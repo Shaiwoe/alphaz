@@ -125,7 +125,7 @@
                             @foreach ($coins as $coin)
                                 <tr class=" border-b border-gray-600 items-center">
 
-                                    <td class="flex lg:gap-2 items-center lg:px-4 py-4 mt-2 text-gray-200 text-base">
+                                    <td class="flex gap-1 lg:gap-2 items-center lg:px-4 py-4 mt-2 text-gray-200 text-base">
                                         <a href="">
                                             <img class="rounded-full w-7 lg:w-9 "
                                                 src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $coin->icon) }}"
