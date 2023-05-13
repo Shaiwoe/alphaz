@@ -89,7 +89,7 @@
                 <div class="relative overflow-x-auto w-full sm:rounded-lg">
 
                     <table class="w-full  text-right text-gray-500">
-                        <thead class=" text-sm text-gray-200 uppercase ">
+                        <thead class=" text-sm text-gray-200 dark:text-gray-800 uppercase ">
                             <tr>
                                 <th scope="col" class="text-xs lg:text-base px-4 py-3">
                                     نام ارز
@@ -138,20 +138,20 @@
                                     <td class="px-4 py-4 text-green-400">
                                         {{ number_format($coin->quote->USD->price, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700 ">
                                         {{ number_format($coin->quote->USD->percent_change_1h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
                                         {{ number_format($coin->quote->USD->percent_change_24h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
                                         {{ number_format($coin->quote->USD->percent_change_7d, 2) }}
                                     </td>
-                                    <th class="px-4 py-4 text-gray-300">
+                                    <th class="px-4 py-4 text-gray-300 dark:text-gray-700">
                                         {{ number_format($coin->quote->USD->market_cap, 3) }}
                                     </th>
 
-                                    <td class="px-4 py-4 text-gray-300">
+                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
                                         {{ number_format($coin->quote->USD->volume_24h, 3) }}
                                     </td>
                                     <td class="px-4 py-4">
