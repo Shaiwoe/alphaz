@@ -70,55 +70,50 @@ themeToggleBtn.addEventListener("click", function () {
     }
 });
 
-let constrain = 20;
-let mouseOverContainer = document.getElementById("ex1");
-let ex1Layer = document.getElementById("ex1-layer");
-let ex2Layer = document.getElementById("ex2-layer");
+
+
+
+var constrain = 20;
+var mouseOverContainer = document.getElementById("ex1");
+var ex1Layer = document.getElementById("ex1-layer");
+
+var mouseOverContainer2 = document.getElementById("ex1");
+var ex2Layer = document.getElementById("ex2-layer");
+
 
 function transforms(x, y, el) {
-    let box = el.getBoundingClientRect();
-    let calcX = -(y - box.y - box.height / 2) / constrain;
-    let calcY = (x - box.x - box.width / 2) / constrain;
+  var box = el.getBoundingClientRect();
+  var calcX = (y - box.y - (box.height / 2)) / constrain;
+  var calcY = -(x - box.x - (box.width / 2)) / constrain;
 
-    let box2 = el.getBoundingClientRect();
-    let calcX2 = (y - box2.y - box2.height / 2) / constrain;
-    let calcY2 = -(x - box2.x - box2.width / 2) / constrain;
+  return "perspective(100px) "
+    + "   rotateX("+ calcX +"deg) "
+    + "   rotateY("+ calcY +"deg) ";
+};
+function transforms2(x, y, el) {
+  var box = el.getBoundingClientRect();
+  var calcX = -(y - box.y - (box.height / 2)) / constrain;
+  var calcY = (x - box.x - (box.width / 2)) / constrain;
 
-    return (
-        "perspective(100px) " +
-        "   rotateX(" +
-        calcX +
-        "deg) " +
-        "   rotateY(" +
-        calcY +
-        "deg) " +
-
-        "perspective(100px) " +
-        "   rotateX(" +
-        calcX2 +
-        "deg) " +
-        "   rotateY(" +
-        calcY2 +
-        "deg) "
-    );
-
-
-
-
+  return "perspective(100px) "
+    + "   rotateX("+ calcX +"deg) "
+    + "   rotateY("+ calcY +"deg) ";
+};
+ function transformElement(el, xyEl) {
+  el.style.transform  = transforms.apply(null, xyEl);
+}
+function transformElement2(el, xyEl) {
+  el.style.transform  = transforms2.apply(null, xyEl);
 }
 
-function transformElement(el, xyEl) {
-    el.style.transform = transforms.apply(null, xyEl);
-    el.style.transform = transforms2.apply(null, xyEl);
-}
+mouseOverContainer.onmousemove = function(e) {
+  var xy = [e.clientX, e.clientY];
+  var xy2 = [e.clientX, e.clientY];
+  var position = xy.concat([ex1Layer]);
+  var position2 = xy2.concat([ex2Layer]);
 
-mouseOverContainer.onmousemove = function (e) {
-    let xy = [e.clientX, e.clientY];
-    let position = xy.concat([ex1Layer]);
-    let position2 = xy.concat([ex2Layer]);
-
-    window.requestAnimationFrame(function () {
-        transformElement(ex1Layer, position);
-        transformElement(ex2Layer, position2);
-    });
+  window.requestAnimationFrame(function(){
+    transformElement(ex1Layer, position);
+    transformElement2(ex2Layer, position2);
+  });
 };
