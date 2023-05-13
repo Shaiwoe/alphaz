@@ -1,0 +1,185 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Models\Video;
+use App\Models\Catevory;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+
+class VideoController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $videos = Video::latest()->paginate(20);
+        return view('admin.videos.index', compact('videos'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $catevorys = Catevory::where('parent_id', '!=', 0)->get();
+        return view('admin.videos.create', compact('catevorys'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'catevory_id' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+            'body' => 'required',
+            'image' => 'required|mimes:jpg,jpeg,png,svg',
+            'video' => 'required|mimes:mp4,mkv,mov,avi,wmv,avc',
+            'tags' => 'required',
+
+        ]);
+
+        try {
+            DB::beginTransaction();
+
+            $fileNameImage = generateFileName($request->image->getClientOriginalName());
+            $request->image->move(public_path(env('VIDEO_IMAGES_UPLOAD_PATH')), $fileNameImage);
+
+            $fileNameVideo = generateFileName($request->video->getClientOriginalName());
+            $request->video->move(public_path(env('VIDEO_VIDEO_UPLOAD_PATH')), $fileNameVideo);
+
+
+            Video::create([
+                'title' => $request->title,
+                'catevory_id' => $request->catevory_id,
+                'type' => $request->type,
+                'description' => $request->description,
+                'body' => $request->body,
+                'image' => $fileNameImage,
+                'video' => $fileNameVideo,
+                'time' => $request->time,
+                'tags' => $request->tags,
+                'is_active' => $request->is_active,
+            ]);
+
+            DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            alert()->error('مشکل در ایجاد ویدیو', $ex->getMessage())->persistent('حله');
+            return redirect()->back();
+        }
+
+        alert()->success('ویدیو مورد نظر ایجاد شد', 'باتشکر');
+        return redirect()->route('videos.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Video  $video
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Video $video)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Video  $video
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Video $video)
+    {
+        $catevorys = Catevory::where('parent_id', '!=', 0)->get();
+        return view('admin.videos.edit', compact('video', 'catevorys'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Video  $video
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Video $video)
+    {
+        $request->validate([
+            'title' => 'required',
+            'catevory_id' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+            'body' => 'required',
+            'image' => 'nullable|mimes:jpg,jpeg,png,svg',
+            'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
+            'tags' => 'required',
+        ]);
+
+        try {
+            DB::beginTransaction();
+
+            if ($request->has('image')) {
+                $fileNameImage = generateFileName($request->image->getClientOriginalName());
+                $request->image->move(public_path(env('VIDEO_IMAGES_UPLOAD_PATH')), $fileNameImage);
+            }
+
+            if ($request->has('video')) {
+                $fileNameVideo = generateFileName($request->video->getClientOriginalName());
+                $request->video->move(public_path(env('VIDEO_VIDEO_UPLOAD_PATH')), $fileNameVideo);
+            }
+
+
+
+            $video->update([
+                'title' => $request->title,
+                'catevory_id' => $request->catevory_id,
+                'type' => $request->type,
+                'description' => $request->description,
+                'body' => $request->body,
+                'image' => $request->has('image') ? $fileNameImage : $video->image,
+                'video' => $request->has('video') ? $fileNameVideo : $video->video,
+                'time' => $request->time,
+                'tags' => $request->tags,
+                'is_active' => $request->is_active,
+            ]);
+
+
+            DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            alert()->error('مشکل در ویرایش ویدیو', $ex->getMessage())->persistent('حله');
+            return redirect()->back();
+        }
+
+        alert()->success('ویدیو مورد نظر ویرایش شد', 'باتشکر');
+        return redirect()->route('videos.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Video  $video
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Video $video)
+    {
+        $video->delete();
+
+        alert()->success('ویدیو مورد نظر حذف شد', 'باتشکر');
+        return redirect()->route('videos.index');
+    }
+}
