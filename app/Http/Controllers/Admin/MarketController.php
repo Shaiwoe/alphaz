@@ -44,6 +44,7 @@ class MarketController extends Controller
         $request->validate([
             'icon' => 'required|mimes:jpg,jpeg,png,svg',
             'name' => 'required|string',
+            'slug' => 'required|string',
         ]);
 
         try {
@@ -55,6 +56,7 @@ class MarketController extends Controller
         Market::create([
             'icon' => $fileNameImage,
             'name' => $request->name,
+            'slug' => $request->slug,
             'symbol' => $request->symbol,
             'price_usdt' => $request->price_usdt,
             'price_rial' => $request->price_rial,
@@ -112,6 +114,7 @@ class MarketController extends Controller
         $request->validate([
             'icon' => 'required|mimes:jpg,jpeg,png,svg',
             'name' => 'required|string',
+            'slug' => 'required|string',
         ]);
 
         try {
@@ -123,6 +126,7 @@ class MarketController extends Controller
         $market->update([
             'icon' => $fileNameImage,
             'name' => $request->name,
+            'slug' => $request->slug,
             'symbol' => $request->symbol,
             'price_usdt' => $request->price_usdt,
             'price_rial' => $request->price_rial,

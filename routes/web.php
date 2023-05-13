@@ -62,7 +62,7 @@ Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->
 
 
 Route::get('/prices', [MarketController::class, 'coins'])->name('home.prices.index');
-Route::get('/prices/{prices:slug}', [MarketController::class, 'show'])->name('home.prices.show');
+Route::get('/prices/{market:id}/{slug}', [MarketController::class, 'show'])->name('home.prices.show');
 
 // Route::get('/coins', [MarketController::class, 'coins'])->name('home.coins');
 

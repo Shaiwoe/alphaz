@@ -49,7 +49,9 @@
                                     عنوان
                                 </th>
 
-
+                                <th scope="col" class="px-6 py-3">
+                                    لینک
+                                </th>
 
                                 <th scope="col" class="px-6 py-3">
                                     وضعیت
@@ -68,11 +70,17 @@
                                     <td class="px-6 py-4">
                                         {{ $markets->firstItem() + $key }}
                                     </td>
+
                                     <td class="px-6 py-4 text-sky-500">
                                         <img class="w-8" src="{{ url(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon) }}" alt="">
                                     </td>
+                                    
                                     <td>
                                         {{ $market->name }}
+                                    </td>
+
+                                    <td>
+                                        {{ $market->slug }}
                                     </td>
 
 

@@ -54,6 +54,14 @@
                         </div>
 
                         <div class="flex flex-col w-full">
+                            <label for="slug" class="block mb-2 text-sm font-medium text-gray-100 ">عنوان
+                                لینک ارز</label>
+                            <input type="text" name="slug" id="slug" value="{{ $market->slug }}"
+                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                            <x-input-error :messages="$errors->get('slug')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
                             <label for="symbol" class="block mb-2 text-sm font-medium text-gray-100 ">
                                  نماد</label>
                             <input type="text" name="symbol" id="symbol" value="{{ $market->symbol }}"
@@ -69,7 +77,7 @@
                             <x-input-error :messages="$errors->get('site')" class="mt-2" />
                         </div>
 
-                        
+
 
 
 

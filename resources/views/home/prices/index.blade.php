@@ -157,7 +157,7 @@
                                         <img src="/image/chart.png" alt="">
                                     </td>
                                     <td class="flex justify-end px-4 py-4">
-                                        <a href=""
+                                        <a href="{{ route('home.prices.show', ['market' => $coin->id, 'slug' => $coin->slug]) }}"
                                             class="flex gap-2 text-white bg-button1 py-2 px-4 rounded-full  text-xs items-center">
                                             مشاهده بیشتر
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

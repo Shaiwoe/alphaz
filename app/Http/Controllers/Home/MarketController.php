@@ -31,7 +31,7 @@ class MarketController extends Controller
                 if ($market->symbol == $price->symbol) {
 
                     $coin = (object) [
-                        'name' => $market->name, 'icon' => $market->icon, 'symbol' => $market->symbol , 'quote' => $price->quote
+                        'name' => $market->name, 'id' => $market->id, 'slug' => $market->slug, 'icon' => $market->icon, 'symbol' => $market->symbol , 'quote' => $price->quote
                     ];
 
                     $coins[] = $coin;
@@ -78,7 +78,7 @@ class MarketController extends Controller
         return $response;
     }
 
-    public function show(Market $market)
+    public function show(Market $market, $slug=null)
     {
         $price = $this->getAPICoin($market->symbol);
 
