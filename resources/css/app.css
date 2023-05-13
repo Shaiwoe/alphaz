@@ -25,7 +25,7 @@ body {
 }
 
 #menu-right {
-    
+
     fill: #1D213B;
     border-radius: 30px;
     opacity: 1;
@@ -206,7 +206,7 @@ body {
 
 #bg-footer {
     /* UI Properties */
-    background:  0% 0% no-repeat padding-box;
+    background: 0% 0% no-repeat padding-box;
     filter: brightness(0.8);
     border-radius: 30px;
     opacity: 1;
@@ -418,17 +418,19 @@ img {
     left: calc(50% - (mouseX - imageLeft) * 0.1);
 }
 
-.main_body{
+.main_body {
     margin-top: 10%;
 }
 
 /* tailwind css */
-.icon_svg_light{
+.icon_svg_light {
     fill: none;
     stroke: #fff;
 }
-.icon_svg_dark{
+
+.icon_svg_dark {
     fill: none;
     stroke: #1d213b;
 }
+
 

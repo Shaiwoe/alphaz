@@ -20,6 +20,7 @@
 
 <body class="bg-indigo-1 dark:bg-white1">
 
+
     {{-- header  --}}
     @include('components/header')
 
@@ -72,7 +73,7 @@
                 <div >
                     <img id="ex1-layer" class="w-3/12 lg:w-2/12 absolute top-[40%] left-[1%]" src="/image/E1.svg" alt="">
                     <img id="ex2-layer"  class="w-3/12 lg:w-2/12 absolute top-[70%] right-[20%] lg:right-[30%]" src="/image/E2.svg" alt="">
-                    <img  class="w-3/12 lg:w-2/12 absolute top-[7%] left-[50%] lg:left-[30%]" src="/image/E3.svg" alt="">
+                    <img  class="animate-bounce w-3/12 lg:w-2/12 absolute top-[7%] left-[50%] lg:left-[30%]" src="/image/E3.svg" alt="">
                 </div>
             </div>
 
