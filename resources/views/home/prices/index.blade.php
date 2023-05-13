@@ -71,7 +71,7 @@
 
                 <div >
                     <img id="ex1-layer" class="w-3/12 lg:w-2/12 absolute top-[40%] left-[1%]" src="/image/E1.svg" alt="">
-                    <img  class="w-3/12 lg:w-2/12 absolute top-[70%] right-[20%] lg:right-[30%]" src="/image/E2.svg" alt="">
+                    <img id="ex2-layer"  class="w-3/12 lg:w-2/12 absolute top-[70%] right-[20%] lg:right-[30%]" src="/image/E2.svg" alt="">
                     <img  class="w-3/12 lg:w-2/12 absolute top-[7%] left-[50%] lg:left-[30%]" src="/image/E3.svg" alt="">
                 </div>
             </div>
@@ -96,27 +96,27 @@
                                 <th scope="col" class="px-4 py-3">
                                     قیمت تتر
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
+                                <th scope="col" class="px-4 py-3 font-sans ">
                                     1h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
+                                <th scope="col" class="px-4 py-3 font-sans ">
                                     24h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
+                                <th scope="col" class="px-4 py-3 font-sans ">
                                     7d %
                                 </th>
-                                <th scope="col" class="px-4 py-3 hidden lg:block ">
+                                <th scope="col" class="px-4 py-3  ">
                                     ارزش بازار
                                 </th>
 
-                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
+                                <th scope="col" class="px-4 py-3 font-sans ">
                                     Volume(24h)
                                 </th>
 
                                 <th scope="col" class="px-4 py-3">
                                     نمودار
                                 </th>
-                                <th scope="col" class=" justify-end px-4 py-3 hidden lg:flex">
+                                <th scope="col" class="flex justify-end px-4 py-3 ">
                                     توضیحات بیشتر
                                 </th>
                             </tr>
@@ -137,20 +137,20 @@
                                     <td class="px-4 py-4 text-green-400">
                                         {{ number_format($coin->quote->USD->price, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
+                                    <td class="px-4 py-4 text-gray-300 ">
                                         {{ number_format($coin->quote->USD->percent_change_1h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
+                                    <td class="px-4 py-4 text-gray-300 ">
                                         {{ number_format($coin->quote->USD->percent_change_24h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
+                                    <td class="px-4 py-4 text-gray-300 ">
                                         {{ number_format($coin->quote->USD->percent_change_7d, 2) }}
                                     </td>
-                                    <th class="px-4 py-4 text-gray-300 hidden lg:block">
+                                    <th class="px-4 py-4 text-gray-300">
                                         {{ number_format($coin->quote->USD->market_cap, 3) }}
                                     </th>
 
-                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
+                                    <td class="px-4 py-4 text-gray-300">
                                         {{ number_format($coin->quote->USD->volume_24h, 3) }}
                                     </td>
                                     <td class="px-4 py-4">
