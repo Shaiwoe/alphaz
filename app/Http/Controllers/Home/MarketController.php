@@ -82,6 +82,7 @@ class MarketController extends Controller
     {
         $price = $this->getAPICoin($market->symbol);
 
+        
         if ( !property_exists($price, 'data') ) {
 
             throw new \Exception('Could not load coin');
