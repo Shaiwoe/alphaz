@@ -124,7 +124,7 @@
                         </thead>
                         <tbody>
                             @foreach ($coins as $coin)
-                                <tr class=" border-b border-gray-600 items-center">
+                                <tr class=" border-b border-gray-600 dark:border-gray-400 items-center">
 
                                     <td class="flex gap-1 lg:gap-2 items-center lg:px-4 py-4 mt-2 text-gray-200 text-base">
                                         <a href="">
