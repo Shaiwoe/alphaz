@@ -132,7 +132,7 @@
                                                 src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $coin->icon) }}"
                                                 alt="">
                                         </a>
-                                        <p class="text-xs lg:text-base">{{ $coin->name }}</p>
+                                        <p class="text-xs lg:text-base text-gray-200 dark:text-gray-700">{{ $coin->name }}</p>
                                     </td>
 
                                     <td class="px-4 py-4 text-green-400">
