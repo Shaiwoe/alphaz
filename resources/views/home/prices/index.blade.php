@@ -48,13 +48,13 @@
     </div>
 
 
-    <div class="container mx-auto lg:p-4 p-8 z-40">
-        <div class="flex w-full mt-44 z-40 relative text-white justify-between items-center space-y-10">
+    <div class="container mx-auto p-4 z-40">
+        <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10">
 
-            <div class="w-4/12 space-y-10 relative text-white dark:text-gray-700">
+            <div class="w-full lg:w-4/12 space-y-10 relative text-white dark:text-gray-700">
 
-                <p class="text-4xl z-40">نمای بازار کریپتو</p>
-                <p class="z-40">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و
+                <p class="lg:text-4xl text-2xl z-40 flex justify-center">نمای بازار کریپتو</p>
+                <p class="hidden lg:block z-40">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و
                     با
                     مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید. در این صفحه
                     می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و با مقایسه قیمت ارزهای
@@ -66,13 +66,13 @@
                 </p>
             </div>
 
-            <div id="ex1" class="w-8/12 flex justify-end relative ">
-                <img class="w-8/12" src="/image/crypto.svg" alt="">
+            <div id="ex1" class="w-full lg:w-8/12 flex lg:justify-end relative">
+                <img class="lg:w-8/12" src="/image/crypto.svg" alt="">
 
                 <div >
-                    <img id="ex1-layer" class="w-2/12 absolute top-[40%] left-[1%]" src="/image/E1.svg" alt="">
-                    <img  class=" w-2/12 absolute top-[70%] right-[30%]" src="/image/E2.svg" alt="">
-                    <img  class=" w-2/12 absolute top-[7%] left-[30%]" src="/image/E3.svg" alt="">
+                    <img id="ex1-layer" class="w-3/12 lg:w-2/12 absolute top-[40%] left-[1%]" src="/image/E1.svg" alt="">
+                    <img  class="w-3/12 lg:w-2/12 absolute top-[70%] right-[20%] lg:right-[30%]" src="/image/E2.svg" alt="">
+                    <img  class="w-3/12 lg:w-2/12 absolute top-[7%] left-[50%] lg:left-[30%]" src="/image/E3.svg" alt="">
                 </div>
             </div>
 
@@ -84,7 +84,7 @@
 
         <div class="flex flex-col mt-20 space-y-10 z-40">
 
-            <div id="coinBox" class="w-full bg-coin1 flex  p-8 z-40 relative h-full">
+            <div id="coinBox" class="w-full bg-coin1 flex p-2 lg:p-8 z-40 relative h-full">
                 <div class="relative overflow-x-auto w-full sm:rounded-lg">
 
                     <table class="w-full  text-right text-gray-500">
@@ -96,27 +96,27 @@
                                 <th scope="col" class="px-4 py-3">
                                     قیمت تتر
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans">
+                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
                                     1h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans">
+                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
                                     24h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans">
+                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
                                     7d %
                                 </th>
-                                <th scope="col" class="px-4 py-3 ">
+                                <th scope="col" class="px-4 py-3 hidden lg:block ">
                                     ارزش بازار
                                 </th>
 
-                                <th scope="col" class="px-4 py-3 font-sans"">
+                                <th scope="col" class="px-4 py-3 font-sans hidden lg:block">
                                     Volume(24h)
                                 </th>
 
                                 <th scope="col" class="px-4 py-3">
                                     نمودار
                                 </th>
-                                <th scope="col" class="flex justify-end px-4 py-3">
+                                <th scope="col" class=" justify-end px-4 py-3 hidden lg:flex">
                                     توضیحات بیشتر
                                 </th>
                             </tr>
@@ -125,38 +125,38 @@
                             @foreach ($coins as $coin)
                                 <tr class=" border-b border-gray-600 items-center">
 
-                                    <td class="flex gap-2 items-center px-4 py-4 mt-2 text-gray-200 text-base">
+                                    <td class="flex lg:gap-2 items-center lg:px-4 py-4 mt-2 text-gray-200 text-base">
                                         <a href="">
-                                            <img class="rounded-full w-9 "
+                                            <img class="rounded-full lg:w-9 "
                                                 src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $coin->icon) }}"
                                                 alt="">
                                         </a>
-                                        {{ $coin->name }}
+                                        <p class="text-xs lg:text-base">{{ $coin->name }}</p>
                                     </td>
 
                                     <td class="px-4 py-4 text-green-400">
                                         {{ number_format($coin->quote->USD->price, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300">
+                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
                                         {{ number_format($coin->quote->USD->percent_change_1h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
                                         {{ number_format($coin->quote->USD->percent_change_24h, 2) }}
                                     </td>
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
                                         {{ number_format($coin->quote->USD->percent_change_7d, 2) }}
                                     </td>
-                                    <th class="px-4 py-4 text-gray-300 ">
+                                    <th class="px-4 py-4 text-gray-300 hidden lg:block">
                                         {{ number_format($coin->quote->USD->market_cap, 3) }}
                                     </th>
 
-                                    <td class="px-4 py-4 text-gray-300 ">
+                                    <td class="px-4 py-4 text-gray-300 hidden lg:block">
                                         {{ number_format($coin->quote->USD->volume_24h, 3) }}
                                     </td>
                                     <td class="px-4 py-4">
                                         <img src="/image/chart.png" alt="">
                                     </td>
-                                    <td class="flex justify-end px-4 py-4">
+                                    <td class="justify-end px-4 py-4 hidden lg:flex">
                                         <a href="{{ route('home.prices.show', ['market' => $coin->id, 'slug' => $coin->slug]) }}"
                                             class="flex gap-2 text-white bg-button1 py-2 px-4 rounded-full  text-xs items-center">
                                             مشاهده بیشتر
