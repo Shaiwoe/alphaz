@@ -90,33 +90,33 @@
                     <table class="w-full  text-right text-gray-500">
                         <thead class=" text-sm text-gray-200 uppercase ">
                             <tr>
-                                <th scope="col" class="px-4 py-3">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
                                     نام ارز
                                 </th>
-                                <th scope="col" class="px-4 py-3">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
                                     قیمت تتر
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans ">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
                                     1h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans ">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
                                     24h %
                                 </th>
-                                <th scope="col" class="px-4 py-3 font-sans ">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
                                     7d %
                                 </th>
-                                <th scope="col" class="px-4 py-3  ">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3  ">
                                     ارزش بازار
                                 </th>
 
-                                <th scope="col" class="px-4 py-3 font-sans ">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
                                     Volume(24h)
                                 </th>
 
-                                <th scope="col" class="px-4 py-3">
+                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
                                     نمودار
                                 </th>
-                                <th scope="col" class="flex justify-end px-4 py-3 ">
+                                <th scope="col" class="text-xs lg:text-base flex justify-end px-4 py-3 ">
                                     توضیحات بیشتر
                                 </th>
                             </tr>
@@ -156,7 +156,7 @@
                                     <td class="px-4 py-4">
                                         <img src="/image/chart.png" alt="">
                                     </td>
-                                    <td class="justify-end px-4 py-4 hidden lg:flex">
+                                    <td class="justify-end px-4 py-4">
                                         <a href="{{ route('home.prices.show', ['market' => $coin->id, 'slug' => $coin->slug]) }}"
                                             class="flex gap-2 text-white bg-button1 py-2 px-4 rounded-full  text-xs items-center">
                                             مشاهده بیشتر
