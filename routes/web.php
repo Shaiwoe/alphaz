@@ -63,6 +63,7 @@ Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->
 
 Route::get('/prices', [MarketController::class, 'coins'])->name('home.prices.index');
 Route::get('/prices/{market:id}/{slug}', [MarketController::class, 'show'])->name('home.prices.show');
+// Route::post('ckeditor/upload', [MarketController::class,'upload'])->name('ckeditor.upload');
 
 // Route::get('/coins', [MarketController::class, 'coins'])->name('home.coins');
 
