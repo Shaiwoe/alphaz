@@ -44,7 +44,7 @@
                     <p class="text-2xl">قیمت لحظه ای {{  $market->name  }}</p>
 
                     <div  id="coinBox" class="bg-coin1 p-4 flex flex-col w-full items-center justify-center space-y-6">
-                        {{-- <p class="text-4xl">{{ number_format($price->data->USD[0]->quote->USD->price, 2) }}</p> --}}
+                        <p class="text-4xl"><span class="text-lg">$</span> {{ number_format($price->quote->USD->price, 2) }} </p>
 
                         <img class="w-9/12 p-4" src="/image/chart.png" alt="">
                     </div>
@@ -52,19 +52,19 @@
 
 
                 <div class="flex flex-col w-full justify-center items-center space-y-10">
-                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center">
+                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات ساعتی</p>
-                        <p></p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg"> {{ number_format($price->quote->USD->percent_change_1h, 2) }}</p>
                     </div>
 
-                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center">
+                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات روزانه</p>
-                        <p></p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">{{ number_format($price->quote->USD->percent_change_24h, 2) }}</p>
                     </div>
 
-                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center">
+                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات هفتگی</p>
-                        <p></p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">{{ number_format($price->quote->USD->percent_change_7d, 2) }}</p>
                     </div>
                 </div>
 
@@ -95,6 +95,11 @@
             </div>
 
 
+        </div>
+
+
+        <div class="flex flex-col mt-24 justify-center">
+            <p>{!! $market->text !!}</p>
         </div>
 
     </div>

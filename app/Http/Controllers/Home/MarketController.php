@@ -82,11 +82,15 @@ class MarketController extends Controller
     {
         $price = $this->getAPICoin($market->symbol);
 
-        
+
         if ( !property_exists($price, 'data') ) {
 
             throw new \Exception('Could not load coin');
         }
+
+        $data = (array) $price->data;
+        $price = array_shift($data);
+        $price = $price[0];
 
         return view('home.prices.show', compact('market', 'price'));
     }
