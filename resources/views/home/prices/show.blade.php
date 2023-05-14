@@ -99,7 +99,7 @@
 
 
         <div class="flex flex-col mt-24 justify-center">
-            <p>{{ $market->text !!}}</p>
+            <p>{{ $market->text }}</p>
         </div>
 
     </div>
