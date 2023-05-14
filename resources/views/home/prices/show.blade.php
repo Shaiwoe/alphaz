@@ -43,7 +43,7 @@
                     src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon) }}" alt="">
 
                 <div class="flex flex-col w-full justify-center items-center space-y-8">
-                    <p class="bg-button1 p-4 rounded-full">بازگشت به لیست بازار کریپتو</p>
+                    <a href="{{ route('home.prices.index') }}" class="bg-button1 p-4 rounded-full">بازگشت به لیست بازار کریپتو</a>
 
                     <p class="text-2xl">قیمت لحظه ای {{ $market->name }}</p>
 
@@ -114,7 +114,7 @@
         </div>
 
 
-        <div id="coinBox" class="bg-coin1 flex flex-col mt-24 p-2 justify-center">
+        <div id="coinBox" class="bg-coin1 flex flex-col mt-24 p-8 justify-center">
             <p>{{ $market->text }}</p>
         </div>
 
