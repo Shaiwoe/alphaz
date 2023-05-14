@@ -34,17 +34,22 @@
 
 
     <div class="container mx-auto p-4 z-40">
-        <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10">
+        <div
+            class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10">
 
-            <div id="coinBox" class="bg-coin1 w-full h-full flex justify-between p-4">
+            <div id="coinBox" class="bg-coin1 w-full h-full flex justify-between p-4 overflow-hidden">
+
+                <img class="absolute opacity-20 -left-24 -top-10 overflow-hidden w-4/12"
+                    src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon) }}" alt="">
 
                 <div class="flex flex-col w-full justify-center items-center space-y-8">
                     <p class="bg-button1 p-4 rounded-full">بازگشت به لیست بازار کریپتو</p>
 
-                    <p class="text-2xl">قیمت لحظه ای {{  $market->name  }}</p>
+                    <p class="text-2xl">قیمت لحظه ای {{ $market->name }}</p>
 
-                    <div  id="coinBox" class="bg-coin1 p-4 flex flex-col w-full items-center justify-center space-y-6">
-                        <p class="text-4xl"><span class="text-lg">$</span> {{ number_format($price->quote->USD->price, 2) }} </p>
+                    <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-full items-center justify-center space-y-6">
+                        <p class="text-4xl"><span class="text-lg">$</span>
+                            {{ number_format($price->quote->USD->price, 2) }} </p>
 
                         <img class="w-9/12 p-4" src="/image/chart.png" alt="">
                     </div>
@@ -54,39 +59,50 @@
                 <div class="flex flex-col w-full justify-center items-center space-y-10">
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات ساعتی</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg"> {{ number_format($price->quote->USD->percent_change_1h, 2) }}</p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                            {{ number_format($price->quote->USD->percent_change_1h, 2) }}</p>
                     </div>
 
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات روزانه</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">{{ number_format($price->quote->USD->percent_change_24h, 2) }}</p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                            {{ number_format($price->quote->USD->percent_change_24h, 2) }}</p>
                     </div>
 
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p>تغییرات هفتگی</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">{{ number_format($price->quote->USD->percent_change_7d, 2) }}</p>
+                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                            {{ number_format($price->quote->USD->percent_change_7d, 2) }}</p>
                     </div>
                 </div>
 
 
                 <div class="flex flex-col w-full justify-center items-center space-y-4 relative">
-                    <img class="absolute opacity-20 left-1 w-11/12" src="{{  asset(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon)  }}" alt="">
+
                     <div class="flex flex-col gap-8 items-center">
                         <div class="flex gap-2 items-center">
                             <p class="text-2xl">رمز ارز</p>
                             <p class="text-2xl">{{ $market->name }}</p>
-                            <img class="w-20" src="{{  asset(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon)  }}" alt="">
+                            <img class="w-20" src="{{ asset(env('MARKET_IMAGES_UPLOAD_PATH') . $market->icon) }}"
+                                alt="">
                         </div>
 
 
-                        <div>
-                            <p></p>
+                        <div class="w-full text-center text-xl bg-button1 p-2 rounded-full">
+                            <p>{{ number_format($price->quote->USD->price, 2) }}</p>
                         </div>
 
-                        <div class="flex flex-col gap-2 bg-button1 w-full justify-center items-center p-2 rounded-full">
-                            <a href="{{ url('https://google.com') }}">آدرس وبسایت</a>
-                            <p>{{ $market->site }}</p>
+                        <div class="flex gap-2 bg-button1 w-full justify-center items-center p-2 rounded-full">
 
+
+                            <p class="mt-2">{{ $market->site }}</p>
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -98,7 +114,7 @@
         </div>
 
 
-        <div class="flex flex-col mt-24 justify-center">
+        <div id="coinBox" class="bg-coin1 flex flex-col mt-24 p-2 justify-center">
             <p>{{ $market->text }}</p>
         </div>
 
