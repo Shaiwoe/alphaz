@@ -99,7 +99,7 @@
                     <div
                         class="flex w-full  rounded-3xl p-2 lg:p-4 z-40 text-right">
 
-                        <div class="flex  flex-col  items-center p-4 z-40 gap-4 text-white dark:text-gray-700  leading-10">
+                        <div class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700  leading-10">
                             <p id="image-article">{!! $article->body !!}</p>
                         </div>
                     </div>
