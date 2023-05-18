@@ -70,7 +70,7 @@
 
         <div class="w-full lg:w-10/12 gap-16 grid lg:grid-cols-2">
 
-            <div id="coinBox"
+            <a href="{{ route('home.books.index') }}" id="coinBox"
                 class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/book.svg" alt="">
                 <p>کتاب ها</p>
@@ -79,9 +79,9 @@
                     علاقه مندان به کتاب را هموار سازد . همچنین در نظر دارند با تولید و تألیف کتاب‌های اختصاصی و کاربردی
                     در حوزه‌های مربوطه کنار شما عزیزان باشد تا از مطالعه‌ی دسته‌بندی شده لذت ببرید.
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
+            <a href="{{ route('home.articles.index') }}" id="coinBox"
                 class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/article-icon.svg" alt="">
                 <p>مقاله ها</p>
@@ -93,9 +93,9 @@
                     مورد نظر خود را پیدا کنید .
                     همچنین می توانید تمامی اخبار به روز را در بخش اخبار در منوی صفحه اصلی دنبال کنید .
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
+            <a href="{{ route('home.padcasts.index') }}" id="coinBox"
                 class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/padcast-icon.svg" alt="">
                 <p>پادکست ها</p>
@@ -105,9 +105,9 @@
                     کیفیت ممکن به گوش شما عزیزان برسانیم تا در زمانی که وقت مطالعه ندارید از آموزش و دنبال کردن اخبار
                     نیز لذت ببرید .
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
+            <a href="{{ route('home.videos.index') }}" id="coinBox"
                 class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/video-icon.svg" alt="">
                 <p>ویدئو ها</p>
@@ -117,7 +117,7 @@
                     جلب کند.
                     همواره در تلاشیم تا با تولید ویدئوهای با کیفیت و مفید در کنار شما عزیزان باشیم .
                 </p>
-            </div>
+            </a>
         </div>
 
     </div>
