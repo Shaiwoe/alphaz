@@ -167,10 +167,18 @@ body {
     opacity: 1;
 }
 
-#contact-input {
+/* #contact-input {
+
+    background: #FFFFFF2B 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+    border: none;
+    opacity: 1;
+} */
+.contact-input {
     /* UI Properties */
     background: #FFFFFF2B 0% 0% no-repeat padding-box;
     border-radius: 41px;
+    border: none;
     opacity: 1;
 }
 
@@ -205,6 +213,18 @@ body {
 
 
 #bg-footer {
+    /* UI Properties */
+    background: 0% 0% no-repeat padding-box;
+    filter: brightness(0.8);
+    border-radius: 30px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    filter: brightness(0.8);
+
+}
+
+.bg-footer {
     /* UI Properties */
     background: 0% 0% no-repeat padding-box;
     filter: brightness(0.8);
