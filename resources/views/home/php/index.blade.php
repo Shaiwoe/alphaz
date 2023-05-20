@@ -19,7 +19,12 @@
 
 <body class="bg-indigo-1 dark:bg-white1">
 
-    {{-- {{ phpinfo(); }} --}}
+    <div>
+        <form action="">
+
+            
+        </form>
+    </div>
 
 </body>
 

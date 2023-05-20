@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\Google;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Home\FaqController;
+use App\Http\Controllers\Home\PhpController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
@@ -45,7 +46,9 @@ use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/php', [PhpinfoController::class, 'index'])->name('home.index');
+
+Route::resource('php', PhpController::class);
+
 Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
