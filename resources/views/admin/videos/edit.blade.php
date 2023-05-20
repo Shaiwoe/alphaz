@@ -113,6 +113,22 @@
                     </div>
 
                     <div class="flex flex-col gap-4 w-full">
+
+                        <div class="flex flex-col w-full">
+                            <label for="youtube" class="block mb-2 text-sm font-medium text-gray-100">لینک یوتیوب
+                                </label>
+                            <textarea rows="5" type="text" name="youtube" id="youtube"
+                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400">{{ $video->youtube }}</textarea>
+                            <x-input-error :messages="$errors->get('youtube')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="aparat" class="block mb-2 text-sm font-medium text-gray-100">لینک آپارات
+                                </label>
+                            <textarea rows="5" type="text" name="aparat" id="aparat"
+                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400">{{ $video->aparat }}</textarea>
+                            <x-input-error :messages="$errors->get('aparat')" class="mt-2" />
+                        </div>
                         <div class="flex flex-col w-full">
                             <label for="description" class="block mb-2 text-sm font-medium text-gray-100">توضیح
                                 کوتاه</label>
