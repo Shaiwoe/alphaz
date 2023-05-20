@@ -67,7 +67,7 @@ class PhpController extends Controller
         }
 
         alert()->success('ویدیو مورد نظر ایجاد شد', 'باتشکر');
-        return redirect()->route('php.index.create');
+        return redirect()->route('php.create');
     }
 
     /**
