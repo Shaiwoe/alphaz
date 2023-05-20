@@ -71,21 +71,51 @@
 
                         </button>
 
-                        <div class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
-                            <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg"
-                                width="18" height="20" viewBox="0 0 18 20">
-                                <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
-                                    <path class="stroke-white dark:stroke-dark8" id="Path_5803" data-name="Path 5803"
-                                        d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2" transform="translate(-4 -3)"
-                                        fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" />
-                                    <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
-                                        data-name="Ellipse 210" cx="4" cy="4" r="4"
-                                        transform="translate(4)" fill="none" stroke="#fff"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                </g>
-                            </svg>
-                        </div>
+
+
+
+                        @if (Route::has('login'))
+                            <div class="flex  rounded-md lg:gap-4 items-center">
+                                @auth
+                                    <a href="{{ url('/dashboard') }}"
+                                        class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
+                                        <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg"
+                                            width="18" height="20" viewBox="0 0 18 20">
+                                            <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
+                                                <path class="stroke-white dark:stroke-dark8" id="Path_5803"
+                                                    data-name="Path 5803" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
+                                                    transform="translate(-4 -3)" fill="none" stroke="#fff"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
+                                                    data-name="Ellipse 210" cx="4" cy="4" r="4"
+                                                    transform="translate(4)" fill="none" stroke="#fff"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}"
+                                        class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
+                                        <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg"
+                                            width="18" height="20" viewBox="0 0 18 20">
+                                            <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
+                                                <path class="stroke-white dark:stroke-dark8" id="Path_5803"
+                                                    data-name="Path 5803" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
+                                                    transform="translate(-4 -3)" fill="none" stroke="#fff"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
+                                                    data-name="Ellipse 210" cx="4" cy="4" r="4"
+                                                    transform="translate(4)" fill="none" stroke="#fff"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            </g>
+                                        </svg>
+                                    </a>
+
+
+
+                                @endauth
+                            </div>
+                        @endif
                     </div>
 
 
