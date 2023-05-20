@@ -55,7 +55,7 @@
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
                                 <img class="rounded-t-xl w-full h-36"
-                                    src="{{ asset(env('VIDEOS_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
                                     alt="">
                             </a>
 
