@@ -86,7 +86,7 @@ class CatevoryController extends Controller
     public function edit(Catevory $catevory)
     {
         $catevorys = Catevory::where('parent_id', 0)->get();
-        return view('admin.cateporys.edit', compact('catevory', 'catevorys'));
+        return view('admin.catevorys.edit', compact('catevory', 'catevorys'));
     }
 
     /**

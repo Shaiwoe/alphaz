@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Home\MarketController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\PhpinfoController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\PadcastController;
 use App\Http\Controllers\Admin\CateboryController;
@@ -44,6 +45,7 @@ use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/php', [PhpinfoController::class, 'index'])->name('home.index');
 Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
