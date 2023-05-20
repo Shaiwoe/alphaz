@@ -18,7 +18,6 @@ class PhpController extends Controller
     {
         $phps = Php::query()
             ->orderBy('created_at', 'desc')
-            ->search()
             ->paginate(9);
 
         return view('home.php.index', compact('phps'));
@@ -68,7 +67,7 @@ class PhpController extends Controller
         }
 
         alert()->success('ویدیو مورد نظر ایجاد شد', 'باتشکر');
-        return redirect()->route('php.index');
+        return redirect()->route('php.index.create');
     }
 
     /**
