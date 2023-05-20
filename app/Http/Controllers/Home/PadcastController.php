@@ -13,14 +13,15 @@ class PadcastController extends Controller
         $padcasts = Padcast::query()
             ->orderBy('updated_at', 'desc')
             ->where('is_active', 1)
+            ->search()
             ->paginate(9);
-        $padcastsBanners = Padcast::orderBy('created_at', 'desc')->take(1)->get();
-        return view('home.padcasts.index' , compact('padcasts' , 'padcastsBanners'));
+
+        return view('home.padcasts.index', compact('padcasts'));
     }
 
     public function show(Padcast $padcast)
     {
 
-        return view('home.padcasts.show' , compact('padcast'));
+        return view('home.padcasts.show', compact('padcast'));
     }
 }

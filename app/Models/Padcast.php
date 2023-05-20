@@ -39,4 +39,14 @@ class Padcast extends Model
     {
         return $this->belongsTo(Catepory::class);
     }
+
+    public function scopeSearch($query)
+    {
+        $keyword = request()->query('search');
+        if (request()->query('search') && trim($keyword) != '') {
+            $query->where('title', 'LIKE', '%'. trim($keyword) .'%');
+        }
+
+        return $query;
+    }
 }

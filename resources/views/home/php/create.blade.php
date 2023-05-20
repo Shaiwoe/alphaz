@@ -27,7 +27,7 @@
                 <form action="{{ route('php.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <div class="grid grid-cols-4 w-full gap-6  mb-6">
+                    <div class="flex w-4/12 justify-center items-center gap-6  mb-6">
 
                         <div class="flex flex-col w-full">
                             <label for="video" class="block mb-2 text-sm font-medium text-gray-100">انتخاب
