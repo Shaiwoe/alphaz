@@ -20,11 +20,11 @@
     @include('components/light')
 
 
-    <div class="flex justify-between overflow-x-auto relative space-x-4">
+    <div class="flex justify-between  relative space-x-4">
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-10/12 mt-28 h-full overflow-y-auto p-4">
+        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
 
             <div class="w-full flex bg-coin1  p-4" id="coinBox">
                 @foreach ($articles as $article)
@@ -36,7 +36,7 @@
                                     alt="">
                             </a>
 
-                            <p class="w-full text-sm">
+                            <p class="w-full text-sm text-white dark:text-gray-700">
                                 {{ $article->title }}
                             </p>
                         </div>

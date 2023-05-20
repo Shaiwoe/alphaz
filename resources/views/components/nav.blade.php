@@ -8,13 +8,13 @@
                 </a>
 
                 <div class="flex flex-col space-y-3 mt-8">
-                    <p class="text-sm text-white">{{ $users->name }} , خوش آمدی</p>
+                    <p class="text-sm text-white dark:text-gray-600 ">{{ $users->name }} , خوش آمدی</p>
 
-                    <p class="text-sm">پروفایل کاربری</p>
+                    <p class="text-sm text-gray-400 dark:text-gray-600">پروفایل کاربری</p>
                 </div>
             </div>
 
-            <ul class="flex flex-col text-white mt-4 space-y-6 text-lg px-4 py-16">
+            <ul class="flex flex-col text-white dark:text-gray-600 mt-4 space-y-6 text-lg px-4 py-16">
                 <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
