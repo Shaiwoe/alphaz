@@ -87,7 +87,6 @@
 
 
 
-
             <div class="flex p-4 h-full text-white dark:text-gray-700 mt-16 lg:mt-44 z-40 gap-8 bg-coin1 dark:bg-white"
                 id="coinBox">
 
