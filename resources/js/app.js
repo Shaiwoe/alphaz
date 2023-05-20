@@ -20,10 +20,11 @@ if (
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
-var themeToggleDarkImage = document.getElementById("theme-toggle-dark-icon-2");
-var themeToggleLightImage = document.getElementById(
-    "theme-toggle-light-icon-2"
-);
+
+
+const logoDarkEl = document.getElementsByClassName('logo_dark_el');
+const logoLightEl = document.getElementsByClassName('logo_light_el');
+
 
 // Change the icons inside the button based on previous settings
 if (
@@ -32,10 +33,14 @@ if (
         window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
     themeToggleLightIcon.classList.remove("hidden");
-    themeToggleLightImage.classList.remove("hidden");
+    for (let i = 0; i < logoDarkEl.length; i++) {
+        logoDarkEl[i].classList.remove('hidden');
+    }
 } else {
     themeToggleDarkIcon.classList.remove("hidden");
-    themeToggleDarkImage.classList.remove("hidden");
+    for (let i = 0; i < logoDarkEl.length; i++) {
+        logoLightEl[i].classList.remove('hidden');
+    }
 }
 
 var themeToggleBtn = document.getElementById("theme-toggle");
@@ -45,8 +50,11 @@ themeToggleBtn.addEventListener("click", function () {
     themeToggleDarkIcon.classList.toggle("hidden");
     themeToggleLightIcon.classList.toggle("hidden");
 
-    themeToggleDarkImage.classList.toggle("hidden");
-    themeToggleLightImage.classList.toggle("hidden");
+
+    for (let i = 0; i < logoDarkEl.length; i++) {
+        logoDarkEl[i].classList.toggle('hidden');
+        logoLightEl[i].classList.toggle('hidden');
+    }
 
     // if set via local storage previously
     if (localStorage.getItem("color-theme")) {

@@ -23,6 +23,8 @@
     @include('components/light')
 
 
+
+
     <div class="light dark:opacity-40 relative w-full">
         <div class="absolute right-0">
             <img src="/image/tinified/5.png" alt="">

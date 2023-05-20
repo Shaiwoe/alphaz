@@ -31,9 +31,10 @@
     </div>
 
     <div class="w-full flex flex-col-reverse lg:flex-row container mx-auto relative text-white dark:text-gray-700 p-8">
-        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72">
+        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
+            id="coinBox">
             <p class="text-center lg:text-3xl mt-8">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>
-            <p class="leading-10 text-xs lg:text-lg">
+            <p class="leading-10 text-xs lg:text-lg text-justify">
                 مجموعه آلفارنسی از سال ۲۰۱۹ فعالیت خودش را همراه با رزومه‌ای درخشان (سودهای 400 الی 1300 درصدی ) و تیم
                 تحقیقاتی پروژه های IEO های پر سود ، شروع کرد . با شروع اپیدمی کرونا مجموعه آلفارنسی با برگزاری بیش از
                 600 وبینار تلاش کرد که همواره مسیر آموزش دنیایی کریپتوکارنسی را برای شما عزیزان هموار سازد .
@@ -48,8 +49,13 @@
         </div>
 
         <div class="relative w-full flex justify-end z-40 mt-16 lg:mt-64">
-            <img class="w-full lg:w-8/12" src="image/blob.svg" alt="">
-            <img class="absolute w-4/12 top-[20%] left-[10%]" src="image/logo3.png" alt="">
+            <img class="w-full lg:w-7/12" src="image/svg/about-svg.svg" alt="">
+            <img id=""
+                class="logo_dark_el hidden absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500"
+                src="/image/logo-white.png" alt="">
+            <img id=""
+                class="logo_light_el hidden absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500"
+                src="/image/logo-dark.png" alt="">
         </div>
 
 
@@ -60,32 +66,31 @@
 
 
 
-    <div
-        class="flex flex-col justify-center items-center container mx-auto text-white dark:text-gray-700 space-y-8 p-8">
-        <div class="lg:text-2xl z-50 mt-36">
+    <div class="flex flex-col justify-center items-center container mx-auto text-white space-y-8 p-8">
+        <div class="lg:text-2xl z-50 mt-15 lg:mt-36 dark:text-black">
             <p>محتوا هایی که در آلفارنسی مشاهده میکنید</p>
         </div>
 
 
 
-        <div class="w-full gap-16 grid lg:grid-cols-2">
+        <div class="w-full lg:w-10/12 gap-16 grid lg:grid-cols-2">
 
-            <div id="coinBox"
-                class="bg-coin1 dark:bg-coin2 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+            <a href="{{ route('home.books.index') }}" id="coinBox"
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/book.svg" alt="">
                 <p>کتاب ها</p>
-                <p>
+                <p class="text-justify">
                     مجموعه آلفارنسی تصمیم دارد تا با معرفی و ترجمه کتاب های مطرح در حوزه ارزدیجتال و متاورس مسیر
                     علاقه مندان به کتاب را هموار سازد . همچنین در نظر دارند با تولید و تألیف کتاب‌های اختصاصی و کاربردی
                     در حوزه‌های مربوطه کنار شما عزیزان باشد تا از مطالعه‌ی دسته‌بندی شده لذت ببرید.
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
-                class="bg-coin1 dark:bg-coin2 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+            <a href="{{ route('home.articles.index') }}" id="coinBox"
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/article-icon.svg" alt="">
                 <p>مقاله ها</p>
-                <p>
+                <p class="text-justify">
                     اگر در حوزه کریپتوکارنسی و متاورس حرفه‌ای هستید و یا تازه به این حوزه‌ها ورود کردین، تیم محتوای
                     آلفارنسی
                     شبانه روز در تلاش هستند تا با تولیدمحتوای مبتدی ، پیشرفته ، حرفه‌ای و کاربردی ، مطالب مفید و آموزنده
@@ -93,31 +98,31 @@
                     مورد نظر خود را پیدا کنید .
                     همچنین می توانید تمامی اخبار به روز را در بخش اخبار در منوی صفحه اصلی دنبال کنید .
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
-                class="bg-coin1 dark:bg-coin2 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+            <a href="{{ route('home.padcasts.index') }}" id="coinBox"
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/padcast-icon.svg" alt="">
                 <p>پادکست ها</p>
-                <p>
+                <p class="text-justify">
                     اگر طرفدار گوش دادن به پادکست هستین ، پادکست‌های مجموعه ما رو از دست ندین .
                     در تلاشیم تا به صورت مستمر اخبار و آموزش های حوزه کریپتوکارنسی و دنیای متاورس و NFT را با بالاترین
                     کیفیت ممکن به گوش شما عزیزان برسانیم تا در زمانی که وقت مطالعه ندارید از آموزش و دنبال کردن اخبار
                     نیز لذت ببرید .
                 </p>
-            </div>
+            </a>
 
-            <div id="coinBox"
-                class="bg-coin1 dark:bg-coin2 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+            <a href="{{ route('home.videos.index') }}" id="coinBox"
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
                 <img class="w-20" src="image/svg/video-icon.svg" alt="">
                 <p>ویدئو ها</p>
-                <p>
+                <p class="text-justify">
                     امروزه محتوای ویدئویی طرفدار خودش را دارد . مجموعه ما در 2 سال اخیر سعی داشت تا با تولید ویدئوهای
                     آموزشی و کاربردی حرفه‌ای فرآیند یادگیری را برای شما عزیزان تسریع کند و نظر علاقه مندان این حوزه را
                     جلب کند.
                     همواره در تلاشیم تا با تولید ویدئوهای با کیفیت و مفید در کنار شما عزیزان باشیم .
                 </p>
-            </div>
+            </a>
         </div>
 
     </div>
@@ -125,28 +130,6 @@
 
 
 
-
-    <div class="flex flex-col container mx-auto space-y-8 p-8 ">
-        <div class=" mt-36 flex flex-col justify-center items-center space-y-12 text-white dark:text-gray-700">
-            <p class="text-2xl">محتوای توضیحاتی راجب سایت</p>
-            <p class="leading-10 text-xs lg:text-base">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
-                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
-                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
-                شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
-                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
-                اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی
-                با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
-                مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
-                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و
-                فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
-                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-            </p>
-        </div>
-    </div>
 
 
     <!-- top footer  -->

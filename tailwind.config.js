@@ -17,7 +17,7 @@ module.exports = {
                 md: '768px',
                 lg: '976px',
                 xl: '1440px',
-              },    
+              },
             colors: {
                 'dark1': '#0d0e12',
                 'dark2': '#13161b',
@@ -42,7 +42,7 @@ module.exports = {
                 'coin1': '#ffffff2b',
                 'coin2': '#EDEEF5',
                 'icon-light': '#b9bbc3',
-                'bgmenu1': '#090C3500',
+                'bgmenu1': '#090C35',
                 'blue1': '#110B53',
 
               },

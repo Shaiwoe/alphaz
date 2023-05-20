@@ -25,32 +25,66 @@
                     <div class="flex gap-4">
                         <button id="theme-toggle" type="button"
                             class="menu-dark dark:bg-icon-light dark:text-gray-700 p-3 rounded-full">
-                            <svg id="theme-toggle-dark-icon"  class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="19.962" height="19.962" viewBox="0 0 19.962 19.962">
-                            <path class="stroke-white dark:stroke-dark8" id="moon" d="M21,12.79A9,9,0,1,1,11.21,3,7,7,0,0,0,21,12.79Z" transform="translate(-2.038 -2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            <svg id="theme-toggle-dark-icon" class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="19.962" height="19.962"
+                                viewBox="0 0 19.962 19.962">
+                                <path class="stroke-white dark:stroke-dark8" id="moon"
+                                    d="M21,12.79A9,9,0,1,1,11.21,3,7,7,0,0,0,21,12.79Z" transform="translate(-2.038 -2)"
+                                    fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" />
                             </svg>
 
-                            <svg id="theme-toggle-light-icon" class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <circle class="stroke-white dark:stroke-dark8" id="Ellipse_212" data-name="Ellipse 212" cx="5" cy="5" r="5" transform="translate(7 7)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_2" data-name="Line 2" y2="2" transform="translate(12 1)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_3" data-name="Line 3" y2="2" transform="translate(12 21)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_4" data-name="Line 4" x2="1.42" y2="1.42" transform="translate(4.22 4.22)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_5" data-name="Line 5" x2="1.42" y2="1.42" transform="translate(18.36 18.36)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_6" data-name="Line 6" x2="2" transform="translate(1 12)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_7" data-name="Line 7" x2="2" transform="translate(21 12)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_8" data-name="Line 8" y1="1.42" x2="1.42" transform="translate(4.22 18.36)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <line class="stroke-white dark:stroke-dark8" id="Line_9" data-name="Line 9" y1="1.42" x2="1.42" transform="translate(18.36 4.22)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            <svg id="theme-toggle-light-icon" class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle class="stroke-white dark:stroke-dark8" id="Ellipse_212" data-name="Ellipse 212"
+                                    cx="5" cy="5" r="5" transform="translate(7 7)"
+                                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_2" data-name="Line 2"
+                                    y2="2" transform="translate(12 1)" fill="none" stroke="#000"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_3" data-name="Line 3"
+                                    y2="2" transform="translate(12 21)" fill="none" stroke="#000"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_4" data-name="Line 4"
+                                    x2="1.42" y2="1.42" transform="translate(4.22 4.22)" fill="none"
+                                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_5" data-name="Line 5"
+                                    x2="1.42" y2="1.42" transform="translate(18.36 18.36)" fill="none"
+                                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_6" data-name="Line 6"
+                                    x2="2" transform="translate(1 12)" fill="none" stroke="#000"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_7" data-name="Line 7"
+                                    x2="2" transform="translate(21 12)" fill="none" stroke="#000"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_8" data-name="Line 8"
+                                    y1="1.42" x2="1.42" transform="translate(4.22 18.36)" fill="none"
+                                    stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" />
+                                <line class="stroke-white dark:stroke-dark8" id="Line_9" data-name="Line 9"
+                                    y1="1.42" x2="1.42" transform="translate(18.36 4.22)" fill="none"
+                                    stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" />
                             </svg>
 
-                            
+
                         </button>
 
                         <div class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
-                        <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20">
-                        <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
-                            <path class="stroke-white dark:stroke-dark8" id="Path_5803" data-name="Path 5803" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2" transform="translate(-4 -3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210" data-name="Ellipse 210" cx="4" cy="4" r="4" transform="translate(4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                        </g>
-                        </svg>
+                            <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="20" viewBox="0 0 18 20">
+                                <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
+                                    <path class="stroke-white dark:stroke-dark8" id="Path_5803" data-name="Path 5803"
+                                        d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2" transform="translate(-4 -3)"
+                                        fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" />
+                                    <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
+                                        data-name="Ellipse 210" cx="4" cy="4" r="4"
+                                        transform="translate(4)" fill="none" stroke="#fff"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                </g>
+                            </svg>
                         </div>
                     </div>
 
@@ -169,9 +203,9 @@
 
                 <div class="flex w-full justify-end z-40">
                     <a href="{{ route('home.index') }}" class="z-40">
-                        <img id="theme-toggle-light-icon-2" class="hidden w-40 lg:w-60" src="/image/logo-white.png"
+                        <img id="" class="logo_dark_el hidden w-40 lg:w-60" src="/image/logo-white.png"
                             alt="">
-                        <img id="theme-toggle-dark-icon-2" class="hidden w-40 lg:w-60" src="/image/logo-dark.png"
+                        <img id="" class="logo_light_el hidden w-40 lg:w-60" src="/image/logo-dark.png"
                             alt="">
                     </a>
                 </div>
