@@ -26,6 +26,7 @@
         <!-- main -->
         <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
 
+
             <div class="w-full flex bg-coin1  p-4" id="coinBox">
                 @foreach ($articles as $article)
                     <div class="flex w-full">
