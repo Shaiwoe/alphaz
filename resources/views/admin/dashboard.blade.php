@@ -27,7 +27,7 @@
         <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
 
 
-            <div class="w-full flex bg-coin1  p-4" id="coinBox">
+            <div class="w-full flex flex-col lg:flex-row gap-8 bg-coin1  p-4" id="coinBox">
                 @foreach ($articles as $article)
                     <div class="flex w-full">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
@@ -50,7 +50,7 @@
             </div>
 
 
-            <div class="w-full flex bg-coin1 mt-24  p-4" id="coinBox">
+            <div class="w-full flex flex-col lg:flex-row bg-coin1 mt-24  p-4" id="coinBox">
                 @foreach ($videos as $video)
                     <div class="flex w-full">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
@@ -73,7 +73,7 @@
             </div>
 
 
-            <div class="w-full flex gap-8 bg-coin1 mt-24  p-4" id="coinBox">
+            <div class="w-full flex flex-col lg:flex-row gap-8 bg-coin1 mt-24  p-4" id="coinBox">
                 @foreach ($padcasts as $padcast)
                     <div class="flex w-full gap-4">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
