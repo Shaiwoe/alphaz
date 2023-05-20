@@ -73,7 +73,7 @@
             </div>
 
 
-            <div class="w-full flex bg-coin1 mt-24  p-4" id="coinBox">
+            <div class="w-full flex gap-8 bg-coin1 mt-24  p-4" id="coinBox">
                 @foreach ($padcasts as $padcast)
                     <div class="flex w-full gap-4">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
