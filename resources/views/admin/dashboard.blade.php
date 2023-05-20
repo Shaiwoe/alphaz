@@ -36,9 +36,9 @@
                                     alt="">
                             </a>
 
-                            <p class="w-full text-sm text-white dark:text-gray-700">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
                                 {{ $article->title }}
-                            </p>
+                            </a>
                         </div>
                     </div>
                 @endforeach
