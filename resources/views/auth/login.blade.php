@@ -41,14 +41,14 @@
 
             <a href="{{ route('auth.google') }}" id="coinBox"
                 class="bg-coin1 py-3  text-white rounded-lg flex justify-center gap-4 items-center">
-                <img src="/image/google-symbol.png" alt="">
-                ورود با گوگل
+                <img class="w-14" src="/image/google-symbol.png" alt="">
+                ورود یا ثبت نام با گوگل
             </a>
 
             <a href="{{ route('auth.provider', ['provider' => 'github']) }}" id="coinBox"
                 class="bg-coin1 py-3  text-white rounded-lg flex justify-center gap-4 items-center">
-                <img src="/image/github.png" alt="">
-                ورود با گیت
+                <img class="w-10" src="/image/github.png" alt="">
+                ورود یا ثبت نام با گیت
             </a>
 
         </div>
