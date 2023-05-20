@@ -28,8 +28,9 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
         return view('admin.videos.create', compact('catevorys'));
     }
@@ -100,9 +101,10 @@ class VideoController extends Controller
      * @param  \App\Models\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function show(Video $video)
+    public function show(Video $video, Request $request)
     {
-        //
+        $users = $request->user();
+        return view('admin.videos.index', compact('users'));
     }
 
     /**

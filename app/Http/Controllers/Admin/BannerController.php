@@ -28,9 +28,10 @@ class BannerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.banners.create');
+        $users = $request->user();
+        return view('admin.banners.create', compact('users'));
     }
 
     /**
@@ -84,9 +85,11 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function show(Banner $banner)
+    public function show(Banner $banner, Request $request)
     {
-        //
+        $users = $request->user();
+        return view('admin.banners.show', compact('users'));
+
     }
 
     /**
