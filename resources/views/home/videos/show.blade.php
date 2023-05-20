@@ -106,10 +106,7 @@
                         <p>دسته بندی : </p>
                         {{ $video->catevory->title }}
                     </div>
-                    <div class="flex justify-between">
-                        <p> نوع : </p>
-                        <p class="text-green-500">{{ $video->type }}</p>
-                    </div>
+
                     <a href="{{ asset(env('VIDEO_VIDEO_UPLOAD_PATH') . $video->video) }}"
                         class="bg-coin1 dark:bg-slate-600 text-center p-2 rounded-md text-green-500">دانلود مستقیم</a>
 
@@ -121,12 +118,17 @@
 
 
                     <div class="flex w-full gap-10">
-                        <div>
+                        {{-- <div>
                             <video class="w-full" controls>
                                 <source src="{{ asset(env('VIDEO_VIDEO_UPLOAD_PATH') . $video->video) }}"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                        </div> --}}
+
+                        <div class="w-full">
+                            <iframe class="w-full h-96" src="{{ $video->youtube }}"></iframe>
+
                         </div>
 
                     </div>

@@ -38,7 +38,7 @@ class VideoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request , Video $video)
     {
         $request->validate([
             'title' => 'required',
@@ -47,8 +47,10 @@ class VideoController extends Controller
             'description' => 'required',
             'body' => 'required',
             'image' => 'required|mimes:jpg,jpeg,png,svg',
-            'video' => 'required|mimes:mp4,mkv,mov,avi,wmv,avc',
+            'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
             'tags' => 'required',
+            'youtube' => 'nullable',
+            'aparat' => 'nullable',
 
         ]);
 
@@ -58,8 +60,10 @@ class VideoController extends Controller
             $fileNameImage = generateFileName($request->image->getClientOriginalName());
             $request->image->move(public_path(env('VIDEO_IMAGES_UPLOAD_PATH')), $fileNameImage);
 
-            $fileNameVideo = generateFileName($request->video->getClientOriginalName());
-            $request->video->move(public_path(env('VIDEO_VIDEO_UPLOAD_PATH')), $fileNameVideo);
+            if ($request->has('video') && $request->video !== null) {
+                $fileNameVideo = generateFileName($request->video->getClientOriginalName());
+                $request->video->move(public_path(env('VIDEO_VIDEO_UPLOAD_PATH')), $fileNameVideo);
+            }
 
 
             Video::create([
@@ -69,9 +73,11 @@ class VideoController extends Controller
                 'description' => $request->description,
                 'body' => $request->body,
                 'image' => $fileNameImage,
-                'video' => $fileNameVideo,
+                'video' => $request->video !== null ? $fileNameVideo : $video->video,
                 'time' => $request->time,
                 'tags' => $request->tags,
+                'youtube' => $request->youtube,
+                'aparat' => $request->aparat,
                 'is_active' => $request->is_active,
             ]);
 
@@ -127,6 +133,8 @@ class VideoController extends Controller
             'image' => 'nullable|mimes:jpg,jpeg,png,svg',
             'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
             'tags' => 'required',
+            'aparat' => 'nullable',
+            'youtube' => 'nullable',
         ]);
 
         try {
@@ -154,6 +162,8 @@ class VideoController extends Controller
                 'video' => $request->has('video') ? $fileNameVideo : $video->video,
                 'time' => $request->time,
                 'tags' => $request->tags,
+                'youtube' => $request->youtube,
+                'aparat' => $request->aparat,
                 'is_active' => $request->is_active,
             ]);
 

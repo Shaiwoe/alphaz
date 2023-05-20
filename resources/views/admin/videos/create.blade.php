@@ -32,7 +32,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="title" class="block mb-2 text-sm font-medium text-gray-100">عنوان</label>
-                            <input type="text" name="title" id="title"
+                            <input type="text" name="title" id="title" value="{{ old('title') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
@@ -52,8 +52,9 @@
 
                         <div class="flex flex-col w-full">
                             <label for="type" class="block mb-2 text-sm font-medium text-gray-100">نوع</label>
-                            <input type="text" name="type" id="type"
-                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400">
+                            <input type="text" name="type" id="type"  value="{{ old('type') }}"
+                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
+                                placeholder="رایگان را وارد کنید" >
                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                         </div>
 
@@ -78,7 +79,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="time" class="block mb-2 text-sm font-medium text-gray-100">زمان</label>
-                            <input type="text" name="time" id="time"
+                            <input type="text" name="time" id="time" value="{{ old('time') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="00:00:00">
                             <x-input-error :messages="$errors->get('time')" class="mt-2" />
@@ -86,7 +87,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="tags" class="block mb-2 text-sm font-medium text-gray-100">تگ</label>
-                            <input type="text" name="tags" id="tags"
+                            <input type="text" name="tags" id="tags" value="{{ old('tags') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="تگ ها را , از هم جدا کنید">
                             <x-input-error :messages="$errors->get('tags')" class="mt-2" />
@@ -107,11 +108,29 @@
 
                     <div class="flex flex-col gap-4 w-full">
                         <div class="flex flex-col w-full">
-                            <label for="description" class="block mb-2 text-sm font-medium text-gray-100">توضیح
-                                کوتاه</label>
-                            <textarea rows="5" type="text" name="description" id="description"
+                            <label for="youtube" class="block mb-2 text-sm font-medium text-gray-100">لینک یوتیوب
+                                </label>
+                            <textarea rows="1" type="text" name="youtube" id="youtube"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
-                                placeholder="توضیحات ویدیو را وارد کنید" value="{{ old('description') }}"></textarea>
+                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('youtube') }}"></textarea>
+                            <x-input-error :messages="$errors->get('youtube')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="aparat" class="block mb-2 text-sm font-medium text-gray-100">لینک آپارات
+                                </label>
+                            <textarea rows="1" type="text" name="aparat" id="aparat"
+                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
+                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('aparat') }}"></textarea>
+                            <x-input-error :messages="$errors->get('aparat')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-100">توضیحات
+                                </label>
+                            <textarea rows="3" type="text" name="description" id="description"
+                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
+                                placeholder=" توضیحات ویدیو را وارد کنید" value="{{ old('description') }}"></textarea>
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>
 
