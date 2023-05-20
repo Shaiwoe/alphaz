@@ -72,6 +72,29 @@
             </div>
 
 
+            <div class="w-full flex bg-coin1 mt-24  p-4" id="coinBox">
+                @foreach ($padcasts as $padcast)
+                    <div class="flex w-full">
+                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
+                            <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}">
+                                <img class="rounded-t-xl w-full h-36"
+                                    src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $padcast->image) }}"
+                                    alt="">
+                            </a>
+
+                            <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
+                                {{ $padcast->title }}
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="flex w-full justify-center items-center ">
+                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-b-full">آخرین پادکست سایت</p>
+            </div>
+
+
         </div>
     </div>
 
