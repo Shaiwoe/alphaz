@@ -86,7 +86,7 @@
             </div>
 
 
-            <a  href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow6" data-tooltip-placement="left" type="button">
+            <a  href="{{ route('home.padcasts.index') }}" data-tooltip-target="tooltip-no-arrow6" data-tooltip-placement="left" type="button">
                 <svg  class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 23.642 36.597">
                 <g id="Group_44" data-name="Group 44" transform="translate(1 1)">
                     <path class="stroke-white dark:stroke-dark8" id="Path_5810" data-name="Path 5810" d="M13.637,1A4.637,4.637,0,0,0,9,5.637V18a4.637,4.637,0,0,0,9.275,0V5.637A4.637,4.637,0,0,0,13.637,1Z" transform="translate(-2.817 -1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>

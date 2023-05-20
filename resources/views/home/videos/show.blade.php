@@ -86,9 +86,9 @@
             </div>
 
 
-            <div class="flex w-full gap-10">
+            <div class="flex flex-col-reverse lg:flex-row w-full gap-10">
                 <div
-                    class="flex flex-col bg-coin1 dark:bg-white h-full rounded-2xl z-40 p-4 w-3/12 space-y-8 text-white dark:text-gray-600">
+                    class="flex flex-col bg-coin1 dark:bg-white h-full rounded-2xl z-40 p-4 lg:w-3/12 space-y-8 text-white dark:text-gray-600">
                     <p class="bg-coin1 dark:bg-white text-center p-2 rounded-md">اطلاعات ویدیو</p>
                     <div class="flex justify-between">
                         <p>زمان انتشار : </p>
@@ -113,7 +113,7 @@
                 </div>
 
 
-                <div class="flex flex-col w-9/12 p-4 h-full text-white dark:text-gray-700  z-40 gap-8 bg-coin1 dark:bg-white"
+                <div class="flex flex-col lg:w-9/12 p-4 h-full text-white dark:text-gray-700  z-40 gap-8 bg-coin1 dark:bg-white"
                     id="coinBox">
 
 
