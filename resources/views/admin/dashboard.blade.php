@@ -26,17 +26,17 @@
         <!-- main -->
         <div class="flex flex-col w-10/12 mt-28 h-full overflow-y-auto p-4">
 
-            <div class="flex bg-coin1  p-4" id="coinBox">
+            <div class="w-full flex bg-coin1  p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="grid lg:grid-cols-4 gap-8 w-full">
-                        <div class="flex flex-col space-y-4 w-full">
+                    <div class="flex w-full">
+                        <div class="flex gap-8 justify-center items-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                <img class="rounded-t-xl w-full h-96"
+                                <img class="rounded-t-xl w-full h-36"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                     alt="">
                             </a>
 
-                            <p class="w-full">
+                            <p class="w-full text-sm">
                                 {{ $article->title }}
                             </p>
                         </div>
