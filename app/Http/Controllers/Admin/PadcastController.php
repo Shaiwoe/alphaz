@@ -28,10 +28,11 @@ class PadcastController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $cateporys = Catepory::where('parent_id', '!=' , 0)->get();
-        return view('admin.padcasts.create' , compact('cateporys'));
+        return view('admin.padcasts.create' , compact('cateporys','users'));
     }
 
     /**
@@ -105,10 +106,11 @@ class PadcastController extends Controller
      * @param  \App\Models\Padcast  $padcast
      * @return \Illuminate\Http\Response
      */
-    public function edit(Padcast $padcast)
+    public function edit(Padcast $padcast , Request $request)
     {
+        $users = $request->user();
         $cateporys = Catepory::where('parent_id', '!=' , 0)->get();
-        return view('admin.padcasts.edit' , compact('padcast' , 'cateporys'));
+        return view('admin.padcasts.edit' , compact('padcast' , 'cateporys', 'users'));
     }
 
     /**
