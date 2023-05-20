@@ -44,6 +44,33 @@
                 @endforeach
             </div>
 
+            <div class="flex w-full justify-center items-center ">
+                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-b-full">آخرین مقالات سایت</p>
+            </div>
+
+
+            <div class="w-full flex bg-coin1 mt-24  p-4" id="coinBox">
+                @foreach ($videos as $video)
+                    <div class="flex w-full">
+                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
+                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                <img class="rounded-t-xl w-full h-36"
+                                    src="{{ asset(env('VIDEOS_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                                    alt="">
+                            </a>
+
+                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
+                                {{ $video->title }}
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="flex w-full justify-center items-center ">
+                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-b-full">آخرین ویدیو سایت</p>
+            </div>
+
 
         </div>
     </div>
