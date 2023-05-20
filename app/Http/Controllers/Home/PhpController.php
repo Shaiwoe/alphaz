@@ -42,7 +42,7 @@ class PhpController extends Controller
     public function store(Request $request , Php $php)
     {
         $request->validate([
-            'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
+            'video' => 'nullable',
         ]);
 
         try {
