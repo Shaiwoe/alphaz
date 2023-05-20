@@ -1,10 +1,10 @@
-<div class="w-2/12 px-5 py-4  relative hidden md:block">
+<div class="w-2/12 px-5 py-4  relative z-50 hidden md:block">
     <div class="bg-coin1  shadow-xl rounded-lg z-50 lg:mt-24  w-full" id="coinBox">
         <div class="flex flex-col">
 
             <div class="flex gap-4 items-center">
                 <a href="{{ route('home.index') }}" class="flex justify-center items-center mt-8 px-4">
-                    <image class="" src="/image/profile2.png" alt="">
+                    <img class="" src="/image/profile2.png" alt="">
                 </a>
 
                 <div class="flex flex-col space-y-3 mt-8">
