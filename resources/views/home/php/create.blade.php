@@ -24,7 +24,7 @@
                 </div>
                 {{-- form create article  --}}
 
-                <form action="{{ route('videos.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('php.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="grid grid-cols-4 w-full gap-6  mb-6">
@@ -38,8 +38,6 @@
                         </div>
 
                     </div>
-
-
 
 
                     <div class="flex gap-4 mt-14">
