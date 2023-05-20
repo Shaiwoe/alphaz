@@ -14,10 +14,11 @@ class CateporyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $cateporys = Catepory::latest()->paginate(100);
-        return view('admin.cateporys.index', compact('cateporys'));
+        return view('admin.cateporys.index', compact('cateporys','users'));
     }
 
     /**

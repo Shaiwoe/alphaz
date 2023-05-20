@@ -14,10 +14,13 @@ class BannerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $users = $request->user();
+
         $banners = Banner::latest()->paginate(20);
-        return view('admin.banners.index', compact('banners'));
+        return view('admin.banners.index', compact('banners','users'));
     }
 
     /**

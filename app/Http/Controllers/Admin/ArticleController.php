@@ -16,10 +16,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $Articles = Article::latest()->search()->paginate(20);
-        return view('admin.articles.index', compact('Articles'));
+        return view('admin.articles.index', compact('Articles','users'));
     }
 
     /**
@@ -27,11 +28,12 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $tags = Tag::all();
         $Categorys = Category::where('parent_id', '!=' , 0)->get();
-        return view('admin.articles.create' , compact('tags' , 'Categorys'));
+        return view('admin.articles.create' , compact('tags' , 'Categorys','users'));
     }
 
     /**
@@ -90,10 +92,11 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Article $article , Request $request)
     {
+        $users = $request->user();
         $images = $article->images;
-        return view('admin.articles.show', compact('article', 'images'));
+        return view('admin.articles.show', compact('article', 'images', 'users'));
     }
 
     /**
@@ -102,11 +105,12 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Article $article , Request $request)
     {
+        $users = $request->user();
         $tags = Tag::all();
         $Categorys = Category::where('parent_id', '!=' , 0)->get();
-        return view('admin.articles.edit' , compact('article' , 'tags' , 'Categorys'));
+        return view('admin.articles.edit' , compact('article' , 'tags' , 'Categorys', 'users'));
     }
 
     /**

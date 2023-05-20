@@ -15,10 +15,12 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
+
         $videos = Video::latest()->paginate(20);
-        return view('admin.videos.index', compact('videos'));
+        return view('admin.videos.index', compact('videos','users'));
     }
 
     /**

@@ -15,10 +15,11 @@ class TagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $tags = Tag::latest()->paginate(10);
-        return view('admin.tags.index', compact('tags'));
+        return view('admin.tags.index', compact('tags','users'));
     }
 
     /**

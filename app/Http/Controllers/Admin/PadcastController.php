@@ -15,10 +15,12 @@ class PadcastController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $users = $request->user();
         $padcasts = Padcast::latest()->paginate(20);
-        return view('admin.padcasts.index', compact('padcasts'));
+        return view('admin.padcasts.index', compact('padcasts', 'users'));
     }
 
     /**

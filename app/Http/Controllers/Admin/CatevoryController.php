@@ -14,10 +14,11 @@ class CatevoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $catevorys = Catevory::latest()->paginate(100);
-        return view('admin.catevorys.index', compact('catevorys'));
+        return view('admin.catevorys.index', compact('catevorys','users'));
     }
 
     /**

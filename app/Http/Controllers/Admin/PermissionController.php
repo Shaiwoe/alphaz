@@ -16,10 +16,12 @@ class PermissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $users = $request->user();
         $permissions = Permission::latest()->paginate(50);
-        return view('admin.permissions.index', compact('permissions'));
+        return view('admin.permissions.index', compact('permissions', 'users'));
     }
 
     /**

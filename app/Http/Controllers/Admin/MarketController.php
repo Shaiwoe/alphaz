@@ -14,13 +14,16 @@ class MarketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $users = $request->user();
+
         $markets = Market::query()
         ->orderBy('created_at', 'ASC')
         ->where('is_active', 1)
         ->paginate(9);
-        return view('admin.markets.index', compact('markets'));
+        return view('admin.markets.index', compact('markets','users'));
     }
 
     /**

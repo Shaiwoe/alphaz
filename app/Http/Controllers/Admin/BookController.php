@@ -15,10 +15,13 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $users = $request->user();
+
         $books = Book::latest()->paginate(20);
-        return view('admin.books.index', compact('books'));
+        return view('admin.books.index', compact('books','users'));
     }
 
     /**

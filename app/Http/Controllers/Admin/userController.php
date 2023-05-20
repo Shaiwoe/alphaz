@@ -12,10 +12,12 @@ use Spatie\Permission\Models\Permission;
 
 class userController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::latest()->paginate(20);
-        return view('admin.users.index' , compact('users'));
+        $users = $request->user();
+
+        $userr = User::latest()->paginate(20);
+        return view('admin.users.index' , compact('userr','users'));
     }
 
     public function edit(User $user)

@@ -14,10 +14,11 @@ class CateboryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $cateborys = Catebory::latest()->paginate(100);
-        return view('admin.cateborys.index', compact('cateborys'));
+        return view('admin.cateborys.index', compact('cateborys','users'));
     }
 
     /**

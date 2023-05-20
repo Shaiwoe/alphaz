@@ -19,7 +19,7 @@
                 <!-- main  -->
                 <div class="flex flex-col space-y-12 w-full px-4 mt-8">
                     <div class="flex justify-between items-center">
-                        <p class="text-xl"> لیست کاربران - {{ $users->total() }}</p>
+                        <p class="text-xl"> لیست کاربران - {{ $userr->total() }}</p>
 
                     </div>
 
@@ -51,10 +51,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $key => $user)
+                                @foreach ($userr as $key => $user)
                                 <tr class=" text-white border-b bg-dark2 dark:border-gray-700 hover:bg-gray-800">
                                     <td class="px-6 py-4">
-                                        {{ $users->firstItem() + $key }}
+                                        {{ $userr->firstItem() + $key }}
                                     </td>
                                     <td class="px-6 py-4">
                                        <img class="w-8" src="/img/profile2.png" alt="">
@@ -91,7 +91,7 @@
                     {{-- paginate  --}}
                     {{-- paginate  --}}
                     <div class="paginate">
-                        {{  $users->render() }}
+                        {{  $userr->render() }}
                     </div>
 
                 </div>

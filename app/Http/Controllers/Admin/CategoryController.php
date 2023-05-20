@@ -14,10 +14,11 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $users = $request->user();
         $Categorys = Category::latest()->paginate(100);
-        return view('admin.categories.index', compact('Categorys'));
+        return view('admin.categories.index', compact('Categorys','users'));
     }
 
     /**
