@@ -32,7 +32,7 @@ class VideoController extends Controller
     {
         $users = $request->user();
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
-        return view('admin.videos.create', compact('catevorys'));
+        return view('admin.videos.create', compact('catevorys','users'));
     }
 
     /**
@@ -116,7 +116,7 @@ class VideoController extends Controller
     public function edit(Video $video, Request $request)
     {
         $users = $request->user();
-        
+
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
         return view('admin.videos.edit', compact('video', 'catevorys','users'));
     }
