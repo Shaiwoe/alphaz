@@ -13,14 +13,15 @@ class VideoController extends Controller
         $videos = Video::query()
             ->orderBy('updated_at', 'desc')
             ->where('is_active', 1)
+            ->search()
             ->paginate(9);
-        $videosBanners = Video::orderBy('created_at', 'desc')->take(1)->get();
-        return view('home.videos.index' , compact('videos' , 'videosBanners'));
+
+        return view('home.videos.index', compact('videos'));
     }
 
     public function show(Video $video)
     {
 
-        return view('home.videos.show' , compact('video'));
+        return view('home.videos.show', compact('video'));
     }
 }

@@ -54,7 +54,7 @@
                 مقاله ها
             </div>
 
-            <a  href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow4" data-tooltip-placement="left" type="button">
+            <a  href="{{ route('home.videos.index') }}" data-tooltip-target="tooltip-no-arrow4" data-tooltip-placement="left" type="button">
             <svg  class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 32 32">
             <g id="Group_45" data-name="Group 45" transform="translate(1 1)">
                 <rect class="stroke-white dark:stroke-dark8" id="Rectangle_5" data-name="Rectangle 5" width="30" height="30" rx="2.18" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>

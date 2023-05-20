@@ -50,8 +50,8 @@ Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.art
 Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'])->name('home.categories.show');
 Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->name('home.articles.show');
 
-Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index')->middleware(['permission:1']);
-Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show')->middleware(['permission:1']);
+Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
+Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 
 Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index')->middleware(['permission:1']);
 Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('home.books.show')->middleware(['permission:1']);
@@ -65,7 +65,7 @@ Route::get('/prices', [MarketController::class, 'coins'])->name('home.prices.ind
 Route::get('/prices/{market:id}/{slug}', [MarketController::class, 'show'])->name('home.prices.show');
 // Route::post('ckeditor/upload', [MarketController::class,'upload'])->name('ckeditor.upload');
 
-// Route::get('/coins', [MarketController::class, 'coins'])->name('home.coins');
+
 
 Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/faq', [FaqController::class, 'index'])->name('home.faq');
