@@ -113,10 +113,12 @@ class VideoController extends Controller
      * @param  \App\Models\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function edit(Video $video)
+    public function edit(Video $video, Request $request)
     {
+        $users = $request->user();
+        
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
-        return view('admin.videos.edit', compact('video', 'catevorys'));
+        return view('admin.videos.edit', compact('video', 'catevorys','users'));
     }
 
     /**
