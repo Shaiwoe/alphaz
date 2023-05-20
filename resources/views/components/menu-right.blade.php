@@ -74,7 +74,7 @@
                 فیلم ها
             </div>
 
-            <a  href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow5" data-tooltip-placement="left" type="button">
+            <a  href="{{ route('home.books.index') }}" data-tooltip-target="tooltip-no-arrow5" data-tooltip-placement="left" type="button">
             <svg  class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 38.069 32.917">
             <path class="stroke-white dark:stroke-dark8" id="book-outline" d="M50.035,71.729c1.288-5.085,6.154-7.682,16.746-7.729a1.283,1.283,0,0,1,1.288,1.288V88.476a1.288,1.288,0,0,1-1.288,1.288c-10.306,0-14.287,2.078-16.746,5.153-2.445-3.059-6.441-5.153-16.746-5.153A1.321,1.321,0,0,1,32,88.32V65.288A1.283,1.283,0,0,1,33.288,64C43.881,64.047,48.746,66.644,50.035,71.729Zm0,0V94.916" transform="translate(-31 -63)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
             </svg>

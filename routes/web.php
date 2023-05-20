@@ -58,8 +58,8 @@ Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 
-Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index')->middleware(['permission:1']);
-Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('home.books.show')->middleware(['permission:1']);
+Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index');
+Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('home.books.show');
 
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');

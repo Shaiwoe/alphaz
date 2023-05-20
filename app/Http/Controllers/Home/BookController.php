@@ -13,14 +13,15 @@ class BookController extends Controller
         $books = Book::query()
             ->orderBy('updated_at', 'desc')
             ->where('is_active', 1)
+            ->search()
             ->paginate(9);
-        $booksBanners = Book::orderBy('created_at', 'desc')->take(1)->get();
-        return view('home.books.index' , compact('books' , 'booksBanners'));
+
+        return view('home.books.index', compact('books'));
     }
 
     public function show(Book $book)
     {
 
-        return view('home.books.show' , compact('book'));
+        return view('home.books.show', compact('book'));
     }
 }
