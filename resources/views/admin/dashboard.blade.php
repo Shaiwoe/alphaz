@@ -75,7 +75,7 @@
 
             <div class="w-full flex bg-coin1 mt-24  p-4" id="coinBox">
                 @foreach ($padcasts as $padcast)
-                    <div class="flex w-full">
+                    <div class="flex w-full gap-4">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}">
                                 <img class="rounded-t-xl w-full h-36"
