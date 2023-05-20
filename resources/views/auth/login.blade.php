@@ -26,7 +26,7 @@
     <div class="hidden lg:block absolute right-0 top-[17%]">
         <image class="" src="/image/vector3.svg" alt="">
     </div>
-    <div class="absolute bottom-0 left-[30%]">
+    <div class="hidden lg:block absolute bottom-0 left-[30%]">
         <image class="" src="/image/vector3.svg" alt="">
     </div>
 
@@ -35,18 +35,18 @@
 
 
     <div class="w-full flex flex-col-reverse lg:flex-row container mx-auto relative text-white dark:text-gray-700 p-8">
-        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-64 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
+        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-64 bg-coin1 dark:bg-white  p-2 lg:p-8 self-center  dark:shadow-2xl"
             id="coinBox">
 
 
             <a href="{{ route('auth.google') }}" id="coinBox"
-                class="bg-coin1 py-3  text-white rounded-lg flex justify-center gap-4 items-center">
-                <img class="w-14" src="/image/google-symbol.png" alt="">
+                class="bg-coin1 dark:bg-gray-100 py-1  text-white dark:text-gray-700 rounded-lg flex justify-center gap-4 items-center">
+                <img class="w-10" src="/image/google-symbol.png" alt="">
                 ورود یا ثبت نام با گوگل
             </a>
 
             <a href="{{ route('auth.provider', ['provider' => 'github']) }}" id="coinBox"
-                class="bg-coin1 py-3  text-white rounded-lg flex justify-center gap-4 items-center">
+                class="bg-coin1 dark:bg-gray-100 py-1  text-white dark:text-gray-700 rounded-lg flex justify-center gap-4 items-center">
                 <img class="w-10" src="/image/github.png" alt="">
                 ورود یا ثبت نام با گیت
             </a>
