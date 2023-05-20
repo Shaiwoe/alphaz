@@ -2,9 +2,14 @@
     <div class="flex flex-col w-11/12  lg:justify-end">
         <div id=""
             class="w-full flex flex-col lg:flex-row items-center container mx-auto  p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
-            <div class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50 dark:text-black">
-                <img class="w-full lg:w-8/12" src="image/logo-dark.png" alt="">
-                <p class="left-8 text-xs lg:text-base text-justify">امروزه بیشتر از هر زمان دیگری ، دنیای بلاکچین و رمزارزها پر آوازه
+            <div
+                class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50 dark:text-black">
+                {{-- <img class="w-full lg:w-8/12" src="image/logo-dark.png" alt=""> --}}
+                <img id="" class="logo_dark_el hidden w-full lg:w-8/12" src="/image/logo-white.png" alt="">
+                <img id="" class="logo_light_el hidden w-full lg:w-8/12" src="/image/logo-dark.png"
+                    alt="">
+                <p class="left-8 text-xs lg:text-base text-justify">امروزه بیشتر از هر زمان دیگری ، دنیای بلاکچین و
+                    رمزارزها پر آوازه
                     شده و کمتر کسی پیدا میشه که نام رمز ارز
                     ها را نشنیده باشه یا با دنیای بلاک چین آشنا نباشه . اما آشنایی ساده کافی نیست برای این که به این
                     دنیای
@@ -28,7 +33,8 @@
             </div>
 
             <div class="flex flex-col gap-8 z-50">
-                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://www.instagram.com/alpharency/">
+                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
+                    href="https://www.instagram.com/alpharency/">
 
                     <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/instagram.svg" alt="">
 
@@ -37,10 +43,12 @@
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://t.me/alpharency">
                     <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/send.svg" alt="">
                 </a>
-                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://www.youtube.com/@alpharency">
+                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
+                    href="https://www.youtube.com/@alpharency">
                     <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/youtube.svg" alt="">
                 </a>
-                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://twitter.com/alpharency">
+                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
+                    href="https://twitter.com/alpharency">
                     <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/twitter.svg" alt="">
                 </a>
             </div>

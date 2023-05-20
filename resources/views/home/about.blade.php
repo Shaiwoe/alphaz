@@ -31,7 +31,8 @@
     </div>
 
     <div class="w-full flex flex-col-reverse lg:flex-row container mx-auto relative text-white dark:text-gray-700 p-8">
-        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"  id="coinBox">
+        <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
+            id="coinBox">
             <p class="text-center lg:text-3xl mt-8">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>
             <p class="leading-10 text-xs lg:text-lg text-justify">
                 مجموعه آلفارنسی از سال ۲۰۱۹ فعالیت خودش را همراه با رزومه‌ای درخشان (سودهای 400 الی 1300 درصدی ) و تیم
@@ -49,7 +50,12 @@
 
         <div class="relative w-full flex justify-end z-40 mt-16 lg:mt-64">
             <img class="w-full lg:w-7/12" src="image/svg/about-svg.svg" alt="">
-            <img class="absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500" src="image\logo-dark.png" alt="">
+            <img id=""
+                class="logo_dark_el hidden absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500"
+                src="/image/logo-white.png" alt="">
+            <img id=""
+                class="logo_light_el hidden absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500"
+                src="/image/logo-dark.png" alt="">
         </div>
 
 
@@ -60,8 +66,7 @@
 
 
 
-    <div
-        class="flex flex-col justify-center items-center container mx-auto text-white space-y-8 p-8">
+    <div class="flex flex-col justify-center items-center container mx-auto text-white space-y-8 p-8">
         <div class="lg:text-2xl z-50 mt-15 lg:mt-36 dark:text-black">
             <p>محتوا هایی که در آلفارنسی مشاهده میکنید</p>
         </div>
