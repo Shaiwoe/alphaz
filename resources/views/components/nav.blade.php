@@ -59,7 +59,7 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffset1" class="z-50 hidden bg-coin1 divide-y divide-gray-100 rounded shadow w-64">
+                    <div id="dropdownOffset1" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('users.index') }}"
