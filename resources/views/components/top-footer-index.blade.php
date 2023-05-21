@@ -1,5 +1,5 @@
 <div class="container mx-auto text-gray-100 flex justify-end mt-8 lg:mt-24 px-4 sm:px-8">
-    <div class="flex flex-col w-11/12  lg:justify-end">
+    <div class="flex flex-col lg:w-11/12 justify-center  lg:justify-end">
         <div id=""
             class="w-full flex flex-col lg:flex-row items-center container mx-auto  p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
             <div
@@ -21,7 +21,7 @@
                     ای و با دانش کافی وارد این عرصه بشین ، آلفارنسی میتونه بهترین انتخاب باشه واستون .
                 </p>
             </div>
-            <div class="p-1 h-5/6 border-r-4 border-white dark:border-black"></div>
+            <div class="p-1 h-5/6 lg:border-r-4 border-white dark:border-black"></div>
             <div class="flex flex-col justify-center items-center space-y-6 w-4/12 z-50 dark:text-black">
                 <ul class="space-y-6 text-sm lg:text-lg">
                     <li><a href="{{ route('home.index') }}">صفحه اصلی</a></li>
@@ -32,24 +32,23 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col gap-8 z-50">
+            <div class="flex lg:flex-col gap-4 lg:gap-8 z-50 mt-12">
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://www.instagram.com/alpharency/">
 
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/instagram.svg" alt="">
-
+                    <img class="w-4 h-4 xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/instagram.svg" alt="">
 
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://t.me/alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/send.svg" alt="">
+                    <img class="w-4 h-4 xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/send.svg" alt="">
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://www.youtube.com/@alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/youtube.svg" alt="">
+                    <img class="w-4 h-4 xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/youtube.svg" alt="">
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://twitter.com/alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/twitter.svg" alt="">
+                    <img class="w-4 h-4 xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/twitter.svg" alt="">
                 </a>
             </div>
         </div>

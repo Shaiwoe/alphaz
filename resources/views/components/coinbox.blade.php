@@ -1,5 +1,5 @@
 {{-- coin box  --}}
-<div class="container mx-auto text-gray-100 flex justify-end mt-24 px-4 sm:px-8">
+<div class="container mx-auto text-gray-100 flex justify-center lg:justify-end mt-24  sm:px-8">
     <div class="flex flex-col w-11/12   lg:justify-end ">
         <div id="coinBox" class="bg-coin1 dark:bg-white p-2 lg:p-12">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-8">
