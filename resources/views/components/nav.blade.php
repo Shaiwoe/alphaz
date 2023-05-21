@@ -15,7 +15,7 @@
             </div>
 
             <ul class="flex flex-col text-white dark:text-gray-600 mt-4 space-y-6 text-lg px-4 py-16">
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -28,7 +28,7 @@
                 </li>
 
                 @can('Market')
-                    <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -41,7 +41,7 @@
                 @endcan
 
                 @can('Manager')
-                    <div class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -80,7 +80,7 @@
 
                 @can('New')
                     {{-- article  --}}
-                    <div class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -99,23 +99,23 @@
                     </div>
 
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffset" class="z-50 hidden bg-dark2 divide-y divide-gray-100 rounded shadow w-64">
+                    <div id="dropdownOffset" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('articles.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">لیست اخبار</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست اخبار</a>
                             </li>
                             <li>
                                 <a href="{{ route('articles.create') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">اخبار جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">اخبار جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('categories.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
                             </li>
                             <li>
                                 <a href="{{ route('tags.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">تگ ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ ها</a>
                             </li>
                         </ul>
                     </div>
@@ -124,7 +124,7 @@
 
                 @can('Video')
                     {{-- video  --}}
-                    <div class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round"
@@ -142,19 +142,19 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetV" class="z-50 hidden bg-dark2 divide-y divide-gray-100 rounded shadow w-64">
+                    <div id="dropdownOffsetV" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('videos.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">لیست ویدیو ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست ویدیو ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('videos.create') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">ویدیو جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">ویدیو جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('catevorys.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
                             </li>
 
                         </ul>
@@ -163,7 +163,7 @@
 
                 @can('Padcast')
                     {{-- padcast  --}}
-                    <div class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -181,19 +181,19 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetP" class="z-50 hidden bg-dark2 divide-y divide-gray-100 rounded shadow w-64">
+                    <div id="dropdownOffsetP" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('padcasts.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">لیست پادکست ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست پادکست ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('padcasts.create') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">پادکست جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">پادکست جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('cateporys.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
                             </li>
 
                         </ul>
@@ -202,7 +202,7 @@
 
                 @can('Book')
                     {{-- books  --}}
-                    <div class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -220,19 +220,19 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetB" class="z-50 hidden bg-dark2 divide-y divide-gray-100 rounded shadow w-64">
+                    <div id="dropdownOffsetB" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('books.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">لیست کتاب ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست کتاب ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('books.create') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">کتاب جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">کتاب جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('cateborys.index') }}"
-                                    class="block px-4 py-2 hover:bg-yellow-500 hover:rounded-md">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
                             </li>
                         </ul>
                     </div>
@@ -242,7 +242,7 @@
 
 
                 @can('Banner')
-                    <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                    <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -252,7 +252,7 @@
                     </li>
                 @endcan
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -262,7 +262,7 @@
                     <a href="{{ route('dashboard') }}">لیست مورد علاقه ها</a>
                 </li>
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -272,7 +272,7 @@
                     <a href="{{ route('dashboard') }}">انجمن پرسش پاسخ</a>
                 </li>
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -282,7 +282,7 @@
                     <a href="{{ route('dashboard') }}">اطلاع رسانی وبینار</a>
                 </li>
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -292,7 +292,7 @@
                     <a href="{{ route('dashboard') }}">امتیازهای من</a>
                 </li>
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -302,7 +302,7 @@
                     <a href="{{ route('dashboard') }}">محتوای ویژه</a>
                 </li>
 
-                <li class="flex items-center gap-4 hover:border-l-8 border border-gray-400 rounded-full  p-2 ">
+                <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2 ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -314,7 +314,7 @@
                 </li>
 
                 <form method="POST" action="{{ route('logout') }}"
-                    class="flex items-center gap-4 hover:border-l-8  border border-gray-400 rounded-full  p-2 ">
+                    class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2 ">
                     @csrf
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">

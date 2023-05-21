@@ -454,3 +454,10 @@ img {
 }
 
 
+.dropdown_menu_dash{
+    inset: 10px 12px auto auto !important;
+}
+.dropdown_menu_dash,ul,li{
+
+}
+
