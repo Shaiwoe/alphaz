@@ -88,7 +88,7 @@
                         </div>
 
                         <div class="flex gap-4 mt-14">
-                            <button type="submit" class="bg-green-500 hover:bg-green-600 w-full lg:w-1/12 p-2 rounded-lg  text-white ">ثبت</button>
+                            <button type="submit" class="bg-yellow-300 hover:bg-yellow-500 w-full lg:w-1/12 p-2 rounded-lg  text-white ">ثبت</button>
                             <a href="{{ route('users.index') }}" class="bg-red-500 text-center hover:bg-red-600 w-full lg:w-1/12 p-2 p-2 rounded-lg text-white">بازگشت</a>
                         </div>
 

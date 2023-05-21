@@ -29,9 +29,10 @@ class PermissionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.permissions.create');
+        $users = $request->user();
+        return view('admin.permissions.create', compact('users'));
     }
 
     /**
@@ -73,9 +74,10 @@ class PermissionController extends Controller
      * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function show(Permission $permission)
+    public function show(Permission $permission , Request $request)
     {
-        //
+        $users = $request->user();
+        return view('admin.permissions.create', compact('users'));
     }
 
     /**
@@ -84,8 +86,9 @@ class PermissionController extends Controller
      * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function edit(Permission $permission)
+    public function edit(Permission $permission, Request $request)
     {
+        $users = $request->user();
         return view('admin.permissions.edit' , compact('permission'));
     }
 

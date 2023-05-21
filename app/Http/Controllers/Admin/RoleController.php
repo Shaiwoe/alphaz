@@ -30,10 +30,11 @@ class RoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $permissions = Permission::all();
-        return view('admin.roles.create' , compact('permissions'));
+        return view('admin.roles.create' , compact('permissions','users'));
     }
 
     /**
@@ -79,9 +80,10 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(Role $role, Request $request)
     {
-        return view('admin.roles.show', compact('role'));
+        $users = $request->user();
+        return view('admin.roles.show', compact('role','users'));
     }
 
     /**
@@ -90,10 +92,11 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $role)
+    public function edit(Role $role, Request $request)
     {
+        $users = $request->user();
         $permissions = Permission::all();
-        return view('admin.roles.edit' , compact('role' ,'permissions'));
+        return view('admin.roles.edit' , compact('role' ,'permissions','users'));
     }
 
     /**

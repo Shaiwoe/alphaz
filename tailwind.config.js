@@ -34,7 +34,6 @@ module.exports = {
                 'white3': '#f4f3ee',
                 'indigo-1': '#090C35',
                 'indigo-2': '#090C35',
-                'green2': '#08b5bd',
                 'icon': '#FFFFFF2B',
                 'button1': '#08B5BD91',
                 'form1': '#FFFFFF2B',
