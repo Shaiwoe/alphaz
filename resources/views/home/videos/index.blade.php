@@ -107,7 +107,7 @@
                                 </p>
                             </a>
                             <p class="text-center text-gray-500 text-sm">و
-                                {{ Str::limit($video->body, 80) }}
+                                {{ Str::limit($video->description, 80) }}
                             </p>
 
                             <div class="flex justify-between px-2 lg:px-4">

@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @vite('resources/css/app.css')
     <title>Document</title>
 </head>
 
-<body class="bg-dark3 text-gray-200">
+<body class="bg-indigo-1 dark:bg-white1">
+
+    {{-- header  --}}
+    @include('components/header')
+
+    @include('components/light')
+
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full h-screen overflow-y-auto p-4">
-            <!-- nav header -->
-            @include('components/navHeader')
+        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
+
             <!-- main  -->
             <div class="flex flex-col space-y-12 w-full px-4 mt-8">
                 <div class="flex justify-between items-center">
                     <p class="text-xl"> اخبار ها - {{ $Articles->total() }}</p>
                     <a href="{{ route('articles.create') }}"
-                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center">
+                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center text-white dark:text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -34,7 +41,7 @@
 
                 <form class="mt-44 z-40">
                     <label for="default-search"
-                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                        class="mb-2 text-sm font-medium text-white dark:text-gray-600 sr-only ">Search</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg aria-hidden="true" class="w-7 h-7 text-gray-100 dark:text-gray-800" fill="none"
@@ -53,8 +60,8 @@
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-                    <table class="w-full text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-gray-100 uppercase bg-gray-900">
+                    <table class="w-full text-right text-white dark:text-gray-600">
+                        <thead class="text-gray-100 uppercase bg-coin1 dark:bg-gray-100">
                             <tr>
 
                                 <th scope="col" class="px-6 py-3">
@@ -77,7 +84,7 @@
                         </thead>
                         <tbody>
                             @foreach ($Articles as $key => $article)
-                                <tr class="bg-dark2 text-white border-b border-gray-700 hover:bg-gray-800">
+                                <tr class="bg-coin1 dark:bg-gray-100 text-white border-b border-gray-700 hover:bg-gray-500">
                                     <td class="px-6 py-4">
                                         {{ $Articles->firstItem() + $key }}
                                     </td>
