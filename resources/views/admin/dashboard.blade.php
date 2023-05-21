@@ -51,50 +51,32 @@
 
 
             <div class="flex w-full justify-center items-center mt-16">
-                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین ویدیو سایت</p>
+                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">محتوا مرتبط با سلیقه شما </p>
             </div>
 
-            <div class="w-full flex flex-col lg:flex-row bg-coin1  gap-8  p-4" id="coinBox">
-                @foreach ($videos as $video)
-                    <div class="flex w-full">
-                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
-                                <img class="rounded-t-xl w-full h-36"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
+            <div class="w-full grid grid-cols-4 gap-4 bg-coin1 p-4" id="coinBox">
+                @foreach ($articless as $article)
+                    <div class="flex w-full bg-coin1" id="coinBox">
+                        <div class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <img class="rounded-t-xl w-full h-44"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                     alt="">
                             </a>
 
-                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
-                                {{ $video->title }}
-                            </a>
+                            <div class="flex flex-col space-y-4 p-4">
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
+                                    {{ $article->title }}
+                                </a>
+
+                                <p>
+                                    {{ Str::limit($article->description, 80) }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-
-
-            <div class="flex w-full justify-center items-center mt-16">
-                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین پادکست سایت</p>
-            </div>
-
-            <div class="w-full flex flex-col lg:flex-row gap-8 bg-coin1   p-4" id="coinBox">
-                @foreach ($padcasts as $padcast)
-                    <div class="flex w-full gap-4">
-                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                            <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}">
-                                <img class="rounded-t-xl w-full h-36"
-                                    src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $padcast->image) }}"
-                                    alt="">
-                            </a>
-
-                            <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
-                                {{ $padcast->title }}
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
 
 
 

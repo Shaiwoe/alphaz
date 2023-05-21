@@ -17,9 +17,9 @@ class DashbordController extends Controller
     {
         $users = $request->user();
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
-        $videos = Video::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
+        $articless = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(8)->get();
         $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
 
-        return view('admin.dashboard', compact('users', 'articles', 'videos', 'padcasts'));
+        return view('admin.dashboard', compact('users', 'articles', 'articless', 'padcasts'));
     }
 }
