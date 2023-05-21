@@ -52,4 +52,15 @@ class User extends Authenticatable implements MustVerifyEmail
         $date = verta()->jalaliToGregorian($v->year, $v->month, $v->day);
         return $query->where('created_at', '>', Carbon::create($date[0], $date[1], $date[2], 0, 0, 0))->get();
     }
+
+
+    public function scopeSearch($query)
+    {
+        $keyword = request()->query('search');
+        if (request()->query('search') && trim($keyword) != '') {
+            $query->where('email', 'LIKE', '%'. trim($keyword) .'%');
+        }
+
+        return $query;
+    }
 }

@@ -16,15 +16,17 @@ class userController extends Controller
     {
         $users = $request->user();
 
-        $userr = User::latest()->paginate(20);
+        $userr = User::latest()->search()->paginate(20);
+
         return view('admin.users.index' , compact('userr','users'));
     }
 
-    public function edit(User $user)
+    public function edit(User $user, Request $request)
     {
+        $users = $request->user();
         $roles = Role::all();
         $permissions = Permission::all();
-        return view('admin.users.edit' , compact('user' , 'roles' , 'permissions'));
+        return view('admin.users.edit' , compact('user' , 'roles' , 'permissions', 'users'));
 
     }
 
