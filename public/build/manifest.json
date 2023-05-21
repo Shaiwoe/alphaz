@@ -3,10 +3,6 @@
     "file": "assets/medium-6c3f5d27.woff2",
     "src": "public/fonts/medium.woff2"
   },
-  "public/fonts/light.woff2": {
-    "file": "assets/light-bf19f76e.woff2",
-    "src": "public/fonts/light.woff2"
-  },
   "public/fonts/Yekan-Bakh-FaNum-05-Medium.woff": {
     "file": "assets/Yekan-Bakh-FaNum-05-Medium-d807027d.woff",
     "src": "public/fonts/Yekan-Bakh-FaNum-05-Medium.woff"
@@ -15,8 +11,12 @@
     "file": "assets/NovaSquare-Regular-8359deb4.ttf",
     "src": "public/fonts/NovaSquare-Regular.ttf"
   },
+  "public/fonts/light.woff2": {
+    "file": "assets/light-bf19f76e.woff2",
+    "src": "public/fonts/light.woff2"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-c4f02647.css",
+    "file": "assets/app-e33b540b.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
