@@ -20,16 +20,19 @@
     {{-- header  --}}
     @include('components/header')
 
-    @include('components/light')
-
-
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute top-0 left-0">
+            <img src="/image/tinified/1.png" alt="">
+        </div>
+    </div>
 
 
     <div class="light dark:opacity-40 relative w-full">
-        <div class="absolute right-0">
-            <img src="/image/tinified/5.png" alt="">
+        <div class="absolute top-[100%] right-0">
+            <img src="/image/tinified/2.png" alt="">
         </div>
     </div>
+    
     <!-- main -->
     <div class="container mx-auto p-4 sm:p-8 text-white">
         <div class="flex flex-col space-y-4 sm:space-y-8">
@@ -157,11 +160,6 @@
     <!-- footer  -->
     @include('components/footer')
 
-    <div class="light dark:opacity-40 relative w-full">
-        <div class="absolute bottom-[100%]">
-            <img src="/image/tinified/6.png" alt="">
-        </div>
-    </div>
 
 </body>
 
