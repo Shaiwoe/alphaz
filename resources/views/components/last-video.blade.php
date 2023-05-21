@@ -2,8 +2,8 @@
     <div class="flex flex-col w-11/12  lg:justify-end">
         <div id="coinBox" class="bg-coin1 dark:bg-white p-2">
             <div class="hidden text-white dark:text-gray-700 lg:flex justify-between p-4">
-                <p>آخرین مقالات</p>
-                <a href="{{ route('home.articles.index') }}" class="flex gap-1 text-sm items-center">
+                <p>آخرین ویدیوها</p>
+                <a href="{{ route('home.videos.index') }}" class="flex gap-1 text-sm items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -16,30 +16,30 @@
             <div class="container swiper lg:px-12">
                 <div class="slide-container ">
                     <div class="card-wrapper swiper-wrapper ">
-                        @foreach ($articles as $article)
+                        @foreach ($videos as $video)
                             <div class="card swiper-slide">
                                 <div class="bg-blue1 dark:bg-white1 text-white dark:text-gray-700 rounded-xl flex flex-col space-y-6">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
                                         <img class="rounded-t-xl h-56 max-h-44"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">{{ $article->title }}</p>
+                                    <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                        <p class="text-sm font-bold text-center">{{ $video->title }}</p>
                                     </a>
                                     <p class="hidden lg:flex text-center text-gray-400 text-sm px-2 py-3">و
-                                        {{ Str::limit($article->description, 80) }}
+                                        {{ Str::limit($video->description, 50) }}
                                     </p>
 
                                     <div class="flex items-center justify-between py-1 px-3">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
                                             class="bg-button1 flex mt-3 rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده ویدیو
                                         </a>
 
                                         <div class="flex items-center gap-4">
