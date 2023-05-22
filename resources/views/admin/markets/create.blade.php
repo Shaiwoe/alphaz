@@ -121,7 +121,7 @@
 
                     <div class="flex gap-4 mt-14">
                         <button type="submit"
-                            class="bg-yellow-300 hover:bg-yellow-500 w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
+                            class="bg-green-400 hover:bg-green-500 w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
                         <a href="{{ route('markets.index') }}"
                             class="bg-red-500 text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
                     </div>
