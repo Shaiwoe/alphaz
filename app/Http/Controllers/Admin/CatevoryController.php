@@ -26,10 +26,11 @@ class CatevoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $catevorys = Catevory::where('parent_id', 0)->get();
-        return view('admin.catevorys.create', compact('catevorys'));
+        return view('admin.catevorys.create', compact('catevorys', 'users'));
     }
 
     /**
@@ -73,9 +74,10 @@ class CatevoryController extends Controller
      * @param  \App\Models\Catevory  $catevory
      * @return \Illuminate\Http\Response
      */
-    public function show(Catevory $catevory)
+    public function show(Catevory $catevory , Request $request)
     {
-        return view('admin.catevorys.show', compact('catevory'));
+        $users = $request->user();
+        return view('admin.catevorys.show', compact('catevory','users'));
     }
 
     /**
@@ -84,10 +86,11 @@ class CatevoryController extends Controller
      * @param  \App\Models\Catevory  $catevory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Catevory $catevory)
+    public function edit(Catevory $catevory , Request $request)
     {
+        $users = $request->user();
         $catevorys = Catevory::where('parent_id', 0)->get();
-        return view('admin.catevorys.edit', compact('catevory', 'catevorys'));
+        return view('admin.catevorys.edit', compact('catevory', 'catevorys', 'users'));
     }
 
     /**

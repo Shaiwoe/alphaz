@@ -34,7 +34,7 @@
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 min-h-screen">
 
             <!-- main  -->
             <div class="flex flex-col space-y-12 w-full px-4 mt-8">
@@ -71,8 +71,8 @@
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-                    <table class="w-full text-right text-white dark:text-gray-600">
-                        <thead class=" uppercase bg-coin1 dark:bg-gray-100">
+                    <table class="w-full text-right bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600">
+                        <thead class=" uppercase ">
                             <tr>
 
                                 <th scope="col" class="px-6 py-3">
