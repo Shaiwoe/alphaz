@@ -1,4 +1,8 @@
 {
+  "public/fonts/medium.woff2": {
+    "file": "assets/medium-6c3f5d27.woff2",
+    "src": "public/fonts/medium.woff2"
+  },
   "public/fonts/light.woff2": {
     "file": "assets/light-bf19f76e.woff2",
     "src": "public/fonts/light.woff2"
@@ -11,12 +15,8 @@
     "file": "assets/Yekan-Bakh-FaNum-05-Medium-d807027d.woff",
     "src": "public/fonts/Yekan-Bakh-FaNum-05-Medium.woff"
   },
-  "public/fonts/medium.woff2": {
-    "file": "assets/medium-6c3f5d27.woff2",
-    "src": "public/fonts/medium.woff2"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-742b33db.css",
+    "file": "assets/app-864b5e00.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
