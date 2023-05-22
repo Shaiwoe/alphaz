@@ -131,7 +131,7 @@
                 </div>
 
                 {{-- paginate  --}}
-                <div class="paginate">
+                <div class="paginate mt-12">
                     {{ $markets->render() }}
                 </div>
 
