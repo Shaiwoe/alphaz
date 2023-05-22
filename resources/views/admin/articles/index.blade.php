@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>مقالات</title>
 </head>
 
 <body class="bg-indigo-1 dark:bg-white1">
@@ -17,7 +17,18 @@
     {{-- header  --}}
     @include('components/header')
 
-    @include('components/light')
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute top-0 left-0">
+            <img src="/image/tinified/1.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute top-[100%] right-0">
+            <img src="/image/tinified/2.png" alt="">
+        </div>
+    </div>
 
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
@@ -30,7 +41,7 @@
                 <div class="flex justify-between items-center">
                     <p class="text-xl"> اخبار ها - {{ $Articles->total() }}</p>
                     <a href="{{ route('articles.create') }}"
-                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center text-white dark:text-gray-600">
+                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -61,7 +72,7 @@
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
                     <table class="w-full text-right text-white dark:text-gray-600">
-                        <thead class="text-gray-100 uppercase bg-coin1 dark:bg-gray-100">
+                        <thead class=" uppercase bg-coin1 dark:bg-gray-100">
                             <tr>
 
                                 <th scope="col" class="px-6 py-3">
@@ -84,11 +95,11 @@
                         </thead>
                         <tbody>
                             @foreach ($Articles as $key => $article)
-                                <tr class="bg-coin1 dark:bg-gray-100 text-white border-b border-gray-700 hover:bg-gray-500">
+                                <tr class="bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-b border-gray-700 hover:bg-gray-400">
                                     <td class="px-6 py-4">
                                         {{ $Articles->firstItem() + $key }}
                                     </td>
-                                    <td class="px-6 py-4 text-white">
+                                    <td class="px-6 py-4 ">
                                         <a href="{{ $article->path() }}">
                                             {{ $article->title }}
                                         </a>
@@ -107,10 +118,7 @@
                                             href="{{ $article->path() }}">
                                             لینک
                                         </a>
-                                        <a class="flex bg-green-400 text-white px-4 py-2 rounded-md"
-                                            href="{{ route('articles.show', ['article' => $article->id]) }}">
-                                            نمایش
-                                        </a>
+
                                         <a class="flex bg-yellow-400 text-white px-4 py-2 rounded-md"
                                             href="{{ route('articles.edit', ['article' => $article->id]) }}">
                                             ویرایش

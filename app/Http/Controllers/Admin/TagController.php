@@ -27,9 +27,10 @@ class TagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.tags.create');
+        $users = $request->user();
+        return view('admin.tags.create' , compact('users'));
     }
 
     /**
@@ -68,9 +69,10 @@ class TagController extends Controller
      * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag)
+    public function show(Tag $tag, Request $request)
     {
-        return view('admin.tags.show' , compact('tag'));
+        $users = $request->user();
+        return view('admin.tags.show' , compact('tag', 'users'));
     }
 
     /**
@@ -79,9 +81,10 @@ class TagController extends Controller
      * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag)
+    public function edit(Tag $tag, Request $request)
     {
-        return view('admin.tags.edit' , compact('tag'));
+        $users = $request->user();
+        return view('admin.tags.edit' , compact('tag','users'));
     }
 
     /**

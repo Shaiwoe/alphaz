@@ -5,36 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>مقالات</title>
 </head>
 
-<body class="bg-dark3 text-gray-200">
+<body class="bg-indigo-1 dark:bg-white1">
+
+    {{-- header  --}}
+    @include('components/header')
+
+    @include('components/light')
+
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full h-screen overflow-y-auto p-4">
-            <!-- nav header -->
-            @include('components/navHeader')
+        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
             <!-- main  -->
             <div class="flex flex-col space-y-12 w-full px-4 mt-8">
                 <div class="flex justify-between items-center">
-                    <p class="text-xl"> اخبار : {{ $article->title }}</p>
+                    <p class="text-xl text-white dark:text-gray-600"> {{ $article->title }}</p>
                 </div>
 
                 {{-- Images --}}
-                <div class="grid w-full gap-12 bg-dark2 p-8 rounded-lg">
+                <div class="grid w-full gap-12 p-8 rounded-lg">
                     <div class="flex flex-col space-y-4">
-                        <p>تصویر اصلی</p>
                         <img class="max-h-52"
                             src="{{ url(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                             alt="{{ $article->name }}">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-5 w-full gap-6  mb-6">
+                <div class="grid lg:grid-cols-5 w-full gap-6  mb-6">
 
                     <div class="flex flex-col w-full">
                         <label for="title" class="block mb-2 text-sm font-medium text-gray-100 ">عنوان اخبار</label>

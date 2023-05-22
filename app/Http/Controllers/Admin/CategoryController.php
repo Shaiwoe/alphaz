@@ -17,6 +17,7 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
+
         $Categorys = Category::latest()->paginate(100);
         return view('admin.categories.index', compact('Categorys','users'));
     }
@@ -26,11 +27,12 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $Categorys = Category::all();
 
-        return view('admin.categories.create', compact('Categorys'));
+        return view('admin.categories.create', compact('Categorys','users'));
     }
 
     /**
@@ -85,11 +87,12 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Category $category, Request $request)
     {
+        $users = $request->user();
         $Categorys = Category::where('parent_id', 0)->get();
 
-        return view('admin.categories.edit', compact('category', 'Categorys'));
+        return view('admin.categories.edit', compact('category', 'Categorys','users'));
     }
 
     /**

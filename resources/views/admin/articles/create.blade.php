@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>ایجاد مقاله</title>
 </head>
 
 <body class="bg-indigo-1 dark:bg-white1">
@@ -16,39 +16,51 @@
     {{-- header  --}}
     @include('components/header')
 
-    @include('components/light')
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute top-0 left-0">
+            <img src="/image/tinified/1.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute top-[100%] right-0">
+            <img src="/image/tinified/2.png" alt="">
+        </div>
+    </div>
 
 
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 ">
 
             <!-- main  -->
             <div class="flex flex-col space-y-12 w-full px-4 mt-8">
                 <div class="flex justify-between items-center">
-                    <p class="text-xl">ایجاد اخبار جدید</p>
+                    <p class="text-xl text-white dark:text-gray-600">ایجاد اخبار جدید</p>
                 </div>
                 {{-- form create article  --}}
 
                 <form action="{{ route('articles.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <div class="grid grid-cols-3 w-full gap-6  mb-6">
+                    <div class="grid lg:grid-cols-3 w-full gap-6  mb-6">
 
                         <div class="flex flex-col w-full">
-                            <label for="title" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
+                            <label for="title"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
                                 اخبار</label>
                             <input type="text" name="title" id="title" value="{{ old('title') }}"
                                 class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 border-gray-600 placeholder:text-white dark:placeholder:text-gray-600 text-white focus:ring-yellow-400 focus:border-yellow-400"
-                                id="coinBox"
-                                placeholder="عنوان اخبار را وارد کنید">
+                                id="coinBox" placeholder="عنوان اخبار را وارد کنید">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="tag_id" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">تگ</label>
+                            <label for="tag_id"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">تگ</label>
                             <select id="tag_id" name="tag_id"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 placeholder:text-white dark:placeholder:text-gray-600 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 id="coinBox"
@@ -62,7 +74,8 @@
 
 
                         <div class="flex flex-col w-full">
-                            <label for="category_id" class="block mb-2 text-sm font-medium text-white dark:text-gray-700 ">نوع دسته
+                            <label for="category_id"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
                                 بندی</label>
                             <select id="category_id" name="category_id"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 items-center justify-center placeholder:text-white dark:placeholder:text-gray-600 text-center focus:ring-yellow-400 focus:border-yellow-400">
@@ -75,7 +88,7 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="is_active" class="block mb-2 text-sm font-medium text-gray-100">وضعیت</label>
+                            <label for="is_active" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1">انتشار</option>
@@ -84,7 +97,7 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="primary_image" class="block mb-2 text-sm font-medium text-gray-100">انتخاب
+                            <label for="primary_image" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 عکس</label>
                             <input name="primary_image" id="primary_image"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 focus:ring-yellow-400 focus:border-yellow-400"
@@ -97,7 +110,8 @@
 
 
                     <div class="flex flex-col w-full mb-6">
-                        <label for="description" class="block mb-2 text-sm text-white dark:text-gray-600">توضیحات کوتاه</label>
+                        <label for="description" class="block mb-2 text-sm text-white dark:text-gray-600">توضیحات
+                            کوتاه</label>
                         <textarea id="description" name="description" value="{{ old('description') }}" rows="4"
                             class="block p-2.5 w-full text-white bg-coin1 dark:bg-gray-100 placeholder:text-white dark:placeholder:text-gray-600 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500"
                             placeholder="توضیحات کوتاه را وارد کنید ..."></textarea>
@@ -105,7 +119,7 @@
                     </div>
 
                     <div class="flex flex-col w-full mb-6 ">
-                        <label for="body" class="block mb-2 text-sm text-white dark:text-gray-60">متن
+                        <label for="body" class="block mb-2 text-sm text-white dark:text-gray-600">متن
                             مقاله</label>
                         <textarea id="body" name="body" rows="8"
                             class="block p-2.5 w-full text-white bg-coin1 dark:bg-gray-100 placeholder:text-white dark:placeholder:text-gray-600 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500"
@@ -115,9 +129,9 @@
 
                     <div class="flex gap-4 mt-14">
                         <button type="submit"
-                            class="bg-green-500 hover:bg-green-600 w-1/12 p-2 rounded-lg text-white dark:text-gray-60 ">ثبت</button>
+                            class="bg-green-500 hover:bg-green-600 w-full lg:w-1/12 p-2 rounded-lg text-white  ">ثبت</button>
                         <a href="{{ route('articles.index') }}"
-                            class="bg-red-500 text-center hover:bg-red-600 w-1/12 p-2 rounded-lg text-white dark:text-gray-60   ">بازگشت</a>
+                            class="bg-red-500 text-center hover:bg-red-600 w-full lg:w-1/12 p-2 rounded-lg text-white   ">بازگشت</a>
                     </div>
 
 
