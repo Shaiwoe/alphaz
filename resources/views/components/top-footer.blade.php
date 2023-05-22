@@ -20,7 +20,7 @@
                     ای و با دانش کافی وارد این عرصه بشین ، آلفارنسی میتونه بهترین انتخاب باشه واستون .
                 </p>
             </div>
-            <div class="p-1 h-5/6 border-r-4 border-white dark:border-black"></div>
+            <div class="p-1 h-5/6 lg:border-r-4 border-white dark:border-black"></div>
             <div class="flex flex-col justify-center items-center space-y-6 w-4/12 z-50">
                 <ul class="space-y-6 text-sm lg:text-lg text-white dark:text-black">
                     <li><a href="{{ route('home.about') }}">درباره ما</a></li>
@@ -31,7 +31,7 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col gap-8 z-50">
+            <div class="flex lg:flex-col  gap-8 z-50">
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://www.instagram.com/alpharency/">
 
