@@ -89,7 +89,7 @@ class PermissionController extends Controller
     public function edit(Permission $permission, Request $request)
     {
         $users = $request->user();
-        return view('admin.permissions.edit' , compact('permission'));
+        return view('admin.permissions.edit' , compact('permission','users'));
     }
 
     /**

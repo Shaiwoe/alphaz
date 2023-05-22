@@ -27,8 +27,8 @@
                     <a href="{{ route('dashboard') }}">داشبورد</a>
                 </li>
 
-                @can('Market')
-                    <li class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
+                @can('Prices')
+                    <li class="flex items-center gap-4 text-white dark:text-gray-600 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -41,7 +41,7 @@
                 @endcan
 
                 @can('Manager')
-                    <div class="flex items-center gap-4 hover:border-2 border border-white rounded-full  p-2">
+                    <div class="flex items-center  gap-4 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -49,7 +49,7 @@
                         </svg>
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset1"
                             data-dropdown-offset-distance="35" data-dropdown-offset-skidding="50"
-                            data-dropdown-placement="left" class="text-white flex gap-4 items-center w-full justify-between"
+                            data-dropdown-placement="left" class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
                             type="button">
                             کاربران
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -88,7 +88,7 @@
                         </svg>
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
-                            data-dropdown-placement="left" class="text-white flex gap-4 items-center w-full justify-between"
+                            data-dropdown-placement="left" class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
                             type="button">
                             اخبار
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -133,7 +133,7 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetV"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
                             ویدیو ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -172,7 +172,7 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetP"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
                             پادکست ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -211,7 +211,7 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetB"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
                             کتابخونه ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">

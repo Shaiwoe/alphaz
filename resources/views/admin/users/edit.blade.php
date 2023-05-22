@@ -59,7 +59,7 @@
 
                             <div class="flex flex-col w-full">
                                 <label for="role" class="block mb-2 text-sm font-medium text-white">نقش کاربر</label>
-                                <select id="role" name="role" class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
+                                <select id="role" name="role" class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                                     <option></option>
                                     @foreach ($roles as $role)
                                         <option value="{{ $role->name }}" {{ in_array($role->id , $user->roles->pluck('id')->toArray()) ? 'selected' : '' }}>{{ $role->display_name }}</option>

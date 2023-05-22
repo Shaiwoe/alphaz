@@ -31,9 +31,10 @@ class MarketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.markets.create');
+        $users = $request->user();
+        return view('admin.markets.create', compact('users'));
     }
 
     /**
@@ -89,9 +90,10 @@ class MarketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $users = $request->user();
+        return view('admin.markets.create', compact('users'));
     }
 
     /**
@@ -100,9 +102,11 @@ class MarketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Market $market)
+    public function edit(Market $market,Request $request)
     {
-        return view('admin.markets.edit' , compact('market'));
+        $users = $request->user();
+
+        return view('admin.markets.edit' , compact('market','users'));
     }
 
     /**
