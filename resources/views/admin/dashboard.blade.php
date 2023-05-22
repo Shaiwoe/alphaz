@@ -35,16 +35,16 @@
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 ">
 
 
             <div class="flex w-full justify-center items-center ">
-                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت</p>
+                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت</p>
             </div>
 
             <div class="w-full flex flex-col lg:flex-row gap-4 bg-coin1 p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="flex w-full">
+                    <div class="flex  w-full">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                 <img class="rounded-t-xl w-full h-36"
@@ -62,10 +62,10 @@
 
 
             <div class="flex w-full justify-center items-center mt-16">
-                <p class="w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">محتوا مرتبط با سلیقه شما </p>
+                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">محتوا مرتبط با سلیقه شما </p>
             </div>
 
-            <div class="w-full grid grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
+            <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
                 @foreach ($articless as $article)
                     <div class="flex w-full bg-coin1" id="coinBox">
                         <div class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
