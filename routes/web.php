@@ -20,6 +20,7 @@ use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\PhpinfoController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\PadcastController;
+use App\Http\Controllers\Home\MetaversController;
 use App\Http\Controllers\Admin\CateboryController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CateporyController;
@@ -32,6 +33,7 @@ use App\Http\Controllers\Admin\MarketController as AdminMarketController;
 use App\Http\Controllers\Home\ArticleController as HomeArticleController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
+use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 
 /*
@@ -68,7 +70,10 @@ Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->
 
 Route::get('/prices', [MarketController::class, 'coins'])->name('home.prices.index');
 Route::get('/prices/{market:id}/{slug}', [MarketController::class, 'show'])->name('home.prices.show');
-// Route::post('ckeditor/upload', [MarketController::class,'upload'])->name('ckeditor.upload');
+
+
+Route::get('/metavers', [MetaversController::class, 'coins'])->name('home.metavers.index');
+Route::get('/metavers/{metavers:id}/{slug}', [MetaversController::class, 'show'])->name('home.metavers.show');
 
 
 
@@ -95,6 +100,7 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::resource('articles', ArticleController::class)->middleware(['permission:New']);
     Route::resource('banners', BannerController::class)->middleware(['permission:Banner']);
     Route::resource('markets', AdminMarketController::class)->middleware(['permission:Prices']);
+    Route::resource('metavers', AdminMetaversController::class)->middleware(['permission:Metavers']);
     Route::resource('padcasts', PadcastController::class)->middleware(['permission:Padcast']);
     Route::resource('videos', VideoController::class)->middleware(['permission:Video']);
     Route::resource('books', BookController::class)->middleware(['permission:Book']);

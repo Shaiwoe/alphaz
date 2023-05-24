@@ -28,7 +28,8 @@
                 </li>
 
                 @can('Prices')
-                    <li class="flex items-center gap-4 text-white dark:text-gray-600 hover:border-2 border border-white rounded-full  p-2">
+                    <li
+                        class="flex items-center gap-4 text-white dark:text-gray-600 hover:border-2 border border-white rounded-full  p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -37,6 +38,20 @@
                         </svg>
 
                         <a href="{{ route('markets.index') }}">مارکت</a>
+                    </li>
+                @endcan
+
+                @can('Metavers')
+                    <li
+                        class="flex items-center gap-4 text-white dark:text-gray-600 hover:border-2 border border-white rounded-full  p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                        </svg>
+
+
+                        <a href="{{ route('metavers.index') }}">متاورس</a>
                     </li>
                 @endcan
 
@@ -49,7 +64,8 @@
                         </svg>
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset1"
                             data-dropdown-offset-distance="35" data-dropdown-offset-skidding="50"
-                            data-dropdown-placement="left" class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
+                            data-dropdown-placement="left"
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
                             type="button">
                             کاربران
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -59,7 +75,8 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffset1" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
+                    <div id="dropdownOffset1"
+                        class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('users.index') }}"
@@ -88,34 +105,40 @@
                         </svg>
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
-                            data-dropdown-placement="left" class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
+                            data-dropdown-placement="left"
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
                             type="button">
                             اخبار
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
                         </button>
                     </div>
 
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffset" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
+                    <div id="dropdownOffset"
+                        class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('articles.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست اخبار</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست
+                                    اخبار</a>
                             </li>
                             <li>
                                 <a href="{{ route('articles.create') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">اخبار جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">اخبار
+                                    جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('categories.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته
+                                    بندی</a>
                             </li>
                             <li>
                                 <a href="{{ route('tags.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ
+                                    ها</a>
                             </li>
                         </ul>
                     </div>
@@ -133,7 +156,8 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetV"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
+                            type="button">
                             ویدیو ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -142,19 +166,23 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetV" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
+                    <div id="dropdownOffsetV"
+                        class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('videos.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست ویدیو ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست
+                                    ویدیو ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('videos.create') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">ویدیو جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">ویدیو
+                                    جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('catevorys.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته
+                                    بندی</a>
                             </li>
 
                         </ul>
@@ -172,7 +200,8 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetP"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
+                            type="button">
                             پادکست ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -181,19 +210,23 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetP" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
+                    <div id="dropdownOffsetP"
+                        class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('padcasts.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست پادکست ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست
+                                    پادکست ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('padcasts.create') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">پادکست جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">پادکست
+                                    جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('cateporys.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته
+                                    بندی</a>
                             </li>
 
                         </ul>
@@ -211,7 +244,8 @@
                         <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffsetB"
                             data-dropdown-offset-distance="15" data-dropdown-offset-skidding="55"
                             data-dropdown-placement="left"
-                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between" type="button">
+                            class="text-white dark:text-gray-600 flex gap-4 items-center w-full justify-between"
+                            type="button">
                             کتابخونه ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -220,19 +254,23 @@
                         </button>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="dropdownOffsetB" class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
+                    <div id="dropdownOffsetB"
+                        class="z-50 bg-dark6 rounded-bl-3xl rounded-tl-3xl drop-shadow-lg border-solid border-l-2 border-green  hidden dropdown_menu_dash  divide-y divide-gray-100 rounded shadow w-40">
                         <ul class="py-1 text-gray-100" aria-labelledby="dropdownDefault">
                             <li>
                                 <a href="{{ route('books.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست کتاب ها</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">لیست
+                                    کتاب ها</a>
                             </li>
                             <li>
                                 <a href="{{ route('books.create') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">کتاب جدید</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">کتاب
+                                    جدید</a>
                             </li>
                             <li>
                                 <a href="{{ route('cateborys.index') }}"
-                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته بندی</a>
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته
+                                    بندی</a>
                             </li>
                         </ul>
                     </div>

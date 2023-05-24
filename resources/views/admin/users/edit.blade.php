@@ -59,7 +59,7 @@
 
                             <div class="flex flex-col w-full">
                                 <label for="role" class="block mb-2 text-sm font-medium text-white">نقش کاربر</label>
-                                <select id="role" name="role" class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
+                                <select id="role" name="role" class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                                     <option></option>
                                     @foreach ($roles as $role)
                                         <option value="{{ $role->name }}" {{ in_array($role->id , $user->roles->pluck('id')->toArray()) ? 'selected' : '' }}>{{ $role->display_name }}</option>
@@ -78,7 +78,7 @@
                             <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
                                 <div class="grid grid-cols-5 gap-4 py-4">
                                     @foreach ($permissions as $permission)
-                                        <div class="flex items-center gap-2 px-2 bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 rounded-lg">
+                                        <div class="flex items-center gap-2 px-2 bg-coin1 dark:bg-gray-100 text-gray-400 border-gray-600 rounded-lg">
                                             <input {{ in_array( $permission->id , $user->permissions->pluck('id')->toArray() ) ? 'checked' : '' }} id="permission_{{ $permission->id }}" type="checkbox" value="{{ $permission->name }}" name="{{ $permission->name }}" class="w-4 h-4 text-blue-600  rounded  ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
                                             <label for="permission_{{ $permission->id }}" class="w-full py-4 ml-2 text-sm font-medium ">{{ $permission->display_name }}</label>
                                         </div>
