@@ -5,7 +5,11 @@
             <img class="" src="image/svg/logo-menu-right.png" alt="">
         </div>
 
+<<<<<<< HEAD
         <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[7vh] ">
+=======
+        <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[5vh] ">
+>>>>>>> ba0431a2d6400272cd431300e819b0b20e51854e
             <a class="xl:mt-18 lg:mt-12" href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 30.835 34.039">
@@ -58,7 +62,10 @@
 
            
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ba0431a2d6400272cd431300e819b0b20e51854e
             <a href="{{ route('home.articles.index') }}" data-tooltip-target="tooltip-no-arrow3"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 26.733 32.917">
@@ -166,6 +173,67 @@
             <div id="tooltip-no-arrow6" role="tooltip"
                 class="menu-right bg-menu1 dark:bg-white absolute z-10 invisible inline-block p-2 w-36 text-base text-white dark:text-gray-700 rounded-lg shadow-sm opacity-0 tooltip ">
                 پادکست ها
+            </div>
+
+            <a href="{{ route('home.padcasts.index') }}" data-tooltip-target="tooltip-no-arrow6"
+                data-tooltip-placement="left" type="button">
+                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" x="0"
+                    y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
+                    xml:space="preserve" class="">
+                    <g>
+                        <defs>
+                            <clipPath id="a" clipPathUnits="userSpaceOnUse">
+                                <path class="stroke-white dark:stroke-dark8 " d="M0 512h512V0H0Z" ></path>
+                            </clipPath>
+                        </defs>
+                        <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+                            <path class="stroke-white dark:stroke-dark8"
+                                d="M0 0c0 26.622-21.529 48.199-48.2 48.199h-321.333c-26.59 0-48.2-21.577-48.2-48.199v-128.534a48.085 48.085 0 0 1 14.138-34.085c8.998-9.037 21.289-14.114 34.062-14.114h89.732A54.875 54.875 0 0 1-241-160.667v.008a45.46 45.46 0 0 0 64.267 0v-.008a54.872 54.872 0 0 1 38.801-16.066H-48.2c12.773 0 25.064 5.077 34.061 14.114A48.082 48.082 0 0 1 0-128.534z"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                transform="translate(464.867 352.4)" fill="none" stroke="#000000"
+                                stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                 class=""></path>
+                            <path class="stroke-white dark:stroke-dark8"
+                                d="M0 0v-.017c0-42.608 16.95-83.466 47.075-113.599a160.696 160.696 0 0 1 113.592-47.051c88.768 0 160.666 71.931 160.666 160.667"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                transform="translate(95.334 175.667)" fill="none" stroke="#000000"
+                                stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                 class=""></path>
+                            <path class="stroke-white dark:stroke-dark8"
+                                d="M0 0v.017C0 21.32 8.516 41.75 23.538 56.813c15.103 15.062 35.506 23.521 56.795 23.521h32.133V0z"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                transform="translate(95.334 400.6)" fill="none" stroke="#000000"
+                                stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                 class=""></path>
+                            <path class="stroke-white dark:stroke-dark8"
+                                d="M0 0v.017C0 21.32-8.434 41.75-23.537 56.813c-15.022 15.062-35.427 23.521-56.796 23.521h-32.133V0Z"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                transform="translate(416.666 400.6)" fill="none" stroke="#000000"
+                                stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                 class=""></path>
+                            <path class="stroke-white dark:stroke-dark8" d="M0 0v0c-31.25-10.428-65.07-10.428-96.4 0"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                transform="translate(304.2 111.4)" fill="none" stroke="#000000" stroke-width="30"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                stroke-dasharray="none" stroke-opacity=""  class="">
+                            </path>
+                            <path class="stroke-white dark:stroke-dark8" d="M207.8 400.6h96.4V497h-96.4z"
+                                style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                fill="none" stroke="#000000" stroke-width="30" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none"
+                                stroke-opacity=""  class=""></path>
+                        </g>
+                    </g>
+                </svg>
+
+            </a>
+            <div id="tooltip-no-arrow6" role="tooltip"
+                class="menu-right bg-menu1 dark:bg-white absolute z-10 invisible inline-block p-2 w-36 text-base text-white dark:text-gray-700 rounded-lg shadow-sm opacity-0 tooltip ">
+                متاورس
             </div>
 
         </div>
