@@ -5,11 +5,7 @@
             <img class="" src="image/svg/logo-menu-right.png" alt="">
         </div>
 
-<<<<<<< HEAD
         <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[7vh] ">
-=======
-        <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[5vh] ">
->>>>>>> ba0431a2d6400272cd431300e819b0b20e51854e
             <a class="xl:mt-18 lg:mt-12" href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 30.835 34.039">
@@ -60,12 +56,8 @@
                 ارز دیجیتال
             </div>
 
-           
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ba0431a2d6400272cd431300e819b0b20e51854e
             <a href="{{ route('home.articles.index') }}" data-tooltip-target="tooltip-no-arrow3"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 26.733 32.917">
