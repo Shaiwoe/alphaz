@@ -1,4 +1,4 @@
-<div class="container mx-auto relative justify-between px-4 sm:px-8 gap-8 flex  w-full ">
+<div class="container overflow-hidden mx-auto relative justify-between px-4 sm:px-8 gap-8 flex  w-full ">
 
 
     <div class="flex flex-col w-full relative lg:mt-20 xl:mt-40 md:mt-10 mt-44">
