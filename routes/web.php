@@ -23,6 +23,7 @@ use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\PhpinfoController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\PadcastController;
+use App\Http\Controllers\Admin\WebinarController;
 use App\Http\Controllers\Home\MetaversController;
 use App\Http\Controllers\Admin\CateboryController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -37,6 +38,7 @@ use App\Http\Controllers\Home\VideoController as HomeVideoController;
 use App\Http\Controllers\Admin\MarketController as AdminMarketController;
 use App\Http\Controllers\Home\ArticleController as HomeArticleController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
+use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
@@ -109,6 +111,7 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::resource('padcasts', PadcastController::class)->middleware(['permission:Padcast']);
     Route::resource('videos', VideoController::class)->middleware(['permission:Video']);
     Route::resource('books', BookController::class)->middleware(['permission:Book']);
+    Route::resource('webinars', WebinarController::class)->middleware(['permission:Webinar']);
     Route::resource('users', userController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('roles', RoleController::class);
@@ -123,6 +126,8 @@ Route::get('/vip', [VipController::class, 'index'])->middleware(['auth', 'verifi
 Route::get('/score', [ScoreController::class, 'index'])->middleware(['auth', 'verified'])->name('score');
 Route::get('/question', [QuestionController::class, 'index'])->middleware(['auth', 'verified'])->name('question');
 Route::get('/favorite', [FavoriteController::class, 'index'])->middleware(['auth', 'verified'])->name('favorite');
+Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 'verified'])->name('webinar');
+Route::get('/profile', [AdminProfileController::class, 'index'])->middleware(['auth', 'verified'])->name('profile');
 
 // Route::middleware(['auth', 'verified'])->group(function () {
 //     Route::get('/dashboard/profile', [ProfileController::class, 'edit'])->name('profile.edit');

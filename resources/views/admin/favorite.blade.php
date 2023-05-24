@@ -42,7 +42,7 @@
                 <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">لیست مورد علاقه شما  </p>
             </div>
 
-            <div class="w-full grid lg:grid-cols-4 gap-4 lg:flex-row gap-4 bg-coin1 p-4" id="coinBox">
+            <div class="w-full grid lg:grid-cols-4 gap-4 lg:flex-row  bg-coin1 p-4" id="coinBox">
                 @foreach ($articles as $article)
                     <div class="glex  w-full">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">

@@ -66,28 +66,28 @@
                             <label for="title" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
                                 بنر</label>
                             <input type="text" name="title" id="title" value="{{ $banner->title }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
                             <label for="text" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">متن بنر</label>
                             <input type="text" name="text" id="text" value="{{ $banner->text }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('text')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
                             <label for="priority" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">الویت</label>
                             <input type="number" name="priority" id="priority" value="{{ $banner->priority }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('priority')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
                             <label for="type" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع بنر</label>
                             <input type="text" name="type" id="type" value="{{ $banner->type }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                         </div>
 
@@ -96,7 +96,7 @@
                             <label for="button_text" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">متن
                                 دکمه</label>
                             <input type="text" name="button_text" id="button_text" value="{{ $banner->button_text }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_text')" class="mt-2" />
                         </div>
 
@@ -104,7 +104,7 @@
                             <label for="button_link" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">لینک
                                 دکمه</label>
                             <input type="text" name="button_link" id="button_link" value="{{ $banner->button_link }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_link')" class="mt-2" />
                         </div>
 
@@ -112,7 +112,7 @@
                             <label for="button_icon" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">آیکون
                                 دکمه</label>
                             <input type="text" name="button_icon" id="button_icon" value="{{ $banner->button_icon }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_icon')" class="mt-2" />
                         </div>
 
