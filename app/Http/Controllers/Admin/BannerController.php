@@ -98,9 +98,10 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Banner $banner)
+    public function edit(Banner $banner, Request $request)
     {
-        return view('admin.banners.edit' , compact('banner'));
+        $users = $request->user();
+        return view('admin.banners.edit' , compact('banner','users'));
     }
 
     /**

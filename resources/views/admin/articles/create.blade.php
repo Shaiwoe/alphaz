@@ -88,7 +88,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="is_active" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
+                            <label for="is_active"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1">انتشار</option>
@@ -97,7 +98,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="primary_image" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
+                            <label for="primary_image"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 عکس</label>
                             <input name="primary_image" id="primary_image"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 focus:ring-yellow-400 focus:border-yellow-400"

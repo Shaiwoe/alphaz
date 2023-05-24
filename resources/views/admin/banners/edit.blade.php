@@ -51,75 +51,75 @@
                         <img src="{{ url(env('BANNER_IMAGES_UPLOAD_PATH') . $banner->image) }}" alt="">
                     </div>
 
-                    <div class="grid grid-cols-4 w-full gap-6  mb-6">
+                    <div class="grid lg:grid-cols-4 w-full gap-6  mb-6">
 
                         <div class="flex flex-col w-full">
-                            <label for="image" class="block mb-2 text-sm font-medium text-gray-100">انتخاب
+                            <label for="image" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 عکس</label>
                             <input name="image" id="banner_image"
-                                class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
+                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
                                 type="file">
                             <x-input-error :messages="$errors->get('image')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="title" class="block mb-2 text-sm font-medium text-gray-100 ">عنوان
+                            <label for="title" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
                                 بنر</label>
                             <input type="text" name="title" id="title" value="{{ $banner->title }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-100 ">متن بنر</label>
+                            <label for="text" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">متن بنر</label>
                             <input type="text" name="text" id="text" value="{{ $banner->text }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('text')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="priority" class="block mb-2 text-sm font-medium text-gray-100 ">الویت</label>
+                            <label for="priority" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">الویت</label>
                             <input type="number" name="priority" id="priority" value="{{ $banner->priority }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('priority')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="type" class="block mb-2 text-sm font-medium text-gray-100 ">نوع بنر</label>
+                            <label for="type" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع بنر</label>
                             <input type="text" name="type" id="type" value="{{ $banner->type }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                         </div>
 
 
                         <div class="flex flex-col w-full">
-                            <label for="button_text" class="block mb-2 text-sm font-medium text-gray-100 ">متن
+                            <label for="button_text" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">متن
                                 دکمه</label>
                             <input type="text" name="button_text" id="button_text" value="{{ $banner->button_text }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_text')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="button_link" class="block mb-2 text-sm font-medium text-gray-100 ">لینک
+                            <label for="button_link" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">لینک
                                 دکمه</label>
                             <input type="text" name="button_link" id="button_link" value="{{ $banner->button_link }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_link')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="button_icon" class="block mb-2 text-sm font-medium text-gray-100 ">آیکون
+                            <label for="button_icon" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">آیکون
                                 دکمه</label>
                             <input type="text" name="button_icon" id="button_icon" value="{{ $banner->button_icon }}"
-                                class="block p-2.5 w-full rounded-lg bg-dark2 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 text-white focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('button_icon')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="is_active" class="block mb-2 text-sm font-medium text-gray-100">وضعیت</label>
+                            <label for="is_active" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
-                                class="flex  p-2.5 w-full rounded-lg bg-dark2 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
+                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1"
                                     {{ $banner->getRawOriginal('is_active') == 1 ? 'selected' : '' }}>انتشار</option>
                                 <option value="0"
@@ -134,9 +134,9 @@
 
                     <div class="flex gap-4 mt-14">
                         <button type="submit"
-                            class="bg-green-500 hover:bg-green-600 w-1/12 p-2 rounded-lg">ثبت</button>
+                            class="bg-green-500 hover:bg-green-600 w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
                         <a href="{{ route('banners.index') }}"
-                            class="bg-red-500 text-center hover:bg-red-600 w-1/12 p-2 rounded-lg">بازگشت</a>
+                            class="bg-red-500 text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
                     </div>
 
 

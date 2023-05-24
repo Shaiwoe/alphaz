@@ -26,10 +26,11 @@ class CateporyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $cateporys = Catepory::where('parent_id', 0)->get();
-        return view('admin.cateporys.create', compact('cateporys'));
+        return view('admin.cateporys.create', compact('cateporys','users'));
     }
 
     /**
@@ -73,9 +74,10 @@ class CateporyController extends Controller
      * @param  \App\Models\Catepory  $catepory
      * @return \Illuminate\Http\Response
      */
-    public function show(Catepory $catepory)
+    public function show(Catepory $catepory, Request $request)
     {
-        return view('admin.cateporys.show', compact('catepory'));
+        $users = $request->user();
+        return view('admin.cateporys.show', compact('catepory', 'users'));
     }
 
     /**
@@ -84,10 +86,11 @@ class CateporyController extends Controller
      * @param  \App\Models\Catepory  $catepory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Catepory $catepory)
+    public function edit(Catepory $catepory, Request $request)
     {
+        $users = $request->user();
         $cateporys = Catepory::where('parent_id', 0)->get();
-        return view('admin.cateporys.edit', compact('catepory', 'cateporys'));
+        return view('admin.cateporys.edit', compact('catepory', 'cateporys', 'users'));
     }
 
     /**

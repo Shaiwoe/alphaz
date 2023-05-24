@@ -26,10 +26,11 @@ class CateboryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $cateborys = Catebory::where('parent_id', 0)->get();
-        return view('admin.cateborys.create', compact('cateborys'));
+        return view('admin.cateborys.create', compact('cateborys', 'users'));
     }
 
     /**
@@ -73,9 +74,10 @@ class CateboryController extends Controller
      * @param  \App\Models\Catebory  $catebory
      * @return \Illuminate\Http\Response
      */
-    public function show(Catebory $catebory)
+    public function show(Catebory $catebory, Request $request)
     {
-        return view('admin.cateborys.show', compact('catebory'));
+        $users = $request->user();
+        return view('admin.cateborys.show', compact('catebory','users'));
     }
 
     /**
@@ -84,10 +86,11 @@ class CateboryController extends Controller
      * @param  \App\Models\Catebory  $catebory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Catebory $catebory)
+    public function edit(Catebory $catebory, Request $request)
     {
+        $users = $request->user();
         $cateborys = Catebory::where('parent_id', 0)->get();
-        return view('admin.cateborys.edit', compact('catebory', 'cateborys'));
+        return view('admin.cateborys.edit', compact('catebory', 'cateborys', 'users'));
     }
 
     /**

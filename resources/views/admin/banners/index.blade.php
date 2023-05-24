@@ -38,9 +38,9 @@
             <!-- main  -->
             <div class="flex flex-col space-y-12 w-full px-4 mt-8">
                 <div class="flex justify-between items-center">
-                    <p class="text-xl"> بنر ها - {{ $banners->total() }}</p>
+                    <p class="text-xl  text-white dark:text-gray-600"> بنر ها - {{ $banners->total() }}</p>
                     <a href="{{ route('banners.create') }}"
-                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center">
+                        class="text-white bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -52,8 +52,8 @@
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-                    <table class="w-full text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-gray-100 uppercase bg-gray-900">
+                    <table class="w-full text-right bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600">
+                        <thead class="uppercase">
                             <tr>
 
                                 <th scope="col" class="px-6 py-3">
@@ -77,15 +77,7 @@
                                 <th scope="col" class="px-6 py-3">
                                     نوع
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    متن دکمه
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    لینک دکمه
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    آیکون دکمه
-                                </th>
+
                                 <th scope="col" class="px-6 py-3">
                                     عملیات
                                 </th>
@@ -94,8 +86,7 @@
                         </thead>
                         <tbody>
                             @foreach ($banners as $key => $banner)
-                                <tr
-                                    class=" text-white border-b bg-dark2 dark:border-gray-700 hover:bg-gray-800">
+                                <tr class=" bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-b bg-dark2 dark:border-gray-700 ">
                                     <td class="px-6 py-4">
                                         {{ $banners->firstItem() + $key }}
                                     </td>
@@ -123,18 +114,11 @@
                                     <td>
                                         {{ $banner->type }}
                                     </td>
-                                    <td>
-                                        {{ $banner->button_text }}
-                                    </td>
-                                    <td>
-                                        {{ $banner->button_link }}
-                                    </td>
-                                    <td>
-                                        {{ $banner->button_icon }}
-                                    </td>
+                                    
                                     <td class="px-6 py-4 flex gap-4">
 
-                                        <form action="{{ route('banners.destroy', ['banner' => $banner->id]) }}" method="POST">
+                                        <form action="{{ route('banners.destroy', ['banner' => $banner->id]) }}"
+                                            method="POST">
                                             @csrf
                                             @method('DELETE')
 

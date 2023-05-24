@@ -29,10 +29,11 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $users = $request->user();
         $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
-        return view('admin.books.create' , compact('cateborys'));
+        return view('admin.books.create' , compact('cateborys','users'));
     }
 
     /**
@@ -105,10 +106,11 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit(Book $book, Request $request)
     {
+        $users = $request->user();
         $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
-        return view('admin.books.edit' , compact('book' , 'cateborys'));
+        return view('admin.books.edit' , compact('book' , 'cateborys','users'));
     }
 
     /**
