@@ -83,7 +83,7 @@
 
 
 
-        <div class="flex flex-col mt-20 lg:mt-64 space-y-10 z-40">
+        <div class="flex flex-col mt-20 lg:mt-32 space-y-10 z-40">
 
             <div id="coinBox" class="w-full bg-coin1 flex p-2 lg:p-8 z-40 relative h-full">
                 <div class="relative overflow-x-auto w-full sm:rounded-lg">
