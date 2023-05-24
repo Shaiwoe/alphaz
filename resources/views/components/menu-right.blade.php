@@ -1,6 +1,6 @@
 <div class="container mx-auto absolute">
     <div id="menu-right"
-        class="pb-10 hidden w-[7%] md:right-[5%] lg:right-[8%] top-[15%] bg-menu1 dark:bg-white dark:shadow-2xl lg:block fixed  flex-col z-50">
+        class="pb-10 hidden w-[7%] md:right-[5%] lg:right-[8%] top-[15%] bg-menu1 dark:bg-white dark:shadow-2xl lg:block fixed  flex-col z-10">
         <div class="flex justify-center items-center mt-8">
             <img class="" src="image/svg/logo-menu-right.png" alt="">
         </div>
