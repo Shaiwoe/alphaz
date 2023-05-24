@@ -26,7 +26,7 @@
                 صفحه اصلی
             </div>
 
-            <a href="{{ route('home.prices.index') }}" data-tooltip-target="tooltip-no-arrow2"
+            <a href="{{ route('home.prices.index') }}" data-tooltip-target="tooltip-no-arrow15"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 32.272 32.272">
                     <g id="bar-chart-outline" transform="translate(1 1)">
@@ -51,7 +51,7 @@
 
             </a>
 
-            <div id="tooltip-no-arrow10" role="tooltip"
+            <div id="tooltip-no-arrow15" role="tooltip"
                 class="menu-right bg-menu1 dark:bg-white absolute z-10 invisible inline-block p-2 w-36 text-base text-white dark:text-gray-700 rounded-lg shadow-sm opacity-0 tooltip ">
                 ارز دیجیتال
             </div>
@@ -167,7 +167,7 @@
                 پادکست ها
             </div>
 
-            <a href="{{ route('home.padcasts.index') }}" data-tooltip-target="tooltip-no-arrow6"
+            <a href="{{ route('home.padcasts.index') }}" data-tooltip-target="tooltip-no-arrow12"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" x="0"
                     y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
@@ -223,7 +223,7 @@
                 </svg>
 
             </a>
-            <div id="tooltip-no-arrow6" role="tooltip"
+            <div id="tooltip-no-arrow12" role="tooltip"
                 class="menu-right bg-menu1 dark:bg-white absolute z-10 invisible inline-block p-2 w-36 text-base text-white dark:text-gray-700 rounded-lg shadow-sm opacity-0 tooltip ">
                 متاورس
             </div>
