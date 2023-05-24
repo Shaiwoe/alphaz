@@ -32,19 +32,35 @@
     <!-- top -->
     @include('components/index-top')
 
+    <div class="container mx-auto relative justify-center pr-0 sm:pr-0 md:pr-0 lg:pr-12 xl:pr-0 mt-24 w-10/12 lg:w-9/12 xl2:w-8/12 xl:w-9/12 space-y-10 sm:space-y-10 md:space-y-15 lg:space-y-20 xl:space-y-40">
+        {{-- coin box  --}}
+        @include('components/coinbox')
 
-    {{-- coin box  --}}
-    @include('components/coinbox')
+        {{-- banner box  --}}
+        @include('components/banner')
 
-    <div class="light dark:opacity-40 relative w-full">
+        {{-- last article  --}}
+        @include('components/last-article')
+
+        {{-- banner b  --}}
+        @include('components/index-banner-b')
+
+        {{-- last video  --}}
+        @include('components/last-video')
+
+        {{-- app box  --}}
+        @include('components/app')
+
+        <!-- top footer  -->
+        @include('components/top-footer-index')
+    </div>
+
+
+    {{-- <div class="light dark:opacity-40 relative w-full">
         <div class="absolute left-0">
             <img src="/image/tinified/4.png" alt="">
         </div>
     </div>
-    {{-- banner box  --}}
-    @include('components/banner')
-
-
 
     <div class="light dark:opacity-40 relative w-full">
         <div class="absolute right-0">
@@ -52,23 +68,11 @@
         </div>
     </div>
 
-    {{-- last article  --}}
-    @include('components/last-article')
-
-
-    {{-- banner b  --}}
-    @include('components/index-banner-b')
-
-    {{-- last video  --}}
-    @include('components/last-video')
-
-
-
-    {{-- app box  --}}
-    @include('components/app')
-
-    <!-- top footer  -->
-    @include('components/top-footer-index')
+    <div class="light dark:opacity-40 relative w-full">
+        <div class="absolute bottom-[100%]">
+            <img src="/image/tinified/6.png" alt="">
+        </div>
+    </div> --}}
 
 
 
@@ -77,11 +81,7 @@
     <!-- footer  -->
     @include('components/footer')
 
-    <div class="light dark:opacity-40 relative w-full">
-        <div class="absolute bottom-[100%]">
-            <img src="/image/tinified/6.png" alt="">
-        </div>
-    </div>
+
 
     @include('sweetalert::alert')
 

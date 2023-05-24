@@ -1,6 +1,6 @@
-<div class="container mx-auto text-gray-100 flex justify-center lg:justify-end mt-8 lg:mt-44 px-4 sm:px-8">
-    <div class="flex flex-col w-11/12  lg:justify-end">
-        <div id="coinBox" class="bg-coin1 dark:bg-white p-2">
+<div class="container mx-auto text-gray-100">
+    <div class="flex flex-col">
+        <div id="coinBox" class="bg-coin1 dark:bg-white dark:filter-none dark:shadow-2xl p-2">
             <div class="hidden text-white dark:text-gray-700 lg:flex justify-between p-4">
                 <p>آخرین مقالات</p>
                 <a href="{{ route('home.articles.index') }}" class="flex gap-1 text-sm items-center">

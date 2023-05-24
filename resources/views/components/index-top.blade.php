@@ -4,7 +4,7 @@
     <div class="flex flex-col w-full relative lg:mt-20 xl:mt-40 md:mt-10 mt-44">
 
         <div class="">
-            <img class="mix-blend-color-dodge dark:mix-blend-normal" src="image/svg/world.svg">
+            <img class="mix-blend-color-dodge dark:mix-blend-normal h-full mx-auto" src="image/svg/world.svg">
         </div>
 
         <div class="flex absolute right-[15%] -top-[50%] lg:left-[10%] lg:top-[20%]">

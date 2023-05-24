@@ -31,27 +31,19 @@
 
 
 
-
-
-
-
-<div class="container mx-auto text-gray-100 flex justify-center lg:justify-end mt-2 xl:mt-28 lg:mt-18 px-4 sm:px-8">
-    <div class="flex flex-col w-11/12  lg:justify-end ">
-
-        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+{{-- <div id="default-carousel" class="w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative w-full h-56 overflow-hidden rounded-[30px] md:h-[32rem]">
+            <div class="w-full relative overflow-hidden rounded-[30px]">
                 <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden absolute duration-700 ease-in-out" data-carousel-item>
                     <img src="image/banner1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class=" block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden absolute duration-700 ease-in-out" data-carousel-item>
                     <img src="image/banner2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        class=" block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
-
             </div>
             <!-- Slider indicators -->
             <div class="hidden absolute z-30 lg:flex -bottom-10 left-1/2 gap-2">
@@ -88,7 +80,71 @@
                     <span class="sr-only">Next</span>
                 </span>
             </button>
-        </div>
+        </div> --}}
 
-    </div>
+<div class="slider rounded-3xl overflow-hidden dark:shadow-2xl">
+    <img class="w-full" src="image/banner1.jpg">
+    <img class="w-full" src="image/banner2.jpg">
+
+    <button class="prev p-5 rounded-full">
+        <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 512 512">
+            <path class="stroke-white dark:stroke-dark8" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144" />
+        </svg>
+    </button>
+    <button class="next p-5 rounded-full">
+
+        <svg  class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 512 512">
+            <path class="stroke-white dark:stroke-dark8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                d="M184 112l144 144-144 144" />
+        </svg>
+
+    </button>
 </div>
+
+<script>
+    const slider = document.querySelector('.slider');
+const prevBtn = slider.querySelector('.prev');
+const nextBtn = slider.querySelector('.next');
+const images = slider.querySelectorAll('img');
+
+let currentImage = 0;
+
+function showImage(n) {
+  images[currentImage].style.display = 'none';
+  images[n].style.display = 'block';
+  currentImage = n;
+}
+
+function nextImage() {
+  let nextImage = currentImage + 1;
+  if (nextImage >= images.length) {
+    nextImage = 0;
+  }
+  showImage(nextImage);
+}
+
+let intervalId = setInterval(nextImage, 5000);
+
+prevBtn.addEventListener('click', () => {
+  let prevImage = currentImage - 1;
+  if (prevImage < 0) {
+    prevImage = images.length - 1;
+  }
+  showImage(prevImage);
+  clearInterval(intervalId);
+});
+
+nextBtn.addEventListener('click', () => {
+  nextImage();
+  clearInterval(intervalId);
+});
+
+slider.addEventListener('mouseover', () => {
+  clearInterval(intervalId);
+});
+
+slider.addEventListener('mouseout', () => {
+  intervalId = setInterval(nextImage, 5000);
+});
+</script>

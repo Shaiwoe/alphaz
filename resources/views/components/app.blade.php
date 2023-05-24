@@ -1,10 +1,10 @@
-<div class="container mx-auto text-gray-100 flex justify-end mt-24 px-4 sm:px-8">
-    <div class="flex flex-col lg:flex-row w-full lg:w-10/12  lg:justify-end ">
+<div class="container mx-auto text-gray-100">
+    <div class="flex flex-col lg:flex-row w-full">
         <img src="image/app.png" alt="">
 
         <div class="flex flex-col space-y-12 justify-center items-center">
             <p class="text-xl mt-8">اپلیکیشن آلفارنسی همیشه همراه تو</p>
-            <p class="text-gray-500">
+            <p class="text-gray-500 text-justify">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                 کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
