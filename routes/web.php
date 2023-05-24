@@ -6,13 +6,16 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Home\FaqController;
 use App\Http\Controllers\Home\PhpController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\VipController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\MapsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\userController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Admin\ChartController;
+use App\Http\Controllers\Admin\ScoreController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Home\MarketController;
 use App\Http\Controllers\Admin\BannerController;
@@ -26,6 +29,8 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CateporyController;
 use App\Http\Controllers\Admin\CatevoryController;
 use App\Http\Controllers\Admin\DashbordController;
+use App\Http\Controllers\Admin\FavoriteController;
+use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
@@ -51,7 +56,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::resource('php', PhpController::class);
 
-Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
 Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'])->name('home.categories.show');
@@ -110,6 +115,14 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
 
     Route::post('ckeditor/upload', [ArticleController::class,'upload'])->name('ckeditor.upload');
 });
+
+
+Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/maps', [MapsController::class, 'index'])->middleware(['auth', 'verified'])->name('maps');
+Route::get('/vip', [VipController::class, 'index'])->middleware(['auth', 'verified'])->name('vip');
+Route::get('/score', [ScoreController::class, 'index'])->middleware(['auth', 'verified'])->name('score');
+Route::get('/question', [QuestionController::class, 'index'])->middleware(['auth', 'verified'])->name('question');
+Route::get('/favorite', [FavoriteController::class, 'index'])->middleware(['auth', 'verified'])->name('favorite');
 
 // Route::middleware(['auth', 'verified'])->group(function () {
 //     Route::get('/dashboard/profile', [ProfileController::class, 'edit'])->name('profile.edit');

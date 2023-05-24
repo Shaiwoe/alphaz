@@ -4,7 +4,7 @@
             class="w-full flex flex-col lg:flex-row items-center container mx-auto p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
             <div
                 class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50 dark:text-black">
-                {{-- <img class="w-full lg:w-8/12" src="image/logo-dark.png" alt=""> --}}
+                
                 <img id="" class="logo_dark_el hidden w-full lg:w-8/12" src="/image/logo-white.png" alt="">
                 <img id="" class="logo_light_el hidden w-full lg:w-8/12" src="/image/logo-dark.png"
                     alt="">
