@@ -17,21 +17,21 @@ class MetaversController extends Controller
             throw new \Exception('Could not load coins');
         }
 
-        $metaver = Metavers::query()
+        $metavers = Metavers::query()
         ->orderBy('created_at', 'ASC')
         ->where('is_active', 1)
         ->paginate(100);
 
         $coins = [];
 
-        foreach ($metaver as $metavers) {
+        foreach ($metavers as $metaverss) {
 
             foreach ($prices->data as $price) {
 
-                if ($metavers->symbol == $price->symbol) {
+                if ($metaverss->symbol == $price->symbol) {
 
                     $coin = (object) [
-                        'name' => $metavers->name, 'id' => $metavers->id, 'slug' => $metavers->slug, 'icon' => $metavers->icon, 'symbol' => $metavers->symbol , 'quote' => $price->quote
+                        'name' => $metaverss->name, 'id' => $metaverss->id, 'slug' => $metaverss->slug, 'icon' => $metaverss->icon, 'symbol' => $metaverss->symbol , 'quote' => $price->quote
                     ];
 
                     $coins[] = $coin;
@@ -39,7 +39,7 @@ class MetaversController extends Controller
             }
         }
 
-        return view('home.metavers.index', compact('coins' , 'metavers', 'metaver'));
+        return view('home.metavers.index', compact('coins' , 'metaverss' , 'metaverss'));
     }
 
     protected function getAPICoins()
