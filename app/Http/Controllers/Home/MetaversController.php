@@ -39,7 +39,7 @@ class MetaversController extends Controller
             }
         }
 
-        return view('home.metavers.index', compact('coins' , 'metavers'));
+        return view('home.metavers.index', compact('coins' , 'metavers', 'metaver'));
     }
 
     protected function getAPICoins()
