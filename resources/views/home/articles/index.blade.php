@@ -25,7 +25,7 @@
 
 
     <!-- main -->
-    <div class="container mx-auto text-white p-4 sm:p-8">
+    <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
 
 
         <form class="mt-44 z-40">

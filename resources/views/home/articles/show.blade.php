@@ -31,7 +31,7 @@
         </div>
     </div>
     <!-- main -->
-    <div class="container mx-auto p-4 sm:p-8 text-white">
+    <div class="p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white">
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
             <div class="flex-col mt-24 lg:mt-44">

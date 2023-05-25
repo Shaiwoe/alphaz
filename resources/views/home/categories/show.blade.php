@@ -37,7 +37,7 @@
 
 
     <!-- main -->
-    <div class="container mx-auto text-white p-4 sm:p-8 min-h-screen">
+    <div class="sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12mx-auto text-white p-4 sm:p-8 min-h-screen">
 
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 w-full mt-44 gap-8 p-4 relative z-40" id="article-box">

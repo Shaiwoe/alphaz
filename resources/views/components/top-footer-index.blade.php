@@ -4,7 +4,7 @@
             class="w-full flex flex-col lg:flex-row items-center container mx-auto p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
             <div
                 class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50 dark:text-black">
-                
+
                 <img id="" class="logo_dark_el hidden w-full lg:w-8/12" src="/image/logo-white.png" alt="">
                 <img id="" class="logo_light_el hidden w-full lg:w-8/12" src="/image/logo-dark.png"
                     alt="">
@@ -21,7 +21,7 @@
                     ای و با دانش کافی وارد این عرصه بشین ، آلفارنسی میتونه بهترین انتخاب باشه واستون .
                 </p>
             </div>
-            <div class="p-1 h-5/6 lg:border-r-4 border-white dark:border-black"></div>
+            <div class="p-1 h-10/12 lg:border-r-4 border-white dark:border-black hidden md:block" style="height: 300px"></div>
             <div class="flex flex-col justify-center items-center space-y-6 w-4/12 z-50  text-white dark:text-black">
                 <ul class="space-y-6 text-sm lg:text-lg">
                     <li><a href="{{ route('home.index') }}">صفحه اصلی</a></li>

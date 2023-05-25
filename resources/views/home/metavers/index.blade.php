@@ -49,7 +49,7 @@
     </div>
 
 
-    <div class="container mx-auto p-4 z-40">
+    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-40">
         <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-32 z-40 relative text-white items-center justify-between  space-y-10">
 
             <div class="w-full lg:w-6/12  space-y-10 relative text-white dark:text-gray-700">

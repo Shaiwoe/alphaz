@@ -33,7 +33,7 @@
 
 
 
-    <div class="container mx-auto p-4 z-40">
+    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-40">
         <div
             class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10">
 

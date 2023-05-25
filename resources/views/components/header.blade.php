@@ -2,7 +2,7 @@
     <div class=" absolute flex">
         <div id="bg-menu" class=" dark:bg-white fixed w-full p-3 z-50">
 
-            <div class="container mx-auto flex items-center">
+            <div class="mx-auto flex items-center sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-10/12">
 
                 <div class="flex w-full justify-start gap-3 lg:gap-10 items-center z-50 text-white">
                     <div class="hidden lg:flex gap-10 text-xs lg:text-base text-white dark:text-gray-700">

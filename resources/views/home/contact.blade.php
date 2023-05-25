@@ -44,11 +44,11 @@
 
 
 
-    <div class="full-width container mx-auto p-4 lg:p-8 text-white z-50 ">
+    <div class="p-4 lg:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-50 ">
         <div class=" flex flex-col lg:flex-row mt-28 lg:mt-30">
             <div class="flex-1">
 
-                <div class="w-full xl:w-4/6  grid grid-cols-2 gap-10 z-50">
+                <div class="w-full xl:w-4/6  grid grid-cols-2 gap-5 md:gap-7 lg:gap-10 z-50">
                     <a  id="coinBox" href="https://www.instagram.com/alpharency/" class="flex flex-col gap-3 justify-center items-center py-10 bg-coin1 dark:bg-purple1">
                         <img id="" class="p-2 rounded-md w-20 h-20" src="image/svg/instagram.svg" alt="">
                         <p>Instagram</p>
@@ -84,7 +84,7 @@
 
 
 
-    <div class="container flex mx-auto text-white dark:text-gray-700 z-30 p-4 lg:p-8">
+    <div class="sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 flex mx-auto text-white dark:text-gray-700 z-30 p-4 lg:p-8">
         <form class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30" id="coinBox" action="">
             <p class="lg:text-2xl">برای ارتباط با ما پیام دهید</p>
             <div class="flex flex-col w-full gap-12 z-50">

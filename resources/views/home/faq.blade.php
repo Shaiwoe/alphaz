@@ -23,9 +23,11 @@
     @include('components/light')
 
 
-    <div class="w-full container flex mx-auto  text-white z-50 p-4">
+    <div class="p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 flex mx-auto  text-white z-50">
+
         <div class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full p-4 lg:p-12 mt-16 lg:mt-72 z-40" id="coinBox"
             action="">
+
             <div id="accordion-open" class="border-none" data-accordion="open">
 
                 <h2 id="accordion-open-heading-1" >

@@ -32,7 +32,7 @@
     <!-- top -->
     @include('components/index-top')
 
-    <div class="container mx-auto relative justify-center pr-0 sm:pr-0 md:pr-0 lg:pr-12 xl:pr-0 mt-24 w-10/12 lg:w-9/12 xl2:w-8/12 xl:w-9/12 space-y-10 sm:space-y-10 md:space-y-15 lg:space-y-20 xl:space-y-40">
+    <div class="container mx-auto relative justify-center pr-0 sm:pr-0 md:pr-0 lg:pr-12 xl:pr-0 xl2:pr-28 mt-24 w-10/12 lg:w-9/12 xl2:w-9/12 xl:w-9/12 space-y-10 sm:space-y-10 md:space-y-15 lg:space-y-20 xl:space-y-40">
         {{-- coin box  --}}
         @include('components/coinbox')
 
