@@ -6,6 +6,10 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
+
+
+
+
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (
     localStorage.getItem("color-theme") === "dark" ||
@@ -20,11 +24,8 @@ if (
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
-
-
-const logoDarkEl = document.getElementsByClassName('logo_dark_el');
-const logoLightEl = document.getElementsByClassName('logo_light_el');
-
+const logoDarkEl = document.getElementsByClassName("logo_dark_el");
+const logoLightEl = document.getElementsByClassName("logo_light_el");
 
 // Change the icons inside the button based on previous settings
 if (
@@ -34,12 +35,12 @@ if (
 ) {
     themeToggleLightIcon.classList.remove("hidden");
     for (let i = 0; i < logoDarkEl.length; i++) {
-        logoDarkEl[i].classList.remove('hidden');
+        logoDarkEl[i].classList.remove("hidden");
     }
 } else {
     themeToggleDarkIcon.classList.remove("hidden");
     for (let i = 0; i < logoDarkEl.length; i++) {
-        logoLightEl[i].classList.remove('hidden');
+        logoLightEl[i].classList.remove("hidden");
     }
 }
 
@@ -50,10 +51,9 @@ themeToggleBtn.addEventListener("click", function () {
     themeToggleDarkIcon.classList.toggle("hidden");
     themeToggleLightIcon.classList.toggle("hidden");
 
-
     for (let i = 0; i < logoDarkEl.length; i++) {
-        logoDarkEl[i].classList.toggle('hidden');
-        logoLightEl[i].classList.toggle('hidden');
+        logoDarkEl[i].classList.toggle("hidden");
+        logoLightEl[i].classList.toggle("hidden");
     }
 
     // if set via local storage previously
@@ -78,9 +78,6 @@ themeToggleBtn.addEventListener("click", function () {
     }
 });
 
-
-
-
 var constrain = 20;
 var mouseOverContainer = document.getElementById("ex1");
 var ex1Layer = document.getElementById("ex1-layer");
@@ -88,45 +85,54 @@ var ex1Layer = document.getElementById("ex1-layer");
 var mouseOverContainer2 = document.getElementById("ex1");
 var ex2Layer = document.getElementById("ex2-layer");
 
-
 function transforms(x, y, el) {
-  var box = el.getBoundingClientRect();
-  var calcX = (y - box.y - (box.height / 2)) / constrain;
-  var calcY = -(x - box.x - (box.width / 2)) / constrain;
+    var box = el.getBoundingClientRect();
+    var calcX = (y - box.y - box.height / 2) / constrain;
+    var calcY = -(x - box.x - box.width / 2) / constrain;
 
-  return "perspective(100px) "
-    + "   rotateX("+ calcX +"deg) "
-    + "   rotateY("+ calcY +"deg) ";
-};
+    return (
+        "perspective(100px) " +
+        "   rotateX(" +
+        calcX +
+        "deg) " +
+        "   rotateY(" +
+        calcY +
+        "deg) "
+    );
+}
 function transforms2(x, y, el) {
-  var box = el.getBoundingClientRect();
-  var calcX = -(y - box.y - (box.height / 2)) / constrain;
-  var calcY = (x - box.x - (box.width / 2)) / constrain;
+    var box = el.getBoundingClientRect();
+    var calcX = -(y - box.y - box.height / 2) / constrain;
+    var calcY = (x - box.x - box.width / 2) / constrain;
 
-  return "perspective(100px) "
-    + "   rotateX("+ calcX +"deg) "
-    + "   rotateY("+ calcY +"deg) ";
-};
- function transformElement(el, xyEl) {
-  el.style.transform  = transforms.apply(null, xyEl);
+    return (
+        "perspective(100px) " +
+        "   rotateX(" +
+        calcX +
+        "deg) " +
+        "   rotateY(" +
+        calcY +
+        "deg) "
+    );
+}
+function transformElement(el, xyEl) {
+    el.style.transform = transforms.apply(null, xyEl);
 }
 function transformElement2(el, xyEl) {
-  el.style.transform  = transforms2.apply(null, xyEl);
+    el.style.transform = transforms2.apply(null, xyEl);
 }
 
-mouseOverContainer.onmousemove = function(e) {
-  var xy = [e.clientX, e.clientY];
-  var xy2 = [e.clientX, e.clientY];
-  var position = xy.concat([ex1Layer]);
-  var position2 = xy2.concat([ex2Layer]);
+mouseOverContainer.onmousemove = function (e) {
+    var xy = [e.clientX, e.clientY];
+    var xy2 = [e.clientX, e.clientY];
+    var position = xy.concat([ex1Layer]);
+    var position2 = xy2.concat([ex2Layer]);
 
-  window.requestAnimationFrame(function(){
-    transformElement(ex1Layer, position);
-    transformElement2(ex2Layer, position2);
-  });
+    window.requestAnimationFrame(function () {
+        transformElement(ex1Layer, position);
+        transformElement2(ex2Layer, position2);
+    });
 };
-
-
 
 
 

@@ -119,8 +119,6 @@
                         {{ $padcast->catepory->title }}
                     </div>
 
-                    <a href="{{ asset(env('PADCAST_VOICE_UPLOAD_PATH') . $padcast->voice) }}"
-                        class="bg-coin1 dark:bg-slate-600 text-center p-2 rounded-md text-green-500">دانلود مستقیم</a>
 
                 </div>
 
@@ -128,12 +126,17 @@
                 <div class="flex flex-col lg:w-9/12 p-4 h-full text-white dark:text-gray-700  z-40 gap-8 bg-box dark:bg-white"
                     id="coinBox">
 
-                    <div class="at-music-player">
-                        <audio class="w-full px-20 mt-12" controls>
-                          <source src="{{ asset(env('PADCAST_VOICE_UPLOAD_PATH') . $padcast->voice) }}" type="audio/mpeg">
-                        </audio>
-                      </div>
 
+
+                    <div class="p-2 lg:px-4  space-y-4">
+
+                        <p class="text-2xl">{{ $padcast->catepory->title }}</p>
+
+                        <audio class="w-full " controls>
+                            <source src="{{ asset(env('PADCAST_VOICE_UPLOAD_PATH') . $padcast->voice) }}"
+                                type="audio/mpeg">
+                        </audio>
+                    </div>
 
                     <div class="flex flex-col w-full lg:w-full ">
 
