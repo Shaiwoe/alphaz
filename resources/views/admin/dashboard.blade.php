@@ -11,7 +11,7 @@
     <title>پنل کاربری</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 h-screen overflow-scroll">
 
 
     {{-- header  --}}
@@ -30,8 +30,7 @@
         </div>
     </div>
 
-
-    <div class="flex justify-between  relative space-x-4">
+    <div class="flex justify-between w-full relative space-x-4 ">
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
@@ -39,7 +38,8 @@
 
 
             <div class="flex w-full justify-center items-center ">
-                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت</p>
+                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت
+                </p>
             </div>
 
             <div class="w-full flex flex-col lg:flex-row gap-4 bg-coin1 p-4" id="coinBox">
@@ -52,7 +52,8 @@
                                     alt="">
                             </a>
 
-                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                class="w-full text-sm text-white dark:text-gray-700">
                                 {{ $article->title }}
                             </a>
                         </div>
@@ -62,7 +63,8 @@
 
 
             <div class="flex w-full justify-center items-center mt-16">
-                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">محتوا مرتبط با سلیقه شما </p>
+                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">محتوا مرتبط با
+                    سلیقه شما </p>
             </div>
 
             <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
@@ -76,7 +78,8 @@
                             </a>
 
                             <div class="flex flex-col space-y-4 p-4">
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}" class="w-full text-sm text-white dark:text-gray-700">
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                    class="w-full text-sm text-white dark:text-gray-700">
                                     {{ $article->title }}
                                 </a>
 
@@ -93,6 +96,7 @@
 
         </div>
     </div>
+
 
 </body>
 

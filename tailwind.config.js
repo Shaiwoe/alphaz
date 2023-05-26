@@ -45,6 +45,7 @@ module.exports = {
                 'icon-light': '#b9bbc3',
                 'bgmenu1': '#090C35',
                 'blue1': '#110B53',
+                'box': '#110B53'
 
               },
         },
