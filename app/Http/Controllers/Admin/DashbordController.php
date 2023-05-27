@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Like;
 use App\Models\Market;
 use App\Models\Padcast;
 use App\Models\Video;
@@ -17,9 +18,49 @@ class DashbordController extends Controller
     {
         $users = $request->user();
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
-        $articless = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(8)->get();
-        $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
 
-        return view('admin.dashboard', compact('users', 'articles', 'articless', 'padcasts'));
+        $likes = Like::where('user_id' , auth()->id())->get();
+        return view('admin.dashboard', compact('users', 'articles', 'likes'));
     }
+
+    public function add(Article $article)
+    {
+        if (auth()->check()) {
+            if ($article->checkUserLike(auth()->id())) {
+                alert()->warning('مقاله مورد نظر به لیست پسندیدها اضافه شده است', 'دقت کنید')->persistent('حله');
+                return redirect()->back();
+            } else {
+                Like::create([
+                    'user_id' => auth()->id(),
+                    'article_id' => $article->id
+                ]);
+
+                alert()->success('مقاله مورد نظر به لیست پسندیدها  شما اضافه شد', 'باتشکر');
+                return redirect()->back();
+            }
+        } else {
+            alert()->warning('برای افزودن به لیست پسندیدها  نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
+            return redirect()->back();
+        }
+    }
+
+
+    public function remove(Article $article)
+    {
+        if (auth()->check()) {
+            $like = Like::where('article_id', $article->id)->where('user_id', auth()->id())->firstOrFail();
+            if ($like) {
+                Like::where('article_id', $article->id)->where('user_id', auth()->id())->delete();
+            }
+
+            alert()->success('مقاله مورد نظر از لیست پسندیدها شما حذف شد', 'باتشکر');
+            return redirect()->back();
+        } else {
+            alert()->warning('برای حذف از لیست پسندیدها نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
+            return redirect()->back();
+        }
+    }
+
+
+
 }

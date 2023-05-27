@@ -68,6 +68,9 @@ Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->
 Route::get('/whislist/{article}', [WishlistController::class, 'add'])->name('home.whishlist.add');
 Route::get('/whislist-romve/{article}', [WishlistController::class, 'remove'])->name('home.whishlist.remove');
 
+Route::get('/like/{article}', [DashbordController::class, 'add'])->name('home.like.add');
+Route::get('/like-romve/{article}', [DashbordController::class, 'remove'])->name('home.like.remove');
+
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 

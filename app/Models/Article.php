@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Tag;
+use App\Models\Like;
 use App\Models\Category;
 use App\Models\Wishlist;
 use App\Models\ArticleImage;
@@ -66,6 +67,12 @@ class Article extends Model
     public function checkUserWishlist($userId)
     {
         return $this->hasMany(Wishlist::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function checkUserLike($userId)
+    {
+        return $this->hasMany(Like::class)->where('user_id' , $userId)->exists();
     }
 
 }
