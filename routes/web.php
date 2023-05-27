@@ -136,10 +136,6 @@ Route::get('/wishlist', [WishlistController::class, 'userProfile'])->middleware(
 Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 'verified'])->name('webinar');
 Route::get('/profile', [AdminProfileController::class, 'index'])->middleware(['auth', 'verified'])->name('profile');
 
-// Route::middleware(['auth', 'verified'])->group(function () {
-//     Route::get('/dashboard/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/dashboard/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/dashboard/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
+
 
 require __DIR__.'/auth.php';

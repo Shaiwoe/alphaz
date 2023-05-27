@@ -19,7 +19,16 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
-        $Articles = Article::latest()->search()->paginate(20);
+        
+
+
+        $Articles = Article::query()
+            ->orderBy('updated_at', 'desc')
+            ->where('is_active', 1)
+            ->search()
+            ->paginate(15);
+
+
         return view('admin.articles.index', compact('Articles','users'));
     }
 

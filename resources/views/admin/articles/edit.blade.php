@@ -50,7 +50,8 @@
                     <div class="grid lg:grid-cols-3 w-full gap-6  mb-6">
 
                         <div class="flex flex-col w-full">
-                            <label for="title" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
+                            <label for="title"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
                                 اخبار</label>
                             <input type="text" name="title" id="title" value="{{ $article->title }}"
                                 class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
@@ -77,7 +78,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="category_id" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
+                            <label for="category_id"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
                                 بندی</label>
                             <select id="category_id" name="category_id"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
@@ -91,7 +93,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="primary_image" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
+                            <label for="primary_image"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 عکس</label>
                             <input name="primary_image" id="primary_image"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
@@ -100,7 +103,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="is_active" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
+                            <label for="is_active"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1"
@@ -115,7 +119,8 @@
 
 
                     <div class="flex flex-col w-full mb-6 text-white">
-                        <label for="description" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیحات کوتاه</label>
+                        <label for="description"
+                            class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیحات کوتاه</label>
                         <textarea id="description" name="description" rows="4"
                             class="block p-2.5 w-full text-white bg-coin1 dark:bg-gray-100  dark:text-gray-600 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500">{{ $article->description }}</textarea>
                         <x-input-error :messages="$errors->get('description')" class="mt-2" />
@@ -171,6 +176,8 @@
             content: 'fa',
         });
     </script>
+
+    
 </body>
 
 </html>
