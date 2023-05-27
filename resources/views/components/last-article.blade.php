@@ -18,7 +18,8 @@
                     <div class="card-wrapper swiper-wrapper ">
                         @foreach ($articles as $article)
                             <div class="card swiper-slide">
-                                <div class="bg-blue1 dark:bg-white1 w-full text-white dark:text-gray-700 rounded-xl flex flex-col space-y-6">
+                                <div
+                                    class="bg-blue1 dark:bg-white1 w-full text-white dark:text-gray-700 rounded-xl flex flex-col space-y-6">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-xl w-full h-96"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
