@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Alpharency</title>
+    <title>{{ $article->title }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -50,32 +50,66 @@
 
 
             <div id="coinBox"
-                class="bg-coin1 dark:bg-white w-full flex justify-between text-white dark:text-gray-700    z-30 gap-10 py-4 px-8 rounded-xl">
-                <p class="hidden lg:flex text-xl">زمان مورد نیاز برای مطالعه این مقاله 8 دقیقه است</p>
-                <div class="hidden lg:flex cursor-pointer  gap-2 items-center">
-                    <p class="mt-1 "> افزودن به لیست مورد علاقه ها</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-sky-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                </div>
-                <div class="cursor-pointer flex gap-2 items-center">
-                    <p class="mt-1">میپسندم</p>
+                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-xl">
+
+                <p>زمان مطالعه برای این مقاله 10 دقیقه است</p>
+
+                @auth
+                    @if ($article->checkUserWishlist(auth()->id()))
+                        <a href="{{ route('home.whishlist.remove', ['article' => $article->id]) }}"
+                            class="hidden lg:flex cursor-pointer bg-green-500 px-4 py-2 rounded-xl gap-2 items-center">
+                            به لیست علاقه مندی ها اضافه شد
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 -mt-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                            </svg>
+
+                        </a>
+                    @else
+                        <a href="{{ route('home.whishlist.add', ['article' => $article->id]) }}"
+                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                            افزودن به لیست مورد علاقه ها
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                            </svg>
+
+                        </a>
+                    @endif
+                @else
+                    <a href="{{ route('home.whishlist.add', ['article' => $article->id]) }}"
+                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                        افزودن به لیست مورد علاقه ها
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+
+                    </a>
+                @endauth
+
+
+
+                <a href="" class="flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                    این مقاله را میپسندم
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-red-600">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                     </svg>
-                </div>
-                <div class="cursor-pointer flex gap-2 items-center">
-                    <p class="mt-1">8963</p>
+                </a>
+                <a href="" class="flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                    تعداد بازدید 4585
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                        stroke="currentColor" class="w-6 h-6 text-sky-400">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                </div>
+                </a>
                 <div class="hidden lg:flex cursor-pointer  gap-2 items-center">
                     <p class="mt-1">{{ verta($article->updated_at)->format(' %d / %B / %Y') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -89,7 +123,7 @@
 
 
 
-            <div class="flex p-4 h-full text-white dark:text-gray-700 mt-16 lg:mt-44 z-40 gap-8 bg-coin1 dark:bg-white"
+            <div class="flex p-4 h-full text-white dark:text-gray-700 mt-16 lg:mt-44 z-40 gap-8 bg-box dark:bg-white"
                 id="coinBox">
 
 
@@ -97,8 +131,7 @@
 
                 <div class="flex flex-col w-full lg:w-full ">
 
-                    <div
-                        class="flex w-full  rounded-3xl p-2 lg:p-4 z-40 text-right">
+                    <div class="flex w-full  rounded-3xl p-2 lg:p-4 z-40 text-right">
 
                         <div class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700  leading-10">
                             <p id="image-article">{!! $article->body !!}</p>
@@ -119,12 +152,15 @@
     <!-- footer  -->
     @include('components/footer')
 
+
+
     <div class="light dark:opacity-40 relative w-full">
         <div class="absolute bottom-[100%]">
             <img src="/image/tinified/6.png" alt="">
         </div>
     </div>
 
+    @include('sweetalert::alert')
 </body>
 
 </html>

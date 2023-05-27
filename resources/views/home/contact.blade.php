@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Alpharency</title>
+    <title>Alpharency | تماس با ما</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -70,8 +70,8 @@
                     </a>
                 </div>
             </div>
-            <div class="flex-1 text-center z-30 relative self-center" style="text-align: -webkit-center;">
-                <p class="text-center text-2xl z-30 xl:absolute top-0 left-0 my-8 xl:my-0">شبکه های اجتماعی ما را هم دنبال کنید</p>
+            <div class="flex-1  text-center z-30 relative self-center" style="text-align: -webkit-center;">
+                <p class="text-center text-xl z-30 xl:absolute top-0 left-0 my-8 xl:my-0">شبکه های اجتماعی ما را هم دنبال کنید</p>
                 <img src="image/svg/contact-svg.svg" class="w-8/12" alt="">
             </div>
         </div>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Tag;
 use App\Models\Category;
+use App\Models\Wishlist;
 use App\Models\ArticleImage;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
@@ -59,6 +60,12 @@ class Article extends Model
         }
 
         return $query;
+    }
+
+
+    public function checkUserWishlist($userId)
+    {
+        return $this->hasMany(Wishlist::class)->where('user_id' , $userId)->exists();
     }
 
 }

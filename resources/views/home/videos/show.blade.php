@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Alpharency</title>
+    <title>{{ $video->title }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -32,7 +32,7 @@
             <img src="/image/tinified/2.png" alt="">
         </div>
     </div>
-    
+
     <!-- main -->
     <div class="container mx-auto p-4 sm:p-8 text-white">
         <div class="flex flex-col space-y-4 sm:space-y-8">

@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\PadcastController;
 use App\Http\Controllers\Admin\WebinarController;
 use App\Http\Controllers\Home\MetaversController;
+use App\Http\Controllers\Home\WishlistController;
 use App\Http\Controllers\Admin\CateboryController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CateporyController;
@@ -63,6 +64,9 @@ Route::resource('php', PhpController::class);
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
 Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'])->name('home.categories.show');
 Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->name('home.articles.show');
+
+Route::get('/whislist/{article}', [WishlistController::class, 'add'])->name('home.whishlist.add');
+Route::get('/whislist-romve/{article}', [WishlistController::class, 'remove'])->name('home.whishlist.remove');
 
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
@@ -125,7 +129,7 @@ Route::get('/maps', [MapsController::class, 'index'])->middleware(['auth', 'veri
 Route::get('/vip', [VipController::class, 'index'])->middleware(['auth', 'verified'])->name('vip');
 Route::get('/score', [ScoreController::class, 'index'])->middleware(['auth', 'verified'])->name('score');
 Route::get('/question', [QuestionController::class, 'index'])->middleware(['auth', 'verified'])->name('question');
-Route::get('/favorite', [FavoriteController::class, 'index'])->middleware(['auth', 'verified'])->name('favorite');
+Route::get('/wishlist', [WishlistController::class, 'userProfile'])->middleware(['auth', 'verified'])->name('wishlist');
 Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 'verified'])->name('webinar');
 Route::get('/profile', [AdminProfileController::class, 'index'])->middleware(['auth', 'verified'])->name('profile');
 
