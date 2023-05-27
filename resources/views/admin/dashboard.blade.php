@@ -11,7 +11,7 @@
     <title>پنل کاربری</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1 h-screen overflow-scroll">
+<body class="bg-indigo-1 dark:bg-white1">
 
 
     {{-- header  --}}
