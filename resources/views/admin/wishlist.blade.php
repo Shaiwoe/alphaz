@@ -45,7 +45,7 @@
                         <p>شما هیچ لیست علاقه مندی ندارید</p>
                     </div>
 
-                    <div class="w-full flex justify-center items-center">
+                    <div class="w-full flex justify-center items-center mt-12">
                         <img class="w-6/12" src="image/server.svg" alt="">
                     </div>
                 </div>
