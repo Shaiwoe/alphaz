@@ -137,7 +137,7 @@
 
 
                 <a href="" class="flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
-                    تعداد بازدید 4585
+                    تعداد بازدید  {{ $article->viewCount }}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-sky-400">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -176,6 +176,56 @@
 
                 </div>
 
+            </div>
+
+
+            <div class="w-full flex flex-col lg:flex-row gap-4 bg-coin1 p-4 z-40" id="coinBox">
+                @foreach ($articles as $article)
+                    <div class="flex  w-full">
+                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <img class="rounded-t-xl w-full h-36"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                    alt="">
+                            </a>
+
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                class="w-full text-sm text-white dark:text-gray-700">
+                                {{ $article->title }}
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+
+            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30 p-4 lg:p-8">
+                <form class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30" id="coinBox" action="">
+                    <p class="lg:text-2xl">برای ارتباط با ما پیام دهید</p>
+                    <div class="flex flex-col w-full gap-12 z-50">
+                        <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
+                            <div class="flex flex-col w-full z-50">
+                                <label class="text-sm lg:text-base" for="">نام و نام خانوادگی</label>
+                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+
+                                <label class="mt-9 text-sm lg:text-base" for="">آدرس ایمیل</label>
+                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+
+                                <label class="mt-9 text-sm lg:text-base" for="">عنوان تیکت</label>
+                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+                            </div>
+
+                            <div class="flex flex-col w-full">
+                                <label for="">متن تیکت</label>
+                                <textarea id="contact-input" class="mt-4 contact-input dark:bg-icon-light" name="" id="" cols="30" rows="11"></textarea>
+                            </div>
+                        </div>
+
+                        <button id="contact-button" class="p-2" type="submit">
+                            ارسال پیام
+                        </button>
+                    </div>
+                </form>
             </div>
 
 
