@@ -89,8 +89,6 @@
         @include('components/coinbox')
 
 
-        <p class="w-full text-center mt-20">اینجا باکس محتوا های مقاله پادکست ویدئو و... مرتبط با ارز های دیجیتال</p>
-
 
         <div class="flex flex-row  mt-20 z-40 relative">
             <div class="basis-1/2 self-center text-2xl font-bold text-white">قیمت لحظه ای ارز های دیجیتال</div>
