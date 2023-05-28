@@ -55,6 +55,11 @@ use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 |
 */
 
+use App\Http\Controllers\Home\CoinMarketController;
+
+Route::get('/coin/market/list', [CoinMarketController::class, 'list']);
+Route::get('/coin/market/show/{symbol}', [CoinMarketController::class, 'show']);
+
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::resource('php', PhpController::class);
