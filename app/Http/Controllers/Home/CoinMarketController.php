@@ -19,7 +19,7 @@ class CoinMarketController extends Controller
             $coins[] = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
 
-        return view('home.coins.list', compact('coins'));
+        return view('home.coins.index', compact('coins'));
     }
 
     public function show($symbol)
