@@ -15,7 +15,7 @@ module.exports = {
             screens: {
                 sm: '480px',
                 md: '768px',
-                lg: '976px',
+                lg: '1367px',
                 xl: '1601px',
                 xl2: '1900px',
               },
@@ -32,6 +32,7 @@ module.exports = {
                 'purple2': '#453e6a',
                 'green': '#08b5bd',
                 'green-o': '#08b5bdaa',
+                'red': '#BD082D',
                 'red-o': '#BD082Daa',
                 'purple3': '#685a8f',
                 'white2': '#46494c',

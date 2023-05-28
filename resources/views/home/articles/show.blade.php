@@ -47,28 +47,26 @@
                     alt="{{ $article->title }}">
             </div>
 
-
-
             <div id="coinBox"
-                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-xl">
+                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
 
                 <p>زمان مطالعه برای این مقاله 10 دقیقه است</p>
 
                 @auth
                     @if ($article->checkUserWishlist(auth()->id()))
                         <a href="{{ route('home.whishlist.remove', ['article' => $article->id]) }}"
-                            class="hidden lg:flex cursor-pointer bg-green-500 px-4 py-2 rounded-xl gap-2 items-center">
+                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                             به لیست علاقه مندی ها اضافه شد
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6 -mt-1">
-                                <path stroke-linecap="round" stroke-linejoin="round"
+                                <path class="stroke-green fill-green" stroke-linecap="round" stroke-linejoin="round"
                                     d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                             </svg>
 
                         </a>
                     @else
                         <a href="{{ route('home.whishlist.add', ['article' => $article->id]) }}"
-                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                             افزودن به لیست مورد علاقه ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
@@ -80,7 +78,7 @@
                     @endif
                 @else
                     <a href="{{ route('home.whishlist.add', ['article' => $article->id]) }}"
-                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                         افزودن به لیست مورد علاقه ها
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -96,11 +94,11 @@
                 @auth
                     @if ($article->checkUserLike(auth()->id()))
                         <a href="{{ route('home.like.remove', ['article' => $article->id]) }}"
-                            class="hidden lg:flex cursor-pointer bg-green-500 px-4 py-2 rounded-xl gap-2 items-center">
+                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2  rounded-full gap-2 items-center">
                             شما این مقاله را پسندیده اید
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
+                                class="w-6 h-6">
+                                <path class="stroke-red fill-red" stroke-linecap="round" stroke-linejoin="round"
                                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                             </svg>
 
@@ -108,7 +106,7 @@
                         </a>
                     @else
                         <a href="{{ route('home.like.add', ['article' => $article->id]) }}"
-                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                            class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
                             این مقاله را میپسندم
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
@@ -120,7 +118,7 @@
                     @endif
                 @else
                     <a href="{{ route('home.like.add', ['article' => $article->id]) }}"
-                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                        class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
                         این مقاله را میپسندم
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -136,10 +134,10 @@
 
 
 
-                <a href="" class="flex cursor-pointer bg-coin1 px-4 py-2 rounded-xl gap-2 items-center">
+                <a href="" class="flex cursor-pointer px-4 py-2 gap-2 items-center">
                     تعداد بازدید {{ $article->viewCount }}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6 text-sky-400">
+                        stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -157,25 +155,117 @@
             </div>
 
 
+            <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5">
+                <div class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                    <div class="flex flex-col w-full">
+                        <div id="coinBox"
+                            class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                            <p class="text-white font-bold text-xl text-center">دسته بندی ها</p>
 
-            <div class="flex p-4 h-full text-white dark:text-gray-700 mt-16 lg:mt-44 z-40 gap-8 bg-box dark:bg-white"
-                id="coinBox">
+
+                                @php
+                                    $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
+                                @endphp
+
+                                @foreach ($parentCategorys as $parentCategory)
+                                    <div class="sidenav p-1 m-2 z-40 hover:bg-green rounded-full">
+                                        <button class="dropdown-btn">
+                                            {{ $parentCategory->title }}
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <div class="dropdown-container z-40">
+                                            @foreach ($parentCategory->children as $childCategory)
+                                                <a
+                                                    href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                                    {{ $childCategory->title }}
+                                                </a>
+                                                </ul>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                        </div>
+                        <div id="coinBox"
+                            class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
+                            <p class="text-white font-bold text-xl text-center">تگ ها</p>
 
 
 
-
-                <div class="flex flex-col w-full lg:w-full ">
-
-                    <div class="flex w-full  rounded-3xl p-2 lg:p-4 z-40 text-right">
-
-                        <div class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700  leading-10">
-                            <p id="image-article">{!! $article->body !!}</p>
                         </div>
                     </div>
 
-
                 </div>
+                <div class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
+                    <div class="flex flex-col w-full">
 
+                        <div class="flex w-full rounded-3xl p-2 lg:p-4 z-40 text-right">
+                            <div
+                                class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
+                                <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
+                                    {{ $article->title }}</h1>
+                                <p id="image-article">{!! $article->body !!}</p>
+                                <div id="coinBox"
+                                    class="w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+
+                                    <a href=""
+                                        class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                            viewBox="0 0 512 512">
+                                            <path class="stroke-white dark:stroke-black" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
+                                        </svg>
+                                        مقاله بعدی:
+                                        موضوع
+
+
+
+                                    </a>
+                                    <a href=""
+                                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                        مقاله را مطالعه کردم
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-check-square">
+                                            <polyline class="stroke-white dark:stroke-black" points="9 11 12 14 22 4">
+                                            </polyline>
+                                            <path class="stroke-white dark:stroke-black"
+                                                d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                        </svg>
+
+                                    </a>
+
+
+
+                                    <a href=""
+                                        class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
+                                        مقاله قبلی:
+                                        موضوع
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                            viewBox="0 0 512 512">
+                                            <path class="stroke-white dark:stroke-black" fill="none"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+                                        </svg>
+
+                                    </a>
+
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
 
 
@@ -198,8 +288,7 @@
                                     class="w-full text-sm text-white dark:text-gray-700">
                                     {{ $article->title }}
                                 </a>
-                                <p
-                                    class="w-full text-sm text-white dark:text-gray-700">
+                                <p class="w-full text-sm text-white dark:text-gray-700">
                                     {{ Str::limit($article->description, 80) }}
                                 </p>
                             </div>

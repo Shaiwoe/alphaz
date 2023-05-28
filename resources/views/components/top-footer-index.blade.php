@@ -21,7 +21,7 @@
                     ای و با دانش کافی وارد این عرصه بشین ، آلفارنسی میتونه بهترین انتخاب باشه واستون .
                 </p>
             </div>
-            <div class="p-1 h-10/12 lg:border-r-4 border-white dark:border-black hidden md:block" style="height: 300px"></div>
+            <div class="p-1 h-10/12 lg:border-r-4 border-white dark:border-black hidden lg:block" style="height: 300px"></div>
             <div class="flex flex-col justify-center items-center space-y-6 w-4/12 z-50  text-white dark:text-black">
                 <ul class="space-y-6 text-sm lg:text-lg">
                     <li><a href="{{ route('home.index') }}">صفحه اصلی</a></li>

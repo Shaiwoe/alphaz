@@ -279,7 +279,6 @@ body {
 /* Style the sidenav links and the dropdown button */
 .sidenav a,
 .dropdown-btn {
-    padding: 6px 8px 6px 16px;
     display: block;
     border: none;
     background: none;
@@ -287,12 +286,6 @@ body {
     text-align: right;
     cursor: pointer;
     outline: none;
-}
-
-/* On mouse-over */
-.sidenav a:hover,
-.dropdown-btn:hover {
-    color: aqua;
 }
 
 /* Main content */
@@ -568,7 +561,6 @@ img {
     backdrop-filter: brightness(0.6);
 }
 
-
 /* dropdown */
 select:not([size]) {
     background-image: none;
@@ -578,16 +570,59 @@ select:not([size]) {
     padding-right: unset;
 }
 
-.custom-dropdown select option{
+.custom-dropdown select option {
     border: none;
 }
-.custom-dropdown select{
+.custom-dropdown select {
     border: none;
 }
 
+/* swal2-container */
+.swal2-container {
+    backdrop-filter: blur(10px);
+}
+.swal2-popup {
+    border-radius: 30px !important;
+    background-color: #110b5399 !important;
+    color: #fff !important;
+    backdrop-filter: blur(10px) !important;
+    backdrop-filter: brightness(0.5) !important;
+    -webkit-box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+    -moz-box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+    box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+}
+.swal2-icon {
+    border-color: #08b5bd !important;
+    color: #08b5bd !important;
+}
+.swal2-confirm {
+    border-radius: 30px !important;
+    padding: 10px 40px 10px 40px !important;
+    background-color: #08b5bd !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: x-large !important;
+}
+.swal2-title {
+    font-size: x-large !important;
+}
 
 
+/* articles */
 
-
-
-
+.text_articles p img{
+    width: 100% !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 30px !important;
+    transition: 1s;
+}
+.text_articles p img:hover{
+    -webkit-box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+    -moz-box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+    box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
+}
+.text_articles p{
+    text-align: justify;
+}
