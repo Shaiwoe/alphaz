@@ -209,45 +209,6 @@
             </div>
 
 
-            @if ($likes->isEmpty())
-
-                <div class="mt-8 flex flex-col gap-4 w-full justify-center items-center space-y-6">
-
-                    <div
-                        class="flex lg:flex-col lg:text-5xl text-white dark:text-gray-600 lg:space-y-8 text-sm gap-2 mt-24">
-                        <p>شما هیچ محتوا پسندیده ای ندارید</p>
-                    </div>
-
-                    <div class="w-full flex justify-center items-center ">
-                        <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
-                    </div>
-                </div>
-            @else
-                <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
-                    @foreach ($likes as $like)
-                        <div class="flex w-full bg-coin1" id="coinBox">
-                            <div class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
-                                <a href="{{ route('home.articles.show', ['article' => $like->article->slug]) }}">
-                                    <img class="rounded-t-xl w-full h-44"
-                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $like->article->primary_image) }}"
-                                        alt="">
-                                </a>
-
-                                <div class="flex flex-col space-y-4 p-4">
-                                    <a href="{{ route('home.articles.show', ['article' => $like->article->slug]) }}"
-                                        class="w-full text-sm text-white dark:text-gray-700">
-                                        {{ $like->article->title }}
-                                    </a>
-
-                                    <p>
-                                        {{ Str::limit($like->article->description, 80) }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
 
 
 

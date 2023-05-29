@@ -63,9 +63,6 @@ Route::get('/coins/{symbol}', [CoinMarketController::class, 'show']);
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::resource('php', PhpController::class);
-
-
 
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
 Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'])->name('home.categories.show');
@@ -89,10 +86,6 @@ Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('hom
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');
 
-
-
-Route::get('/prices', [MarketController::class, 'coins'])->name('home.prices.index');
-Route::get('/prices/{market:id}/{slug}', [MarketController::class, 'show'])->name('home.prices.show');
 
 
 Route::get('/metavers', [MetaversController::class, 'coins'])->name('home.metavers.index');
