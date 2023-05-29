@@ -54,7 +54,7 @@
 
                 </div>
 
-                <div class="content_area px-6 rounded-b-2xl z-40 relative act" data-depth="0" data-idx="0">
+                <div class="content_area rounded-b-2xl z-40 relative act" data-depth="0" data-idx="0">
 
                     @if ($studys->isEmpty())
 
