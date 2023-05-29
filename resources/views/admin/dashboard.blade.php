@@ -191,10 +191,10 @@
 
             <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="flex w-full bg-box" id="coinBox">
+                    <div class="flex w-full bg-box rounded-b-2xl">
                         <div class="flex justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                <img class="rounded-t-xl w-full h-36"
+                                <img class="rounded-t-xl w-full h-44"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                     alt="">
                             </a>
