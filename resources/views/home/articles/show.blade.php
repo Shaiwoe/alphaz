@@ -169,8 +169,8 @@
                             @endphp
 
                             @foreach ($parentCategorys as $parentCategory)
-                                <div class="sidenav p-1 m-2 z-40 hover:bg-green rounded-full">
-                                    <button class="dropdown-btn">
+                                <div class="sidenav p-1 m-2 z-40">
+                                    <button class="dropdown-btn hover:bg-green rounded-full">
                                         {{ $parentCategory->title }}
                                         <i class="fa fa-caret-down"></i>
                                     </button>

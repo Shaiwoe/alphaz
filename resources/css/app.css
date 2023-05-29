@@ -245,7 +245,8 @@ body {
 }
 
 .hover-img:hover .image {
-    opacity: 0.1;
+    filter: blur(20px);
+    opacity: 0.5;
 }
 
 .hover-img:hover .middle {
@@ -279,7 +280,6 @@ body {
 /* Style the sidenav links and the dropdown button */
 .sidenav a,
 .dropdown-btn {
-    display: block;
     border: none;
     background: none;
     width: 100%;
@@ -300,6 +300,9 @@ body {
 /* Add an active class to the active dropdown button */
 .active {
     color: aqua;
+}
+.active svg path{
+    stroke: #08b5bd;
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
