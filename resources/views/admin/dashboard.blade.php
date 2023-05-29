@@ -184,7 +184,7 @@
             </div>
 
 
-            <div class="flex w-full justify-center items-center  mt-24">
+            <div class="flex w-full justify-center items-center  mt-12">
                 <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت
                 </p>
             </div>
