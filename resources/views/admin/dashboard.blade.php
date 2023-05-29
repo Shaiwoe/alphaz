@@ -194,7 +194,7 @@
                     <div class="flex w-full bg-box rounded-b-2xl">
                         <div class="flex justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                <img class="rounded-t-xl w-full h-44"
+                                <img class=" w-full h-44"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                     alt="">
                             </a>
@@ -205,7 +205,7 @@
                             </a>
 
                             <p>
-                                {{ Str::limit($article->description, 40) }}
+                                {{ Str::limit($article->description, 80) }}
                             </p>
                         </div>
                     </div>
