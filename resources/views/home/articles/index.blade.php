@@ -180,7 +180,7 @@
                                     {{ Str::limit($article->title, 40) }}
                                 </p>
                             </a>
-                            <p class="text-center text-gray-500 text-sm">و
+                            <p class="text-center text-gray-500 text-sm">
                                 {{ Str::limit($article->description, 80) }}
                             </p>
 

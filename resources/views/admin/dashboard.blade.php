@@ -189,9 +189,9 @@
                 </p>
             </div>
 
-            <div class="w-full flex flex-col lg:flex-row gap-4 bg-coin1 p-4" id="coinBox">
+            <div class="w-full grid lg:grid-cols-4 gap-4 bg-coin1 p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="flex  w-full">
+                    <div class="flex w-full">
                         <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                 <img class="rounded-t-xl w-full h-36"
@@ -203,6 +203,10 @@
                                 class="w-full text-sm text-white dark:text-gray-700">
                                 {{ $article->title }}
                             </a>
+
+                            <p>
+                                {{ Str::limit($article->description, 40) }}
+                            </p>
                         </div>
                     </div>
                 @endforeach
