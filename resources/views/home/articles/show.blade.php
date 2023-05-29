@@ -156,34 +156,35 @@
 
 
             <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5">
-                <div class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
-                    <div class="flex flex-col w-full">
+                <div
+                    class="w-full  md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                    <div class="flex flex-col w-full ">
                         <div id="coinBox"
-                            class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                            class=" bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
                             <p class="text-white font-bold text-xl text-center">دسته بندی ها</p>
 
 
-                                @php
-                                    $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
-                                @endphp
+                            @php
+                                $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
+                            @endphp
 
-                                @foreach ($parentCategorys as $parentCategory)
-                                    <div class="sidenav p-1 m-2 z-40 hover:bg-green rounded-full">
-                                        <button class="dropdown-btn">
-                                            {{ $parentCategory->title }}
-                                            <i class="fa fa-caret-down"></i>
-                                        </button>
-                                        <div class="dropdown-container z-40">
-                                            @foreach ($parentCategory->children as $childCategory)
-                                                <a
-                                                    href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
-                                                    {{ $childCategory->title }}
-                                                </a>
-                                                </ul>
-                                            @endforeach
-                                        </div>
+                            @foreach ($parentCategorys as $parentCategory)
+                                <div class="sidenav p-1 m-2 z-40 hover:bg-green rounded-full">
+                                    <button class="dropdown-btn">
+                                        {{ $parentCategory->title }}
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-container z-40">
+                                        @foreach ($parentCategory->children as $childCategory)
+                                            <a
+                                                href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                                {{ $childCategory->title }}
+                                            </a>
+                                            </ul>
+                                        @endforeach
                                     </div>
-                                @endforeach
+                                </div>
+                            @endforeach
 
                         </div>
                         <div id="coinBox"
@@ -196,7 +197,8 @@
                     </div>
 
                 </div>
-                <div class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
+                <div
+                    class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
                     <div class="flex flex-col w-full">
 
                         <div class="flex w-full rounded-3xl p-2 lg:p-4 z-40 text-right">
@@ -222,21 +224,64 @@
 
 
                                     </a>
-                                    <a href=""
-                                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                        مقاله را مطالعه کردم
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-check-square">
-                                            <polyline class="stroke-white dark:stroke-black" points="9 11 12 14 22 4">
-                                            </polyline>
-                                            <path class="stroke-white dark:stroke-black"
-                                                d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                                        </svg>
 
-                                    </a>
+
+
+
+                                    @auth
+                                        @if ($article->checkUserStudy(auth()->id()))
+                                            <a href="{{ route('home.study.remove', ['article' => $article->id]) }}"
+                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                                مقاله را مطالعه کردم
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check-square ">
+                                                    <polyline class="stroke-green dark:stroke-green"
+                                                        points="9 11 12 14 22 4">
+                                                    </polyline>
+                                                    <path class="stroke-white dark:stroke-black"
+                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
+                                                    </path>
+                                                </svg>
+
+                                            </a>
+                                        @else
+                                            <a href="{{ route('home.study.add', ['article' => $article->id]) }}"
+                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                                افزودن به لیست مطالعه شده ها
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check-square">
+                                                    <polyline class="stroke-white dark:stroke-black"
+                                                        points="9 11 12 14 22 4">
+                                                    </polyline>
+                                                    <path class="stroke-white dark:stroke-black"
+                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
+                                                    </path>
+                                                </svg>
+
+                                            </a>
+                                        @endif
+                                    @else
+                                        <a href="{{ route('home.study.add', ['article' => $article->id]) }}"
+                                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                            افزودن به لیست مطالعه شده ها
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-check-square">
+                                                <polyline class="stroke-white dark:stroke-black" points="9 11 12 14 22 4">
+                                                </polyline>
+                                                <path class="stroke-white dark:stroke-black"
+                                                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                            </svg>
+
+                                        </a>
+                                    @endauth
 
 
 

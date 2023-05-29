@@ -62,5 +62,44 @@ class DashbordController extends Controller
     }
 
 
+    public function studyAdd(Article $article)
+    {
+        if (auth()->check()) {
+            if ($article->checkUserStudy(auth()->id())) {
+                alert()->warning('مقاله مورد نظر به لیست مطالعه شده اضافه شده است', 'دقت کنید')->persistent('حله');
+                return redirect()->back();
+            } else {
+                Like::create([
+                    'user_id' => auth()->id(),
+                    'article_id' => $article->id
+                ]);
+
+                alert()->success('مقاله مورد نظر به لیست مطالعه شده اضافه شد', 'باتشکر');
+                return redirect()->back();
+            }
+        } else {
+            alert()->warning('برای افزودن به لیست مطالعه شده ها  نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
+            return redirect()->back();
+        }
+    }
+
+
+    public function studyRemove(Article $article)
+    {
+        if (auth()->check()) {
+            $like = Like::where('article_id', $article->id)->where('user_id', auth()->id())->firstOrFail();
+            if ($like) {
+                Like::where('article_id', $article->id)->where('user_id', auth()->id())->delete();
+            }
+
+            alert()->success('مقاله مورد نظر از لیست مطالعه شدها حذف شد', 'باتشکر');
+            return redirect()->back();
+        } else {
+            alert()->warning('برای حذف از لیست مطالعه شده ها نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
+            return redirect()->back();
+        }
+    }
+
+
 
 }

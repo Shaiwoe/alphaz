@@ -75,4 +75,10 @@ class Article extends Model
         return $this->hasMany(Like::class)->where('user_id' , $userId)->exists();
     }
 
+    public function checkUserStudy($userId)
+    {
+        return $this->hasMany(Like::class)->where('user_id' , $userId)->exists();
+    }
+
+
 }
