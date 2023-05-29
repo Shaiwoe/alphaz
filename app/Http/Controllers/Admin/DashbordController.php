@@ -9,7 +9,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Like;
 use App\Models\Market;
 use App\Models\Padcast;
+use App\Models\Study;
 use App\Models\Video;
+use App\Models\Wishlist;
 use WisdomDiala\Cryptocap\Facades\Cryptocap;
 
 class DashbordController extends Controller
@@ -18,9 +20,10 @@ class DashbordController extends Controller
     {
         $users = $request->user();
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
-
-        $likes = Like::where('user_id' , auth()->id())->get();
-        return view('admin.dashboard', compact('users', 'articles', 'likes'));
+        $studys = Study::where('user_id' , auth()->id())->take(4)->get();
+        $likes = Like::where('user_id' , auth()->id())->take(4)->get();
+        $wishlists = Wishlist::where('user_id' , auth()->id())->take(4)->get();
+        return view('admin.dashboard', compact('users', 'articles', 'likes','studys','wishlists'));
     }
 
     public function add(Article $article)
@@ -53,49 +56,10 @@ class DashbordController extends Controller
                 Like::where('article_id', $article->id)->where('user_id', auth()->id())->delete();
             }
 
-            alert()->success('مقاله مورد نظر از لیست پسندیدها شما حذف شد', 'باتشکر');
+            alert()->warning('مقاله مورد نظر از لیست پسندیدها شما حذف شد', 'باتشکر');
             return redirect()->back();
         } else {
             alert()->warning('برای حذف از لیست پسندیدها نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
-            return redirect()->back();
-        }
-    }
-
-
-    public function studyAdd(Article $article)
-    {
-        if (auth()->check()) {
-            if ($article->checkUserStudy(auth()->id())) {
-                alert()->warning('مقاله مورد نظر به لیست مطالعه شده اضافه شده است', 'دقت کنید')->persistent('حله');
-                return redirect()->back();
-            } else {
-                Like::create([
-                    'user_id' => auth()->id(),
-                    'article_id' => $article->id
-                ]);
-
-                alert()->success('مقاله مورد نظر به لیست مطالعه شده اضافه شد', 'باتشکر');
-                return redirect()->back();
-            }
-        } else {
-            alert()->warning('برای افزودن به لیست مطالعه شده ها  نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
-            return redirect()->back();
-        }
-    }
-
-
-    public function studyRemove(Article $article)
-    {
-        if (auth()->check()) {
-            $like = Like::where('article_id', $article->id)->where('user_id', auth()->id())->firstOrFail();
-            if ($like) {
-                Like::where('article_id', $article->id)->where('user_id', auth()->id())->delete();
-            }
-
-            alert()->success('مقاله مورد نظر از لیست مطالعه شدها حذف شد', 'باتشکر');
-            return redirect()->back();
-        } else {
-            alert()->warning('برای حذف از لیست مطالعه شده ها نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
             return redirect()->back();
         }
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Tag;
 use App\Models\Like;
+use App\Models\Study;
 use App\Models\Category;
 use App\Models\Wishlist;
 use App\Models\ArticleImage;
@@ -77,7 +78,7 @@ class Article extends Model
 
     public function checkUserStudy($userId)
     {
-        return $this->hasMany(Like::class)->where('user_id' , $userId)->exists();
+        return $this->hasMany(Study::class)->where('user_id' , $userId)->exists();
     }
 
 

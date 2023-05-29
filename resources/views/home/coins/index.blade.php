@@ -348,7 +348,7 @@
 
         bindingTabEvent('.tab_wrap');
     </script>
-    {{--  --}}
+
 
 
 

@@ -39,7 +39,7 @@ class WishlistController extends Controller
                 Wishlist::where('article_id', $article->id)->where('user_id', auth()->id())->delete();
             }
 
-            alert()->success('مقاله مورد نظر از لیست علاقه مندی ها شما حذف شد', 'باتشکر');
+            alert()->warning('مقاله مورد نظر از لیست علاقه مندی ها شما حذف شد', 'باتشکر');
             return redirect()->back();
         } else {
             alert()->warning('برای حذف از لیست علاقه مندی ها نیاز هست در ابتدا وارد سایت شوید', 'دقت کنید')->persistent('حله');
