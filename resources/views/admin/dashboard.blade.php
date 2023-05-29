@@ -109,9 +109,9 @@
                             </div>
                         </div>
                     @else
-                        <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
+                        <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
                             @foreach ($wishlists as $wishlist)
-                                <div class="flex w-full bg-coin1" >
+                                <div class="flex w-full bg-coin1" id="coinBox">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
