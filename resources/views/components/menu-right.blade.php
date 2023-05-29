@@ -26,7 +26,7 @@
                 صفحه اصلی
             </div>
 
-            <a href="{{ route('home.prices.index') }}" data-tooltip-target="tooltip-no-arrow15"
+            <a href="" data-tooltip-target="tooltip-no-arrow15"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 32.272 32.272">
                     <g id="bar-chart-outline" transform="translate(1 1)">
@@ -56,7 +56,7 @@
                 متاورس
             </div>
 
-            <a href="{{ route('home.metavers.index') }}" data-tooltip-target="tooltip-no-arrow12"
+            <a href="{{ route('home.coins.index') }}" data-tooltip-target="tooltip-no-arrow12"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" x="0"
                     y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
