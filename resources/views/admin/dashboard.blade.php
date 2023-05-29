@@ -199,14 +199,16 @@
                                     alt="">
                             </a>
 
-                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                class="w-full text-sm text-white dark:text-gray-700">
-                                {{ $article->title }}
-                            </a>
+                            <div class="flex flex-col p-4 w-full space-y-4">
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                    class="w-full text-sm text-white dark:text-gray-700">
+                                    {{ $article->title }}
+                                </a>
 
-                            <p>
-                                {{ Str::limit($article->description, 80) }}
-                            </p>
+                                <p class="text-sm">
+                                    {{ Str::limit($article->description, 80) }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
