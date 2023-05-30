@@ -59,7 +59,7 @@ use App\Http\Controllers\Home\CoinMarketController;
 use App\Http\Controllers\Home\StudyController;
 
 Route::get('/coins', [CoinMarketController::class, 'list'])->name('home.coins.index');
-Route::get('/coins/{symbol}', [CoinMarketController::class, 'show']);
+Route::get('/coins/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
