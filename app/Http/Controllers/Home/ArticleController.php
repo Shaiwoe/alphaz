@@ -28,7 +28,7 @@ class ArticleController extends Controller
     {
 
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
-
+        $article->increment('viewCount');
         $categorys = Category::all();
         return view('home.articles.show', compact('article', 'articles'));
     }
