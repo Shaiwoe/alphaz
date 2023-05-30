@@ -268,11 +268,8 @@
                                                 </svg>
                                             </td>
                                             <td
-                                                class="flex gap-1 lg:gap-2 items-center space-x-5 lg:px-4 py-4 mt-2 text-gray-200 text-base">
-                                                <a href="">
-                                                    <img class="rounded-full w-7 lg:w-0" src=""
-                                                        alt="">
-                                                </a>
+                                                class="flex gap-1 lg:gap-4 items-center space-x-5 lg:px-4 py-4 mt-2 text-gray-200 text-base">
+
                                                 <img src="/assets/{{ $coin->symbol }}.png" class="w-8 h-8">
                                                 <p class="text-xs lg:text-base text-gray-200 dark:text-gray-700">
                                                     {{ $coin->name }}</p>
