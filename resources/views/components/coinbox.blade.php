@@ -1,4 +1,4 @@
-{{-- coin box  --}}
+
 <div class="container mx-auto text-gray-100">
     <div class="flex flex-col">
         <div id="coinBox" class="bg-coin1 dark:bg-white dark:filter-none dark:shadow-2xl p-2 md:p-6">
