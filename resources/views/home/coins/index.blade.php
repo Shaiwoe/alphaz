@@ -167,36 +167,36 @@
                             <table class="w-full text-right text-gray-500">
                                 <thead class="text-sm text-gray-200 dark:text-gray-800 uppercase bg-coin1 rounded-full">
                                     <tr>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 rounded-r-full">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 rounded-r-full">
                                             #
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
                                             نام ارز
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
                                             قیمت تتر
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
                                             1h %
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 font-sans ">
-                                            24h %
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
+                                            24h%
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
                                             7d %
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
                                             ارزش بازار
                                         </th>
 
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
                                             Volume(24h)
                                         </th>
 
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
                                             نمودار
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-base px-4 py-4 rounded-l-full">
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 rounded-l-full">
                                             توضیحات بیشتر
                                         </th>
                                     </tr>
