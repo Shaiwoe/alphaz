@@ -156,10 +156,7 @@
 
             </div>
 
-            <div class="flex justify-center lg:px-36 z-40">
-                <img class="w-full  rounded-2xl" src=""
-                    alt="{{ $video->title }}">
-            </div>
+
 
             <div id="coinBox"
                 class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
@@ -221,6 +218,12 @@
                 <div
                     class="w-full  md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
                     <div class="flex flex-col w-full ">
+                        <div id="coinBox">
+                            <div class="flex justify-center lg:px-36 z-40">
+                                <img class="w-full  rounded-2xl" src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                                    alt="{{ $video->title }}">
+                            </div>
+                        </div>
                         <div id="coinBox"
                             class=" bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
                             <p class="text-white font-bold text-xl text-center">دسته بندی ها</p>
