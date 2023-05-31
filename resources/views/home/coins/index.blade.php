@@ -91,52 +91,118 @@
                 <div id="coinBox" class="bg-coin1 dark:bg-white dark:filter-none dark:shadow-2xl p-2 md:p-6">
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-8">
 
+                        @foreach($coins as $coin)
+                        @if($coin->symbol == 'BTC')
                         <div
                             class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
                             <img class="w-10 lg:w-16 lg:-mt-10" src="image/bitcoin.png" alt="">
                             <p class="lg:text-2xl font-bold">BTC</p>
                             <div class="flex items-center gap-2">
-                                <img class="w-3" src="image/top-green.svg" alt="">
-                                <p class="lg:text-xl">28.300.25</p>
+                                @if($coin->percent_change_1h > 0)
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-green" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @else
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-red" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @endif
+                                <p class="lg:text-xl">{{ number_format($coin->price, 2) }}</p>
                             </div>
                             <p class="text-xs shadow-2xl">جزئیات بیشتر</p>
                             <div class=""></div>
                         </div>
+                        @endif
 
+                        @if($coin->symbol == 'ETH')
                         <div
                             class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
                             <img class="w-10 lg:w-16 lg:-mt-10" src="image/ethereum.png" alt="">
                             <p class="lg:text-2xl font-bold">ETH</p>
                             <div class="flex items-center gap-2">
-                                <img class="w-3" src="image/top-green.svg" alt="">
-                                <p class="lg:text-xl">1820.25</p>
+                                @if($coin->percent_change_1h > 0)
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-green" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @else
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-red" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @endif
+                                <p class="lg:text-xl">{{ number_format($coin->price, 2) }}</p>
                             </div>
                             <div>
                                 <p class="text-xs">جزئیات بیشتر</p>
                             </div>
                         </div>
+                        @endif
 
+                        @if($coin->symbol == 'ADA')
                         <div
                             class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
                             <img class="w-10 lg:w-16 lg:-mt-10" src="image/cardano.png" alt="">
                             <p class="lg:text-2xl font-bold">ADA</p>
                             <div class="flex items-center gap-2">
-                                <img class="w-3" src="image/top-green.svg" alt="">
-                                <p class="lg:text-xl">0.3787</p>
+                               @if($coin->percent_change_1h > 0)
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-green" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @else
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-red" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @endif
+                                <p class="lg:text-xl">{{ number_format($coin->price, 2) }}</p>
                             </div>
                             <p class="text-xs">جزئیات بیشتر</p>
                         </div>
+                        @endif
 
+                        @if($coin->symbol == 'XRP')
                         <div
                             class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
                             <img class="w-10 lg:w-16 lg:-mt-10" src="image/xrp.png" alt="">
                             <p class="lg:text-2xl font-bold">XRP</p>
                             <div class="flex items-center gap-2">
-                                <img class="w-3" src="image/top-green.svg" alt="">
-                                <p class="lg:text-xl">0.5304</p>
+                                @if($coin->percent_change_1h > 0)
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-green" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @else
+                                <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-red" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                @endif
+                                <p class="lg:text-xl">{{ number_format($coin->price, 2) }}</p>
                             </div>
                             <p class="text-xs">جزئیات بیشتر</p>
                         </div>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -219,6 +285,9 @@
                                         <th scope="col" class="text-xs lg:text-sm px-4 py-4">
                                             قیمت تتر
                                         </th>
+                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                            قیمت تومان
+                                        </th>
                                         <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
                                             1h %
                                         </th>
@@ -257,10 +326,13 @@
                                             <td
                                                 class="flex gap-1 lg:gap-4 items-center space-x-5 lg:px-4 py-4 mt-2 text-gray-200 text-base">
 
-                                                <img src="/assets/{{ $coin->symbol }}.png" class="w-8 h-8">
+                                                <img src="/assets/{{ $coin->symbol }}.png" class="w-8 h-8 rounded-full">
                                                 <p class="text-xs lg:text-base text-gray-200 dark:text-gray-700">
                                                     {{ $coin->name }}</p>
                                             </td>
+
+
+
 
                                             @if ($coin->percent_change_1h > 0)
                                                 <td class="px-4 py-4 text-green-400">
@@ -291,6 +363,39 @@
                                                     </div>
                                                 </td>
                                             @endif
+
+                                            @if ($coin->percent_change_1h > 0)
+                                                <td class="px-4 py-4 text-green-400">
+                                                    <div class="flex items-center">
+                                                        <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-green" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                                        <p>
+                                                            {{ number_format($coin->price_rls, 2) }}
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            @else
+                                                <td class="px-4 py-4 text-red-400">
+                                                    <div class="flex items-center">
+                                                        <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                            <path class="fill-red" data-name="Polygon 2"
+                                                                d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
+                                                                transform="translate(15 13) rotate(180)"
+                                                                fill="#fff" />
+                                                        </svg>
+                                                        <p>
+                                                            {{ number_format($coin->price_rls, 2) }}
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            @endif
+
+
+
                                             @if ($coin->percent_change_1h < 0)
                                                 <td class="px-4 py-4 text-white dark:text-gray-700 ">
                                                     <p class="bg-red-o text-center rounded-md">
