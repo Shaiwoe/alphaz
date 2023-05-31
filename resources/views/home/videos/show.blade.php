@@ -379,25 +379,25 @@
 
             <div class="w-full flex flex-col  space-y-12 bg-coin1 p-4 z-40" id="coinBox">
                 <p class="text-center text-xl">
-                    مقالات مرتبط
+                    ویدئو های مرتبط
                 </p>
 
                 <div class="flex flex-col lg:flex-row w-full gap-4">
-                    @foreach ($videos as $video)
+                    @foreach ($articles as $article)
                         <div class="flex  w-full bg-box" id="coinBox">
                             <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                                <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                     <img class="rounded-t-xl w-full h-36"
-                                        src="{{ asset(env('videoS_IMAGES_UPLOAD_PATH') . $video->primary_image) }}"
+                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                         alt="">
                                 </a>
 
-                                <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
                                     class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ $video->title }}
+                                    {{ $article->title }}
                                 </a>
                                 <p class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ Str::limit($video->description, 80) }}
+                                    {{ Str::limit($article->description, 80) }}
                                 </p>
                             </div>
                         </div>
