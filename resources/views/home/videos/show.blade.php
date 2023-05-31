@@ -157,7 +157,7 @@
             </div>
 
             <div class="flex justify-center lg:px-36 z-40">
-                <img class="w-full  rounded-2xl" src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                <img class="w-full  rounded-2xl" src=""
                     alt="{{ $video->title }}">
             </div>
 
@@ -166,9 +166,8 @@
 
                 <p>زمان ویدئو 10 دقیقه است</p>
 
-                @auth
-                    @if ($video->checkUserWishlist(auth()->id()))
-                        <a href="{{ route('home.whishlist.remove', ['video' => $video->id]) }}"
+
+                        <a href=""
                             class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                             به لیست علاقه مندی ها اضافه شد
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -178,8 +177,7 @@
                             </svg>
 
                         </a>
-                    @else
-                        <a href="{{ route('home.whishlist.add', ['video' => $video->id]) }}"
+                        <a href=""
                             class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                             افزودن به لیست مورد علاقه ها
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -189,9 +187,7 @@
                             </svg>
 
                         </a>
-                    @endif
-                @else
-                    <a href="{{ route('home.whishlist.add', ['video' => $video->id]) }}"
+                    <a href=""
                         class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                         افزودن به لیست مورد علاقه ها
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -201,13 +197,11 @@
                         </svg>
 
                     </a>
-                @endauth
 
 
 
-                @auth
-                    @if ($video->checkUserLike(auth()->id()))
-                        <a href="{{ route('home.like.remove', ['video' => $video->id]) }}"
+
+                        <a href=""
                             class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2  rounded-full gap-2 items-center">
                             شما این ویدئو را پسندیده اید
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -218,8 +212,7 @@
 
 
                         </a>
-                    @else
-                        <a href="{{ route('home.like.add', ['video' => $video->id]) }}"
+                        <a href=""
                             class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
                             این ویدئو را میپسندم
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -229,9 +222,8 @@
                             </svg>
 
                         </a>
-                    @endif
-                @else
-                    <a href="{{ route('home.like.add', ['video' => $video->id]) }}"
+
+                    <a href=""
                         class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
                         این ویدئو را میپسندم
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -241,7 +233,6 @@
                         </svg>
 
                     </a>
-                @endauth
 
 
 
@@ -249,7 +240,7 @@
 
 
                 <a href="" class="flex cursor-pointer px-4 py-2 gap-2 items-center">
-                    تعداد بازدید {{ $video->viewCount }}
+                    تعداد بازدید
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
