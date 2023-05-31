@@ -36,7 +36,7 @@
 
 
     <!-- main -->
-    <div class="container mx-auto text-white p-4 sm:p-8">
+    <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
 
 
         <form class="mt-44 z-40">
@@ -51,55 +51,283 @@
                     </svg>
                 </div>
 
-                <input type="search" name="search" id="search-input" value="{{ request()->has('search') ? request()->search : '' }}"
+                <input type="search" name="search" id="search-input"
+                    value="{{ request()->has('search') ? request()->search : '' }}"
                     class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
                     placeholder="برای جستجو در ویدیو ها کلمه مورد نظر را تایپ کنید" required>
             </div>
         </form>
 
 
-        <div class="light dark:opacity-40 relative w-full">
-            <div class="absolute left-0">
-                <img src="image/tinified/4.png" alt="">
+
+
+        {{-- slide top  --}}
+        <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
+
+            <p class="text-white dark:text-gray-700 text-3xl z-40 mt-8 underline underline-offset-8">برترین مقاله های یک
+                ماه گذشته</p>
+
+
+
+            <div class="w-9/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+
+
+                <div class="row-span-2 col-span-2">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-span-1">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full z-40">
+                            <img class=" image" src="image/12.jpg" alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                توضیحات مقاله
+                            </div>
+                            <div class="text10">
+                                <a href=""
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="light dark:opacity-40 w-full">
+            <div class="absolute w-5/12 left-0" style="top:1500px">
+                <img class="" src="image/tinified/4.png" alt="">
+            </div>
+        </div>
+        <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
+
+            <div
+                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                <div class="flex flex-col w-full">
+                    <div id="coinBox"
+                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                        <p class="text-white font-bold text-xl text-center">دسته بندی ها</p>
 
 
-        <div class="flex p-4 mt-16 lg:mt-44 z-40 gap-8 bg-coin1 dark:bg-white relative" id="coinBox">
+                        @php
+                            $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
+                        @endphp
+
+                        @foreach ($parentCategorys as $parentCategory)
+                            <div class="sidenav p-1 m-2 z-40">
+                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                    <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
+                                        <path id="chevron-right" d="M9,18l6-6L9,6"
+                                            transform="translate(19.414 -7.586) rotate(90)" fill="none"
+                                            stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" />
+                                    </svg>
+
+                                    {{ $parentCategory->title }}
+
+                                </button>
+                                <div class="dropdown-container z-40 mr-5">
+
+                                    @foreach ($parentCategory->children as $childCategory)
+                                        <a class="flex mb-3"
+                                            href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                            <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
+                                                <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
+                                                    cy="4" r="4" fill="#fff" />
+                                            </svg>
+
+                                            {{ $childCategory->title }}
+
+                                        </a>
+                                        </ul>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        @endforeach
+
+                    </div>
+
+                    <div id="coinBox"
+                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
+                        <p class="text-white font-bold text-xl text-center">فیلتر بر اساس زمان</p>
+                    </div>
+
+                    <div id="coinBox"
+                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
+                        <p class="text-white font-bold text-xl text-center">فیلتر بر اساس تگ ها</p>
 
 
 
-            <div class="flex flex-col w-full  min-h-screen">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
 
                 <div
                     class="flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
 
-                    <div class="hidden lg:flex gap-6">
-                        <p class="bg-button1 text-white w-36 p-2 rounded-2xl">بر اساس جدیدترین</p>
-                        <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بر اساس قدیمی ترین</p>
-                        <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترید بازدید</p>
-                        <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترین لایک</p>
-                    </div>
+                    <div class="flex-col w-full contents">
+                        <div class="hidden lg:flex gap-3">
+                            <p class="bg-green text-white w-36 p-2 rounded-2xl">بر اساس جدیدترین</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بر اساس قدیمی ترین</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترید بازدید</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترین لایک</p>
+                        </div>
 
-                    <div class="flex gap-4">
-                        <p class="bg-form1 p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
-                            </svg>
-                        </p>
+                        <div class="flex gap-2">
+                            <p class="bg-form1 p-2 rounded-full">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                                </svg>
+                            </p>
 
-                        <p class="bg-button1 p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z" />
-                            </svg>
-                        </p>
+                            <p class="bg-green p-2 rounded-full">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z" />
+                                </svg>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -109,8 +337,7 @@
                         <div class="bg-indigo-1  rounded-3xl flex flex-col w-full space-y-6">
                             <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
                                 <img class="rounded-t-3xl w-full h-28"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
-                                    alt="">
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}" alt="">
                             </a>
                             <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
                                 <p class="text-sm font-bold text-center">
@@ -158,10 +385,14 @@
                         </div>
                     @endforeach
 
-                    <div class="flex w-full justify-start mt-24">
-                        {{ $videos->onEachSide(4)->links('vendor.pagination.tailwind') }}
-                    </div>
 
+
+
+                </div>
+                <div class="flex w-full justify-between mt-14 mb-3">
+                    <a class="bg-green p-3 rounded-full mx-3">صفحه بعد</a>
+                    {{ $videos->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                    <a class="bg-green p-3 rounded-full mx-3">صفحه قبل</a>
                 </div>
             </div>
 
@@ -216,23 +447,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
