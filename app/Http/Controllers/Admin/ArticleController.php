@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
-        
+
 
 
         $Articles = Article::query()
@@ -55,6 +55,7 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'tag_id' => 'required',
             'is_active' => 'required',
             'description' => 'required',
@@ -72,6 +73,7 @@ class ArticleController extends Controller
 
         $article = Article::create([
             'title' => $request->title,
+            'slug' => $request->slug,
             'category_id' => $request->category_id,
             'description' => $request->description,
             'body' => $request->body,
@@ -134,6 +136,7 @@ class ArticleController extends Controller
         $request->validate([
             'primary_image' => 'nullable|mimes:jpg,jpeg,png,svg',
             'title' => 'required',
+            'slug' => 'required',
             'tag_id' => 'required',
             'tag_id.*' => 'exists:tags,id',
             'is_active' => 'required',
@@ -153,6 +156,7 @@ class ArticleController extends Controller
 
         $article->update([
             'title' => $request->title,
+            'slug' => $request->slug,
             'category_id' => $request->category_id,
             'description' => $request->description,
             'body' => $request->body,

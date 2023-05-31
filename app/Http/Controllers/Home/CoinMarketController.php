@@ -78,7 +78,7 @@ class CoinMarketController extends Controller
     protected function getMarketCoins()
     {
         $address = [
-            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=400'
+            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=600'
         ];
 
         $headers = [

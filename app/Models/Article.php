@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
-    use HasFactory , Sluggable;
+    use HasFactory ;
 
     protected $table = "articles";
     protected $guarded = [];
@@ -24,19 +24,7 @@ class Article extends Model
         return $is_active ? 'انتشار' : 'پیش نمایش' ;
     }
 
-    /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
-    }
+
 
     public function tags()
     {

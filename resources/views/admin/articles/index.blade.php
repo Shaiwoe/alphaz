@@ -41,7 +41,7 @@
                 <div class="flex justify-between items-center">
                     <p class="text-xl"> اخبار ها - {{ $Articles->total() }}</p>
                     <a href="{{ route('articles.create') }}"
-                        class="bg-green-600 px-8 py-2 rounded-md flex gap-2 items-center text-white">
+                        class="bg-green px-8 py-2 rounded-md flex gap-2 items-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -82,6 +82,9 @@
                                     عنوان
                                 </th>
                                 <th scope="col" class="px-6 py-3">
+                                    لینک مقاله
+                                </th>
+                                <th scope="col" class="px-6 py-3">
                                     نام دسته بندی
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -95,7 +98,7 @@
                         </thead>
                         <tbody>
                             @foreach ($Articles as $key => $article)
-                                <tr class="bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-b border-gray-700 hover:bg-gray-400">
+                                <tr class="bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-b border-gray-700 ">
                                     <td class="px-6 py-4">
                                         {{ $Articles->firstItem() + $key }}
                                     </td>
@@ -105,16 +108,21 @@
                                         </a>
                                     </td>
                                     <td class="px-6 py-4">
+                                        {{ $article->slug }}
+                                    </td>
+                                    
+                                    <td class="px-6 py-4">
                                         {{ $article->category->title }}
                                     </td>
+
                                     <td class="px-6 py-4">
                                         <div
-                                            class="{{ $article->getRawOriginal('is_active') ? 'text-green-500' : 'text-red-500' }}">
+                                            class="{{ $article->getRawOriginal('is_active') ? 'text-green' : 'text-red-500' }}">
                                             {{ $article->is_active }}
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 flex gap-4">
-                                        <a class="flex bg-blue-500 text-white px-4 py-2 rounded-md"
+                                        <a class="flex bg-sky-500 text-white px-4 py-2 rounded-md"
                                             href="{{ $article->path() }}">
                                             لینک
                                         </a>
@@ -129,7 +137,7 @@
                                             @method('DELETE')
 
                                             <button type="submit"
-                                                class="flex bg-red-500 text-white px-4 py-2 rounded-md">
+                                                class="flex bg-red text-white px-4 py-2 rounded-md">
                                                 حذف
                                             </button>
                                         </form>
