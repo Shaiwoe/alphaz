@@ -12,7 +12,7 @@ class ArticleController extends Controller
     public function index(Request $request, Article $article)
     {
         $articles = Article::query()
-            ->orderBy('updated_at', 'desc')
+            ->orderBy('created_at', 'desc')
             ->where('is_active', 1)
             ->search()
             ->paginate(9);
@@ -20,8 +20,7 @@ class ArticleController extends Controller
 
         $lastArticles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(1)->get();
 
-        $articleBanners = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(2)->get();
-        return view('home.articles.index', compact('articles', 'articleBanners', 'lastArticles'));
+        return view('home.articles.index', compact('articles', 'lastArticles'));
     }
 
     public function show(Article $article)
