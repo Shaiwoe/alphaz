@@ -170,18 +170,33 @@
 
                             @foreach ($parentCategorys as $parentCategory)
                                 <div class="sidenav p-1 m-2 z-40">
-                                    <button class="dropdown-btn hover:bg-green rounded-full">
+                                    <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                        <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
+                                            <path id="chevron-right" d="M9,18l6-6L9,6"
+                                                transform="translate(19.414 -7.586) rotate(90)" fill="none"
+                                                stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" />
+                                        </svg>
+
                                         {{ $parentCategory->title }}
-                                        <i class="fa fa-caret-down"></i>
+
                                     </button>
-                                    <div class="dropdown-container z-40">
+                                    <div class="dropdown-container z-40 mr-5">
+
                                         @foreach ($parentCategory->children as $childCategory)
-                                            <a
+                                            <a class="flex mb-3"
                                                 href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                                <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
+                                                    <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
+                                                        cy="4" r="4" fill="#fff" />
+                                                </svg>
+
                                                 {{ $childCategory->title }}
+
                                             </a>
                                             </ul>
                                         @endforeach
+
                                     </div>
                                 </div>
                             @endforeach
@@ -231,7 +246,6 @@
                                                 class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                                                 مقاله را مطالعه کردم
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                                     class="feather feather-check-square ">

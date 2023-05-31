@@ -58,7 +58,38 @@
 
 
             <div class="w-9/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
-                <div class="row-span-2 col-span-2">
+
+                @foreach ($lastArticles as $lastArticle)
+                    <div class="row-span-2 col-span-2">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full  z-40">
+                                <img class="image" src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $lastArticle->primary_image) }}" alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($lastArticle->title, 40) }}</div>
+                                <div class="text10 text-xs lg:text-sm">
+                                    {{ Str::limit($lastArticle->description, 80) }}
+                                </div>
+                                <div class="text10">
+                                    <a href="{{ route('home.articles.show', ['article' => $lastArticle->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+
+
+                <div class="col-span-1">
                     <div class="hover-img">
                         <a href="" class="flex justify-end w-full z-40">
                             <img class=" image" src="image/12.jpg" alt="">
@@ -71,8 +102,8 @@
                             <div class="text10">
                                 <a href=""
                                     class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
@@ -95,8 +126,8 @@
                             <div class="text10">
                                 <a href=""
                                     class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
@@ -119,8 +150,8 @@
                             <div class="text10">
                                 <a href=""
                                     class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
@@ -143,8 +174,8 @@
                             <div class="text10">
                                 <a href=""
                                     class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
@@ -167,32 +198,8 @@
                             <div class="text10">
                                 <a href=""
                                     class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
@@ -263,8 +270,11 @@
                             <div class="sidenav p-1 m-2 z-40">
                                 <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
-                                        <path id="chevron-right" d="M9,18l6-6L9,6" transform="translate(19.414 -7.586) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                      </svg>
+                                        <path id="chevron-right" d="M9,18l6-6L9,6"
+                                            transform="translate(19.414 -7.586) rotate(90)" fill="none"
+                                            stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" />
+                                    </svg>
 
                                     {{ $parentCategory->title }}
 
@@ -275,8 +285,9 @@
                                         <a class="flex mb-3"
                                             href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
-                                                <circle id="Ellipse_241" data-name="Ellipse 241" cx="4" cy="4" r="4" fill="#fff"/>
-                                              </svg>
+                                                <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
+                                                    cy="4" r="4" fill="#fff" />
+                                            </svg>
 
                                             {{ $childCategory->title }}
 
@@ -311,7 +322,8 @@
 
 
 
-            <div class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+            <div
+                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
 
                 <div
                     class="flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
@@ -326,16 +338,16 @@
 
                         <div class="flex gap-2">
                             <p class="bg-form1 p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                                 </svg>
                             </p>
 
                             <p class="bg-green p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -364,31 +376,23 @@
                                 {{ Str::limit($article->description, 80) }}
                             </p>
 
-                            <div class="flex justify-between px-2 lg:px-4">
+                            <div class="flex justify-between items-center px-2 lg:px-4">
                                 <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
                                     class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                     </svg>
                                     مشاهده مقاله
                                 </a>
 
-                                <div class="flex items-center gap-4">
-                                    <p class="flex gap-1 items-center text-xs">
-                                        126
-                                        <svg fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                        </svg>
-                                    </p>
+                                <div class="flex items-center gap-4 -mt-2">
 
-                                    <p class="flex gap-1 items-center text-xs">
-                                        1640
-                                        <svg fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <p class="flex gap-1 items-center text-base">
+                                        {{ $article->viewCount }}
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-5 h-5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -404,9 +408,9 @@
 
 
                 </div>
-                <div class="flex w-full justify-start mt-14 mb-3">
+                <div class="flex w-full justify-between mt-14 mb-3">
                     <a class="bg-green p-3 rounded-full mx-3">صفحه بعد</a>
-                    {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                    {{ $articles->onEachSide(2)->links('vendor.pagination.tailwind') }}
                     <a class="bg-green p-3 rounded-full mx-3">صفحه قبل</a>
                 </div>
             </div>

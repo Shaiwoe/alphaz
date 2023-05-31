@@ -14,6 +14,8 @@ class CoinMarketController extends Controller
 
         $coins = [];
 
+
+
         foreach ($response->data as $coin) {
 
             $coins[] = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
@@ -41,7 +43,7 @@ class CoinMarketController extends Controller
     protected function getMarketCoins()
     {
         $address = [
-            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest'
+            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=400'
         ];
 
         $headers = [

@@ -181,20 +181,7 @@
                             transform="translate(-16.041 -31.985)" fill="#fff" />
                     </svg>
                 </button>
-                <span class="custom-dropdown btn_tab_s float-right p-3 rounded-t-2xl mx-4 text-white flex">
-                    <svg class="xl:w-4 lg:w-2 xl:h-4 lg:h-2 ml-3 self-center" viewBox="0 0 15 13">
-                        <path class="stroke-white dark:stroke-dark8" data-name="Polygon 2"
-                            d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
-                            transform="translate(15 13) rotate(180)" fill="#fff" />
-                    </svg>
-                    <select class="bg-transparent border-none">
-                        <option class="">25 عدد در هر صفحه</option>
-                        <option>50 عدد در هر صفحه</option>
-                        <option>100 عدد در هر صفحه</option>
-                        <option>200 عدد در هر صفحه</option>
-                    </select>
 
-                </span>
                 <button class="btn_tab_s btn_tab float-left p-3 rounded-t-2xl text-white flex" data-depth="0"
                     data-idx="3">جستجو در نام ارز ها
 
@@ -261,7 +248,7 @@
                                     @foreach ($coins as $coin)
                                         <tr class=" border-b border-gray-600 dark:border-gray-400 items-center">
                                             <td>
-                                                <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3" viewBox="0 0 24.638 23">
+                                                <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3 -mt-2" viewBox="0 0 24.638 23">
                                                     <path class="stroke-white dark:stroke-dark8 fill-none"
                                                         d="M35.442,54.982a.821.821,0,0,1-.482-.154l-6.6-4.786-6.6,4.786A.821.821,0,0,1,20.5,53.9l2.575-7.626L16.4,41.7a.821.821,0,0,1,.462-1.5h8.233l2.484-7.646a.821.821,0,0,1,1.563,0L31.624,40.2h8.233a.821.821,0,0,1,.465,1.5l-6.676,4.574L36.219,53.9a.821.821,0,0,1-.777,1.084Z"
                                                         transform="translate(-16.041 -31.985)" fill="#fff" />
@@ -277,7 +264,7 @@
 
                                             @if ($coin->percent_change_1h > 0)
                                                 <td class="px-4 py-4 text-green-400">
-                                                    <div class="flex items-center">
+                                                    <div class="flex items-center gap-2">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-green" data-name="Polygon 2"
                                                                 d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
@@ -291,7 +278,7 @@
                                                 </td>
                                             @else
                                                 <td class="px-4 py-4 text-red-400">
-                                                    <div class="flex items-center">
+                                                    <div class="flex items-center gap-2">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-red" data-name="Polygon 2"
                                                                 d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"

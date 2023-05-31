@@ -18,10 +18,10 @@ class ArticleController extends Controller
             ->paginate(9);
 
 
-
+        $lastArticles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(1)->get();
 
         $articleBanners = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(2)->get();
-        return view('home.articles.index', compact('articles', 'articleBanners'));
+        return view('home.articles.index', compact('articles', 'articleBanners', 'lastArticles'));
     }
 
     public function show(Article $article)
