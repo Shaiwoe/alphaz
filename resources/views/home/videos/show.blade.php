@@ -382,7 +382,7 @@
                     ویدئو های مرتبط
                 </p>
 
-                <div class="flex flex-col lg:flex-row w-full gap-4">
+                {{-- <div class="flex flex-col lg:flex-row w-full gap-4">
                     @foreach ($articles as $article)
                         <div class="flex  w-full bg-box" id="coinBox">
                             <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
@@ -402,7 +402,7 @@
                             </div>
                         </div>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
 
 
