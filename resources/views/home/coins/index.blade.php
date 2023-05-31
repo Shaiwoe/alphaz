@@ -374,7 +374,7 @@
                                                                 fill="#fff" />
                                                         </svg>
                                                         <p>
-                                                            {{ number_format($coin->price_rls, 2) }}
+                                                            {{ number_format($coin->price_ir, 2) }}
                                                         </p>
                                                     </div>
                                                 </td>
@@ -388,7 +388,7 @@
                                                                 fill="#fff" />
                                                         </svg>
                                                         <p>
-                                                            {{ number_format($coin->price_rls, 2) }}
+                                                            {{ number_format($coin->price_ir, 2) }}
                                                         </p>
                                                     </div>
                                                 </td>
