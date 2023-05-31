@@ -166,27 +166,6 @@
 
                 <p>زمان ویدئو 10 دقیقه است</p>
 
-
-                        <a href=""
-                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                            به لیست علاقه مندی ها اضافه شد
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 -mt-1">
-                                <path class="stroke-green fill-green" stroke-linecap="round" stroke-linejoin="round"
-                                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                            </svg>
-
-                        </a>
-                        <a href=""
-                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                            افزودن به لیست مورد علاقه ها
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                            </svg>
-
-                        </a>
                     <a href=""
                         class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                         افزودن به لیست مورد علاقه ها
@@ -200,28 +179,6 @@
 
 
 
-
-                        <a href=""
-                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2  rounded-full gap-2 items-center">
-                            شما این ویدئو را پسندیده اید
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" class="w-6 h-6">
-                                <path class="stroke-red fill-red" stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-
-                        </a>
-                        <a href=""
-                            class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
-                            این ویدئو را میپسندم
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-                        </a>
 
                     <a href=""
                         class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
@@ -371,44 +328,10 @@
 
 
 
-                                    @auth
-                                        @if ($video->checkUserStudy(auth()->id()))
-                                            <a href="{{ route('home.study.remove', ['video' => $video->id]) }}"
-                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                                ویدئو را مشاهده کردم
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-check-square ">
-                                                    <polyline class="stroke-green dark:stroke-green"
-                                                        points="9 11 12 14 22 4">
-                                                    </polyline>
-                                                    <path class="stroke-white dark:stroke-black"
-                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
-                                                    </path>
-                                                </svg>
 
-                                            </a>
-                                        @else
-                                            <a href="{{ route('home.study.add', ['video' => $video->id]) }}"
-                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                                افزودن به لیست مشاهده شده ها
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-check-square">
-                                                    <polyline class="stroke-white dark:stroke-black"
-                                                        points="9 11 12 14 22 4">
-                                                    </polyline>
-                                                    <path class="stroke-white dark:stroke-black"
-                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
-                                                    </path>
-                                                </svg>
 
-                                            </a>
-                                        @endif
-                                    @else
-                                        <a href="{{ route('home.study.add', ['video' => $video->id]) }}"
+
+                                        <a href=""
                                             class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
                                             افزودن به لیست مشاهده شده ها
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
@@ -422,7 +345,6 @@
                                             </svg>
 
                                         </a>
-                                    @endauth
 
 
 
