@@ -306,7 +306,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($coins as $coin)
+                                    @foreach ($data as $coin)
                                         <tr class=" border-b border-gray-600 dark:border-gray-400 items-center">
                                             <td>
                                                 <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3 -mt-2"
@@ -462,6 +462,10 @@
 
                     </div>
                 </div>
+            </div>
+
+            <div class="flex justify-center items-center space-y-6 mt-10">
+                <a href="{{ route('home.coins.index', ['page' => $page+1]) }}" class="px-4 py-2 bg-indigo-500 rounded-lg text-white text-sm text-center font-sans">Next Page</a>
             </div>
 
             <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">Second tab content</div>

@@ -7,7 +7,7 @@ use Cache;
 
 class CoinMarketController extends Controller
 {
-    public function list()
+    public function list($page = 1)
     {
         $controller = $this;
 
@@ -30,13 +30,24 @@ class CoinMarketController extends Controller
         $coins = [];
 
 
-
         foreach ($response->data as $coin) {
 
             $coins[] = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_ir' => ($coin->quote->USD->price * $lastPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
 
-        return view('home.coins.index', compact('coins'));
+        // Pagination
+        $data = array_chunk($coins, 40, true);
+
+        $dataPage = (intval($page) - 1);
+
+        if (!isset($data[$dataPage])) {
+
+            $dataPage = 0; // First page
+        }
+
+        $data = $data[$dataPage];
+
+        return view('home.coins.index', compact('coins', 'data', 'page'));
     }
 
     public function show($symbol)
