@@ -3,18 +3,27 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use Cache;
 
 class CoinMarketController extends Controller
 {
     public function list()
     {
-        $price = $this->getUSDTPrice();
+        $controller = $this;
 
-        // Sell price
-        $sellPrice = array_get($price, 'stats.usdt-rls.bestSell');
+        $price = Cache::remember('getUSDTPrice', 3600, function() use($controller) {
+
+            return $controller->getUSDTPrice();
+        });
+
+        // Last price
+        $lastPrice = array_get($price, 'last');
 
         // List coins
-        $response = $this->getMarketCoins();
+        $response = Cache::remember('getMarketCoins', 3600, function() use($controller) {
+
+            return $controller->getMarketCoins();
+        });
 
         // Check response
 
@@ -22,7 +31,7 @@ class CoinMarketController extends Controller
 
         foreach ($response->data as $coin) {
 
-            $coins[] = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_rls' => ($coin->quote->USD->price * $sellPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
+            $coins[] = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_ir' => ($coin->quote->USD->price * $lastPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
 
         return view('home.coins.index', compact('coins'));
@@ -44,7 +53,7 @@ class CoinMarketController extends Controller
 
         foreach ($response->data as $coin) {
 
-            $coin = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_rls' => ($coin->quote->USD->price * $sellPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
+            $coin = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_ir' => ($coin->quote->USD->price * $lastPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
 
         return view('home.coins.show', compact('coin'));
@@ -53,7 +62,7 @@ class CoinMarketController extends Controller
     protected function getUSDTPrice()
     {
         $address = [
-            'https://api.nobitex.ir', 'market', 'stats?srcCurrency=usdt&dstCurrency=rls'
+            'https://api.exir.io', 'v2', 'ticker?symbol=usdt-irt'
         ];
 
         $response = \PG\Request\Request::instance()
