@@ -20,7 +20,7 @@ class CoinMarketController extends Controller
 
         $coins = [];
 
-
+        
 
         foreach ($response->data as $coin) {
 
