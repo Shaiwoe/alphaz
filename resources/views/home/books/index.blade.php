@@ -292,10 +292,10 @@
 
                     <div class="flex-col w-full contents">
                         <div class="hidden lg:flex gap-3">
-                            <p class="bg-green text-white w-36 p-2 rounded-2xl">بر اساس جدیدترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بر اساس قدیمی ترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترید بازدید</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-2xl">بیشترین لایک</p>
+                            <p class="bg-green text-white w-36 p-2 rounded-full">بر اساس جدیدترین</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بر اساس قدیمی ترین</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترید بازدید</p>
+                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترین لایک</p>
                         </div>
 
                         <div class="flex gap-2">
