@@ -212,7 +212,7 @@
 
         <div class="flex flex-row  mt-20 z-40 relative">
             <div class="basis-1/2 self-center text-2xl font-bold text-white">قیمت لحظه ای ارز های دیجیتال</div>
-            <div class="basis-1/2" style="text-align: -webkit-left;">
+            {{-- <div class="basis-1/2" style="text-align: -webkit-left;">
                 <div class="switch-button">
                     <input class="switch-button-checkbox" type="checkbox">
                     <label class="switch-button-label" for="">
@@ -220,7 +220,7 @@
                         </span>
                     </label>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
 
