@@ -186,7 +186,7 @@
                     </svg>
                 </a>
                 <div class="hidden lg:flex cursor-pointer  gap-2 items-center">
-                    <p class="mt-1">{{ verta($article->updated_at)->format(' %d / %B / %Y') }}</p>
+                    <p class="mt-1">{{ verta($book->updated_at)->format(' %d / %B / %Y') }}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
