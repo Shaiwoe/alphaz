@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         $rightBanners = Banner::where('type', 'right')->where('is_active' , 1)->get();
         $leftBanners = Banner::where('type', 'left')->where('is_active' , 1)->get();
-        $articles = Article::orderBy('updated_at', 'desc')->where('is_active' , 1)->take(8)->get();
+        $articles = Article::orderBy('created_at', 'desc')->where('is_active' , 1)->take(8)->get();
         $videos = Video::orderBy('updated_at', 'desc')->where('is_active' , 1)->take(8)->get();
         return view('home.index' , compact('rightBanners' , 'leftBanners' , 'articles','videos'));
     }
