@@ -32,17 +32,12 @@
     <div class="p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white">
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
-            <div class="flex-col mt-24 lg:mt-44">
-                <div class="flex justify-center z-40">
-                    <p class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $video->title }}</p>
-                </div>
 
-            </div>
 
 
 
             <div id="coinBox"
-                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full mt-24">
 
                 <p>زمان ویدئو 10 دقیقه است</p>
 

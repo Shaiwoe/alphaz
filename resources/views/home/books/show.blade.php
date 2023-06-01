@@ -139,17 +139,8 @@
     <div class="p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white">
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
-            <div class="flex-col mt-24 lg:mt-44">
-                <div class="flex justify-center z-40">
-                    <p class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $book->title }}</p>
-                </div>
-
-            </div>
-
-
-
             <div id="coinBox"
-                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full mt-24">
 
                 <p>زمان مطالعه برای این کتاب 10 دقیقه است</p>
 
@@ -277,7 +268,7 @@
                                 </div>
 
                                 <div id="coinBox"
-                                    class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                                    class="bg-box dark:bg-white w-full flex justify-center items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
 
 
 
@@ -286,14 +277,13 @@
                                         class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
                                         دانلود مستقیم کتاب
 
-                                        <svg class="w-6 h-6"
-                                            viewBox="0 0 512 512">
+                                        <svg class="w-6 h-6" viewBox="0 0 512 512">
                                             <path class="stroke-white"
                                                 d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40"
                                                 fill="none" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="32" />
-                                            <path class="stroke-white" fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
+                                            <path class="stroke-white" fill="none" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
                                                 d="M176 272l80 80 80-80M256 48v288" />
                                         </svg>
 
@@ -305,10 +295,12 @@
                                     <a href=""
                                         class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
                                         مطالعه آنلاین به زودی
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+
+                                        <svg class="w-6 h-6" viewBox="0 0 512 512">
+                                            <path class="stroke-white"
+                                                d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288"
+                                                fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32" />
                                         </svg>
 
                                     </a>
