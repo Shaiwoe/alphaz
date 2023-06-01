@@ -175,7 +175,7 @@
             <div id="coinBox"
                 class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
 
-                <p>زمان مطالعه برای این مقاله 10 دقیقه است</p>
+                <p>زمان مطالعه برای این پادکست 10 دقیقه است</p>
 
 
                 <a href=""
@@ -191,7 +191,7 @@
 
                 <a href=""
                     class="hidden lg:flex cursor-pointer bg-coin1 rounded-full px-4 py-2 gap-2 items-center">
-                    این مقاله را میپسندم
+                    این پادکست را میپسندم
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -316,7 +316,7 @@
                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                 stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
                                         </svg>
-                                        مقاله بعدی:
+                                        پادکست بعدی:
                                         موضوع
 
                                     </a>
@@ -325,7 +325,7 @@
 
                                     <a href=""
                                         class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                        افزودن به لیست مطالعه شده ها
+                                        افزودن به لیست تکمیل شده ها
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
                                             fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -342,7 +342,7 @@
 
                                     <a href=""
                                         class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
-                                        مقاله قبلی:
+                                        پادکست قبلی:
                                         موضوع
 
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
