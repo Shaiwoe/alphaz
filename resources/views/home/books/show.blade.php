@@ -381,7 +381,7 @@
 
             <div class="w-full flex flex-col  space-y-12 bg-coin1 p-4 z-40" id="coinBox">
                 <p class="text-center text-xl">
-                    مقالات مرتبط
+                    کتاب های مرتبط
                 </p>
 
                 {{-- <div class="flex flex-col lg:flex-row w-full gap-4">

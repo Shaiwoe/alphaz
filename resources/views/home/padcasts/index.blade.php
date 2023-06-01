@@ -324,7 +324,7 @@
                     @foreach ($padcasts as $padcast)
                         <div class="bg-indigo-1  rounded-3xl flex flex-col w-full space-y-6">
                             <a href="{{ route('home.padcasts.show', ['padcast' => $padcast->slug]) }}">
-                                <img class="rounded-t-3xl w-full h-28"
+                                <img class="rounded-t-3xl ا-full"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $padcast->image) }}"
                                     alt="">
                             </a>
