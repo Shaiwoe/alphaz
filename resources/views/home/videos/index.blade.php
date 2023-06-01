@@ -344,13 +344,13 @@
                                     {{ Str::limit($video->title, 40) }}
                                 </p>
                             </a>
-                            <p class="text-center text-gray-500 text-sm">و
+                            <p class="text-center text-white text-xs font-extralight px-3">و
                                 {{ Str::limit($video->description, 80) }}
                             </p>
 
                             <div class="flex justify-between px-2 lg:px-4">
                                 <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
-                                    class="bg-button1 flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                    class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                         <path stroke-linecap="round" stroke-linejoin="round"

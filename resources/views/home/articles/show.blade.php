@@ -353,7 +353,7 @@
             </div>
 
 
-            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30 p-4 lg:p-8">
+            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
                 <form class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
                     id="coinBox" action="">
                     <p class="lg:text-2xl">برای ارتباط با ما پیام دهید</p>
