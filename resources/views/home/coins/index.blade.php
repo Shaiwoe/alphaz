@@ -298,7 +298,7 @@
                                         </th>
 
                                         <th scope="col" class="text-xs lg:text-sm px-4 py-4">
-                                            نمودار
+                                            نمودار <span class="font-sans">(7d)</span>
                                         </th>
                                         <th scope="col" class="text-xs lg:text-sm px-4 py-4 rounded-l-full">
                                             توضیحات بیشتر
@@ -438,9 +438,24 @@
                                             <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
                                                 {{ number_format($coin->volume_24h, 3) }}
                                             </td>
-                                            <td class="px-4 py-4">
-                                                <img src="/image/chart.png" alt="">
-                                            </td>
+
+                                            @if ($coin->percent_change_7d < 0)
+                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+
+                                                    <img src="/image/chart-r.png" alt="">
+
+                                                </td>
+                                            @else
+                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+
+                                                    <img src="/image/chart-g.png" alt="">
+
+                                                </td>
+                                            @endif
+
+
+
+
                                             <td class="flex justify-end px-4 py-4 text-center">
                                                 <a href="{{ route('home.coins.show', ['symbol' => $coin->symbol]) }}"
                                                     class="flex gap-2 text-white bg-green py-2 px-4 rounded-full  text-xs items-center">
@@ -464,9 +479,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center space-y-6 mt-10">
-                <a href="{{ route('home.coins.index', ['page' => $page+1]) }}" class="px-4 py-2 bg-indigo-500 rounded-lg text-white text-sm text-center font-sans">Next Page</a>
-            </div>
+
 
             <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">Second tab content</div>
             <div class="content_area rounded-b-2xl pt-4 z-40 text-center" data-depth="0" data-idx="3">
@@ -486,8 +499,17 @@
                         placeholder="برای جستجو در کتاب ها کلمه مورد نظر را تایپ کنید" required>
                 </div>
             </div>
+
+            <div class="flex justify-center items-center gap-8 mt-10">
+                <a href="{{ route('home.coins.index', ['page' => $page - 1]) }}"
+                    class="px-4 py-2 bg-red rounded-lg text-white text-sm text-center">صفحه قبلی</a>
+                <a href="{{ route('home.coins.index', ['page' => $page + 1]) }}"
+                    class="px-4 py-2 bg-green rounded-lg text-white text-sm text-center">صفحه بعدی</a>
+            </div>
         </div>
     </div>
+
+
     <script>
         function findParent(el, className) {
             let check = el.parentNode.classList.contains(className);

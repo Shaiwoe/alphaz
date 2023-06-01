@@ -36,7 +36,7 @@ class CoinMarketController extends Controller
         }
 
         // Pagination
-        $data = array_chunk($coins, 40, true);
+        $data = array_chunk($coins, 60, true);
 
         $dataPage = (intval($page) - 1);
 
@@ -89,7 +89,7 @@ class CoinMarketController extends Controller
     protected function getMarketCoins()
     {
         $address = [
-            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=600'
+            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=5000'
         ];
 
         $headers = [
