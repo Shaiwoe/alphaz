@@ -36,7 +36,7 @@ class CoinMarketController extends Controller
         }
 
         // Pagination
-        $data = array_chunk($coins, 60, true);
+        $data = array_chunk($coins, 80, true);
 
         $dataPage = (intval($page) - 1);
 
