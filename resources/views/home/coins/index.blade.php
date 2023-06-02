@@ -500,12 +500,21 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center gap-8 mt-10">
+            <div class="flex justify-center items-center space-x-5 mt-10">
+
+                @foreach ($pages as $page)
+                <a href="{{ route('home.coins.index', ['page' => $page]) }}" class="bg-green rounded-lg text-white text-sm text-center px-5 py-2 m-5">
+                    {{ $page }}
+                </a>
+                @endforeach
+            </div>
+
+            <!--<div class="flex justify-center items-center gap-8 mt-10">
                 <a href="{{ route('home.coins.index', ['page' => $page - 1]) }}"
                     class="px-4 py-2 bg-red rounded-lg text-white text-sm text-center">صفحه قبلی</a>
                 <a href="{{ route('home.coins.index', ['page' => $page + 1]) }}"
                     class="px-4 py-2 bg-green rounded-lg text-white text-sm text-center">صفحه بعدی</a>
-            </div>
+            </div>-->
         </div>
     </div>
 

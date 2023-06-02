@@ -47,15 +47,31 @@ class CoinMarketController extends Controller
 
         $data = $data[$dataPage];
 
-        return view('home.coins.index', compact('coins', 'data', 'page'));
+        $count = count($coins);
+
+        $endPage = $page + 10;
+
+        if ($endPage > $count) {
+            $endPage = $count;
+        }
+
+        $pages = intval($count / 60);
+        $pages = range($page, $endPage);
+
+        return view('home.coins.index', compact('coins', 'data', 'page', 'pages'));
     }
 
     public function show($symbol)
     {
-        $price = $this->getUSDTPrice();
+        $controller = $this;
 
-        // Sell price
-        $sellPrice = array_get($price, 'stats.usdt-rls.bestSell');
+        $price = Cache::remember('getUSDTPrice', 3600, function() use($controller) {
+
+            return $controller->getUSDTPrice();
+        });
+
+        // Last price
+        $lastPrice = array_get($price, 'last');
 
         // List coins
         $response = $this->getMarketCoin($symbol);
