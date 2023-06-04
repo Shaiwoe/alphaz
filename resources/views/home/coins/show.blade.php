@@ -175,7 +175,7 @@
 
                 <div class="w-full flex flex-col space-y-8 p-8 relative overflow-hidden">
                     <div class="w-10/12 absolute -top-20 -left-20 opacity-25 blur-md ">
-                        <img class="w-full" src="/assets/{{ $coin->symbol }}.png" />
+                        <img class="w-full rounded-full" src="/assets/{{ $coin->symbol }}.png" />
                     </div>
 
                     <div class="w-full flex flex-col justify-center items-center space-y-12 text-left">
@@ -186,7 +186,7 @@
                                 <p>{{ $coin->name }} <span>( {{ $coin->symbol }} )</span></p>
 
                             </div>
-                            <img class="w-3/12" src="/assets/{{ $coin->symbol }}.png" />
+                            <img class="w-3/12 rounded-full" src="/assets/{{ $coin->symbol }}.png" />
                         </div>
 
                         <div class="flex flex-col space-y-2 w-full justify-center items-center text-2xl">
