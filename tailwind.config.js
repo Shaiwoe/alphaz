@@ -42,6 +42,7 @@ module.exports = {
                 'indigo-2': '#090C35',
                 'icon': '#FFFFFF2B',
                 'button1': '#08B5BD91',
+                'button2': '#08B5BD',
                 'form1': '#FFFFFF2B',
                 'white1': '#F0ECFF',
                 'menu1': '#ffffff2b',

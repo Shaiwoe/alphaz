@@ -352,15 +352,15 @@
 
                                                 <img src="/assets/{{ $coin->symbol }}.png"
                                                     class="w-8 h-8 rounded-full">
-                                                <p class="text-xs lg:text-base text-gray-200 dark:text-gray-700">
-                                                    {{ $coin->name }}</p>
+                                                <a href="{{ route('home.coins.show', ['symbol' => $coin->symbol]) }}" class="text-xs lg:text-base text-gray-200 dark:text-gray-700 mt-1">
+                                                    {{ $coin->name }}</a>
                                             </td>
 
 
 
 
                                             @if ($coin->percent_change_1h > 0)
-                                                <td class="px-4 py-4 text-green">
+                                                <td class="px-4 py-4 text-green-400">
                                                     <div class="flex items-center gap-2">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-green" data-name="Polygon 2"
@@ -374,7 +374,7 @@
                                                     </div>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-red">
+                                                <td class="px-4 py-4 text-red-400">
                                                     <div class="flex items-center gap-2">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-red" data-name="Polygon 2"

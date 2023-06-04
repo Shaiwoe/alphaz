@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\Article;
 use App\Http\Controllers\Controller;
-use Cache;
+use Illuminate\Support\Facades\Cache;
+
 
 class CoinMarketController extends Controller
 {
@@ -36,7 +38,7 @@ class CoinMarketController extends Controller
         }
 
         // Pagination
-        $data = array_chunk($coins, 80, true);
+        $data = array_chunk($coins, 60, true);
 
         $dataPage = (intval($page) - 1);
 
@@ -85,7 +87,10 @@ class CoinMarketController extends Controller
             $coin = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_ir' => ($coin->quote->USD->price * $lastPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
 
-        return view('home.coins.show', compact('coin'));
+
+        $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
+
+        return view('home.coins.show', compact('coin', 'articles'));
     }
 
     protected function getUSDTPrice()
@@ -105,7 +110,7 @@ class CoinMarketController extends Controller
     protected function getMarketCoins()
     {
         $address = [
-            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=5000'
+            'https://pro-api.coinmarketcap.com', 'v1', 'cryptocurrency', 'listings', 'latest?start=1&limit=2500'
         ];
 
         $headers = [
