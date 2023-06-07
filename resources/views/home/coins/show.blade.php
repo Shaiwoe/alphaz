@@ -51,7 +51,12 @@
 
     <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-10/12 mx-auto p-4 z-50">
 
+
+
+
         <div class="flex flex-col w-full mt-32 lg:mt-44 z-40 relative text-white  space-y-10 mb-12 lg:mb-32">
+
+
 
             <div class="bg-indigo-1  w-full flex gap-8">
 
@@ -61,50 +66,33 @@
 
                     <p class="text-3xl"> قیمت لحظه ای {{ $coin->name }}</p>
 
-                    <div class="bg-coin1 p-8 w-full flex flex-col space-y-10 justify-center items-center"
-                        id="coinBox">
 
-                        @if ($coin->percent_change_1h > 0)
-                            <td class="px-4 py-4 text-green-400">
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-3 h-3 " viewBox="0 0 15 13">
-                                        <path class="fill-green" data-name="Polygon 2"
-                                            d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
-                                            transform="translate(15 13) rotate(180)" fill="#fff" />
-                                    </svg>
-                                    <p class="text-2xl">
-                                        {{ number_format($coin->price, 2) }}
-                                    </p>
-                                </div>
-                            </td>
-                        @else
-                            <td class="px-4 py-4 text-red-400">
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-3 h-3 " viewBox="0 0 15 13">
-                                        <path class="fill-red" data-name="Polygon 2"
-                                            d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
-                                            transform="translate(15 13) rotate(180)" fill="#fff" />
-                                    </svg>
-                                    <p class="text-2xl">
-                                        {{ number_format($coin->price, 2) }}
-                                    </p>
-                                </div>
-                            </td>
-                        @endif
 
-                        @if ($coin->percent_change_7d < 0)
-                            <div class="w-full flex justify-center items-center">
+                    <div class="flex flex-col justify-center items-center space-y-4">
 
-                                <img class="w-6/12" src="/image/chart-r.png" alt="">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                {
+                                    "symbol": "{{ $coin->symbol }}USDT",
+                                    "width": 350,
+                                    "height": 220,
+                                    "locale": "en",
+                                    "dateRange": "12M",
+                                    "colorTheme": "dark",
+                                    "isTransparent": true,
+                                    "autosize": false,
+                                    "largeChartUrl": ""
+                                }
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
 
-                            </div>
-                        @else
-                            <div class="w-full flex justify-center items-center">
 
-                                <img class="w-6/12" src="/image/chart-g.png" alt="">
 
-                            </div>
-                        @endif
                     </div>
                 </div>
 
@@ -205,6 +193,54 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="flex gap-10">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_0380e"></div>
+
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "height": 680,
+                            "symbol": "{{ $coin->symbol }}USDT",
+                            "interval": "D",
+                            "timezone": "Asia/TEHRAN",
+                            "theme": "dark",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "backgroundColor": "rgba(0, 0, 0, 1)",
+                            "gridColor": "rgba(255, 255, 255, 0.06)",
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_0380e"
+                        });
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+
+
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+                        async>
+                        {
+                            "interval": "1m",
+                            "width": 680,
+                            "isTransparent": false,
+                            "height": 680,
+                            "symbol": "{{ $coin->symbol }}USDT",
+                            "showIntervalTabs": true,
+                            "locale": "en",
+                            "colorTheme": "dark"
+                        }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
             </div>
 
             <div class="bg-box dark:bg-white  w-full flex  p-4 rounded-lg">
