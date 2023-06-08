@@ -48,27 +48,30 @@
                     <div class="grid lg:grid-cols-4 w-full gap-6  mb-6">
 
                         <div class="flex flex-col w-full">
-                            <label for="title" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">عنوان</label>
+                            <label for="title"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">عنوان</label>
                             <input type="text" name="title" id="title"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="catepory_id" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
+                            <label for="catepory_id"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
                                 بندی</label>
                             <select id="catepory_id" name="catepory_id"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 @foreach ($cateporys as $catepory)
-                                    <option value="{{ $catepory->id }}">{{ $catepory->title }} از
-                                        {{ $catepory->parent->title }}</option>
+                                    <option value="{{ $catepory->id }}">{{ $catepory->title }}
+                                    </option>
                                 @endforeach
                             </select>
                             <x-input-error :messages="$errors->get('catepory_id')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="type" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">نوع</label>
+                            <label for="type"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">نوع</label>
                             <input type="text" name="type" id="type"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
@@ -76,7 +79,8 @@
 
 
                         <div class="flex flex-col w-full">
-                            <label for="image" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
+                            <label for="image"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 عکس</label>
                             <input type="file" name="image" id="banner_image"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
@@ -84,7 +88,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="voice" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
+                            <label for="voice"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
                                 پادکست</label>
                             <input type="file" name="voice" id="voice"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
@@ -93,7 +98,8 @@
 
 
                         <div class="flex flex-col w-full">
-                            <label for="time" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">زمان</label>
+                            <label for="time"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">زمان</label>
                             <input type="text" name="time" id="time"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="00:00:00">
@@ -101,7 +107,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="tags" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">تگ</label>
+                            <label for="tags"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">تگ</label>
                             <input type="text" name="tags" id="tags"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="تگ ها را , از هم جدا کنید">
@@ -111,7 +118,8 @@
 
 
                         <div class="flex flex-col w-full">
-                            <label for="is_active" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
+                            <label for="is_active"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1">انتشار</option>
@@ -123,7 +131,8 @@
 
                     <div class="flex flex-col gap-4 w-full">
                         <div class="flex flex-col w-full">
-                            <label for="description" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیح
+                            <label for="description"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیح
                                 کوتاه</label>
                             <textarea rows="5" type="text" name="description" id="description"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
@@ -132,7 +141,8 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="body" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">متن</label>
+                            <label for="body"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">متن</label>
                             <textarea rows="8" type="text" name="body" id="body"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="متن پادکست را وارد کنید" value="{{ old('body') }}"></textarea>

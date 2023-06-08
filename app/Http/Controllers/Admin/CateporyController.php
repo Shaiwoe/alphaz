@@ -29,7 +29,8 @@ class CateporyController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        $cateporys = Catepory::where('parent_id', 0)->get();
+        $cateporys = Catepory::all();
+
         return view('admin.cateporys.create', compact('cateporys','users'));
     }
 

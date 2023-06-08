@@ -59,10 +59,9 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="slug"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">
+                            <label for="slug" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">
 
-                             لینک خبر ( از عنوان کپی کنید و با - جدا کنید)
+                                لینک خبر ( از عنوان کپی کنید و با - جدا کنید)
 
                             </label>
                             <input type="text" name="slug" id="slug" value="{{ old('slug') }}"

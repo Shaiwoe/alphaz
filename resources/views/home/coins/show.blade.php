@@ -73,7 +73,7 @@
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container">
                             <div class="tradingview-widget-container__widget"></div>
-                            
+
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
                                 async>
                                 {

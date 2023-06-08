@@ -32,6 +32,7 @@ class PadcastController extends Controller
     {
         $users = $request->user();
         $cateporys = Catepory::where('parent_id', '!=' , 0)->get();
+
         return view('admin.padcasts.create' , compact('cateporys','users'));
     }
 
