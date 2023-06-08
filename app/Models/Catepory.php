@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Padcast;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Catepory extends Model
 {
@@ -25,5 +26,10 @@ class Catepory extends Model
     public function children()
     {
         return $this->hasMany(Catepory::class, 'parent_id');
+    }
+
+    public function padcasts()
+    {
+        return $this->hasMany(Padcast::class);
     }
 }
