@@ -18,7 +18,7 @@ class ArticleController extends Controller
             ->paginate(9);
 
 
-        $sevenArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
+        $sevenArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->latest()->get();
         $sexArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
         $fiveArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
         $forArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(4)->latest()->get();
