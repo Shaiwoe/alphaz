@@ -36,7 +36,7 @@
 
             <div class="flex-col mt-24 lg:mt-44">
                 <div class="flex justify-center z-40">
-                    <p class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $article->title }}</p>
+                    <h1 class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $article->title }}</h1>
                 </div>
 
             </div>
@@ -415,7 +415,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
