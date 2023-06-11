@@ -67,7 +67,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sevenArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($sevenArticles->title, 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
@@ -98,7 +98,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sexArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($sexArticles->title, 40) }}
                                 </div>
@@ -129,7 +129,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $fiveArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($fiveArticles->title, 40) }}
                                 </div>
@@ -160,7 +160,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $forArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($forArticles->title, 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
@@ -190,7 +190,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $threeArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($threeArticles->title, 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
@@ -218,7 +218,7 @@
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image" src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}" alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-8 p-4">
+                            <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($twoArticles->title, 40) }}
                                 </div>
