@@ -95,7 +95,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sevenArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sexArticles->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
