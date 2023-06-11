@@ -56,7 +56,7 @@ class ArticleController extends Controller
         $request->validate([
             'title' => 'required',
             'slug' => 'required',
-            'tag_id' => 'required',
+            'tag_ids' => 'required',
             'is_active' => 'required',
             'description' => 'required',
             'category_id' => 'required',
@@ -64,6 +64,8 @@ class ArticleController extends Controller
             'primary_image' => 'required|mimes:jpg,jpeg,png,svg',
 
         ]);
+
+
 
         try {
             DB::beginTransaction();
@@ -84,6 +86,7 @@ class ArticleController extends Controller
 
 
         $article->tags()->attach($request->tag_ids);
+
 
         DB::commit();
         } catch (\Exception $ex) {
@@ -137,7 +140,7 @@ class ArticleController extends Controller
             'primary_image' => 'nullable|mimes:jpg,jpeg,png,svg',
             'title' => 'required',
             'slug' => 'required',
-            'tag_id' => 'required',
+            'tag_ids' => 'required',
             'tag_id.*' => 'exists:tags,id',
             'is_active' => 'required',
             'description' => 'required',

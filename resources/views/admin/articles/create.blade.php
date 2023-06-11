@@ -70,18 +70,13 @@
                             <x-input-error :messages="$errors->get('slug')" class="mt-2" />
                         </div>
 
-                        <div class="flex flex-col w-full">
-                            <label for="tag_id"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">تگ</label>
-                            <select id="tag_id" name="tag_id"
-                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 placeholder:text-white dark:placeholder:text-gray-600 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
-                                id="coinBox"
-                                @foreach ($tags as $tag)
-                                    <option value="{{ $tag->id }}">{{ $tag->title }}</option>
-                                @endforeach
-                            </select>
-                            <x-input-error :messages="$errors->get('tag_id')" class="mt-2" />
-                        </div>
+
+
+
+
+
+
+
 
 
 
@@ -123,7 +118,34 @@
                     </div>
 
 
-                    <div class="flex flex-col w-full mb-6">
+
+
+                    <div id="accordion-collapse" data-accordion="collapse">
+                        <h2 id="accordion-collapse-heading-1">
+                        <button type="button" class="flex p-4 items-center justify-between w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400" data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
+                            <span>انتخاب تگ ها</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        </h2>
+                        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                            <div class="grid grid-cols-5 gap-4 py-4">
+                                @foreach ($tags as $tag)
+                                    <div class="flex items-center gap-2 px-2 bg-coin1 dark:bg-gray-100 text-gray-400 border-gray-600 rounded-lg">
+                                        <input  id="tag_ids" type="checkbox" value="{{ $tag->id }}" name="tag_ids[]" class="w-4 h-4 text-blue-600  rounded  ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                                        <label for="tag_ids" class="w-full py-4 ml-2 text-sm font-medium ">{{ $tag->title }}</label>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <x-input-error :messages="$errors->get('tag_ids')" class="mt-2" />
+                    </div>
+
+
+
+
+
+                    <div class="flex flex-col w-full my-6">
                         <label for="description" class="block mb-2 text-sm text-white dark:text-gray-600">توضیحات
                             کوتاه</label>
                         <textarea id="description" name="description" value="{{ old('description') }}" rows="4"
@@ -140,6 +162,8 @@
                             placeholder="متن مقاله را وارد کنید" value="{{ old('body') }}"></textarea>
                         <x-input-error :messages="$errors->get('body')" class="mt-2" />
                     </div>
+
+
 
                     <div class="flex gap-4 mt-14">
                         <button type="submit"
@@ -173,6 +197,8 @@
             $(this).next('.custom-file-label').html(fileName);
         });
     </script>
+
+
 
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     <script>

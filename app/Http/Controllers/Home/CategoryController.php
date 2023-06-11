@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function show(Request $request,Category $category)
     {
-        $articles = $category->articles()->orderBy('updated_at', 'desc')->where('is_active' , 1)->get();
+        $articles = $category->articles()->orderBy('created_at', 'desc')->where('is_active' , 1)->get();
 
         return view('home.categories.show' , compact('articles' , 'category'));
     }

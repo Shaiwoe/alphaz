@@ -11,4 +11,10 @@ class Tag extends Model
 
     protected $table = "tags";
     protected $guarded = [];
+
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

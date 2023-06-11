@@ -332,11 +332,6 @@
 
                     </div>
 
-                    <div id="coinBox"
-                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
-                        <p class="text-white font-bold text-xl text-center">فیلتر بر اساس زمان</p>
-                    </div>
-
 
                     <div id="coinBox"
                         class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
@@ -359,8 +354,7 @@
                         <div class="hidden lg:flex gap-3">
                             <p class="bg-green text-white w-36 p-2 rounded-full">بر اساس جدیدترین</p>
                             <p class="bg-form1 text-white w-36 p-2 rounded-full">بر اساس قدیمی ترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترید بازدید</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترین لایک</p>
+                            
                         </div>
 
                         <div class="flex gap-2">

@@ -18,7 +18,7 @@ class TagController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
-        $tags = Tag::latest()->paginate(10);
+        $tags = Tag::latest()->paginate(50);
         return view('admin.tags.index', compact('tags','users'));
     }
 
