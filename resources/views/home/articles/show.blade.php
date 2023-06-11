@@ -415,9 +415,7 @@
                             </div>
                         </div>
 
-                        <button id="contact-button" class="p-2" type="submit">
-                            ارسال پیام
-                        </button>
+                        
                     </div>
                 </div>
             </div>
