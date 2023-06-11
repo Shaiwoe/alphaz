@@ -154,6 +154,12 @@
                                     class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ
                                     ها</a>
                             </li>
+
+                            <li>
+                                <a href="{{ route('comments.index') }}"
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">کامنت
+                                    ها</a>
+                            </li>
                         </ul>
                     </div>
                 @endcan

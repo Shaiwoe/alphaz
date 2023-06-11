@@ -4,7 +4,6 @@ use App\Http\Controllers\Auth\Google;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Home\FaqController;
-use App\Http\Controllers\Home\PhpController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\VipController;
 use App\Http\Controllers\Auth\AuthController;
@@ -14,14 +13,15 @@ use App\Http\Controllers\Admin\MapsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\userController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\StudyController;
 use App\Http\Controllers\Admin\ChartController;
 use App\Http\Controllers\Admin\ScoreController;
 use App\Http\Controllers\Admin\VideoController;
-use App\Http\Controllers\Home\MarketController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Home\ContactController;
-use App\Http\Controllers\Home\PhpinfoController;
 use App\Http\Controllers\Admin\ArticleController;
+
+use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\PadcastController;
 use App\Http\Controllers\Admin\WebinarController;
 use App\Http\Controllers\Home\MetaversController;
@@ -33,30 +33,22 @@ use App\Http\Controllers\Admin\CatevoryController;
 use App\Http\Controllers\Admin\DashbordController;
 use App\Http\Controllers\Admin\FavoriteController;
 use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Home\CoinMarketController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
 use App\Http\Controllers\Admin\MarketController as AdminMarketController;
 use App\Http\Controllers\Home\ArticleController as HomeArticleController;
+use App\Http\Controllers\Home\CommentController as HomeCommentController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-use App\Http\Controllers\Home\CoinMarketController;
-use App\Http\Controllers\Home\StudyController;
+
+
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
@@ -91,7 +83,7 @@ Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->
 Route::get('/metavers', [MetaversController::class, 'coins'])->name('home.metavers.index');
 Route::get('/metavers/{metavers:id}/{slug}', [MetaversController::class, 'show'])->name('home.metavers.show');
 
-
+Route::post('/comments/{article}', [HomeCommentController::class, 'store'])->name('home.comments.store');
 
 Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/faq', [FaqController::class, 'index'])->name('home.faq');
@@ -124,6 +116,8 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::resource('users', userController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('roles', RoleController::class);
+    Route::resource('comments', CommentController::class);
+    Route::get('/comments/{comment}/change-approve', [CommentController::class,'ChangeApprove'])->name('comments.change');
 
     Route::post('ckeditor/upload', [ArticleController::class,'upload'])->name('ckeditor.upload');
 });

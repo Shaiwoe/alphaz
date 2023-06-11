@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Tag;
 use App\Models\Like;
 use App\Models\Study;
+use App\Models\Comment;
 use App\Models\Category;
 use App\Models\Wishlist;
 use App\Models\ArticleImage;
@@ -69,5 +70,10 @@ class Article extends Model
         return $this->hasMany(Study::class)->where('user_id' , $userId)->exists();
     }
 
+
+    public function approvedComments()
+    {
+        return $this->hasMany(Comment::class)->where('approved' , 1);
+    }
 
 }

@@ -24,6 +24,7 @@ return new class extends Migration
 
             $table->boolean('approved')->default(0);
             $table->text('text');
+
             $table->softDeletes();
             $table->timestamps();
         });
