@@ -18,9 +18,15 @@ class ArticleController extends Controller
             ->paginate(9);
 
 
-        $lastArticles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(1)->get();
+        $sevenArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(1)->get();
+        $sexArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(2)->get();
+        $fiveArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(3)->get();
+        $forArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(4)->get();
+        $threeArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(5)->get();
+        $twoArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(6)->get();
+        $oneArticle = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(7)->skip(7)->get();
 
-        return view('home.articles.index', compact('articles', 'lastArticles'));
+        return view('home.articles.index', compact('articles', 'sevenArticle', 'sexArticle' , 'forArticle' , 'fiveArticle', 'threeArticle' , 'twoArticle' , 'oneArticle'));
     }
 
     public function show(Article $article)
