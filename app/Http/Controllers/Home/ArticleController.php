@@ -19,6 +19,24 @@ class ArticleController extends Controller
             ->paginate(9);
 
 
+
+        $articless = Article::query()
+            ->orderBy('created_at', 'ASC')
+            ->where('is_active', 1)
+            ->search()
+            ->paginate(9);
+
+
+        $articlesss = Article::query()
+            ->orderBy('updated_at', 'desc')
+            ->where('is_active', 1)
+            ->search()
+            ->paginate(9);
+
+
+
+
+
         $sevenArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
         $sexArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
         $fiveArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
@@ -30,7 +48,7 @@ class ArticleController extends Controller
         $tags = Tag::all();
 
 
-        return view('home.articles.index', compact('tags' , 'articles', 'sevenArticle', 'sexArticle' , 'forArticle' , 'fiveArticle', 'threeArticle' , 'twoArticle' , 'oneArticle'));
+        return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Article $article)
@@ -40,6 +58,6 @@ class ArticleController extends Controller
         $article->increment('viewCount');
         $categorys = Category::all();
         $tags = Tag::all();
-        return view('home.articles.show', compact('article', 'articles' , 'tags' , 'categorys'));
+        return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys'));
     }
 }
