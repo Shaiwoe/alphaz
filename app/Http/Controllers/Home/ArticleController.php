@@ -53,11 +53,12 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-
+        $prev = Article::find($article->id - 1);
+        $next = Article::find($article->id + 1);
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $article->increment('viewCount');
         $categorys = Category::all();
         $tags = Tag::all();
-        return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys'));
+        return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys' , 'prev' , 'next'));
     }
 }
