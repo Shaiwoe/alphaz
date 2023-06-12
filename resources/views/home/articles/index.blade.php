@@ -632,7 +632,7 @@
 
                                     </p>
 
-                                    <div class="hidden lg:block w-44 p-2 bg-green rounded-full mx-4">
+                                    <div class="hidden lg:block w-44 p-1 bg-green rounded-full mx-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
                                             class=" flex p-2  text-xs items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
