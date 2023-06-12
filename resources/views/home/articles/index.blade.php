@@ -633,7 +633,7 @@
                                     </p>
 
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                        class="bg-green flex rounded-2xl p-2 text-xs  items-center gap-2">
+                                        class="bg-green flex rounded-2xl px-2 py-2 text-xs w-44 items-center gap-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
