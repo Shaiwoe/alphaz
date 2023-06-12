@@ -57,7 +57,7 @@
 
 
 
-            <div class="w-11/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+            <div class="w-9/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
 
                 @foreach ($sevenArticle as $sevenArticles)
                     <div class="row-span-2 col-span-2">
@@ -67,7 +67,7 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sevenArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($sevenArticles->title, 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
@@ -98,13 +98,11 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sexArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($sexArticles->title, 40) }}
                                 </div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($sexArticles->description, 80) }}
-                                </div>
+
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $sexArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
@@ -129,13 +127,11 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $fiveArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($fiveArticles->title, 40) }}
                                 </div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($fiveArticles->description, 80) }}
-                                </div>
+
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $fiveArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
@@ -160,12 +156,10 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $forArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($forArticles->title, 40) }}</div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($forArticles->description, 80) }}
-                                </div>
+
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $forArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
@@ -190,12 +184,10 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $threeArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($threeArticles->title, 40) }}</div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($threeArticles->description, 80) }}
-                                </div>
+
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $threeArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
@@ -220,13 +212,11 @@
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}"
                                     alt="">
                             </a>
-                            <div class="middle space-y-2 lg:space-y-4">
+                            <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
                                     {{ Str::limit($twoArticles->title, 40) }}
                                 </div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($twoArticles->description, 80) }}
-                                </div>
+
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $twoArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
@@ -243,36 +233,7 @@
                     </div>
                 @endforeach
             </div>
-            {{-- <div class="flex flex-col lg:flex-row w-full gap-8 mt-12">
-                @foreach ($articleBanners as $articleBanner)
-                    <div class="hover-img">
-                        <a href="{{ route('home.articles.show', ['article' => $articleBanner->slug]) }}"
-                            class="flex justify-end w-full z-40">
-                            <img class=" image"
-                                src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $articleBanner->primary_image) }}"
-                                alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">{{ $articleBanner->title }}</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                {{ Str::limit($articleBanner->description, 80) }}
-                            </div>
-                            <div class="text10">
-                                <a href="{{ route('home.articles.show', ['article' => $articleBanner->slug]) }}"
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
-                            </div>
 
-                        </div>
-                    </div>
-                @endforeach
-            </div> --}}
         </div>
 
 
