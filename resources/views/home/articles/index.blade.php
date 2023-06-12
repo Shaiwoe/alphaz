@@ -423,7 +423,7 @@
 
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full  mx-3"> بعد</a>
-                                {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3"> قبل</a>
                             </div>
 
@@ -480,7 +480,7 @@
 
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full mx-3">بعد</a>
-                                {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3">قبل</a>
                             </div>
 
@@ -537,7 +537,7 @@
 
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3">قبل</a>
                             </div>
 
@@ -595,7 +595,7 @@
 
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3">قبل</a>
                             </div>
 
@@ -651,7 +651,7 @@
 
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="hidden lg:block bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="hidden lg:block bg-green p-3 rounded-full mx-3">قبل</a>
                             </div>
 
