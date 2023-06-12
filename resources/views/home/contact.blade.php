@@ -61,12 +61,12 @@
 
                     <a id="coinBox" href="https://www.youtube.com/@alpharency" class="flex flex-col gap-3 justify-center items-center py-10 bg-coin1 dark:bg-purple1">
                         <img id="" class="p-2 rounded-md w-20 h-20" src="image/svg/youtube.svg" alt="">
-                        <p>Twitter</p>
+                        <p>Youtube</p>
                     </a>
 
                     <a id="coinBox" href="https://twitter.com/alpharency" class="flex flex-col gap-3 justify-center items-center py-10 bg-coin1 dark:bg-purple1">
                         <img id="" class="p-2 rounded-md w-20 h-20" src="image/svg/twitter.svg" alt="">
-                        <p>Yourube</p>
+                        <p>Twitter</p>
                     </a>
                 </div>
             </div>
