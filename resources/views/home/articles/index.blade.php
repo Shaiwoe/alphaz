@@ -606,10 +606,10 @@
                         <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4  z-40">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
-                                <div class="bg-indigo-1 rounded-3xl p-2 flex items-center w-full ">
+                                <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <img class="rounded-r-3xl w-5/12 lg:w-7/12"
+                                        <img class="rounded-r-3xl w-6/12 lg:w-7/12"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
