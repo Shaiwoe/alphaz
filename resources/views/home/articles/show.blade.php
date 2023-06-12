@@ -202,80 +202,69 @@
                             @endforeach
 
                         </div>
+
+
                         <div id="coinBox"
                             class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
-                            <p class="text-white font-bold text-xl text-center">تگ ها</p>
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-                <div
-                    class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
-                    <div class="flex flex-col w-full">
-
-                        <div class="flex w-full rounded-3xl p-2 lg:p-4 z-40 text-right">
-                            <div
-                                class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
-                                <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
-                                    {{ $article->title }}</h1>
-                                <p id="image-article">{!! $article->body !!}</p>
-                                <div id="coinBox"
-                                    class="w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
-
+                            <p class="text-white font-bold text-xl text-center">فیلتر بر اساس تگ ها</p>
+                            <div class="grid grid-cols-3 gap-4 mt-8">
+                                @foreach ($tags as $tag)
                                     <a href=""
-                                        class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                            viewBox="0 0 512 512">
-                                            <path class="stroke-white dark:stroke-black" fill="none"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
-                                        </svg>
-                                        مقاله بعدی:
-                                        موضوع
-
-                                    </a>
+                                        class="bg-box rounded-xl w-24 text-center text-sm p-2">{{ $tag->title }}</a>
+                                    {{-- <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
+                                @endforeach
+                            </div>
+                        </div>
 
 
 
-                                    @auth
-                                        @if ($article->checkUserStudy(auth()->id()))
-                                            <a href="{{ route('home.study.remove', ['article' => $article->id]) }}"
-                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                                مقاله را مطالعه کردم
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-check-square ">
-                                                    <polyline class="stroke-green dark:stroke-green"
-                                                        points="9 11 12 14 22 4">
-                                                    </polyline>
-                                                    <path class="stroke-white dark:stroke-black"
-                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
-                                                    </path>
-                                                </svg>
+                    </div>
+                </div>
 
-                                            </a>
-                                        @else
-                                            <a href="{{ route('home.study.add', ['article' => $article->id]) }}"
-                                                class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
-                                                افزودن به لیست مطالعه شده ها
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-check-square">
-                                                    <polyline class="stroke-white dark:stroke-black"
-                                                        points="9 11 12 14 22 4">
-                                                    </polyline>
-                                                    <path class="stroke-white dark:stroke-black"
-                                                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
-                                                    </path>
-                                                </svg>
+            </div>
+            <div class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
+                <div class="flex flex-col w-full">
 
-                                            </a>
-                                        @endif
+                    <div class="flex w-full rounded-3xl p-2 lg:p-4 z-40 text-right">
+                        <div
+                            class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
+                            <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
+                                {{ $article->title }}</h1>
+                            <p id="image-article">{!! $article->body !!}</p>
+                            <div id="coinBox"
+                                class="w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+
+                                <a href=""
+                                    class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+                                        <path class="stroke-white dark:stroke-black" fill="none"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
+                                    </svg>
+                                    مقاله بعدی:
+                                    موضوع
+
+                                </a>
+
+
+
+                                @auth
+                                    @if ($article->checkUserStudy(auth()->id()))
+                                        <a href="{{ route('home.study.remove', ['article' => $article->id]) }}"
+                                            class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                            مقاله را مطالعه کردم
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-check-square ">
+                                                <polyline class="stroke-green dark:stroke-green" points="9 11 12 14 22 4">
+                                                </polyline>
+                                                <path class="stroke-white dark:stroke-black"
+                                                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
+                                                </path>
+                                            </svg>
+
+                                        </a>
                                     @else
                                         <a href="{{ route('home.study.add', ['article' => $article->id]) }}"
                                             class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
@@ -287,141 +276,156 @@
                                                 <polyline class="stroke-white dark:stroke-black" points="9 11 12 14 22 4">
                                                 </polyline>
                                                 <path class="stroke-white dark:stroke-black"
-                                                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11">
+                                                </path>
                                             </svg>
 
                                         </a>
-                                    @endauth
-
-
-
-                                    <a href=""
-                                        class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
-                                        مقاله قبلی:
-                                        موضوع
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                            viewBox="0 0 512 512">
-                                            <path class="stroke-white dark:stroke-black" fill="none"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+                                    @endif
+                                @else
+                                    <a href="{{ route('home.study.add', ['article' => $article->id]) }}"
+                                        class="hidden lg:flex cursor-pointer bg-coin1 px-4 py-2 rounded-full gap-2 items-center">
+                                        افزودن به لیست مطالعه شده ها
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-check-square">
+                                            <polyline class="stroke-white dark:stroke-black" points="9 11 12 14 22 4">
+                                            </polyline>
+                                            <path class="stroke-white dark:stroke-black"
+                                                d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                                         </svg>
 
                                     </a>
+                                @endauth
 
 
 
+                                <a href=""
+                                    class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
+                                    مقاله قبلی:
+                                    موضوع
 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+                                        <path class="stroke-white dark:stroke-black" fill="none"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
+                                    </svg>
 
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="w-full flex flex-col  space-y-12 bg-coin1 p-4 z-40" id="coinBox">
-                <p class="text-center text-xl">
-                    مقالات مرتبط
-                </p>
-
-                <div class="flex flex-col lg:flex-row w-full gap-4">
-                    @foreach ($articles as $article)
-                        <div class="flex  w-full bg-box" id="coinBox">
-                            <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                    <img class="rounded-t-xl w-full h-36"
-                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
-                                        alt="">
                                 </a>
 
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                    class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ $article->title }}
-                                </a>
-                                <p class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ Str::limit($article->description, 80) }}
-                                </p>
+
+
+
+
                             </div>
                         </div>
-                    @endforeach
+
+                    </div>
+
+
                 </div>
             </div>
+        </div>
 
 
-            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
+        <div class="w-full flex flex-col  space-y-12 bg-coin1 p-4 z-40" id="coinBox">
+            <p class="text-center text-xl">
+                مقالات مرتبط
+            </p>
 
-                <form id="comments" action="{{ route('home.comments.store' , ['article' => $article->id ]) }}" method="POST"
-                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30 rounded-3xl"
-                    >
-                    @csrf
+            <div class="flex flex-col lg:flex-row w-full gap-4">
+                @foreach ($articles as $article)
+                    <div class="flex  w-full bg-box" id="coinBox">
+                        <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <img class="rounded-t-xl w-full h-36"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                    alt="">
+                            </a>
 
-                    <p class="lg:text-2xl">لطفا متن دیدگاه خود را وارد کنید</p>
-                    <div class="flex flex-col w-full gap-12 z-50">
-                        <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
-
-                            <div class="flex flex-col w-full">
-
-                                <textarea class="mt-4 contact-input dark:bg-icon-light p-4" name="text" id="text" cols="30"
-                                    rows="11"></textarea>
-
-                                    <x-input-error :messages="$errors->get('text')" class="mt-2" />
-                            </div>
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                class="w-full text-sm text-white dark:text-gray-700">
+                                {{ $article->title }}
+                            </a>
+                            <p class="w-full text-sm text-white dark:text-gray-700">
+                                {{ Str::limit($article->description, 80) }}
+                            </p>
                         </div>
-
-                        <button id="contact-button" class="p-2" type="submit">
-                            ارسال پیام
-                        </button>
                     </div>
-                </form>
+                @endforeach
             </div>
+        </div>
+
+
+        <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
+
+            <form id="comments" action="{{ route('home.comments.store', ['article' => $article->id]) }}"
+                method="POST"
+                class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30 rounded-3xl">
+                @csrf
+
+                <p class="lg:text-2xl">لطفا متن دیدگاه خود را وارد کنید</p>
+                <div class="flex flex-col w-full gap-12 z-50">
+                    <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
+
+                        <div class="flex flex-col w-full">
+
+                            <textarea class="mt-4 contact-input dark:bg-icon-light p-4" name="text" id="text" cols="30"
+                                rows="11"></textarea>
+
+                            <x-input-error :messages="$errors->get('text')" class="mt-2" />
+                        </div>
+                    </div>
+
+                    <button id="contact-button" class="p-2" type="submit">
+                        ارسال پیام
+                    </button>
+                </div>
+            </form>
+        </div>
 
 
 
-            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
+        <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
 
-                <div
-                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
-                    id="coinBox">
+            <div class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
+                id="coinBox">
 
 
-                    <p class="lg:text-2xl">دیدگاها ({{ $article->approvedComments()->count() }})</p>
-                    <div class="flex flex-col w-full gap-12 z-50">
-                        <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
+                <p class="lg:text-2xl">دیدگاها ({{ $article->approvedComments()->count() }})</p>
+                <div class="flex flex-col w-full gap-12 z-50">
+                    <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
 
-                            <div class="flex flex-col w-full">
-                                @foreach ($article->approvedComments as $comment)
-                                    <div class="flex gap-12 mt-4  bg-indigo-1 dark:bg-white p-4" id="coinBox">
-                                        <div>
-                                            <img src="{{ $comment->user->avatar == null ? asset('/image/profile2.png') : $comment->user->avatar }}" alt="">
+                        <div class="flex flex-col w-full">
+                            @foreach ($article->approvedComments as $comment)
+                                <div class="flex gap-12 mt-4  bg-indigo-1 dark:bg-white p-4" id="coinBox">
+                                    <div>
+                                        <img src="{{ $comment->user->avatar == null ? asset('/image/profile2.png') : $comment->user->avatar }}"
+                                            alt="">
+                                    </div>
+
+                                    <div class="flex flex-col space-y-4">
+                                        <div class="flex gap-4">
+                                            <p>{{ $comment->user->name }}</p>
+                                            <p>{{ verta($comment->created_at)->format(' %d / %B / %Y') }}</p>
                                         </div>
 
-                                        <div class="flex flex-col space-y-4">
-                                            <div class="flex gap-4">
-                                                <p>{{ $comment->user->name }}</p>
-                                                <p>{{ verta($comment->created_at)->format(' %d / %B / %Y') }}</p>
-                                            </div>
-
-                                            <div>
-                                                <p>{{ $comment->text }}</p>
-                                            </div>
+                                        <div>
+                                            <p>{{ $comment->text }}</p>
                                         </div>
                                     </div>
-                                @endforeach
-                            </div>
+                                </div>
+                            @endforeach
                         </div>
-
-
                     </div>
+
+
                 </div>
             </div>
-
-
         </div>
+
+
+    </div>
     </div>
 
 
@@ -441,11 +445,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
