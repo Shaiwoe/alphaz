@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -26,15 +27,19 @@ class ArticleController extends Controller
         $twoArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
         $oneArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
 
-        return view('home.articles.index', compact('articles', 'sevenArticle', 'sexArticle' , 'forArticle' , 'fiveArticle', 'threeArticle' , 'twoArticle' , 'oneArticle'));
+        $tags = Tag::all();
+
+
+        return view('home.articles.index', compact('tags' , 'articles', 'sevenArticle', 'sexArticle' , 'forArticle' , 'fiveArticle', 'threeArticle' , 'twoArticle' , 'oneArticle'));
     }
 
     public function show(Article $article)
     {
 
-        $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
+        $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $article->increment('viewCount');
         $categorys = Category::all();
-        return view('home.articles.show', compact('article', 'articles'));
+        $tags = Tag::all();
+        return view('home.articles.show', compact('article', 'articles' , 'tags'));
     }
 }

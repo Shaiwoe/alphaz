@@ -216,7 +216,9 @@
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
-                                <img class=" image" src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}" alt="">
+                                <img class=" image"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}"
+                                    alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-4">
                                 <div class="text10 text-xs lg:text-xl font-bold">
@@ -332,10 +334,15 @@
 
                     </div>
 
-
                     <div id="coinBox"
                         class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
                         <p class="text-white font-bold text-xl text-center">فیلتر بر اساس تگ ها</p>
+                        <div class="grid grid-cols-3 gap-4 mt-8">
+                            @foreach ($tags as $tag)
+                                <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
+                                {{-- <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
+                            @endforeach
+                        </div>
                     </div>
                 </div>
 
@@ -354,7 +361,7 @@
                         <div class="hidden lg:flex gap-3">
                             <p class="bg-green text-white w-36 p-2 rounded-full">بر اساس جدیدترین</p>
                             <p class="bg-form1 text-white w-36 p-2 rounded-full">بر اساس قدیمی ترین</p>
-                            
+
                         </div>
 
                         <div class="flex gap-2">

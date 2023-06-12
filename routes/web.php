@@ -35,6 +35,7 @@ use App\Http\Controllers\Admin\FavoriteController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Home\CoinMarketController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Home\TagController as HomeTagController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
 use App\Http\Controllers\Admin\MarketController as AdminMarketController;
@@ -58,6 +59,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/articles', [HomeArticleController::class, 'index'])->name('home.articles.index');
 Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'])->name('home.categories.show');
+Route::get('/tags/{tag:slug}', [HomeTagController::class, 'show'])->name('home.tags.show');
 Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->name('home.articles.show');
 
 Route::get('/whislist/{article}', [WishlistController::class, 'add'])->name('home.whishlist.add');
