@@ -320,24 +320,24 @@
                     class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
                     <ul class="flex flex-wrap -mb-px gap-4 text-center" id="myTab"
                         data-tabs-toggle="#myTabContent" role="tablist">
-                        <li class="mr-2" role="presentation">
+                        <li class="hidden lg:block mr-2" role="presentation">
                             <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="profile-tab"
                                 data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
                                 aria-selected="false">بر اساس جدیدترین</button>
                         </li>
-                        <li class="mr-2" role="presentation">
+                        <li class="hidden lg:block mr-2" role="presentation">
                             <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="dashboard-tab"
                                 data-tabs-target="#dashboard" type="button" role="tab"
                                 aria-controls="dashboard" aria-selected="false">بر اساس قدیمی ترین</button>
                         </li>
-                        <li class="mr-2" role="presentation">
+                        <li class="hidden lg:block mr-2" role="presentation">
                             <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="settings-tab"
                                 data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
                                 aria-selected="false">بیشترین بازدید</button>
                         </li>
 
 
-                        <li class="mr-52" role="presentation">
+                        <li class="lg:mr-52" role="presentation">
                             <button class="bg-coin1 text-white  p-2 rounded-full" id="width-tab"
                                 data-tabs-target="#width" type="button" role="tab" aria-controls="width"
                                 aria-selected="false">
@@ -615,7 +615,7 @@
                                     </a>
                                     <a class="w-full"
                                         href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">
+                                        <p class="text-xs lg:text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
@@ -632,7 +632,7 @@
 
                                     </p>
 
-                                    <div class="w-44 p-2 bg-green rounded-full mx-4">
+                                    <div class="hidden lg:block w-44 p-2 bg-green rounded-full mx-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
                                             class=" flex p-2  text-xs items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -650,9 +650,9 @@
 
 
                             <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full  mx-3">بعد</a>
+                                <a class="hidden lg:block bg-green p-3 rounded-full  mx-3">بعد</a>
                                 {{ $articles->onEachSide(4)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3">قبل</a>
+                                <a class="hidden lg:block bg-green p-3 rounded-full mx-3">قبل</a>
                             </div>
 
                         </div>
