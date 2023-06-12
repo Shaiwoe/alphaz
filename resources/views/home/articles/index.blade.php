@@ -317,27 +317,27 @@
                 class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
 
                 <div
-                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
-                    <ul class="flex flex-wrap -mb-px gap-4 text-center" id="myTab"
+                    class="mb-4 flex  justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
+                    <ul class="flex flex-wrap  -mb-px gap-4 text-center" id="myTab"
                         data-tabs-toggle="#myTabContent" role="tablist">
                         <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="profile-tab"
+                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="profile-tab"
                                 data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
                                 aria-selected="false">بر اساس جدیدترین</button>
                         </li>
                         <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="dashboard-tab"
+                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="dashboard-tab"
                                 data-tabs-target="#dashboard" type="button" role="tab"
                                 aria-controls="dashboard" aria-selected="false">بر اساس قدیمی ترین</button>
                         </li>
                         <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white w-36 p-2 rounded-full" id="settings-tab"
+                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="settings-tab"
                                 data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
                                 aria-selected="false">بیشترین بازدید</button>
                         </li>
 
 
-                        <li class="lg:mr-52" role="presentation">
+                        <li class="lg:mr-32 xl:mr-52" role="presentation">
                             <button class="bg-coin1 text-white  p-2 rounded-full" id="width-tab"
                                 data-tabs-target="#width" type="button" role="tab" aria-controls="width"
                                 aria-selected="false">
