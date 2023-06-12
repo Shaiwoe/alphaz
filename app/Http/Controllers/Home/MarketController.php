@@ -49,7 +49,8 @@ class MarketController extends Controller
         ];
 
         $headers = [
-            'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c' alpharency
+            'X-CMC_PRO_API_KEY' => 'fe4939ea-5476-4433-bc5d-f1fff7916bdd'
         ];
 
         $response = \PG\Request\Request::instance()
