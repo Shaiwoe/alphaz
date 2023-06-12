@@ -243,8 +243,8 @@
                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                 stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
                                         </svg>
-                                        مقاله بعدی:
-                                        موضوع
+                                        مقاله بعدی
+
 
                                     </a>
 
@@ -305,10 +305,9 @@
 
 
 
-                                    <a href=""
+                                    <a href="{{ $article->id -1 }}"
                                         class="hidden lg:flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
-                                        مقاله قبلی:
-                                        موضوع
+                                        مقاله قبلی
 
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
                                             viewBox="0 0 512 512">

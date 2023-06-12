@@ -43,6 +43,7 @@ class TagController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
         ]);
 
         try {
@@ -50,6 +51,7 @@ class TagController extends Controller
 
         Tag::create([
             'title' => $request->title,
+            'slug' => $request->slug,
         ]);
 
         DB::commit();
@@ -98,10 +100,12 @@ class TagController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
         ]);
 
         $tag->update ([
             'title' => $request->title,
+            'slug' => $request->slug,
         ]);
 
 

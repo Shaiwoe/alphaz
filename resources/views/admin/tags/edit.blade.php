@@ -53,6 +53,12 @@
                                 <x-input-error :messages="$errors->get('title')" class="mt-2" />
                             </div>
 
+                            <div class="flex flex-col w-full lg:w-3/12">
+                                <label for="slug" class="block mb-6 text-sm font-medium text-gray-100">لینک تگ</label>
+                                <input type="text" name="slug" id="slug" value="{{ $tag->slug }}" class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400" placeholder="عنوان تگ را وارد کنید" >
+                                <x-input-error :messages="$errors->get('slug')" class="mt-2" />
+                            </div>
+
 
                         </div>
 
