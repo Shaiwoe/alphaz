@@ -166,18 +166,22 @@
                                 <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
                                     {{ $video->title }}</h1>
                                 <div class="flex w-full gap-10">
-                                    {{-- <div>
+
+                                    @if ($video->video)
+                                        <div class="w-full">
                                             <video class="w-full" controls>
-                                                <source src="{{ asset(env('VIDEO_VIDEO_UPLOAD_PATH') . $video->video) }}"
+                                                <source
+                                                    src="{{ asset(env('VIDEO_VIDEO_UPLOAD_PATH') . $video->video) }}"
                                                     type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
-                                        </div> --}}
+                                        </div>
+                                    @else
+                                        <div class="w-full">
+                                            <iframe class="w-full h-96" src="{{ $video->youtube }}"></iframe>
+                                        </div>
 
-                                    <div class="w-full">
-                                        <iframe class="w-full h-96" src="{{ $video->youtube }}"></iframe>
-
-                                    </div>
+                                    @endif
 
                                 </div>
 
