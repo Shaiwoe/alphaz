@@ -262,7 +262,7 @@
 
                         @foreach ($parentCategorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-40">
-                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 ">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                         <path id="chevron-right" d="M9,18l6-6L9,6"
                                             transform="translate(19.414 -7.586) rotate(90)" fill="none"
@@ -286,7 +286,6 @@
                                             {{ $childCategory->title }}
 
                                         </a>
-                                        </ul>
                                     @endforeach
 
                                 </div>
@@ -300,9 +299,8 @@
                         <p class="text-white font-bold text-xl text-center">فیلتر بر اساس تگ ها</p>
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
-                                <a href=""
-                                    class="bg-box rounded-xl w-24 text-center text-sm p-2">{{ $tag->title }}</a>
                                 {{-- <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
+                                <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
                             @endforeach
                         </div>
                     </div>
