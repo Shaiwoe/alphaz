@@ -603,7 +603,7 @@
                     </div>
 
                     <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
-                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4  z-40">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
