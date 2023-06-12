@@ -40,6 +40,6 @@ class ArticleController extends Controller
         $article->increment('viewCount');
         $categorys = Category::all();
         $tags = Tag::all();
-        return view('home.articles.show', compact('article', 'articles' , 'tags'));
+        return view('home.articles.show', compact('article', 'articles' , 'tags' , 'categorys'));
     }
 }

@@ -212,7 +212,8 @@
 
                             <div class="grid grid-cols-3 gap-4 mt-8">
                                 @foreach ($tags as $tag)
-                                    <a href="" class="bg-box rounded-xl w-24 text-center text-sm p-2">{{ $tag->title }}</a>
+                                    <a href=""
+                                        class="bg-box rounded-xl w-24 text-center text-sm p-2">{{ $tag->title }}</a>
                                     {{-- <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                                 @endforeach
                             </div>
@@ -364,9 +365,9 @@
 
             <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
 
-                <form id="comments" action="{{ route('home.comments.store' , ['article' => $article->id ]) }}" method="POST"
-                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30 rounded-3xl"
-                    >
+                <form id="comments" action="{{ route('home.comments.store', ['article' => $article->id]) }}"
+                    method="POST"
+                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30 rounded-3xl">
                     @csrf
 
                     <p class="lg:text-2xl">لطفا متن دیدگاه خود را وارد کنید</p>
@@ -378,7 +379,7 @@
                                 <textarea class="mt-4 contact-input dark:bg-icon-light p-4" name="text" id="text" cols="30"
                                     rows="11"></textarea>
 
-                                    <x-input-error :messages="$errors->get('text')" class="mt-2" />
+                                <x-input-error :messages="$errors->get('text')" class="mt-2" />
                             </div>
                         </div>
 
@@ -393,8 +394,7 @@
 
             <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
 
-                <div
-                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
+                <div class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
                     id="coinBox">
 
 
@@ -406,7 +406,8 @@
                                 @foreach ($article->approvedComments as $comment)
                                     <div class="flex gap-12 mt-4  bg-indigo-1 dark:bg-white p-4" id="coinBox">
                                         <div>
-                                            <img src="{{ $comment->user->avatar == null ? asset('/image/profile2.png') : $comment->user->avatar }}" alt="">
+                                            <img src="{{ $comment->user->avatar == null ? asset('/image/profile2.png') : $comment->user->avatar }}"
+                                                alt="">
                                         </div>
 
                                         <div class="flex flex-col space-y-4">
@@ -447,14 +448,39 @@
     </div>
 
     @include('sweetalert::alert')
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function filter() {
+
+            let search = $('#search-input').val();
+            if (search == "") {
+                $('#filter-search').prop('disabled', true);
+            } else {
+                $('#filter-search').val(search);
+            }
+
+            $('#filter-form').submit();
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
