@@ -609,7 +609,7 @@
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <img class="rounded-r-3xl w-7/12"
+                                        <img class="rounded-r-3xl w-4/12 lg:w-7/12"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
