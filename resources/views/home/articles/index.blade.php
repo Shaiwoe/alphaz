@@ -57,7 +57,7 @@
 
 
 
-            <div class="w-9/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
 
                 @foreach ($sevenArticle as $sevenArticles)
                     <div class="row-span-2 col-span-2">
