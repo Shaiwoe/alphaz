@@ -63,8 +63,8 @@
                         </div>
 
                         <div class="flex gap-4 mt-14">
-                            <button type="submit" class="bg-green-500 hover:bg-green-600 w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
-                            <a href="{{ route('tags.index') }}" class="bg-red-500 text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
+                            <button type="submit" class="bg-green hover:bg-green w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
+                            <a href="{{ route('tags.index') }}" class="bg-red text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
                         </div>
 
 

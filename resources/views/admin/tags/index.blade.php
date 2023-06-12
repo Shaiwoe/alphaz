@@ -61,6 +61,9 @@
                     عنوان
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    لینک
+                </th>
+                <th scope="col" class="px-6 py-3">
                     عملیات
                 </th>
 
@@ -74,6 +77,9 @@
                 </td>
                 <td class="px-6 py-4">
                     {{ $tag->title }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ $tag->slug }}
                 </td>
                 <td class="px-6 py-4 flex gap-4">
                     <a class="flex bg-green-500 text-white px-4 py-2 rounded-md" href="{{ route('tags.edit' , ['tag' => $tag->id]) }}">
