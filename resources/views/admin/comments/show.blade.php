@@ -77,12 +77,16 @@
 
                     @if ($comment->getRawOriginal('approved'))
                         <a href="{{ route('comments.change'  , ['comment' => $comment->id]) }}"
-                            class="bg-red text-center hover:bg-red-600 w-full lg:w-1/12 p-2 rounded-lg text-white   ">عدم تایید</a>
+                            class="bg-red text-center hover:bg-red-600 w-full lg:w-1/12 p-2 rounded-lg text-white   ">عدم تایید کامنت</a>
                     @else
                         <a href="{{ route('comments.change' , ['comment' => $comment->id]) }}"
                             class="bg-green text-center hover:bg-red-600 w-full lg:w-1/12 p-2 rounded-lg text-white   ">
-                            تایید</a>
+                            کامنت تایید شود</a>
                     @endif
+
+
+                    <a href="{{ route('comments.index') }}"
+                            class="bg-yellow-500 text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
 
 
 

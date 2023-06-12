@@ -15,7 +15,7 @@ class CommentController extends Controller
     {
         // dd($request->all());
         $validator = Validator::make($request->all(), [
-            'text' => 'required|min:20|max:7000',
+            'text' => 'required|min:10|max:7000',
         ]);
 
         if ($validator->fails()) {

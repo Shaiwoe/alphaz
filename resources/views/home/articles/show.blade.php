@@ -340,21 +340,21 @@
                 </p>
 
                 <div class="flex flex-col lg:flex-row w-full gap-4">
-                    @foreach ($articles as $article)
+                    @foreach ($articles as $articleShow)
                         <div class="flex  w-full bg-box" id="coinBox">
                             <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <a href="{{ route('home.articles.show', ['article' => $articleShow->slug]) }}">
                                     <img class="rounded-t-xl w-full h-36"
-                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $articleShow->primary_image) }}"
                                         alt="">
                                 </a>
 
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                <a href="{{ route('home.articles.show', ['article' => $articleShow->slug]) }}"
                                     class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ $article->title }}
+                                    {{ $articleShow->title }}
                                 </a>
                                 <p class="w-full text-sm text-white dark:text-gray-700">
-                                    {{ Str::limit($article->description, 80) }}
+                                    {{ Str::limit($articleShow->description, 80) }}
                                 </p>
                             </div>
                         </div>
