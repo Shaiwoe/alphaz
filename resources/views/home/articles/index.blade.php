@@ -603,13 +603,13 @@
                     </div>
 
                     <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
-                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4  z-40">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <img class="rounded-r-3xl w-6/12"
+                                        <img class="rounded-r-3xl w-7/12"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
@@ -633,7 +633,7 @@
                                     </p>
 
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                        class="bg-green flex  rounded-2xl p-2 text-xs  items-center gap-2">
+                                        class="bg-green flex rounded-2xl p-2 text-xs  items-center gap-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
