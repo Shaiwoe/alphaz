@@ -432,6 +432,9 @@
 
 
         </div>
+
+        <!-- top footer  -->
+        @include('components/top-footer')
     </div>
 
 
