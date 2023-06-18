@@ -248,7 +248,8 @@
 
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
-            <div class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+            <div
+                class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900  z-30 gap-10 p-4 rounded-full">
@@ -301,7 +302,7 @@
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
                                 <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
-                                    class="bg-box dark:bg-slate-300 rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
+                                    class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
                                 {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                             @endforeach
                         </div>
@@ -315,12 +316,13 @@
 
 
             </div>
-            <div class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+            <div
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
                     class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
-                    <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0" id="myTab"
-                        data-tabs-toggle="#myTabContent" role="tablist">
+                    <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0"
+                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
 
                         <li class="md:mr-2 text-white" role="presentation">
                             <button
@@ -349,7 +351,7 @@
 
                         <li class="" role="presentation">
                             <button class="bg-coin1 dark:bg-slate-300 text-white p-2 rounded-full tab_list"
-                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
+                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
                                 aria-controls="width" aria-selected="false">
 
                                 <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 24 24" stroke-width="1.5"
@@ -362,7 +364,7 @@
 
                         <li role="presentation">
                             <button class="bg-coin1 dark:bg-slate-300 text-white  p-2 rounded-full tab_list"
-                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
+                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
                                 aria-controls="height" aria-selected="false">
                                 <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 512 512">
                                     <path class="fill-white dark:fill-zinc-900"
@@ -394,7 +396,8 @@
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
@@ -455,7 +458,8 @@
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
@@ -516,7 +520,8 @@
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
@@ -578,7 +583,8 @@
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 

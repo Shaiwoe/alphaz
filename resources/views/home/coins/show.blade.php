@@ -331,7 +331,8 @@
                             }
                         </script>
                     </div>
-                    <div class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
+                    <div
+                        class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
                         <div class="tradingview-widget-container__widget"></div>
 
                         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
@@ -369,7 +370,8 @@
                             }
                         </script>
                     </div>
-                    <div class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
+                    <div
+                        class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
                         <div class="tradingview-widget-container__widget"></div>
 
                         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
@@ -407,7 +409,8 @@
                             }
                         </script>
                     </div>
-                    <div class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
+                    <div
+                        class="tradingview-widget-container w-full rounded-3xl overflow-hidden hidden dark:flex dark:shadow-2xl">
                         <div class="tradingview-widget-container__widget"></div>
 
                         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
@@ -456,23 +459,54 @@
 
                 <div class="flex flex-col lg:flex-row w-full gap-4">
                     @foreach ($articles as $article)
-                        <div class="flex coinBox dark:shadow-sm dark:bg-slate-100 w-full bg-box" id="">
-                            <div class="flex gap-8 justify-center items-center text-center flex-col space-y-4 w-full">
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                    <img class="rounded-t-xl w-full h-36"
-                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
-                                        alt="">
+                        <div
+                            class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm rounded-3xl flex flex-col w-full space-y-6">
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <img class="rounded-t-3xl h-full"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                    alt="">
+                            </a>
+                            <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                <p class="text-sm font-bold text-center dark:text-zinc-900">
+                                    {{ Str::limit($article->title, 40) }}
+                                </p>
+                            </a>
+                            <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900">
+                                {{ Str::limit($article->description, 80) }}
+                            </p>
+
+                            <div class="flex justify-between items-center px-2 lg:px-4">
+                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                    class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
                                 </a>
 
-                                <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                    class="w-full text-sm text-white dark:text-zinc-900">
-                                    {{ $article->title }}
-                                </a>
-                                <p class="w-full text-sm text-white dark:text-zinc-900">
-                                    {{ Str::limit($article->description, 80) }}
-                                </p>
+                                <div class="flex items-center gap-4 -mt-2">
+
+                                    <p class="flex gap-1 items-center text-base dark:text-zinc-900">
+                                        {{ $article->viewCount }}
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-5 h-5">
+                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                                stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
+
+
+
                     @endforeach
                 </div>
             </div>

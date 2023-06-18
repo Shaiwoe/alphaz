@@ -213,7 +213,7 @@
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
                                 <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
-                                    class="bg-box dark:bg-slate-300 rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
+                                    class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
                                 {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                             @endforeach
                         </div>
@@ -337,7 +337,7 @@
                     مقالات مرتبط
                 </p>
 
-                <div class="flex flex-col lg:flex-row w-full gap-4">
+                <div class="flex flex-col md:flex-row w-full gap-4">
                     <!-- post 1  -->
                     @foreach ($articles as $articleShow)
                         <div class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm rounded-3xl flex flex-col w-full space-y-6">
