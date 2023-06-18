@@ -49,14 +49,14 @@
     </div>
 
 
-    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-50">
+    <div class="sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-50">
         <div
-            class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10 mb-12 lg:mb-32">
+            class="flex flex-col md:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10 mb-12 lg:mb-32">
 
-            <div class="w-full lg:w-4/12 space-y-10 relative text-white dark:text-gray-700">
+            <div class="w-full lg:w-4/12 space-y-10 relative text-white dark:text-zinc-900">
 
                 <p class="lg:text-4xl text-2xl z-40 flex justify-center">نمای بازار کریپتو</p>
-                <p class="hidden lg:block z-40 text-justify">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز
+                <p class="z-40 text-justify">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز
                     دیجیتال محبوبتان آگاه شوید و
                     با
                     مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید. در این صفحه
@@ -70,7 +70,7 @@
             </div>
 
             <div id="ex1" class="w-full lg:w-8/12 flex lg:justify-end relative">
-                <img class="lg:w-8/12" src="/image/crypto.svg" alt="">
+                <img class="lg:w-8/12  dark:brightness-50" src="/image/crypto.svg" alt="">
 
                 <div>
                     <img id="ex1-layer" class="w-3/12 lg:w-2/12 absolute top-[40%] left-[1%]" src="/image/E1.svg"
@@ -89,12 +89,12 @@
         <div class="container mx-auto text-gray-100">
             <div class="flex flex-col">
                 <div id="coinBox" class="bg-coin1 dark:bg-white dark:filter-none dark:shadow-2xl p-2 md:p-6">
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8">
 
                         @foreach ($coins as $coin)
                             @if ($coin->symbol == 'BTC')
                                 <div
-                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
+                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-zinc-900 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
 
 
                                     <img src="/assets/{{ $coin->symbol }}.png"
@@ -103,7 +103,7 @@
                                     <p class="lg:text-2xl font-bold">BTC</p>
                                     <div class="flex items-center gap-2">
                                         @if ($coin->percent_change_1h > 0)
-                                            <td class="px-4 py-4 text-green">
+                                            <td class="p-2 text-green">
                                                 <div class="flex items-center gap-2">
                                                     <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                         <path class="fill-green" data-name="Polygon 2"
@@ -116,7 +116,7 @@
                                                 </div>
                                             </td>
                                         @else
-                                            <td class="px-4 py-4 text-red">
+                                            <td class="p-2 text-red">
                                                 <div class="flex items-center gap-2">
                                                     <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                         <path class="fill-red" data-name="Polygon 2"
@@ -140,7 +140,7 @@
 
                             @if ($coin->symbol == 'ETH')
                                 <div
-                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
+                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-zinc-900 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
 
                                     <img src="/assets/{{ $coin->symbol }}.png"
                                         class="rounded-full w-10 lg:w-16 lg:-mt-10">
@@ -170,7 +170,7 @@
 
                             @if ($coin->symbol == 'XRP')
                                 <div
-                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
+                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-zinc-900 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
 
                                     <img src="/assets/{{ $coin->symbol }}.png"
                                         class="rounded-full w-10 lg:w-16 lg:-mt-10">
@@ -198,7 +198,7 @@
 
                             @if ($coin->symbol == 'BNB')
                                 <div
-                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
+                                    class="bg-indigo-1 dark:bg-coin2 text-white dark:text-zinc-900 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
 
                                     <img src="/assets/{{ $coin->symbol }}.png"
                                         class="rounded-full w-10 lg:w-16 lg:-mt-10">
@@ -232,7 +232,7 @@
 
 
         <div class="flex flex-row  mt-20 z-40 relative">
-            <div class="basis-1/2 self-center text-2xl font-bold text-white">قیمت لحظه ای ارز های دیجیتال</div>
+            <div class="md:basis-1/2 sm:basis-auto self-center text-2xl font-bold text-white dark:text-zinc-900">قیمت لحظه ای ارز های دیجیتال</div>
 
             {{-- <div class="basis-1/2" style="text-align: -webkit-left;">
                 <div class="switch-button">
@@ -253,18 +253,18 @@
                 <button
                     class="btn_tab_s btn_tab float-right p-3 backdrop-filter rounded-t-2xl ml-4 text-white act flex"
                     data-depth="0" data-idx="0">لیست تمام ارزها
-                    <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3" viewBox="0 0 18.071 23">
-                        <path class="stroke-white dark:stroke-dark8" data-name="Path 5877"
+                    <svg class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5 ml-3 mr-3" viewBox="0 0 18.071 23">
+                        <path class="fill-white" data-name="Path 5877"
                             d="M21.973,11.5H14.786a2.464,2.464,0,0,1-2.464-2.464V1.848a.205.205,0,0,0-.205-.205H7.393A3.286,3.286,0,0,0,4.107,4.929V21.357a3.286,3.286,0,0,0,3.286,3.286h11.5a3.286,3.286,0,0,0,3.286-3.286V11.705A.205.205,0,0,0,21.973,11.5ZM17.25,19.714H9.036a.821.821,0,1,1,0-1.643H17.25a.821.821,0,1,1,0,1.643Zm0-4.107H9.036a.821.821,0,1,1,0-1.643H17.25a.821.821,0,1,1,0,1.643Z"
                             transform="translate(-4.107 -1.643)" fill="#fff" />
-                        <path class="stroke-white dark:stroke-dark8" id="Path_5878" data-name="Path 5878"
+                        <path class="fill-white" id="Path_5878" data-name="Path 5878"
                             d="M21.522,9.682,14.139,2.3a.1.1,0,0,0-.175.072V9.036a.821.821,0,0,0,.821.821H21.45a.1.1,0,0,0,.072-.175Z"
                             transform="translate(-4.107 -1.643)" fill="#fff" />
                     </svg>
                 </button>
-                <button class="btn_tab_s btn_tab float-right p-3 rounded-t-2xl mx-4 text-white flex" data-depth="0"
+                {{-- <button class="btn_tab_s btn_tab float-right p-3 rounded-t-2xl mx-4 text-white flex" data-depth="0"
                     data-idx="1">لیست من
-                    <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3" viewBox="0 0 24.638 23">
+                    <svg class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5 ml-3 mr-3" viewBox="0 0 24.638 23">
                         <path class="stroke-white dark:stroke-dark8"
                             d="M35.442,54.982a.821.821,0,0,1-.482-.154l-6.6-4.786-6.6,4.786A.821.821,0,0,1,20.5,53.9l2.575-7.626L16.4,41.7a.821.821,0,0,1,.462-1.5h8.233l2.484-7.646a.821.821,0,0,1,1.563,0L31.624,40.2h8.233a.821.821,0,0,1,.465,1.5l-6.676,4.574L36.219,53.9a.821.821,0,0,1-.777,1.084Z"
                             transform="translate(-16.041 -31.985)" fill="#fff" />
@@ -274,7 +274,7 @@
                 <button class="btn_tab_s btn_tab float-left p-3 rounded-t-2xl text-white flex" data-depth="0"
                     data-idx="3">جستجو در نام ارز ها
 
-                    <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3" viewBox="0 0 23.101 23.101">
+                    <svg class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5 ml-3 mr-3" viewBox="0 0 23.101 23.101">
                         <g id="search" transform="translate(1.388 1.388)">
                             <circle class="stroke-white dark:stroke-dark8" id="Ellipse_211" data-name="Ellipse 211"
                                 cx="9.5" cy="9.5" r="9.5" transform="translate(-0.388 -0.388)"
@@ -285,10 +285,10 @@
                                 stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
-                </button>
+                </button> --}}
             </div>
 
-            <div class="content_area px-6 rounded-b-2xl z-40 relative act" data-depth="0" data-idx="0">
+            <div class="content_area dark:bg-white dark:shadow-xl px-6 z-40 relative act dark-backdrop-filter-none rounded-tl-3xl rounded-b-3xl overflow-hidden" data-depth="0" data-idx="0">
 
                 <div class="flex flex-col space-y-10 z-40">
 
@@ -299,39 +299,39 @@
                                 <thead
                                     class="text-sm text-gray-200 dark:text-gray-800 uppercase bg-coin1 rounded-full">
                                     <tr>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 rounded-r-full">
+                                        {{-- <th scope="col" class="text-xs lg:text-sm p-2 rounded-r-full">
                                             #
-                                        </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                        </th> --}}
+                                        <th scope="col" class="inline-flex text-xs lg:text-sm p-2 rounded-r-full">
                                             نام ارز
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm p-2">
                                             قیمت تتر
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm p-2">
                                             قیمت تومان
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm p-2 font-sans ">
                                             1h %
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm p-2 font-sans ">
                                             24h%
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm p-2 font-sans ">
                                             7d %
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                        <th scope="col" class="text-xs lg:text-sm p-2">
                                             ارزش بازار
                                         </th>
 
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 font-sans ">
+                                        <th scope="col" class="text-xs lg:text-sm p-2 font-sans ">
                                             Volume(24h)
                                         </th>
 
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4">
+                                        <th scope="col" class="text-xs flex lg:text-sm p-2">
                                             نمودار <span class="font-sans">(7d)</span>
                                         </th>
-                                        <th scope="col" class="text-xs lg:text-sm px-4 py-4 rounded-l-full">
+                                        <th scope="col" class="text-xs lg:text-sm p-2 rounded-l-full">
                                             توضیحات بیشتر
                                         </th>
                                     </tr>
@@ -339,20 +339,20 @@
                                 <tbody>
                                     @foreach ($data as $coin)
                                         <tr class=" border-b border-gray-600 dark:border-gray-400 items-center">
-                                            <td>
-                                                <svg class="xl:w-6 lg:w-4 xl:h-6 lg:h-4 mr-3 -mt-2"
+                                            {{-- <td>
+                                                <svg class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5 ml-3 mr-3 -mt-2"
                                                     viewBox="0 0 24.638 23">
                                                     <path class="stroke-white dark:stroke-dark8 fill-none"
                                                         d="M35.442,54.982a.821.821,0,0,1-.482-.154l-6.6-4.786-6.6,4.786A.821.821,0,0,1,20.5,53.9l2.575-7.626L16.4,41.7a.821.821,0,0,1,.462-1.5h8.233l2.484-7.646a.821.821,0,0,1,1.563,0L31.624,40.2h8.233a.821.821,0,0,1,.465,1.5l-6.676,4.574L36.219,53.9a.821.821,0,0,1-.777,1.084Z"
                                                         transform="translate(-16.041 -31.985)" fill="#fff" />
                                                 </svg>
-                                            </td>
+                                            </td> --}}
                                             <td
-                                                class="flex gap-1 lg:gap-4 items-center space-x-5 lg:px-4 py-4 mt-2 text-gray-200 text-base">
+                                                class="flex gap-1 lg:gap-4 items-center space-x-5 lg:p-2 mt-2 text-gray-200 text-base">
 
                                                 <img src="/assets/{{ $coin->symbol }}.png"
                                                     class="w-8 h-8 rounded-full">
-                                                <a href="{{ route('home.coins.show', ['symbol' => $coin->symbol]) }}" class="text-xs lg:text-base text-gray-200 dark:text-gray-700 mt-1">
+                                                <a href="{{ route('home.coins.show', ['symbol' => $coin->symbol]) }}" class="text-xs lg:text-base text-gray-200 dark:text-zinc-900 mt-1">
                                                     {{ $coin->name }}</a>
                                             </td>
 
@@ -360,9 +360,9 @@
 
 
                                             @if ($coin->percent_change_1h > 0)
-                                                <td class="px-4 py-4 text-green-400">
+                                                <td class="p-2 text-green-400">
                                                     <div class="flex items-center gap-2">
-                                                        <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                        <svg class="w-3 h-3 rotate-180" viewBox="0 0 15 13">
                                                             <path class="fill-green" data-name="Polygon 2"
                                                                 d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
                                                                 transform="translate(15 13) rotate(180)"
@@ -374,7 +374,7 @@
                                                     </div>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-red-400">
+                                                <td class="p-2 text-red-400">
                                                     <div class="flex items-center gap-2">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-red" data-name="Polygon 2"
@@ -390,9 +390,9 @@
                                             @endif
 
                                             @if ($coin->percent_change_1h > 0)
-                                                <td class="px-4 py-4 text-green-400">
+                                                <td class="p-2 text-green-400">
                                                     <div class="flex items-center">
-                                                        <svg class="w-3 h-3 " viewBox="0 0 15 13">
+                                                        <svg class="w-3 h-3 rotate-180" viewBox="0 0 15 13">
                                                             <path class="fill-green" data-name="Polygon 2"
                                                                 d="M5.768,3A2,2,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10Z"
                                                                 transform="translate(15 13) rotate(180)"
@@ -404,7 +404,7 @@
                                                     </div>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-red-400">
+                                                <td class="p-2 text-red-400">
                                                     <div class="flex items-center">
                                                         <svg class="w-3 h-3 " viewBox="0 0 15 13">
                                                             <path class="fill-red" data-name="Polygon 2"
@@ -422,13 +422,13 @@
 
 
                                             @if ($coin->percent_change_1h < 0)
-                                                <td class="px-4 py-4 text-white dark:text-gray-700 ">
+                                                <td class="p-2 text-white dark:text-zinc-900 ">
                                                     <p class="bg-red-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_1h, 2) }}
                                                     </p>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-white dark:text-gray-700 ">
+                                                <td class="p-2 text-white dark:text-zinc-900 ">
                                                     <p class="bg-green-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_1h, 2) }}
                                                     </p>
@@ -436,13 +436,13 @@
                                             @endif
 
                                             @if ($coin->percent_change_24h < 0)
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
                                                     <p class="bg-red-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_24h, 2) }}
                                                     </p>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
                                                     <p class="bg-green-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_24h, 2) }}
                                                     </p>
@@ -450,34 +450,34 @@
                                             @endif
 
                                             @if ($coin->percent_change_7d < 0)
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
                                                     <p class="bg-red-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_7d, 2) }}
                                                     </p>
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
                                                     <p class="bg-green-o text-center rounded-md">
                                                         {{ number_format($coin->percent_change_7d, 2) }}
                                                     </p>
                                                 </td>
                                             @endif
-                                            <th class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                            <th class="p-2 text-gray-300 dark:text-zinc-900">
                                                 {{ number_format($coin->market_cap, 3) }}
                                             </th>
 
-                                            <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                            <td class="p-2 text-gray-300 dark:text-zinc-900">
                                                 {{ number_format($coin->volume_24h, 3) }}
                                             </td>
 
                                             @if ($coin->percent_change_7d < 0)
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
 
                                                     <img src="/image/chart-r.png" alt="">
 
                                                 </td>
                                             @else
-                                                <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
+                                                <td class="p-2 text-gray-300 dark:text-zinc-900">
 
                                                     <img src="/image/chart-g.png" alt="">
 
@@ -487,7 +487,7 @@
 
 
 
-                                            <td class="flex justify-end px-4 py-4 text-center">
+                                            <td class="flex justify-end p-2 text-center">
                                                 <a href="{{ route('home.coins.show', ['symbol' => $coin->symbol]) }}"
                                                     class="flex gap-2 text-white bg-green py-2 px-4 rounded-full  text-xs items-center">
                                                     مشاهده
@@ -512,8 +512,8 @@
 
 
 
-            <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">Second tab content</div>
-            <div class="content_area rounded-b-2xl pt-4 z-40 text-center" data-depth="0" data-idx="3">
+            {{-- <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">Second tab content</div> --}}
+            {{-- <div class="content_area rounded-b-2xl pt-4 z-40 text-center" data-depth="0" data-idx="3">
                 <label for="default-search"
                     class="text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative mx-auto w-6/12">
@@ -529,9 +529,9 @@
                         class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
                         placeholder="برای جستجو در کتاب ها کلمه مورد نظر را تایپ کنید" required>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="flex justify-center items-center space-x-5 mt-10">
+            <div class="flex justify-center items-center space-x-5 mt-10 overflow-hidden">
 
                 @foreach ($pages as $page)
                     <a href="{{ route('home.coins.index', ['page' => $page]) }}"

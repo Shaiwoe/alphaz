@@ -13,6 +13,12 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+.coinBox {
+    border-radius: 30px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 
 #world {
     top: 141px;
@@ -231,6 +237,15 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: brightness(0.8);
+}
+.bg-footer-dark2 {
+    /* UI Properties */
+    background: 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: brightness(0);
 }
 
 .middle {
@@ -630,6 +645,33 @@ select:not([size]) {
     text-align: justify;
 }
 
+.tradingview-widget-container iframe{
+    width: 100%;
+    height: inherit;
+}
+.tv-embed-widget-wrapper__body {
+    background: #1e222d !important;
+    border-color: #434651 !important;
+}
 
-
-
+.tabs__tab--selected {
+    background-color: color('green');
+}
+.tab_list[aria-selected="true"] {
+    @apply bg-green;
+    @apply text-white;
+    @apply dark:text-white;
+    @apply dark:bg-green
+}
+.line-clamp-1{
+    overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+}
+.line-clamp-2{
+    overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+}

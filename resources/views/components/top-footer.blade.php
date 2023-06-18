@@ -1,4 +1,4 @@
-<div class="container mx-auto flex justify-end mt-8 lg:mt-24 px-4 sm:px-8">
+<div class="container mx-auto flex justify-end mt-8 lg:mt-24 sm:px-2 md:px-4">
     <div class="flex flex-col lg:justify-end">
         <div id=""
             class="w-full flex flex-col lg:flex-row items-center container mx-auto  p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">

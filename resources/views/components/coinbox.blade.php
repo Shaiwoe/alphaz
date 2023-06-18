@@ -2,7 +2,7 @@
 <div class="container mx-auto text-gray-100">
     <div class="flex flex-col">
         <div id="coinBox" class="bg-coin1 dark:bg-white dark:filter-none dark:shadow-2xl p-2 md:p-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-8">
 
                 <div  class="bg-indigo-1 dark:bg-coin2 text-white dark:text-gray-700 p-2 rounded-3xl flex flex-col justify-center items-center xl:space-y-3">
                     <img class="w-10 lg:w-16 lg:-mt-10" src="image/bitcoin.png" alt="">

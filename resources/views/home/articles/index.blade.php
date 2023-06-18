@@ -33,7 +33,7 @@
                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-7 h-7 text-gray-100 dark:text-gray-800" fill="none"
+                    <svg aria-hidden="true" class="w-7 h-7 text-white dark:text-zinc-900" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -42,7 +42,7 @@
 
                 <input type="search" name="search" id="search-input"
                     value="{{ request()->has('search') ? request()->search : '' }}"
-                    class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700 border-none"
+                    class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-white rounded-full bg-form1 placeholder-gray-100 dark:placeholder-zinc-400 dark:text-zinc-900 border-none dark:bg-white dark:shadow-2xl"
                     placeholder="برای جستجو در مقاله ها کلمه مورد نظر را تایپ کنید" required>
             </div>
         </form>
@@ -52,7 +52,7 @@
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
-            <p class="text-white dark:text-gray-700 text-3xl z-40 mt-8 underline underline-offset-8">برترین مقاله های یک
+            <p class="text-white dark:text-zinc-900 text-3xl z-40 mt-8 underline underline-offset-8">برترین مقاله های یک
                 ماه گذشته</p>
 
 
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $sevenArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -105,7 +105,7 @@
 
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $sexArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -134,7 +134,7 @@
 
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $fiveArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -162,7 +162,7 @@
 
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $forArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -190,7 +190,7 @@
 
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $threeArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -219,7 +219,7 @@
 
                                 <div class="text10">
                                     <a href="{{ route('home.articles.show', ['article' => $twoArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -248,12 +248,11 @@
 
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
-            <div
-                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+            <div class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
-                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
-                        <p class="text-white font-bold text-xl text-center">دسته بندی ها</p>
+                        class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900  z-30 gap-10 p-4 rounded-full">
+                        <p class="text-white font-bold text-xl text-center dark:text-zinc-900">دسته بندی ها</p>
 
 
                         @php
@@ -262,9 +261,10 @@
 
                         @foreach ($parentCategorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-40">
-                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 ">
+                                <button
+                                    class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 dark:bg-slate-300">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
-                                        <path id="chevron-right" d="M9,18l6-6L9,6"
+                                        <path class="dark:stroke-zinc-900" id="chevron-right" d="M9,18l6-6L9,6"
                                             transform="translate(19.414 -7.586) rotate(90)" fill="none"
                                             stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" />
@@ -279,8 +279,9 @@
                                         <a class="flex mb-3"
                                             href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
-                                                <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
-                                                    cy="4" r="4" fill="#fff" />
+                                                <circle class="dark:fill-zinc-900" id="Ellipse_241"
+                                                    data-name="Ellipse 241" cx="4" cy="4"
+                                                    r="4" fill="#fff" />
                                             </svg>
 
                                             {{ $childCategory->title }}
@@ -295,70 +296,77 @@
                     </div>
 
                     <div id="coinBox"
-                        class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700 z-30 gap-10 py-4 px-8 rounded-full mt-8">
-                        <p class="text-white font-bold text-xl text-center">فیلتر بر اساس تگ ها</p>
+                        class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
+                        <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر اساس تگ ها</p>
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
-                                <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
+                                <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
+                                    class="bg-box dark:bg-slate-300 rounded-xl w-24 text-center p-2">{{ $tag->title }}</a>
                                 {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                             @endforeach
                         </div>
+                    </div>
+                    <div id="coinBox"
+                        class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
+                        <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر زمان بندی</p>
+
                     </div>
                 </div>
 
 
             </div>
-
-
-
-            <div
-                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+            <div class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
-                    class="mb-4 flex  justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
-                    <ul class="flex flex-wrap  -mb-px gap-4 text-center" id="myTab"
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
+                    <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0" id="myTab"
                         data-tabs-toggle="#myTabContent" role="tablist">
-                        <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="profile-tab"
-                                data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
-                                aria-selected="false">بر اساس جدیدترین</button>
+
+                        <li class="md:mr-2 text-white" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                                aria-controls="profile" aria-selected="true">بر اساس جدیدترین</button>
                         </li>
-                        <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="dashboard-tab"
-                                data-tabs-target="#dashboard" type="button" role="tab"
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
                                 aria-controls="dashboard" aria-selected="false">بر اساس قدیمی ترین</button>
                         </li>
-                        <li class="hidden lg:block mr-2" role="presentation">
-                            <button class="bg-coin1 text-white text-sm w-36 p-2 rounded-full" id="settings-tab"
-                                data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
-                                aria-selected="false">بیشترین بازدید</button>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                aria-controls="settings" aria-selected="false">بیشترین بازدید</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                aria-controls="settings" aria-selected="false">کمترین بازدید</button>
                         </li>
 
+                        <li class="" role="presentation">
+                            <button class="bg-coin1 dark:bg-slate-300 text-white p-2 rounded-full tab_list"
+                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
+                                aria-controls="width" aria-selected="false">
 
-                        <li class="lg:mr-32 xl:mr-52" role="presentation">
-                            <button class="bg-coin1 text-white  p-2 rounded-full" id="width-tab"
-                                data-tabs-target="#width" type="button" role="tab" aria-controls="width"
-                                aria-selected="false">
-
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                        stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                                 </svg>
                             </button>
                         </li>
 
                         <li role="presentation">
-                            <button class="bg-coin1 text-white  p-2 rounded-full" id="height-tab"
-                                data-tabs-target="#height" type="button" role="tab" aria-controls="height"
-                                aria-selected="false">
-
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z" />
+                            <button class="bg-coin1 dark:bg-slate-300 text-white  p-2 rounded-full tab_list"
+                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
+                                aria-controls="height" aria-selected="false">
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 512 512">
+                                    <path class="fill-white dark:fill-zinc-900"
+                                        d="M204 240H68a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 240H308a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM204 480H68a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 480H308a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36z" />
                                 </svg>
                             </button>
 
@@ -371,27 +379,28 @@
 
                 <div id="myTabContent">
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
-                                <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3">
+                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -419,36 +428,40 @@
                             @endforeach
 
 
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full  mx-3"> بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3"> قبل</a>
-                            </div>
 
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
+                            </div>
                         </div>
                     </div>
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
                             @foreach ($articless as $article)
-                                <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3">
+                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -476,36 +489,40 @@
                             @endforeach
 
 
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full mx-3">بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3">قبل</a>
-                            </div>
 
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
                         </div>
                     </div>
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
                             @foreach ($articlesss as $article)
-                                <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3">
+                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -533,37 +550,41 @@
                             @endforeach
 
 
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3">قبل</a>
-                            </div>
 
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
-                                <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
                                             src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
-                                    <p class="text-center text-white text-xs font-extralight px-3">
+                                    <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
                                         {{ Str::limit($article->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -591,12 +612,15 @@
                             @endforeach
 
 
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3">قبل</a>
-                            </div>
 
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
                         </div>
                     </div>
 
@@ -613,7 +637,7 @@
                                     </a>
                                     <a class="w-full px-4 "
                                         href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-xs lg:text-sm font-bold text-center">
+                                        <p class="text-xs lg:text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
                                     </a>
@@ -647,12 +671,19 @@
                             @endforeach
 
 
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="hidden lg:block bg-green p-3 rounded-full  mx-3">بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="hidden lg:block bg-green p-3 rounded-full mx-3">قبل</a>
-                            </div>
 
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    قبل</a>
+                            </div>
                         </div>
                     </div>
 
