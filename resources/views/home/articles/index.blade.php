@@ -345,8 +345,8 @@
                         <li class="md:mr-2" role="presentation">
                             <button
                                 class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
-                                id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
-                                aria-controls="settings" aria-selected="false">کمترین بازدید</button>
+                                id="settings-tab2" data-tabs-target="#settings2" type="button" role="tab"
+                                aria-controls="settings2" aria-selected="false">کمترین بازدید</button>
                         </li>
 
                         <li class="" role="presentation">
@@ -436,12 +436,19 @@
                         </div>
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
+
+                                <a href="{{ $articles->nextPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
+
                                 {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
+
+                                <a href="{{ $articles->previousPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
+
                             </div>
                         </div>
                     </div>
+
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
@@ -504,29 +511,30 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articlesss as $article)
+                            @foreach ($articleView as $viewDesc)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $viewDesc->primary_image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
-                                            {{ Str::limit($article->title, 40) }}
+                                            {{ Str::limit($viewDesc->title, 40) }}
                                         </p>
                                     </a>
                                     <p
                                         class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
-                                        {{ Str::limit($article->description, 80) }}
+                                        {{ Str::limit($viewDesc->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
@@ -539,7 +547,70 @@
                                         <div class="flex items-center gap-4 -mt-2">
 
                                             <p class="flex gap-1 items-center text-base">
-                                                {{ $article->viewCount }}
+                                                {{ $viewDesc->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($articleViews as $viewASC)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $viewASC->primary_image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($viewASC->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($viewASC->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده مقاله
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $viewASC->viewCount }}
                                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                     stroke="currentColor" class="w-5 h-5">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -616,10 +687,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
-
-
                         </div>
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">

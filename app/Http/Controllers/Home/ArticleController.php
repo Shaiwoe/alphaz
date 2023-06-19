@@ -35,6 +35,21 @@ class ArticleController extends Controller
 
 
 
+        $articleView = Article::query()
+            ->orderBy('viewCount', 'desc')
+            ->where('is_active', 1)
+            ->search()
+            ->paginate(12);
+
+
+        $articleViews = Article::query()
+            ->orderBy('viewCount', 'ASC')
+            ->where('is_active', 1)
+            ->search()
+            ->paginate(12);
+
+
+
 
 
         $sevenArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
@@ -47,18 +62,23 @@ class ArticleController extends Controller
 
         $tags = Tag::all();
 
+        $prev = Article::find($article->slug - 1);
+        $next = Article::find($article->slug + 1);
 
-        return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+
+        return view('home.articles.index', compact('prev', 'next', 'tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Article $article)
     {
         $prev = Article::find($article->id - 1);
         $next = Article::find($article->id + 1);
+
+
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $article->increment('viewCount');
         $categorys = Category::all();
         $tags = Tag::all();
-        return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys' , 'prev' , 'next'));
+        return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys', 'prev', 'next'));
     }
 }
