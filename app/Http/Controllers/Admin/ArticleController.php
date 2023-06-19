@@ -56,6 +56,7 @@ class ArticleController extends Controller
         $request->validate([
             'title' => 'required',
             'slug' => 'required',
+            'time' => 'required',
             'tag_ids' => 'required',
             'is_active' => 'required',
             'description' => 'required',
@@ -76,6 +77,7 @@ class ArticleController extends Controller
         $article = Article::create([
             'title' => $request->title,
             'slug' => $request->slug,
+            'time' => $request->time,
             'category_id' => $request->category_id,
             'description' => $request->description,
             'body' => $request->body,
@@ -139,6 +141,7 @@ class ArticleController extends Controller
         $request->validate([
             'primary_image' => 'nullable|mimes:jpg,jpeg,png,svg',
             'title' => 'required',
+            'time' => 'required',
             'slug' => 'required',
             'tag_ids' => 'required',
             'tag_id.*' => 'exists:tags,id',
@@ -160,6 +163,7 @@ class ArticleController extends Controller
         $article->update([
             'title' => $request->title,
             'slug' => $request->slug,
+            'time' => $request->time,
             'category_id' => $request->category_id,
             'description' => $request->description,
             'body' => $request->body,

@@ -51,11 +51,21 @@
                         <div class="flex flex-col w-full">
                             <label for="title"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
-                                اخبار</label>
+                                مقاله</label>
                             <input type="text" name="title" id="title" value="{{ old('title') }}"
                                 class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 border-gray-600 placeholder:text-white dark:placeholder:text-gray-600 text-white focus:ring-yellow-400 focus:border-yellow-400"
                                 id="coinBox" placeholder="عنوان اخبار را وارد کنید">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="time"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">زمان
+                                مقاله</label>
+                            <input type="text" name="time" id="time" value="{{ old('time') }}"
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 border-gray-600 placeholder:text-white dark:placeholder:text-gray-600 text-white focus:ring-yellow-400 focus:border-yellow-400"
+                                id="coinBox" placeholder="عنوان اخبار را وارد کنید">
+                            <x-input-error :messages="$errors->get('time')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">

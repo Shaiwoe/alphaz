@@ -52,10 +52,19 @@
                         <div class="flex flex-col w-full">
                             <label for="title"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
-                                اخبار</label>
+                                مقاله</label>
                             <input type="text" name="title" id="title" value="{{ $article->title }}"
                                 class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="time"
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
+                                مقاله</label>
+                            <input type="text" name="time" id="time" value="{{ $article->time }}"
+                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
+                            <x-input-error :messages="$errors->get('time')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
@@ -149,7 +158,7 @@
                                                 name="tag_ids[]"
                                                 class="w-4 h-4 text-blue-600  rounded  ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
                                             <label for="tag_ids"
-                                                
+
                                                 class="w-full py-4 ml-2 text-sm font-medium ">{{ $tag->title }}</label>
                                         </div>
                                     @endforeach
