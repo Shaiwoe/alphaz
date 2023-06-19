@@ -322,7 +322,7 @@
                             {
                                 "interval": "1m",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
@@ -340,7 +340,7 @@
                             {
                                 "interval": "1m",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
@@ -361,7 +361,7 @@
                             {
                                 "interval": "1D",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
@@ -379,7 +379,7 @@
                             {
                                 "interval": "1D",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
@@ -400,7 +400,7 @@
                             {
                                 "interval": "1W",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
@@ -418,7 +418,7 @@
                             {
                                 "interval": "1W",
                                 "width": "100%",
-                                "height": 400,
+                                "height": 420,
                                 "isTransparent": false,
                                 "symbol": "{{ $coin->symbol }}USDT",
                                 "showIntervalTabs": true,
