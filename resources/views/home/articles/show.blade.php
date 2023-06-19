@@ -50,7 +50,7 @@
             <div id="coinBox"
                 class="bg-box dark:bg-white w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700 z-30 md:gap-10 sm:gap-3 p-4 rounded-full">
 
-                <p>زمان مطالعه برای این مقاله 10 دقیقه است</p>
+                <p>زمان مطالعه برای این مقاله {{ $article->time }} دقیقه است</p>
 
                 @auth
                     @if ($article->checkUserWishlist(auth()->id()))

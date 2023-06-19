@@ -62,11 +62,7 @@ class ArticleController extends Controller
 
         $tags = Tag::all();
 
-        $prev = Article::find($article->slug - 1);
-        $next = Article::find($article->slug + 1);
-
-
-        return view('home.articles.index', compact('prev', 'next', 'tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Article $article)
