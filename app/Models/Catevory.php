@@ -26,4 +26,9 @@ class Catevory extends Model
     {
         return $this->hasMany(Catevory::class, 'parent_id');
     }
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
 }
