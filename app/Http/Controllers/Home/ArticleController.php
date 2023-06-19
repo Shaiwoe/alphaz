@@ -16,7 +16,7 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'desc')
             ->where('is_active', 1)
             ->search()
-            ->paginate(9);
+            ->paginate(12);
 
 
 
@@ -24,14 +24,14 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'ASC')
             ->where('is_active', 1)
             ->search()
-            ->paginate(9);
+            ->paginate(12);
 
 
         $articlesss = Article::query()
             ->orderBy('updated_at', 'desc')
             ->where('is_active', 1)
             ->search()
-            ->paginate(9);
+            ->paginate(12);
 
 
 
