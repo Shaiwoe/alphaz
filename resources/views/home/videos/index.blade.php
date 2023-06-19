@@ -285,7 +285,7 @@
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
-                                            href="{{ route('home.categories.show', ['catevory' => $childCategory->slug]) }}">
+                                            href="{{ route('home.catevories.show', ['catevory' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
                                                     cy="4" r="4" fill="#fff" />
