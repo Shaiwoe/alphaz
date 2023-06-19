@@ -103,11 +103,20 @@ class TagController extends Controller
             'slug' => 'required',
         ]);
 
-        $tag->update ([
+        try {
+            DB::beginTransaction();
+
+        $tag->update([
             'title' => $request->title,
             'slug' => $request->slug,
         ]);
 
+        DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            alert()->error('مشکل در ایجاد تگ ها', $ex->getMessage())->persistent('حله');
+            return redirect()->back();
+        }
 
         Alert::success('عنوان موفقیت', 'تگ با موفقیت ویرایش شد');
         return redirect()->route('tags.index');
