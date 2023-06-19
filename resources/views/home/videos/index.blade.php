@@ -87,7 +87,7 @@
                                     {{ Str::limit($sevenArticles->description, 80) }}
                                 </div>
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $sevenArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $sevenArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -117,7 +117,7 @@
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $sexArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $sexArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -146,7 +146,7 @@
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $fiveArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $fiveArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -174,7 +174,7 @@
                                     {{ Str::limit($forArticles->title, 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $forArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $forArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -202,7 +202,7 @@
                                     {{ Str::limit($threeArticles->title, 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $threeArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $threeArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -231,7 +231,7 @@
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $twoArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $twoArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
