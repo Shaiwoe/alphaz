@@ -5,10 +5,10 @@
             <img class="" src="image/svg/logo-menu-right.png" alt="">
         </div>
 
-        <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[5vh] ">
-            <a class="xl:mt-18 lg:mt-12" href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow"
+        <div class=" flex flex-col justify-center items-center text-white dark:text-gray-600 space-y-[5vh]">
+            <a class="xl:mt-18 md:mt-12" href="{{ route('home.index') }}" data-tooltip-target="tooltip-no-arrow"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 30.835 34.039">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 30.835 34.039">
                     <g id="Group_43" data-name="Group 43" transform="translate(1 1)">
                         <path class="stroke-white dark:stroke-dark8" id="Path_5812" data-name="Path 5812"
                             d="M3,13.214,17.417,2,31.835,13.214V30.835a3.2,3.2,0,0,1-3.2,3.2H6.2a3.2,3.2,0,0,1-3.2-3.2Z"
@@ -28,7 +28,7 @@
 
             <a href="{{ route('home.coins.index') }}" data-tooltip-target="tooltip-no-arrow15"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 32.272 32.272">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 32.272 32.272">
                     <g id="bar-chart-outline" transform="translate(1 1)">
                         <path class="stroke-white dark:stroke-dark8" id="Path_5828" data-name="Path 5828"
                             d="M32,32V61.191a1.081,1.081,0,0,0,1.081,1.081H62.272" transform="translate(-32 -32)"
@@ -58,7 +58,7 @@
 
             <a href="" data-tooltip-target="tooltip-no-arrow12"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" x="0"
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" x="0"
                     y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
                     xml:space="preserve" class="">
                     <g>
@@ -125,7 +125,7 @@
 
             <a href="{{ route('home.articles.index') }}" data-tooltip-target="tooltip-no-arrow3"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 26.733 32.917">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 26.733 32.917">
                     <g id="Group_46" data-name="Group 46" transform="translate(1 1)">
                         <path class="stroke-white dark:stroke-dark8" id="Path_5807" data-name="Path 5807"
                             d="M19.458,2H7.092A3.092,3.092,0,0,0,4,5.092V29.825a3.092,3.092,0,0,0,3.092,3.092h18.55a3.092,3.092,0,0,0,3.092-3.092V11.275Z"
@@ -154,7 +154,7 @@
 
             <a href="{{ route('home.videos.index') }}" data-tooltip-target="tooltip-no-arrow4"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 32 32">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 32 32">
                     <g id="Group_45" data-name="Group 45" transform="translate(1 1)">
                         <rect class="stroke-white dark:stroke-dark8" id="Rectangle_5" data-name="Rectangle 5"
                             width="30" height="30" rx="2.18" fill="none" stroke="#fff"
@@ -191,7 +191,7 @@
 
             <a href="{{ route('home.books.index') }}" data-tooltip-target="tooltip-no-arrow5"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 38.069 32.917">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 38.069 32.917">
                     <path class="stroke-white dark:stroke-dark8" id="book-outline"
                         d="M50.035,71.729c1.288-5.085,6.154-7.682,16.746-7.729a1.283,1.283,0,0,1,1.288,1.288V88.476a1.288,1.288,0,0,1-1.288,1.288c-10.306,0-14.287,2.078-16.746,5.153-2.445-3.059-6.441-5.153-16.746-5.153A1.321,1.321,0,0,1,32,88.32V65.288A1.283,1.283,0,0,1,33.288,64C43.881,64.047,48.746,66.644,50.035,71.729Zm0,0V94.916"
                         transform="translate(-31 -63)" fill="none" stroke="#fff" stroke-linecap="round"
@@ -207,7 +207,7 @@
 
             <a href="{{ route('home.padcasts.index') }}" data-tooltip-target="tooltip-no-arrow6"
                 data-tooltip-placement="left" type="button">
-                <svg class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" viewBox="0 0 23.642 36.597">
+                <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" viewBox="0 0 23.642 36.597">
                     <g id="Group_44" data-name="Group 44" transform="translate(1 1)">
                         <path class="stroke-white dark:stroke-dark8" id="Path_5810" data-name="Path 5810"
                             d="M13.637,1A4.637,4.637,0,0,0,9,5.637V18a4.637,4.637,0,0,0,9.275,0V5.637A4.637,4.637,0,0,0,13.637,1Z"

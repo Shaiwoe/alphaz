@@ -76,7 +76,7 @@ body {
     backdrop-filter: brightness(0.8);
 }
 
-#bg-menu {
+.bg-menu {
     /* Layout Properties */
     /* UI Properties */
     opacity: 1;

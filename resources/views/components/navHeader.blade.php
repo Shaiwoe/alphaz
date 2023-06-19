@@ -1,13 +1,13 @@
 <header class="w-full flex justify-between bg-dark2 shadow-sm p-4 px-3  rounded-lg items-center">
 
     <div class="flex w-full items-center h-8 gap-2">
-        <image class="w-10" src="/image/profile2.png" alt="">
-        <p class="hidden lg:flex text-sm">سلام کاربر گرامی , خوش امدید</p>
+        <img class="w-10" src="/image/profile2.png" alt="">
+        <p class="hidden md:flex text-sm">سلام کاربر گرامی , خوش امدید</p>
     </div>
 
     <div class="flex w-full justify-end text-white gap-4 items-center">
 
-        <div class="hidden lg:block w-24 bg-green-500 py-1 px-2 rounded-md text-center">
+        <div class="hidden md:block w-24 bg-green-500 py-1 px-2 rounded-md text-center">
             <a class="text-center" href="{{ route('home.index') }}">بازگشت</a>
         </div>
 
@@ -315,7 +315,7 @@
 
         </div>
 
-        <form class="hidden lg:block" method="POST" action="{{ route('logout') }}">
+        <form class="hidden md:block" method="POST" action="{{ route('logout') }}">
             @csrf
             <x-dropdown-link :href="route('logout')"
                 onclick="event.preventDefault();

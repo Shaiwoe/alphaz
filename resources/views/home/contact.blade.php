@@ -44,7 +44,7 @@
 
 
 
-    <div class="p-4 lg:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-50 ">
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-50 ">
         <div class=" flex flex-col lg:flex-row mt-28 lg:mt-30">
             <div class="flex-1">
 
@@ -84,41 +84,43 @@
 
 
 
-    <div class="sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 flex mx-auto text-white dark:text-gray-700 z-30 p-4 lg:p-8">
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-30">
         <form class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30" id="coinBox" action="">
             <p class="lg:text-2xl">برای ارتباط با ما پیام دهید</p>
             <div class="flex flex-col w-full gap-12 z-50">
                 <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
                     <div class="flex flex-col w-full z-50">
                         <label class="text-sm lg:text-base" for="">نام و نام خانوادگی</label>
-                        <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+                        <input id="contact-input" class="mt-2 contact-input dark:bg-slate-200" type="text" name="" id="">
 
                         <label class="mt-9 text-sm lg:text-base" for="">آدرس ایمیل</label>
-                        <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+                        <input id="contact-input" class="mt-2 contact-input dark:bg-slate-200" type="text" name="" id="">
 
                         <label class="mt-9 text-sm lg:text-base" for="">عنوان تیکت</label>
-                        <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light" type="text" name="" id="">
+                        <input id="contact-input" class="mt-2 contact-input dark:bg-slate-200" type="text" name="" id="">
                     </div>
 
                     <div class="flex flex-col w-full">
                         <label for="">متن تیکت</label>
-                        <textarea id="contact-input" class="mt-4 contact-input dark:bg-icon-light" name="" id="" cols="30" rows="11"></textarea>
+                        <textarea id="contact-input" class="mt-4 contact-input dark:bg-slate-200" name="" id="" cols="30" rows="11"></textarea>
                     </div>
                 </div>
 
-                <button id="contact-button" class="p-2" type="submit">
+                <button id="contact-button" class="p-2 text-white" type="submit">
                     ارسال پیام
                 </button>
             </div>
         </form>
+        <!-- top footer  -->
+    @include('components/top-footer')
+
     </div>
 
 
 
 
 
-    <!-- top footer  -->
-    @include('components/top-footer')
+
 
 
 

@@ -24,19 +24,19 @@
 
 
     <div class="hidden lg:block absolute right-0 top-[17%]">
-        <image class="" src="/image/vector3.svg" alt="">
+        <img class="" src="/image/vector3.svg" alt="">
     </div>
     <div class="hidden lg:block absolute bottom-0 left-[30%]">
-        <image class="" src="/image/vector3.svg" alt="">
+        <img class="" src="/image/vector3.svg" alt="">
     </div>
 
 
 
     <!-- main -->
-    <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
+    <div class="mx-auto text-white md:p-8 sm:w-full md:w-10/12 xl2:w-9/12">
 
         <div
-            class="w-full flex flex-col-reverse lg:flex-row container mx-auto relative text-white dark:text-gray-700 p-4 lg:p-8">
+            class="w-full md:flex sm:flex-col-reverse md:flex-row mx-auto relative text-white dark:text-gray-700 p-4 lg:p-8">
             <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-64 bg-coin1 dark:bg-white  p-2 lg:p-8 self-center  dark:shadow-2xl"
                 id="coinBox">
 

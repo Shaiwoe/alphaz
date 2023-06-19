@@ -4,12 +4,12 @@
 
     <div class="flex w-full ">
         <a href="{{ route('home.index') }}" class="z-40">
-            <img id="theme-toggle-light-icon-2"  class="hidden w-10/12 lg:w-72" src="/image/logo-dark.png" alt="">
-            <img id="theme-toggle-dark-icon-2" class="hidden w-10/12 lg:w-72" src="/image/logo-white.png" alt="">
+            <img id="theme-toggle-light-icon-2"  class="hidden w-10/12 md:w-72" src="/image/logo-dark.png" alt="">
+            <img id="theme-toggle-dark-icon-2" class="hidden w-10/12 md:w-72" src="/image/logo-white.png" alt="">
         </a>
     </div>
 
-    <div class="hidden lg:flex  w-full justify-center items-center text-black dark:text-white">
+    <div class="hidden md:flex w-full justify-center items-center text-black dark:text-white">
         <ul class="flex w-full gap-8">
             <a href="{{ route('home.index') }}">
                 <li class="hover:border-b-2 border-yellow-400">خانه</li>
@@ -40,7 +40,7 @@
 
 
 
-        <div class="flex sm:hidden z-50">
+        <div class="flex md:hidden z-50">
 
             <!-- drawer init and toggle -->
             <div class="text-center justify-end flex">
@@ -126,7 +126,7 @@
         </button>
 
         @if (Route::has('login'))
-            <div class="flex  rounded-md lg:gap-4 items-center">
+            <div class="flex  rounded-md md:gap-4 items-center">
                 @auth
                     <a href="{{ url('/dashboard') }}" class="relative">
                         <img class="w-10 h-10 rounded-full" src="/image/profile2.png" alt="profile image">

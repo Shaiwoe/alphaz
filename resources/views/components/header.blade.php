@@ -1,11 +1,11 @@
 <div>
     <div class=" absolute flex">
-        <div id="bg-menu" class=" dark:bg-white fixed w-full p-3 z-50">
+        <div id="" class=" bg-menu dark:bg-white fixed w-full p-3 z-50">
 
-            <div class="mx-auto flex items-center sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-10/12">
+            <div class="mx-auto flex items-center sm:w-full md:w-10/12 xl:w-10/12 xl2:w-10/12">
 
-                <div class="flex w-full justify-start gap-3 lg:gap-10 items-center z-50 text-white">
-                    <div class="hidden lg:flex gap-10 text-xs lg:text-base text-white dark:text-gray-700">
+                <div class="flex w-full justify-start gap-3 md:gap-10 items-center z-50 text-white">
+                    <div class="hidden md:flex gap-10 text-xs md:text-base text-white dark:text-gray-700">
                         <ul class="flex gap-12 md:gap-6">
                             <li>
                                 <a href="{{ route('home.index') }}">صفحه اصلی</a>
@@ -25,7 +25,7 @@
                     <div class="flex gap-4">
                         <button id="theme-toggle" type="button"
                             class="menu-dark dark:bg-icon-light dark:text-gray-700 p-3 rounded-full">
-                            <svg id="theme-toggle-dark-icon" class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5"
+                            <svg id="theme-toggle-dark-icon" class="hidden xl:w-7 md:w-5 xl:h-7 md:h-5"
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="19.962" height="19.962"
                                 viewBox="0 0 19.962 19.962">
                                 <path class="stroke-white dark:stroke-dark8" id="moon"
@@ -34,7 +34,7 @@
                                     stroke-width="2" />
                             </svg>
 
-                            <svg id="theme-toggle-light-icon" class="hidden xl:w-7 lg:w-5 xl:h-7 lg:h-5"
+                            <svg id="theme-toggle-light-icon" class="hidden xl:w-7 md:w-5 xl:h-7 md:h-5"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <circle class="stroke-white dark:stroke-dark8" id="Ellipse_212" data-name="Ellipse 212"
                                     cx="5" cy="5" r="5" transform="translate(7 7)"
@@ -75,7 +75,7 @@
 
 
                         @if (Route::has('login'))
-                            <div class="flex  rounded-md lg:gap-4 items-center">
+                            <div class="flex  rounded-md md:gap-4 items-center">
                                 @auth
                                     <a href="{{ url('/dashboard') }}"
                                         class="w-12">
@@ -84,7 +84,7 @@
                                 @else
                                     <a href="{{ route('login') }}"
                                         class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
-                                        <svg class="xl:w-7 lg:w-5 xl:h-7 lg:h-5" xmlns="http://www.w3.org/2000/svg"
+                                        <svg class="xl:w-7 md:w-5 xl:h-7 md:h-5" xmlns="http://www.w3.org/2000/svg"
                                             width="18" height="20" viewBox="0 0 18 20">
                                             <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
                                                 <path class="stroke-white dark:stroke-dark8" id="Path_5803"
@@ -108,7 +108,7 @@
 
 
 
-                    <div class="flex sm:hidden z-50">
+                    <div class="flex md:hidden z-50">
 
                         <!-- drawer init and toggle -->
                         <div class="">
@@ -157,7 +157,7 @@
                                         </svg>
                                     </div>
                                     <input type="search" id="default-search"
-                                        class="block w-full p-4 text-center pl-10 text-sm lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
+                                        class="block w-full p-4 text-center pl-10 text-sm md:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
                                         placeholder=" جستجو در محتوا سایت" required>
                                 </div>
                             </form>
@@ -221,9 +221,9 @@
 
                 <div class="flex w-full justify-end z-40">
                     <a href="{{ route('home.index') }}" class="z-40">
-                        <img id="" class="logo_dark_el hidden w-40 lg:w-60" src="/image/logo-white.png"
+                        <img id="" class="logo_dark_el hidden w-40 md:w-60" src="/image/logo-white.png"
                             alt="">
-                        <img id="" class="logo_light_el hidden w-40 lg:w-60" src="/image/logo-dark.png"
+                        <img id="" class="logo_light_el hidden w-40 md:w-60" src="/image/logo-dark.png"
                             alt="">
                     </a>
                 </div>

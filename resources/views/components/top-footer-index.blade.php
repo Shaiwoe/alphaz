@@ -1,7 +1,7 @@
-<div class="container mx-auto">
+<div class=" mx-auto">
     <div class="flex flex-col justify-center lg:justify-end">
         <div id=""
-            class="w-full flex flex-col lg:flex-row items-center container mx-auto p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
+            class="w-full flex flex-col lg:flex-row items-center  mx-auto p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
             <div
                 class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50 dark:text-black">
 

@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class=" sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 flex flex-col-reverse lg:flex-row container mx-auto relative text-white dark:text-gray-700 p-4 sm:p-8">
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white flex">
         <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
             id="coinBox">
             <p class="text-center lg:text-3xl mt-8">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>
@@ -66,14 +66,14 @@
 
 
 
-    <div class="flex flex-col justify-center items-center container mx-auto text-white space-y-8 p-8">
+    <div class="flex flex-col justify-center items-center space-y-8 p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white">
         <div class="lg:text-2xl z-50 mt-15 lg:mt-36 dark:text-black">
             <p>محتوا هایی که در آلفارنسی مشاهده میکنید</p>
         </div>
 
 
 
-        <div class="w-full lg:w-10/12 gap-16 grid lg:grid-cols-2">
+        <div class="w-full gap-16 grid lg:grid-cols-2">
 
             <a href="{{ route('home.books.index') }}" id="coinBox"
                 class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
@@ -131,9 +131,10 @@
 
 
 
-
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white flex">
     <!-- top footer  -->
     @include('components/top-footer')
+    </div>
 
 
     <!-- footer  -->

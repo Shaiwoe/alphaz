@@ -23,20 +23,20 @@
     @include('components/light')
 
 
-    <div class="p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 flex mx-auto  text-white z-50">
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-50">
 
-        <div class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full p-4 lg:p-12 mt-16 lg:mt-72 z-40" id="coinBox"
-            action="">
+        <div class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full p-4 md:p-12 mt-16 md:mt-72 z-40"
+            id="coinBox" action="">
 
             <div id="accordion-open" class="border-none" data-accordion="open">
 
-                <h2 id="accordion-open-heading-1" >
+                <h2 id="accordion-open-heading-1">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 rounded-t-3xl focus:mt-5  focus:rounded-t-3xl "
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 rounded-t-3xl focus:mt-5  focus:rounded-t-3xl "
                         data-accordion-target="#accordion-open-body-1" aria-expanded="false"
                         aria-controls="accordion-open-body-1">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 ml-5 mr-2 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 ml-5 mr-2 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -60,11 +60,11 @@
 
                 <h2 id="accordion-open-heading-2">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
                         data-accordion-target="#accordion-open-body-2" aria-expanded="false"
                         aria-controls="accordion-open-body-2">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -90,11 +90,11 @@
 
                 <h2 id="accordion-open-heading-3">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl"
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl"
                         data-accordion-target="#accordion-open-body-3" aria-expanded="false"
                         aria-controls="accordion-open-body-3">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -120,11 +120,11 @@
 
                 <h2 id="accordion-open-heading-4">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
                         data-accordion-target="#accordion-open-body-4" aria-expanded="false"
                         aria-controls="accordion-open-body-4">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -151,11 +151,11 @@
 
                 <h2 id="accordion-open-heading-5">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
                         data-accordion-target="#accordion-open-body-5" aria-expanded="false"
                         aria-controls="accordion-open-body-5">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -181,11 +181,11 @@
 
                 <h2 id="accordion-open-heading-6">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl "
                         data-accordion-target="#accordion-open-body-6" aria-expanded="false"
                         aria-controls="accordion-open-body-6">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -212,11 +212,11 @@
 
                 <h2 id="accordion-open-heading-7">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 text-xs lg:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl focus:rounded-b-none rounded-b-3xl"
+                        class="flex items-center justify-between w-full p-5 text-xs md:text-base text-white bg-dark5 focus:mt-5  focus:rounded-t-3xl focus:rounded-b-none rounded-b-3xl"
                         data-accordion-target="#accordion-open-body-7" aria-expanded="false"
                         aria-controls="accordion-open-body-7">
-                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <span class="flex items-center text-white"><svg class="w-5 h-5 mr-2 ml-5 shrink-0"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                                     clip-rule="evenodd"></path>
@@ -240,12 +240,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!-- top footer  -->
+        @include('components/top-footer')
     </div>
 
 
-    <!-- top footer  -->
-    @include('components/top-footer')
+
 
 
     <!-- footer  -->

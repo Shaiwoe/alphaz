@@ -1,13 +1,13 @@
-<div class="container mx-auto flex justify-end mt-8 lg:mt-24 sm:px-2 md:px-4">
-    <div class="flex flex-col lg:justify-end">
+<div class="mx-auto">
+    <div class="flex flex-col justify-center">
         <div id=""
-            class="w-full flex flex-col lg:flex-row items-center container mx-auto  p-2 lg:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
-            <div class="flex flex-col lg:justify-center lg:items-center space-y-4 w-full lg:w-6/12 p-8 z-50">
+            class="w-full flex flex-col md:flex-row items-center  mx-auto p-2 md:p-8 mt-24 rounded-2xl gap-6 z-30 bg-footer dark:bg-white dark:filter-none dark:shadow-2xl">
+            <div class="flex flex-col md:justify-center md:items-center space-y-4 w-full lg:w-6/12 p-8 z-50">
                 {{-- <img class="w-full lg:w-8/12" src="image/logo-dark.png" alt=""> --}}
-                <img id="" class="logo_dark_el hidden w-full lg:w-8/12" src="/image/logo-white.png" alt="">
-                <img id="" class="logo_light_el hidden w-full lg:w-8/12" src="/image/logo-dark.png"
+                <img id="" class="logo_dark_el hidden w-full md:w-8/12" src="/image/logo-white.png" alt="">
+                <img id="" class="logo_light_el hidden w-full md:w-8/12" src="/image/logo-dark.png"
                     alt="">
-                <p class="left-8 text-xs lg:text-base text-justify text-white dark:text-black">امروزه بیشتر از هر زمان
+                <p class="left-8 text-xs md:text-base text-justify text-white dark:text-black">امروزه بیشتر از هر زمان
                     دیگری ، دنیای بلاکچین و رمزارزها پر آوازه
                     شده و کمتر کسی پیدا میشه که نام رمز ارز
                     ها را نشنیده باشه یا با دنیای بلاک چین آشنا نباشه . اما آشنایی ساده کافی نیست برای این که به این
@@ -20,9 +20,9 @@
                     ای و با دانش کافی وارد این عرصه بشین ، آلفارنسی میتونه بهترین انتخاب باشه واستون .
                 </p>
             </div>
-            <div class="p-1 h-5/6 lg:border-r-4 border-white dark:border-black"></div>
+            <div class="p-1 h-5/6 md:border-r-4 border-white dark:border-black"></div>
             <div class="flex flex-col justify-center items-center space-y-6 w-4/12 z-50">
-                <ul class="space-y-6 text-sm lg:text-lg text-white dark:text-black">
+                <ul class="space-y-6 text-sm md:text-lg text-white dark:text-black">
                     <li><a href="{{ route('home.about') }}">درباره ما</a></li>
                     <li><a href="{{ route('home.contact') }}">ارتباط با ما</a></li>
                     <li><a href="#">پنل‌ کاربری</a></li>
@@ -31,24 +31,39 @@
                 </ul>
             </div>
 
-            <div class="flex lg:flex-col  gap-8 z-50">
-                <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
+            <div class="flex md:flex-col  gap-8 z-50">
+                <a class="menu-dark dark:bg-dark4 dark:text-white rounded-full"
                     href="https://www.instagram.com/alpharency/">
 
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/instagram.svg" alt="">
+
+                    <svg class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5 m-4" viewBox="0 0 24 24">
+                        <g id="instagram" transform="translate(1 1)">
+                            <rect id="Rectangle_33" data-name="Rectangle 33" width="22" height="22"
+                                rx="5" fill="none" stroke="#fff" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" />
+                            <path id="Path_5824" data-name="Path 5824"
+                                d="M16.8,11.711A4.4,4.4,0,1,1,13.089,8,4.4,4.4,0,0,1,16.8,11.711Z"
+                                transform="translate(-1.396 -1.404)" fill="none" stroke="#fff"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_35" data-name="Line 35" x2="0.011" transform="translate(17.05 4.95)"
+                                fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" />
+                        </g>
+                    </svg>
+
 
 
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full" href="https://t.me/alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/send.svg" alt="">
+                    <img class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5" src="/image/svg/send.svg" alt="">
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://www.youtube.com/@alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/youtube.svg" alt="">
+                    <img class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5" src="/image/svg/youtube.svg" alt="">
                 </a>
                 <a class="menu-dark dark:bg-dark4 dark:text-white p-4 rounded-full"
                     href="https://twitter.com/alpharency">
-                    <img class="xl:w-8 lg:w-6 xl:h-8 lg:h-6" src="/image/svg/twitter.svg" alt="">
+                    <img class="xl2:w-7 xl2:h-7 sm:w-5 md:w-5" src="/image/svg/twitter.svg" alt="">
                 </a>
             </div>
         </div>
