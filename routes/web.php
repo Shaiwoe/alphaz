@@ -107,6 +107,7 @@ Route::get('/study-book/{book}', [StudyBookController::class, 'add'])->name('hom
 Route::get('/study-romve-book/{book}', [StudyBookController::class, 'remove'])->name('home.studybook.remove');
 
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
+Route::get('/catevories/{catevory:slug}', [HomeCategoryController::class, 'show'])->name('home.catevories.show');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 
 Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index');

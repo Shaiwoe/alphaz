@@ -77,7 +77,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full  z-40">
                                 <img class="image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sevenArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $sevenArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -108,7 +108,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sexArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $sexArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -137,7 +137,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $fiveArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $fiveArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -166,7 +166,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $forArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $forArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -194,7 +194,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $threeArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $threeArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -222,7 +222,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $twoArticles->image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -265,7 +265,7 @@
 
 
                         @php
-                            $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
+                            $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
@@ -285,7 +285,7 @@
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
-                                            href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                            href="{{ route('home.categories.show', ['catevory' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
                                                     cy="4" r="4" fill="#fff" />
