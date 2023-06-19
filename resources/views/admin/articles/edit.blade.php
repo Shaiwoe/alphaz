@@ -60,7 +60,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="time"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
+                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">زمان
                                 مقاله</label>
                             <input type="text" name="time" id="time" value="{{ $article->time }}"
                                 class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
