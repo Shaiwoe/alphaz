@@ -39,10 +39,13 @@ use App\Http\Controllers\Home\StudyBookController;
 use App\Http\Controllers\Home\CoinMarketController;
 use App\Http\Controllers\Home\StudyVideoController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Home\CommentBookController;
 use App\Http\Controllers\Home\LikePadcastController;
+use App\Http\Controllers\Home\CommentVideoController;
 use App\Http\Controllers\Home\StudyPadcastController;
 use App\Http\Controllers\Home\WishlistBookController;
 use App\Http\Controllers\Home\WishlistVideoController;
+use App\Http\Controllers\Home\CommentPadcastController;
 use App\Http\Controllers\Home\WishlistPadcastController;
 use App\Http\Controllers\Home\TagController as HomeTagController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
@@ -53,10 +56,8 @@ use App\Http\Controllers\Home\CommentController as HomeCommentController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
+use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
-use App\Http\Controllers\Home\CommentBookController;
-use App\Http\Controllers\Home\CommentPadcastController;
-use App\Http\Controllers\Home\CommentVideoController;
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
@@ -107,7 +108,7 @@ Route::get('/study-book/{book}', [StudyBookController::class, 'add'])->name('hom
 Route::get('/study-romve-book/{book}', [StudyBookController::class, 'remove'])->name('home.studybook.remove');
 
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
-Route::get('/catevories/{catevory:slug}', [HomeCategoryController::class, 'show'])->name('home.catevories.show');
+Route::get('/catevories/{catevory:slug}', [HomeCatevoryController::class, 'show'])->name('home.catevories.show');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 
 Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index');
