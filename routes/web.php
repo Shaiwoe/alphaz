@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\PadcastController;
 use App\Http\Controllers\Admin\WebinarController;
+use App\Http\Controllers\Home\LikeBookController;
 use App\Http\Controllers\Home\MetaversController;
 use App\Http\Controllers\Home\WishlistController;
 use App\Http\Controllers\Admin\CateboryController;
@@ -33,8 +34,16 @@ use App\Http\Controllers\Admin\CatevoryController;
 use App\Http\Controllers\Admin\DashbordController;
 use App\Http\Controllers\Admin\FavoriteController;
 use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Home\LikeVideoController;
+use App\Http\Controllers\Home\StudyBookController;
 use App\Http\Controllers\Home\CoinMarketController;
+use App\Http\Controllers\Home\StudyVideoController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Home\LikePadcastController;
+use App\Http\Controllers\Home\StudyPadcastController;
+use App\Http\Controllers\Home\WishlistBookController;
+use App\Http\Controllers\Home\WishlistVideoController;
+use App\Http\Controllers\Home\WishlistPadcastController;
 use App\Http\Controllers\Home\TagController as HomeTagController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
@@ -45,11 +54,9 @@ use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
-
-
-
-
-
+use App\Http\Controllers\Home\CommentBookController;
+use App\Http\Controllers\Home\CommentPadcastController;
+use App\Http\Controllers\Home\CommentVideoController;
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
@@ -65,11 +72,39 @@ Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->
 Route::get('/whislist/{article}', [WishlistController::class, 'add'])->name('home.whishlist.add');
 Route::get('/whislist-romve/{article}', [WishlistController::class, 'remove'])->name('home.whishlist.remove');
 
+Route::get('/wishlist-video/{video}', [WishlistVideoController::class, 'add'])->name('home.whishlistvideo.add');
+Route::get('/wishlist-romve-video/{video}', [WishlistVideoController::class, 'remove'])->name('home.whishlistvideo.remove');
+
+Route::get('/wishlist-padcast/{padcast}', [WishlistPadcastController::class, 'add'])->name('home.whishlistpadcast.add');
+Route::get('/wishlist-romve-padcast/{padcast}', [WishlistPadcastController::class, 'remove'])->name('home.whishlistpadcast.remove');
+
+Route::get('/wishlist-book/{book}', [WishlistBookController::class, 'add'])->name('home.whishlistbook.add');
+Route::get('/wishlist-romve-book/{book}', [WishlistBookController::class, 'remove'])->name('home.whishlistbook.remove');
+
 Route::get('/like/{article}', [DashbordController::class, 'add'])->name('home.like.add');
 Route::get('/like-romve/{article}', [DashbordController::class, 'remove'])->name('home.like.remove');
 
+Route::get('/like-video/{video}', [LikeVideoController::class, 'add'])->name('home.likevideo.add');
+Route::get('/like-romve-video/{video}', [LikeVideoController::class, 'remove'])->name('home.likevideo.remove');
+
+Route::get('/like-padcast/{padcast}', [LikePadcastController::class, 'add'])->name('home.likepadcast.add');
+Route::get('/like-romve-padcast/{padcast}', [LikePadcastController::class, 'remove'])->name('home.likepadcast.remove');
+
+Route::get('/like-book/{book}', [LikeBookController::class, 'add'])->name('home.likebook.add');
+Route::get('/like-romve-book/{book}', [LikeBookController::class, 'remove'])->name('home.likebook.remove');
+
 Route::get('/study/{article}', [StudyController::class, 'add'])->name('home.study.add');
 Route::get('/study-romve/{article}', [StudyController::class, 'remove'])->name('home.study.remove');
+
+Route::get('/study-video/{video}', [StudyVideoController::class, 'add'])->name('home.studyvideo.add');
+Route::get('/study-romve-video/{video}', [StudyVideoController::class, 'remove'])->name('home.studyvideo.remove');
+
+Route::get('/study-padcast/{padcast}', [StudyPadcastController::class, 'add'])->name('home.studypadcast.add');
+Route::get('/study-romve-padcast/{padcast}', [StudyPadcastController::class, 'remove'])->name('home.studypadcast.remove');
+
+
+Route::get('/study-book/{book}', [StudyBookController::class, 'add'])->name('home.studybook.add');
+Route::get('/study-romve-book/{book}', [StudyBookController::class, 'remove'])->name('home.studybook.remove');
 
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
@@ -86,6 +121,12 @@ Route::get('/metavers', [MetaversController::class, 'coins'])->name('home.metave
 Route::get('/metavers/{metavers:id}/{slug}', [MetaversController::class, 'show'])->name('home.metavers.show');
 
 Route::post('/comments/{article}', [HomeCommentController::class, 'store'])->name('home.comments.store');
+
+Route::post('/comments-video/{video}', [CommentVideoController::class, 'store'])->name('home.commentsvideo.store');
+
+Route::post('/comments-padcast/{padcast}', [CommentPadcastController::class, 'store'])->name('home.commentspadcast.store');
+
+Route::post('/comments-book/{book}', [CommentBookController::class, 'store'])->name('home.commentsbook.store');
 
 Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/faq', [FaqController::class, 'index'])->name('home.faq');

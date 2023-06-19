@@ -48,4 +48,27 @@ class Book extends Model
 
         return $query;
     }
+
+
+    public function checkUserWishlist($userId)
+    {
+        return $this->hasMany(WishlistBook::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function checkUserLike($userId)
+    {
+        return $this->hasMany(LikeBook::class)->where('user_id' , $userId)->exists();
+    }
+
+    public function checkUserStudy($userId)
+    {
+        return $this->hasMany(StudyBook::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function approvedComments()
+    {
+        return $this->hasMany(BookComment::class)->where('approved' , 1);
+    }
 }

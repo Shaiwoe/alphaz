@@ -49,4 +49,27 @@ class Padcast extends Model
 
         return $query;
     }
+
+
+    public function checkUserWishlist($userId)
+    {
+        return $this->hasMany(WishlistPadcast::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function checkUserLike($userId)
+    {
+        return $this->hasMany(LikePadcast::class)->where('user_id' , $userId)->exists();
+    }
+
+    public function checkUserStudy($userId)
+    {
+        return $this->hasMany(StudyPadcast::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function approvedComments()
+    {
+        return $this->hasMany(PadcastComment::class)->where('approved' , 1);
+    }
 }

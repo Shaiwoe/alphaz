@@ -49,4 +49,27 @@ class Video extends Model
 
         return $query;
     }
+
+
+    public function checkUserWishlist($userId)
+    {
+        return $this->hasMany(WishlistVideo::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function checkUserLike($userId)
+    {
+        return $this->hasMany(LikeVideo::class)->where('user_id' , $userId)->exists();
+    }
+
+    public function checkUserStudy($userId)
+    {
+        return $this->hasMany(StudyVideo::class)->where('user_id' , $userId)->exists();
+    }
+
+
+    public function approvedComments()
+    {
+        return $this->hasMany(VideoComment::class)->where('approved' , 1);
+    }
 }

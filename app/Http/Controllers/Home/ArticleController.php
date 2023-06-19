@@ -50,8 +50,6 @@ class ArticleController extends Controller
 
 
 
-
-
         $sevenArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
         $sexArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
         $fiveArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
@@ -60,7 +58,7 @@ class ArticleController extends Controller
         $twoArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
         $oneArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
 
-        $tags = Tag::orderBy('created_at', 'desc')->take(20)->latest()->get();
+        $tags = Tag::orderBy('created_at', 'desc')->take(10)->latest()->get();
 
         return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }

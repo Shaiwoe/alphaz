@@ -234,7 +234,7 @@
                                 <div id="coinBox"
                                     class="w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 p-4 rounded-full">
 
-                                    <a href="{{ $next->slug }}"
+                                    <a href=""
                                         class="flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
                                             viewBox="0 0 512 512">
@@ -302,9 +302,7 @@
                                         </a>
                                     @endauth
 
-
-
-                                    <a href="{{ $prev->slug }}"
+                                    <a href=""
                                         class="flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
                                         مقاله قبلی
 
