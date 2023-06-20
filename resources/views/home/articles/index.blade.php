@@ -316,6 +316,8 @@
 
 
             </div>
+
+
             <div
                 class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
@@ -380,6 +382,7 @@
 
 
                 <div id="myTabContent">
+                    
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->

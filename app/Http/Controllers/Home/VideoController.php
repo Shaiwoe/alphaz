@@ -67,8 +67,6 @@ class VideoController extends Controller
 
         $prev = Video::find($video->id - 1);
         $next = Video::find($video->id + 1);
-
-
         $videos = Video::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $video->increment('viewCount');
         $catevorys = Catevory::all();

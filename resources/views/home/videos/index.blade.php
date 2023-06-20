@@ -323,84 +323,406 @@
 
 
             <div
-                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
-                    class="flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
+                    <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0"
+                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
 
-                    <div class="flex-col w-full contents">
-                        <div class="hidden lg:flex gap-3">
-                            <p class="bg-green text-white w-36 p-2  rounded-full">بر اساس جدیدترین</p>
-                            <p class="bg-form1 text-white w-36 p-2  rounded-full">بر اساس قدیمی ترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترید بازدید</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترین لایک</p>
-                        </div>
+                        <li class="md:mr-2 text-white" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                                aria-controls="profile" aria-selected="true">بر اساس جدیدترین</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                                aria-controls="dashboard" aria-selected="false">بر اساس قدیمی ترین</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                aria-controls="settings" aria-selected="false">بیشترین بازدید</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab2" data-tabs-target="#settings2" type="button" role="tab"
+                                aria-controls="settings2" aria-selected="false">کمترین بازدید</button>
+                        </li>
 
-                        <div class="flex gap-2">
-                            <p class="bg-form1 p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                        <li class="" role="presentation">
+                            <button class="bg-coin1 dark:bg-slate-300 text-white p-2 rounded-full tab_list"
+                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
+                                aria-controls="width" aria-selected="false">
+
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                        stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                                 </svg>
-                            </p>
+                            </button>
+                        </li>
 
-                            <p class="bg-green p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z" />
+                        <li role="presentation">
+                            <button class="bg-coin1 dark:bg-slate-300 text-white  p-2 rounded-full tab_list"
+                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
+                                aria-controls="height" aria-selected="false">
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 512 512">
+                                    <path class="fill-white dark:fill-zinc-900"
+                                        d="M204 240H68a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 240H308a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM204 480H68a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 480H308a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36z" />
                                 </svg>
-                            </p>
-                        </div>
-                    </div>
+                            </button>
+
+                        </li>
+
+                    </ul>
+
                 </div>
 
-                <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
-                    <!-- post 1  -->
-                    @foreach ($videos as $video)
-                        <div class="bg-indigo-1  rounded-3xl flex flex-col w-full space-y-6">
-                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
-                                <img class="rounded-t-3xl h-full"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
-                                    alt="">
-                            </a>
-                            <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
-                                <p class="text-sm font-bold text-center">
-                                    {{ Str::limit($video->title, 40) }}
-                                </p>
-                            </a>
-                            <p class="text-center text-white text-xs font-extralight px-3">و
-                                {{ Str::limit($video->description, 80) }}
-                            </p>
 
-                            <div class="flex justify-between px-2 lg:px-4">
-                                <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
-                                    class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده ویدیو
-                                </a>
+                <div id="myTabContent">
 
-                                <div class="flex items-center gap-4">
-                                    <p class="flex gap-1 items-center text-xs">
-                                        126
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                        </svg>
+                    <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($videos as $videoTab)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.videos.show', ['video' => $videoTab->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $videoTab->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.videos.show', ['video' => $videoTab->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($videoTab->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($videoTab->description, 80) }}
                                     </p>
 
-                                    <p class="flex gap-1 items-center text-xs">
-                                        1640
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $videoTab->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده ویدیو
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $videoTab->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+
+                                <a href="{{ $videos->nextPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
+
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+
+                                <a href="{{ $videos->previousPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($videoss as $videoTabs)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.articles.show', ['article' => $videoTabs->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $videoTabs->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.videos.show', ['video' => $videoTabs->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($videoTabs->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($videoTabs->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $videoTabs->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده ویدیو
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $videoTabs->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($videoView as $viewDesc)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.videos.show', ['video' => $viewDesc->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $viewDesc->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.videos.show', ['video' => $viewDesc->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($viewDesc->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($viewDesc->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $viewDesc->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده ویدیو
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $viewDesc->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($videoViews as $viewASC)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.videos.show', ['video' => $viewASC->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $viewASC->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.videos.show', ['video' => $viewASC->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($viewASC->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($viewASC->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $viewASC->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده ویدیو
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $viewASC->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($videos as $video)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($video->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($video->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده ویدیو
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $video->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
+                            <!-- post 1  -->
+                            @foreach ($videos as $video)
+                                <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
+
+                                    <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                        <img class="rounded-r-3xl w-8/12 lg:w-8/12"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $video->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a class="w-full px-4 "
+                                        href="{{ route('home.videos.show', ['video' => $video->slug]) }}">
+                                        <p class="text-xs lg:text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($video->title, 40) }}
+                                        </p>
+                                    </a>
+
+                                    <p class="flex w-full gap-1 items-center text-base">
+                                        {{ $video->viewCount }}
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-5 h-5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -408,20 +730,44 @@
                                         </svg>
 
                                     </p>
+
+                                    <div class="hidden lg:block w-44 p-1 bg-green rounded-full mx-4">
+                                        <a href="{{ route('home.videos.show', ['video' => $video->slug]) }}"
+                                            class=" flex p-2  text-xs items-center gap-2">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده
+                                        </a>
+                                    </div>
+
+
                                 </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    بعد</a>
+                                {{ $videos->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    قبل</a>
                             </div>
                         </div>
-                    @endforeach
-
-
-
+                    </div>
 
                 </div>
-                <div class="flex w-full justify-between mt-14 mb-3">
-                    <a class="bg-green p-3 rounded-full mx-3">صفحه بعد</a>
-                    {{ $videos->onEachSide(4)->links('vendor.pagination.tailwind') }}
-                    <a class="bg-green p-3 rounded-full mx-3">صفحه قبل</a>
-                </div>
+
+
+
             </div>
 
         </div>
