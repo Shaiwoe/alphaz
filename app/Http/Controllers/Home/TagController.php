@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Http\Controllers\Controller;
 use App\Models\Tag;
-use Illuminate\Http\Request;
-use DB;
 use App\Models\Article;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class TagController extends Controller
 {

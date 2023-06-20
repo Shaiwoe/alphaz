@@ -60,6 +60,7 @@ use App\Http\Controllers\Home\CommentController as HomeCommentController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
+use App\Http\Controllers\Home\CateporyController as HomeCateporyController;
 use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
@@ -120,6 +121,7 @@ Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('hom
 
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');
+Route::get('/catepories/{catepory:slug}', [HomeCateporyController::class, 'show'])->name('home.catepories.show');
 
 
 
