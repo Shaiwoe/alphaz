@@ -37,7 +37,7 @@
 
 
             <div id="coinBox"
-                class="bg-box dark:bg-white mt-36 w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700 z-30 md:gap-10 sm:gap-3 p-4 rounded-full">
+                class="bg-box dark:bg-white mt-32 w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700 z-30 md:gap-10 sm:gap-3 p-4 rounded-full">
 
                 <p>زمان مطالعه برای این مقاله {{ $video->time }} دقیقه است</p>
 
