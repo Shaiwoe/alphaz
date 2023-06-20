@@ -169,12 +169,12 @@
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -184,14 +184,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده کتاب
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -221,12 +221,12 @@
                             <!-- post 1  -->
                             @foreach ($articless as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -236,14 +236,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده کتاب
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -274,12 +274,12 @@
                             <!-- post 1  -->
                             @foreach ($articlesss as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -289,14 +289,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده کتاب
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -330,10 +330,10 @@
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
                                     <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('BOOKS_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -343,14 +343,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده کتاب
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -383,13 +383,13 @@
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <img class="rounded-r-3xl w-7/12"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
                                     <a class="w-full"
-                                        href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                        href="{{ route('home.books.show', ['book' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -408,7 +408,7 @@
                                     </p>
 
                                     <div class="w-44 p-2 bg-green rounded-full mx-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
                                             class=" flex p-2  text-xs items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
