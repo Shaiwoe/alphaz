@@ -389,12 +389,12 @@
                             @foreach ($articles as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -412,7 +412,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده پادکست
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -458,12 +458,12 @@
                             @foreach ($articless as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -481,7 +481,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده پادکست
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -521,12 +521,12 @@
                             @foreach ($articleView as $viewDesc)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $viewDesc->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $viewDesc->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $viewDesc->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $viewDesc->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($viewDesc->title, 40) }}
                                         </p>
@@ -537,14 +537,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $viewDesc->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $viewDesc->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده پادکست
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -584,12 +584,12 @@
                             @foreach ($articleViews as $viewASC)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $viewASC->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $viewASC->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $viewASC->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $viewASC->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($viewASC->title, 40) }}
                                         </p>
@@ -600,14 +600,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $viewASC->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $viewASC->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده پادکست
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -647,12 +647,12 @@
                             @foreach ($articles as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcasts' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -663,14 +663,14 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده مقاله
+                                            مشاهده پادکست
                                         </a>
 
                                         <div class="flex items-center gap-4 -mt-2">
@@ -706,13 +706,13 @@
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <img class="rounded-r-3xl w-8/12 lg:w-8/12"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
+                                            src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
                                     </a>
                                     <a class="w-full px-4 "
-                                        href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
+                                        href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <p class="text-xs lg:text-sm font-bold text-center line-clamp-1">
                                             {{ Str::limit($article->title, 40) }}
                                         </p>
@@ -738,7 +738,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده
+                                            مشاهده 
                                         </a>
                                     </div>
 
