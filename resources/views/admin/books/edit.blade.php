@@ -56,6 +56,15 @@
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
+
+                        <div class="flex flex-col w-full">
+                            <label for="slug" class="block mb-2 text-sm font-medium text-white dark:text-gray-600">لینک</label>
+                            <input type="text" name="slug" id="slug"
+                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
+                                value="{{ $book->slug }}">
+                            <x-input-error :messages="$errors->get('slug')" class="mt-2" />
+                        </div>
+
                         <div class="flex flex-col w-full">
                             <label for="catebory_id" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
                                 بندی</label>

@@ -45,6 +45,7 @@ class VideoController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required|unique:video,slug',
             'catevory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -71,6 +72,7 @@ class VideoController extends Controller
 
             Video::create([
                 'title' => $request->title,
+                'slug' => $request->slug,
                 'catevory_id' => $request->catevory_id,
                 'type' => $request->type,
                 'description' => $request->description,
@@ -132,6 +134,7 @@ class VideoController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'catevory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -160,6 +163,7 @@ class VideoController extends Controller
 
             $video->update([
                 'title' => $request->title,
+                'slug' => $request->slug,
                 'catevory_id' => $request->catevory_id,
                 'type' => $request->type,
                 'description' => $request->description,

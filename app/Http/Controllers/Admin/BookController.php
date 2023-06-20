@@ -46,6 +46,7 @@ class BookController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required|unique:book,slug',
             'catebory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -67,6 +68,7 @@ class BookController extends Controller
 
         Book::create([
             'title' => $request->title,
+            'slug' => $request->slug,
             'catebory_id' => $request->catebory_id,
             'type' => $request->type,
             'description' => $request->description,
@@ -124,6 +126,7 @@ class BookController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'catebory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -149,6 +152,7 @@ class BookController extends Controller
 
         $book->update([
             'title' => $request->title,
+            'slug' => $request->slug,
             'catebory_id' => $request->catebory_id,
             'type' => $request->type,
             'description' => $request->description,

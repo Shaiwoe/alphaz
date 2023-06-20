@@ -69,7 +69,7 @@ class PadcastController extends Controller
 
         Padcast::create([
             'title' => $request->title,
-            'slug' => $request->slug,
+            'slug' => 'required|unique:padcast,slug',
             'catepory_id' => $request->catepory_id,
             'type' => $request->type,
             'description' => $request->description,
