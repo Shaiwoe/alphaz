@@ -169,7 +169,7 @@
                                     <li class="">خانه</li>
                                 </a>
                                 <a class="flex gap-6 w-full border-b border-white dark:border-gray-700 text-lg"
-                                    href="#">
+                                    hrefroute('home.coins.index')
                                     <i class="fa-solid fa-chart-simple"></i>
                                     <li class="">مارکت</li>
                                 </a>

@@ -505,8 +505,6 @@
                         </div>
 
 
-
-
                     @endforeach
                 </div>
             </div>
@@ -524,12 +522,6 @@
 
 
     </div>
-
-
-
-
-
-
 
 
     <!-- footer  -->
