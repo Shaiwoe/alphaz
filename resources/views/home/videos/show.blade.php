@@ -177,7 +177,7 @@
 
                                         @foreach ($parentCategory->children as $childCategory)
                                             <a class="flex mb-3"
-                                                href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                                href="{{ route('home.catevories.show', ['catevory' => $childCategory->slug]) }}">
                                                 <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                     <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
                                                         cy="4" r="4" fill="#fff" />
@@ -380,6 +380,7 @@
     <!-- footer  -->
     @include('components/footer')
 
+    @include('sweetalert::alert')
 
     <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
