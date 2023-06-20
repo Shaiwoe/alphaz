@@ -59,6 +59,7 @@ use App\Http\Controllers\Home\ArticleController as HomeArticleController;
 use App\Http\Controllers\Home\CommentController as HomeCommentController;
 use App\Http\Controllers\Home\PadcastController as HomePadcastController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
+use App\Http\Controllers\Home\CateboryController as HomeCateboryController;
 use App\Http\Controllers\Home\CategoryController as HomeCategoryController;
 use App\Http\Controllers\Home\CateporyController as HomeCateporyController;
 use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
@@ -118,7 +119,7 @@ Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('
 
 Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index');
 Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('home.books.show');
-Route::get('/catebories/{catebory:slug}', [HomeCateporyController::class, 'show'])->name('home.catebories.show');
+Route::get('/catebories/{catebory:slug}', [HomeCateboryController::class, 'show'])->name('home.catebories.show');
 
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');
