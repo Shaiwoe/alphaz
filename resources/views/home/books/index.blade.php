@@ -47,166 +47,203 @@
             </div>
         </form>
 
+        <?php if (request()->has('search')) {?>
+        <div class="flex justify-center items-center w-full mt-12">
+            <p class="bg-green flex rounded-2xl p-4 text-base mb-4 items-center gap-2 text-white">
+                تعداد {{ $booksCount }} پادکست برای این جستجو پیدا شد
+            </p>
+        </div>
+        <?php }?>
+
+        <?php if (!request()->has('search')) {?>
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
-            <p class="text-white dark:text-gray-700 text-3xl z-40 mt-8 underline underline-offset-8">برترین مقاله های یک
+            <p class="text-white dark:text-zinc-900 text-3xl z-40 mt-8 underline underline-offset-8">برترین کتاب های
+                یک
                 ماه گذشته</p>
 
 
 
-            <div class="w-9/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+
+                @foreach ($sevenArticle as $sevenArticles)
+                    <div class="row-span-2 col-span-2">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full  z-40">
+                                <img class="image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $sevenArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($sevenArticles->title, 40) }}</div>
+                                <div class="text10 text-xs lg:text-sm">
+                                    {{ Str::limit($sevenArticles->description, 80) }}
+                                </div>
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $sevenArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
 
 
-                <div class="row-span-2 col-span-2">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @foreach ($sexArticle as $sexArticles)
+                    <div class="col-span-1">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full z-40">
+                                <img class=" image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $sexArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($sexArticles->title, 40) }}
+                                </div>
 
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $sexArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
 
+                @foreach ($fiveArticle as $fiveArticles)
+                    <div class="col-span-1">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full z-40">
+                                <img class=" image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $fiveArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($fiveArticles->title, 40) }}
+                                </div>
 
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $fiveArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
+                @endforeach
+
+                @foreach ($forArticle as $forArticles)
+                    <div class="col-span-1">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full z-40">
+                                <img class=" image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $forArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($forArticles->title, 40) }}</div>
+
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $forArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="hover-img">
-                        <a href="" class="flex justify-end w-full z-40">
-                            <img class=" image" src="image/12.jpg" alt="">
-                        </a>
-                        <div class="middle space-y-2 lg:space-y-8">
-                            <div class="text10 text-xs lg:text-xl font-bold">عنوان مقاله</div>
-                            <div class="text10 text-xs lg:text-sm">
-                                توضیحات مقاله
-                            </div>
-                            <div class="text10">
-                                <a href=""
-                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-gray-100 text-center p-2">
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده مقاله
-                                </a>
+                @endforeach
+
+                @foreach ($threeArticle as $threeArticles)
+                    <div class="col-span-1">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full z-40">
+                                <img class=" image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $threeArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($threeArticles->title, 40) }}</div>
+
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $threeArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
+
+                @foreach ($twoArticle as $twoArticles)
+                    <div class="col-span-1">
+                        <div class="hover-img">
+                            <a href="" class="flex justify-end w-full z-40">
+                                <img class=" image"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $twoArticles->image) }}"
+                                    alt="">
+                            </a>
+                            <div class="middle space-y-2 lg:space-y-8">
+                                <div class="text10 text-xs lg:text-xl font-bold">
+                                    {{ Str::limit($twoArticles->title, 40) }}
+                                </div>
+
+                                <div class="text10">
+                                    <a href="{{ route('home.books.show', ['book' => $twoArticles->slug]) }}"
+                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-4 h-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                        مشاهده مقاله
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
+
         </div>
+        <?php }?>
 
 
         <div class="light dark:opacity-40 w-full">
@@ -227,7 +264,7 @@
 
 
                         @php
-                            $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
+                            $parentCategorys = App\Models\Catebory::where('parent_id', 0)->get();
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
@@ -247,7 +284,7 @@
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
-                                            href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                            href="{{ route('home.catebories.show', ['catebory' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
                                                     cy="4" r="4" fill="#fff" />
@@ -285,83 +322,409 @@
 
 
             <div
-                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
-                    class="flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
+                    <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0"
+                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
 
-                    <div class="flex-col w-full contents">
-                        <div class="hidden lg:flex gap-3">
-                            <p class="bg-green text-white w-36 p-2 rounded-full">بر اساس جدیدترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بر اساس قدیمی ترین</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترید بازدید</p>
-                            <p class="bg-form1 text-white w-36 p-2 rounded-full">بیشترین لایک</p>
-                        </div>
+                        <li class="md:mr-2 text-white" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                                aria-controls="profile" aria-selected="true">بر اساس جدیدترین</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                                aria-controls="dashboard" aria-selected="false">بر اساس قدیمی ترین</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                aria-controls="settings" aria-selected="false">بیشترین بازدید</button>
+                        </li>
+                        <li class="md:mr-2" role="presentation">
+                            <button
+                                class="bg-coin1 dark:bg-slate-300 text-white dark:text-zinc-900 text-sm w-auto p-2 rounded-full tab_list hover:text-white dark:hover:text-zinc-900"
+                                id="settings-tab2" data-tabs-target="#settings2" type="button" role="tab"
+                                aria-controls="settings2" aria-selected="false">کمترین بازدید</button>
+                        </li>
 
-                        <div class="flex gap-2">
-                            <p class="bg-form1 p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                        <li class="" role="presentation">
+                            <button class="bg-coin1 dark:bg-slate-300 text-white p-2 rounded-full tab_list"
+                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
+                                aria-controls="width" aria-selected="false">
+
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                        stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                                 </svg>
-                            </p>
+                            </button>
+                        </li>
 
-                            <p class="bg-green p-2 rounded-full">
-                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z" />
+                        <li role="presentation">
+                            <button class="bg-coin1 dark:bg-slate-300 text-white  p-2 rounded-full tab_list"
+                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
+                                aria-controls="height" aria-selected="false">
+                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 512 512">
+                                    <path class="fill-white dark:fill-zinc-900"
+                                        d="M204 240H68a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 240H308a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM204 480H68a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 480H308a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36z" />
                                 </svg>
-                            </p>
-                        </div>
-                    </div>
+                            </button>
+
+                        </li>
+
+                    </ul>
+
                 </div>
 
-                <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
-                    <!-- post 1  -->
-                    @foreach ($books as $book)
-                        <div class="bg-indigo-1  rounded-3xl flex flex-col w-full space-y-6">
-                            <a href="{{ route('home.books.show', ['book' => $book->slug]) }}">
-                                <img class="rounded-t-3xl w-full h-28"
-                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $book->image) }}" alt="">
-                            </a>
-                            <a href="{{ route('home.books.show', ['book' => $book->slug]) }}">
-                                <p class="text-sm font-bold text-center">
-                                    {{ Str::limit($book->title, 40) }}
-                                </p>
-                            </a>
-                            <p class="text-center text-white text-xs font-extralight px-3">
-                                {{ Str::limit($book->description, 80) }}
-                            </p>
 
-                            <div class="flex justify-between px-2 lg:px-4">
-                                <a href="{{ route('home.books.show', ['book' => $book->slug]) }}"
-                                    class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                    مشاهده کتاب
-                                </a>
+                <div id="myTabContent">
 
-                                <div class="flex items-center gap-4">
-                                    <p class="flex gap-1 items-center text-xs">
-                                        126
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                        </svg>
+                    <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($books as $article)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($article->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($article->description, 80) }}
                                     </p>
 
-                                    <p class="flex gap-1 items-center text-xs">
-                                        1640
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده کتاب
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $article->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+
+                                <a href="{{ $books->nextPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
+
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+
+                                <a href="{{ $books->previousPageUrl() }}"
+                                    class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($bookss as $article)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($article->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($article->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده کتاب
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $article->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($bookView as $viewDesc)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.books.show', ['book' => $viewDesc->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $viewDesc->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.books.show', ['book' => $viewDesc->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($viewDesc->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($viewDesc->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.books.show', ['book' => $viewDesc->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده کتاب
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $viewDesc->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($bookViews as $viewASC)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.books.show', ['book' => $viewASC->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $viewASC->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.books.show', ['book' => $viewASC->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($viewASC->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($viewASC->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.books.show', ['book' => $viewASC->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده کتاب
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $viewASC->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                            <!-- post 1  -->
+                            @foreach ($books as $article)
+                                <div
+                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <img class="rounded-t-3xl h-full"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <p class="text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($article->title, 40) }}
+                                        </p>
+                                    </a>
+                                    <p
+                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
+                                        {{ Str::limit($article->description, 80) }}
+                                    </p>
+
+                                    <div class="flex justify-between items-center px-2 lg:px-4">
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
+                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده کتاب
+                                        </a>
+
+                                        <div class="flex items-center gap-4 -mt-2">
+
+                                            <p class="flex gap-1 items-center text-base">
+                                                {{ $article->viewCount }}
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
+                            <!-- post 1  -->
+                            @foreach ($books as $article)
+                                <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
+
+                                    <a href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <img class="rounded-r-3xl w-8/12 lg:w-8/12"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $article->image) }}"
+                                            alt="">
+                                    </a>
+                                    <a class="w-full px-4 "
+                                        href="{{ route('home.books.show', ['book' => $article->slug]) }}">
+                                        <p class="text-xs lg:text-sm font-bold text-center line-clamp-1">
+                                            {{ Str::limit($article->title, 40) }}
+                                        </p>
+                                    </a>
+
+                                    <p class="flex w-full gap-1 items-center text-base">
+                                        {{ $article->viewCount }}
+                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor" class="w-5 h-5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -369,20 +732,44 @@
                                         </svg>
 
                                     </p>
+
+                                    <div class="hidden lg:block w-44 p-1 bg-green rounded-full mx-4">
+                                        <a href="{{ route('home.books.show', ['book' => $article->slug]) }}"
+                                            class=" flex p-2  text-xs items-center gap-2">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                            </svg>
+                                            مشاهده
+                                        </a>
+                                    </div>
+
+
                                 </div>
+                            @endforeach
+
+
+
+
+                        </div>
+                        <div class="flex">
+                            <div class="flex w-full justify-between mt-14 mb-3">
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    بعد</a>
+                                {{ $books->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                <a
+                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
+                                    قبل</a>
                             </div>
                         </div>
-                    @endforeach
-
-
-
+                    </div>
 
                 </div>
-                <div class="flex w-full justify-between mt-14 mb-3">
-                    <a class="bg-green p-3 rounded-full mx-3">صفحه بعد</a>
-                    {{ $books->onEachSide(4)->links('vendor.pagination.tailwind') }}
-                    <a class="bg-green p-3 rounded-full mx-3">صفحه قبل</a>
-                </div>
+
+
+
             </div>
 
         </div>

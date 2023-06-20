@@ -26,4 +26,9 @@ class Catebory extends Model
     {
         return $this->hasMany(Catebory::class, 'parent_id');
     }
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }
