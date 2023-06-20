@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Models\Tab;
 use App\Models\Book;
+use App\Models\Catebory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -71,6 +72,14 @@ class BookController extends Controller
     public function show(Book $book)
     {
 
-        return view('home.books.show', compact('book'));
+        $prev = Book::find($book->id - 1);
+        $next = Book::find($book->id + 1);
+
+
+        $books = Book::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
+        $book->increment('viewCount');
+        $cateborys = Catebory::all();
+        $tabs = Tab::all();
+        return view('home.books.show', compact('book', 'books', 'tabs', 'cateborys', 'prev', 'next'));
     }
 }
