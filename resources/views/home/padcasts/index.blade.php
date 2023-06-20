@@ -48,7 +48,7 @@
         <?php if (request()->has('search')) {?>
         <div class="flex justify-center items-center w-full mt-12">
             <p class="bg-green flex rounded-2xl p-4 text-base mb-4 items-center gap-2 text-white">
-                تعداد {{ $articlesCount }} پادکست برای این جستجو پیدا شد
+                تعداد {{ $padcastCount }} پادکست برای این جستجو پیدا شد
             </p>
         </div>
         <?php }?>
@@ -386,7 +386,7 @@
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articles as $article)
+                            @foreach ($padcasts as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
@@ -440,12 +440,12 @@
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
 
-                                <a href="{{ $articles->nextPageUrl() }}"
+                                <a href="{{ $padcasts->nextPageUrl() }}"
                                     class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
 
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
 
-                                <a href="{{ $articles->previousPageUrl() }}"
+                                <a href="{{ $padcasts->previousPageUrl() }}"
                                     class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
 
                             </div>
@@ -455,7 +455,7 @@
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articless as $article)
+                            @foreach ($padcastss as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
@@ -509,7 +509,7 @@
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
                             </div>
                         </div>
@@ -518,7 +518,7 @@
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articleView as $viewDesc)
+                            @foreach ($padcastView as $viewDesc)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $viewDesc->slug]) }}">
@@ -572,7 +572,7 @@
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
                             </div>
                         </div>
@@ -581,7 +581,7 @@
                     <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articleViews as $viewASC)
+                            @foreach ($padcastViews as $viewASC)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $viewASC->slug]) }}">
@@ -635,7 +635,7 @@
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
                             </div>
                         </div>
@@ -644,10 +644,10 @@
                     <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
-                            @foreach ($articles as $article)
+                            @foreach ($padcasts as $article)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.padcasts.show', ['padcasts' => $article->slug]) }}">
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
                                             src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $article->image) }}"
                                             alt="">
@@ -694,7 +694,7 @@
                         <div class="flex">
                             <div class="flex w-full justify-between mt-14 mb-3">
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
                             </div>
                         </div>
@@ -703,7 +703,7 @@
                     <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
                         <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
                             <!-- post 1  -->
-                            @foreach ($articles as $article)
+                            @foreach ($padcasts as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
 
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}">
@@ -738,7 +738,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                             </svg>
-                                            مشاهده 
+                                            مشاهده
                                         </a>
                                     </div>
 
@@ -755,7 +755,7 @@
                                 <a
                                     class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
                                     بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
+                                {{ $padcasts->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a
                                     class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
                                     قبل</a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Models\Tap;
 use App\Models\Padcast;
+use App\Models\Catepory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,27 +12,27 @@ class PadcastController extends Controller
 {
     public function index(Request $request, Padcast $padcasts)
     {
-        $articles = Padcast::query()
+        $padcasts = Padcast::query()
             ->orderBy('created_at', 'desc')
             ->where('is_active', 1)
             ->search()
             ->paginate(12);
 
-        $articlesCount = Padcast::query()
+        $padcastCount = Padcast::query()
             ->orderBy('created_at', 'desc')
             ->where('is_active', 1)
             ->search()
             ->count();
 
 
-        $articless = Padcast::query()
+        $padcastss = Padcast::query()
             ->orderBy('created_at', 'ASC')
             ->where('is_active', 1)
             ->search()
             ->paginate(12);
 
 
-        $articlesss = Padcast::query()
+        $padcastsss = Padcast::query()
             ->orderBy('updated_at', 'desc')
             ->where('is_active', 1)
             ->search()
@@ -39,14 +40,14 @@ class PadcastController extends Controller
 
 
 
-        $articleView = Padcast::query()
+        $padcastView = Padcast::query()
             ->orderBy('viewCount', 'desc')
             ->where('is_active', 1)
             ->search()
             ->paginate(12);
 
 
-        $articleViews = Padcast::query()
+        $padcastViews = Padcast::query()
             ->orderBy('viewCount', 'ASC')
             ->where('is_active', 1)
             ->search()
@@ -64,12 +65,20 @@ class PadcastController extends Controller
 
         $taps = Tap::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
-        return view('home.padcasts.index', compact('taps', 'articles', 'articlesCount', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        return view('home.padcasts.index', compact('taps', 'padcasts', 'padcastCount', 'padcastss', 'padcastsss', 'padcastView', 'padcastViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Padcast $padcast)
     {
 
+        $prev = Padcast::find($padcast->id - 1);
+        $next = Padcast::find($padcast->id + 1);
+
+
+        $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
+        $padcast->increment('viewCount');
+        $cateporys = Catepory::all();
+        $taps = Tap::all();
         return view('home.padcasts.show', compact('padcast'));
     }
 }
