@@ -402,29 +402,22 @@
 
 
             <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
-                <form class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
-                    id="coinBox" action="">
-                    <p class="lg:text-2xl">برای ارتباط با ما پیام دهید</p>
+
+                <form id="comments" action="{{ route('home.commentsvideo.store', ['video' => $video->id]) }}"
+                    method="POST"
+                    class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30 rounded-3xl">
+                    @csrf
+
+                    <p class="lg:text-2xl">لطفا متن دیدگاه خود را وارد کنید</p>
                     <div class="flex flex-col w-full gap-12 z-50">
                         <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
-                            <div class="flex flex-col w-full z-50">
-                                <label class="text-sm lg:text-base" for="">نام و نام خانوادگی</label>
-                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light"
-                                    type="text" name="" id="">
-
-                                <label class="mt-9 text-sm lg:text-base" for="">آدرس ایمیل</label>
-                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light"
-                                    type="text" name="" id="">
-
-                                <label class="mt-9 text-sm lg:text-base" for="">عنوان تیکت</label>
-                                <input id="contact-input" class="mt-2 contact-input dark:bg-icon-light"
-                                    type="text" name="" id="">
-                            </div>
 
                             <div class="flex flex-col w-full">
-                                <label for="">متن تیکت</label>
-                                <textarea id="contact-input" class="mt-4 contact-input dark:bg-icon-light" name="" id=""
-                                    cols="30" rows="11"></textarea>
+
+                                <textarea class="mt-4 contact-input dark:bg-icon-light p-4" name="text" id="text" cols="30"
+                                    rows="11"></textarea>
+
+                                <x-input-error :messages="$errors->get('text')" class="mt-2" />
                             </div>
                         </div>
 
@@ -433,6 +426,46 @@
                         </button>
                     </div>
                 </form>
+            </div>
+
+
+
+            <div class="w-full flex mx-auto text-white dark:text-gray-700 z-30">
+
+                <div class="flex flex-col bg-box dark:bg-white  dark:shadow-2xl w-full gap-12 p-4 lg:p-12 z-30"
+                    id="coinBox">
+
+
+                    <p class="lg:text-2xl">دیدگاها ({{ $video->approvedComments()->count() }})</p>
+                    <div class="flex flex-col w-full gap-12 z-50">
+                        <div class="flex flex-col lg:flex-row w-full gap-12 z-50 text-white dark:text-gray-700">
+
+                            <div class="flex flex-col w-full">
+                                @foreach ($video->approvedComments as $comment)
+                                    <div class="flex gap-12 mt-4  bg-indigo-1 dark:bg-white p-4" id="coinBox">
+                                        <div>
+                                            <img src="{{ $comment->user->avatar == null ? asset('/image/profile2.png') : $comment->user->avatar }}"
+                                                alt="">
+                                        </div>
+
+                                        <div class="flex flex-col space-y-4">
+                                            <div class="flex gap-4">
+                                                <p>{{ $comment->user->name }}</p>
+                                                <p>{{ verta($comment->created_at)->format(' %d / %B / %Y') }}</p>
+                                            </div>
+
+                                            <div>
+                                                <p>{{ $comment->text }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
 
 
