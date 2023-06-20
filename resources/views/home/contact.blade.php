@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="flex-1  text-center z-30 relative self-center" style="text-align: -webkit-center;">
-                <p class="text-center text-xl z-30 xl:absolute top-0 left-0 my-8 xl:my-0">شبکه های اجتماعی ما را هم دنبال کنید</p>
+                <p class="text-center text-xl z-30 xl:absolute top-0 left-0 my-8 xl:my-0 dark:text-zinc-900">شبکه های اجتماعی ما را هم دنبال کنید</p>
                 <img src="image/svg/contact-svg.svg" class="w-8/12" alt="">
             </div>
         </div>

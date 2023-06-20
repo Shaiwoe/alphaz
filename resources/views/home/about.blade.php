@@ -33,8 +33,8 @@
     <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white flex">
         <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
             id="coinBox">
-            <p class="text-center lg:text-3xl mt-8">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>
-            <p class="leading-10 text-xs lg:text-lg text-justify">
+            <p class="text-center lg:text-3xl mt-8 dark:text-zinc-900">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>
+            <p class="leading-10 text-xs lg:text-lg text-justify dark:text-zinc-900">
                 مجموعه آلفارنسی از سال ۲۰۱۹ فعالیت خودش را همراه با رزومه‌ای درخشان (سودهای 400 الی 1300 درصدی ) و تیم
                 تحقیقاتی پروژه های IEO های پر سود ، شروع کرد . با شروع اپیدمی کرونا مجموعه آلفارنسی با برگزاری بیش از
                 600 وبینار تلاش کرد که همواره مسیر آموزش دنیایی کریپتوکارنسی را برای شما عزیزان هموار سازد .
