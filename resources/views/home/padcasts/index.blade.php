@@ -405,7 +405,7 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
@@ -474,7 +474,7 @@
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
@@ -731,7 +731,7 @@
                                     </p>
 
                                     <div class="hidden lg:block w-44 p-1 bg-green rounded-full mx-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
+                                        <a href="{{ route('home.padcasts.show', ['padcast' => $article->slug]) }}"
                                             class=" flex p-2  text-xs items-center gap-2">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
