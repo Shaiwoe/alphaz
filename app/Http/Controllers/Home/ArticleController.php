@@ -18,6 +18,12 @@ class ArticleController extends Controller
             ->search()
             ->paginate(12);
 
+            $articlesCount = Article::query()
+            ->orderBy('created_at', 'desc')
+            ->where('is_active', 1)
+            ->search()
+            ->count();
+
 
 
         $articless = Article::query()
@@ -60,7 +66,7 @@ class ArticleController extends Controller
 
         $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
-        return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        return view('home.articles.index', compact('tags', 'articles', 'articlesCount', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Article $article)

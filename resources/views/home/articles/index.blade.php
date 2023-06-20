@@ -49,6 +49,7 @@
 
 
 
+        <?php if (!request()->has('search')) {?>
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
@@ -235,8 +236,7 @@
             </div>
 
         </div>
-
-
+        <?php }?>
 
         <div class="light dark:opacity-40 w-full">
             <div class="absolute w-5/12 left-0" style="top:1500px">
@@ -815,6 +815,7 @@
 
             $('#filter-form').submit();
         }
+
     </script>
 
 </body>
