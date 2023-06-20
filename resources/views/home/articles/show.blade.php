@@ -208,16 +208,17 @@
 
 
                         <div id="coinBox"
-                        class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
-                        <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر اساس تگ ها</p>
-                        <div class="grid grid-cols-3 gap-4 mt-8">
-                            @foreach ($tags as $tag)
-                                <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
-                                    class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
-                                {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
-                            @endforeach
+                            class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
+                            <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر اساس تگ ها
+                            </p>
+                            <div class="grid grid-cols-3 gap-4 mt-8">
+                                @foreach ($tags as $tag)
+                                    <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
+                                        class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
+                                    {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                 </div>
@@ -234,18 +235,21 @@
                                 <div id="coinBox"
                                     class="w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 p-4 rounded-full">
 
-                                    <a href=""
-                                        class="flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                            viewBox="0 0 512 512">
-                                            <path class="stroke-white dark:stroke-black" fill="none"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="48" d="M268 112l144 144-144 144M392 256H100" />
-                                        </svg>
-                                        مقاله بعدی
+                                    @if ($next)
+                                        <a href="{{ $next->slug }}"
+                                            class="flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                viewBox="0 0 512 512">
+                                                <path class="stroke-white dark:stroke-black" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="48"
+                                                    d="M268 112l144 144-144 144M392 256H100" />
+                                            </svg>
+                                            مقاله بعدی
 
 
-                                    </a>
+                                        </a>
+                                    @endif
 
 
 
@@ -302,18 +306,21 @@
                                         </a>
                                     @endauth
 
-                                    <a href=""
-                                        class="flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
-                                        مقاله قبلی
+                                    @if ($prev)
+                                        <a href="{{ $prev->slug }}"
+                                            class="flex cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center">
+                                            مقاله قبلی
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                            viewBox="0 0 512 512">
-                                            <path class="stroke-white dark:stroke-black" fill="none"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="48" d="M244 400L100 256l144-144M120 256h292" />
-                                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                viewBox="0 0 512 512">
+                                                <path class="stroke-white dark:stroke-black" fill="none"
+                                                    stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="48"
+                                                    d="M244 400L100 256l144-144M120 256h292" />
+                                            </svg>
 
-                                    </a>
+                                        </a>
+                                    @endif
 
 
 
@@ -338,7 +345,8 @@
                 <div class="flex flex-col md:flex-row w-full gap-4">
                     <!-- post 1  -->
                     @foreach ($articles as $articleShow)
-                        <div class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm rounded-3xl flex flex-col w-full space-y-6">
+                        <div
+                            class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm rounded-3xl flex flex-col w-full space-y-6">
                             <a href="{{ route('home.articles.show', ['article' => $articleShow->slug]) }}">
                                 <img class="rounded-t-3xl h-full"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $articleShow->primary_image) }}"
@@ -370,10 +378,11 @@
                                         {{ $articleShow->viewCount }}
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-5 h-5">
-                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round" stroke-linejoin="round"
+                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                                stroke-linejoin="round"
                                                 d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
+                                                stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
 
                                     </p>
