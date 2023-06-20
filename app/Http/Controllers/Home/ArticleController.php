@@ -58,7 +58,7 @@ class ArticleController extends Controller
         $twoArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
         $oneArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
 
-        $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(25)->get();
+        $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
         return view('home.articles.index', compact('tags', 'articles', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
