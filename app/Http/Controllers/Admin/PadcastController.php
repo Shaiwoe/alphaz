@@ -46,6 +46,7 @@ class PadcastController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'catepory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -68,6 +69,7 @@ class PadcastController extends Controller
 
         Padcast::create([
             'title' => $request->title,
+            'slug' => $request->slug,
             'catepory_id' => $request->catepory_id,
             'type' => $request->type,
             'description' => $request->description,
@@ -125,6 +127,7 @@ class PadcastController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'catepory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
@@ -151,6 +154,7 @@ class PadcastController extends Controller
 
         $padcast->update([
             'title' => $request->title,
+            'slug' => $request->slug,
             'catepory_id' => $request->catepory_id,
             'type' => $request->type,
             'description' => $request->description,
