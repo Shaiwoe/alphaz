@@ -371,7 +371,7 @@
                             class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm rounded-3xl flex flex-col w-full space-y-6">
                             <a href="{{ route('home.books.show', ['book' => $articleShow->slug]) }}">
                                 <img class="rounded-t-3xl h-full"
-                                    src="{{ asset(env('BOOKS_IMAGES_UPLOAD_PATH') . $articleShow->image) }}"
+                                    src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $articleShow->image) }}"
                                     alt="">
                             </a>
                             <a href="{{ route('home.books.show', ['book' => $articleShow->slug]) }}">
