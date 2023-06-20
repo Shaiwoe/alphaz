@@ -79,6 +79,6 @@ class PadcastController extends Controller
         $padcast->increment('viewCount');
         $cateporys = Catepory::all();
         $taps = Tap::all();
-        return view('home.padcasts.show', compact('padcast'));
+        return view('home.padcasts.show', compact('padcast' , 'padcasts' , 'cateporys' , 'taps' , 'prev', 'next'));
     }
 }
