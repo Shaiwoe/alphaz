@@ -110,7 +110,7 @@
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.padcastS.show', ['padcast' => $sexArticles->slug]) }}"
+                                    <a href="{{ route('home.padcasts.show', ['padcast' => $sexArticles->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
