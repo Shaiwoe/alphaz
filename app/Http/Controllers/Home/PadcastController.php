@@ -71,8 +71,8 @@ class PadcastController extends Controller
     public function show(Padcast $padcast)
     {
 
-        $prev = Padcast::find($padcast->id - 1)->orderBy('created_at', 'desc');
-        $next = Padcast::find($padcast->id + 1)->orderBy('created_at', 'desc');
+        $prev = Padcast::orderBy('created_at', 'desc')->find($padcast->id - 1);
+        $next = Padcast::orderBy('created_at', 'desc')->find($padcast->id + 1);
 
 
         $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
