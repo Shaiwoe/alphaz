@@ -50,7 +50,7 @@
                         <div class="flex flex-col w-full">
                             <label for="title"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">عنوان</label>
-                            <input type="text" name="title" id="title"
+                            <input type="text" name="title" id="title" value="{{ old('title') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
@@ -58,7 +58,7 @@
                         <div class="flex flex-col w-full">
                             <label for="slug"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">لینک</label>
-                            <input type="text" name="slug" id="slug"
+                            <input type="text" name="slug" id="slug" value="{{ old('slug') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('slug')" class="mt-2" />
                         </div>
@@ -80,7 +80,7 @@
                         <div class="flex flex-col w-full">
                             <label for="type"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">نوع</label>
-                            <input type="text" name="type" id="type"
+                            <input type="text" name="type" id="type" value="{{ old('type') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                         </div>
@@ -108,7 +108,7 @@
                         <div class="flex flex-col w-full">
                             <label for="time"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">زمان</label>
-                            <input type="text" name="time" id="time"
+                            <input type="text" name="time" id="time" value="{{ old('time') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="00:00:00">
                             <x-input-error :messages="$errors->get('time')" class="mt-2" />
@@ -142,7 +142,7 @@
                             <label for="description"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیح
                                 کوتاه</label>
-                            <textarea rows="5" type="text" name="description" id="description"
+                            <textarea rows="5" type="text" name="description" id="description" value="{{ old('description') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="توضیحات پادکست را وارد کنید" value="{{ old('description') }}"></textarea>
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
@@ -151,7 +151,7 @@
                         <div class="flex flex-col w-full">
                             <label for="body"
                                 class="block mb-2 text-sm font-medium text-white dark:text-gray-600">متن</label>
-                            <textarea rows="8" type="text" name="body" id="body"
+                            <textarea rows="8" type="text" name="body" id="body" value="{{ old('body') }}"
                                 class="flex  p-2.5 w-full rounded-lg bg-dark2 focus:ring-yellow-400 focus:border-yellow-400"
                                 placeholder="متن پادکست را وارد کنید" value="{{ old('body') }}"></textarea>
                             <x-input-error :messages="$errors->get('body')" class="mt-2" />
