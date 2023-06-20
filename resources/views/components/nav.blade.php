@@ -205,6 +205,12 @@
                                     بندی</a>
                             </li>
 
+                            <li>
+                                <a href="{{ route('tavs.index') }}"
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ ها
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 @endcan
@@ -249,6 +255,12 @@
                                     بندی</a>
                             </li>
 
+                            <li>
+                                <a href="{{ route('taps.index') }}"
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ ها
+                                    </a>
+                            </li>
+
                         </ul>
                     </div>
                 @endcan
@@ -291,6 +303,12 @@
                                 <a href="{{ route('cateborys.index') }}"
                                     class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">دسته
                                     بندی</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('tabs.index') }}"
+                                    class="block px-4 py-2 hover:border-r-8 hover:border-green ease-in-out duration-300">تگ ها
+                                    </a>
                             </li>
                         </ul>
                     </div>

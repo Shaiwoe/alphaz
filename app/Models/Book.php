@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Book extends Model
 {
-    use HasFactory , Sluggable;
+    use HasFactory;
 
     protected $table = "books";
     protected $guarded = [];
@@ -19,18 +19,11 @@ class Book extends Model
         return $is_active ? 'انتشار' : 'پیش نمایش' ;
     }
 
-    /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
-    public function sluggable(): array
+
+
+    public function tags()
     {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
+        return $this->belongsToMany(tag_books::class, 'book_tags');
     }
 
     public function catebory()

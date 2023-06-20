@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Padcast extends Model
 {
-    use HasFactory , Sluggable;
+    use HasFactory;
 
     protected $table = "padcasts";
     protected $guarded = [];
@@ -21,18 +21,9 @@ class Padcast extends Model
         return $is_active ? 'انتشار' : 'پیش نمایش' ;
     }
 
-    /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
-    public function sluggable(): array
+    public function tags()
     {
-        return [
-            'slug' => [
-                'source' => 'title'
-            ]
-        ];
+        return $this->belongsToMany(tag_padcasts::class, 'padcast_tags');
     }
 
     public function catepory()

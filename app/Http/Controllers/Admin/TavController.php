@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Tag;
+use App\Models\Tav;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class TagController extends Controller
+class TavController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class TagController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
-        $tags = Tag::latest()->paginate(50);
-        return view('admin.tags.index', compact('tags','users'));
+        $tavs = Tav::latest()->paginate(50);
+        return view('admin.tavs.index', compact('tavs','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class TagController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.tags.create' , compact('users'));
+        return view('admin.tavs.create' , compact('users'));
     }
 
     /**
@@ -42,14 +42,14 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique:tags,title',
-            'slug' => 'required|unique:tags,slug',
+            'title' => 'required|unique:tavs,title',
+            'slug' => 'required|unique:tavs,slug',
         ]);
 
         try {
             DB::beginTransaction();
 
-        Tag::create([
+        Tav::create([
             'title' => $request->title,
             'slug' => $request->slug,
         ]);
@@ -62,51 +62,50 @@ class TagController extends Controller
         }
 
         Alert::success('عنوان موفقیت', 'تگ با موفقیت ایجاد شد');
-        return redirect()->route('tags.index');
+        return redirect()->route('tavs.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag, Request $request)
+    public function show($id)
     {
-        $users = $request->user();
-        return view('admin.tags.show' , compact('tag', 'users'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag, Request $request)
+    public function edit(Tav $tav, Request $request)
     {
         $users = $request->user();
-        return view('admin.tags.edit' , compact('tag','users'));
+        return view('admin.tavs.edit' , compact('tav','users'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tag  $tag
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(Request $request, Tav $tav)
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required',
+            'slug' => 'required'
         ]);
 
         try {
             DB::beginTransaction();
 
-        $tag->update([
+        $tav->update([
             'title' => $request->title,
             'slug' => $request->slug,
         ]);
@@ -119,16 +118,16 @@ class TagController extends Controller
         }
 
         Alert::success('عنوان موفقیت', 'تگ با موفقیت ویرایش شد');
-        return redirect()->route('tags.index');
+        return redirect()->route('tavs.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tag $tag)
+    public function destroy($id)
     {
         //
     }

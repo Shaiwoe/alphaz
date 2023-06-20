@@ -301,7 +301,7 @@
                         <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر اساس تگ ها</p>
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
-                                <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
+                                <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}"
                                     class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
                                 {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                             @endforeach
@@ -382,7 +382,7 @@
 
 
                 <div id="myTabContent">
-                    
+
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
                             <!-- post 1  -->
