@@ -346,7 +346,7 @@
                             </a>
                             <a href="{{ route('home.articles.show', ['article' => $articleShow->slug]) }}">
                                 <p class="text-sm font-bold text-center dark:text-zinc-900">
-                                    {{ Str::limit($article->title, 40) }}
+                                    {{ Str::limit($articleShow->title, 40) }}
                                 </p>
                             </a>
                             <p class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900">
