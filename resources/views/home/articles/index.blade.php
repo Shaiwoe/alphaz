@@ -68,22 +68,22 @@
 
             <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
 
-                @foreach ($sevenArticle as $sevenArticles)
+
                     <div class="row-span-2 col-span-2">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full  z-40">
                                 <img class="image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sevenArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($sevenArticles->title, 40) }}</div>
+                                    {{ Str::limit($a->title, 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($sevenArticles->description, 80) }}
+                                    {{ Str::limit($a->description, 80) }}
                                 </div>
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $sevenArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $a->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -96,24 +96,24 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
 
 
-                @foreach ($sexArticle as $sexArticles)
+
+
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $sexArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $b->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($sexArticles->title, 40) }}
+                                    {{ Str::limit($b->title, 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $sexArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $b->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -126,23 +126,23 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
 
-                @foreach ($fiveArticle as $fiveArticles)
+
+
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $fiveArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $c->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($fiveArticles->title, 40) }}
+                                    {{ Str::limit($c->title, 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $fiveArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $c->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -155,22 +155,21 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
 
-                @foreach ($forArticle as $forArticles)
+
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $forArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $d->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($forArticles->title, 40) }}</div>
+                                    {{ Str::limit($d->title, 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $forArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $d->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -183,22 +182,22 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
 
-                @foreach ($threeArticle as $threeArticles)
+
+
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $threeArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $e->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($threeArticles->title, 40) }}</div>
+                                    {{ Str::limit($e->title, 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $threeArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $e->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -211,23 +210,23 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
 
-                @foreach ($twoArticle as $twoArticles)
+
+
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $twoArticles->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $f->primary_image) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($twoArticles->title, 40) }}
+                                    {{ Str::limit($f->title, 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $twoArticles->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $f->slug]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -240,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+
             </div>
 
         </div>

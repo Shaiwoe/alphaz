@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use App\Models\Tag;
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
@@ -18,7 +19,7 @@ class ArticleController extends Controller
             ->search()
             ->paginate(12);
 
-            $articlesCount = Article::query()
+        $articlesCount = Article::query()
             ->orderBy('created_at', 'desc')
             ->where('is_active', 1)
             ->search()
@@ -64,9 +65,17 @@ class ArticleController extends Controller
         $twoArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
         $oneArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
 
+        $slider = Article::where('created_at', '>=', Carbon::now()->subDays(30)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get();
+        $a = array_shift($slider);
+        $b = array_shift($slider);
+        $c = array_shift($slider);
+        $d = array_shift($slider);
+        $e = array_shift($slider);
+        $f = array_shift($slider);
+
         $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
-        return view('home.articles.index', compact('tags', 'articles', 'articlesCount', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        return view('home.articles.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'tags', 'articles', 'articlesCount', 'articless', 'articlesss', 'articleView', 'articleViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
     }
 
     public function show(Article $article)
