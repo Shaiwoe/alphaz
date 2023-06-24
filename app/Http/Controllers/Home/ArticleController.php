@@ -65,13 +65,15 @@ class ArticleController extends Controller
         $twoArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
         $oneArticle = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
 
-        $slider = Article::where('created_at', '>=', Carbon::now()->subDays(30)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get();
+        $slider = Article::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get()->toArray();
         $a = array_shift($slider);
         $b = array_shift($slider);
         $c = array_shift($slider);
         $d = array_shift($slider);
         $e = array_shift($slider);
         $f = array_shift($slider);
+
+        
 
         $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 

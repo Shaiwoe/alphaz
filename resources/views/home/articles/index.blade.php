@@ -73,17 +73,17 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full  z-40">
                                 <img class="image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($a->title, 40) }}</div>
+                                    {{ Str::limit($a['title'], 40) }}</div>
                                 <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($a->description, 80) }}
+                                    {{ Str::limit($a['description'], 80) }}
                                 </div>
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $a->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $a['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -104,16 +104,16 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $b->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $b['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($b->title, 40) }}
+                                    {{ Str::limit($b['title'], 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $b->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $b['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -133,16 +133,16 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $c->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $c['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($c->title, 40) }}
+                                    {{ Str::limit($c['title'], 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $c->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $c['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -161,15 +161,15 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $d->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $d['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($d->title, 40) }}</div>
+                                    {{ Str::limit($d['title'], 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $d->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $d['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -189,15 +189,15 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $e->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $e['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($e->title, 40) }}</div>
+                                    {{ Str::limit($e['title'], 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $e->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $e['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -217,16 +217,16 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
                                 <img class=" image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $f->primary_image) }}"
+                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $f['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($f->title, 40) }}
+                                    {{ Str::limit($f['title'], 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $f->slug]) }}"
+                                    <a href="{{ route('home.articles.show', ['article' => $f['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -358,30 +358,7 @@
                                 aria-controls="settings2" aria-selected="false">کمترین بازدید</button>
                         </li>
 
-                        <li class="" role="presentation">
-                            <button class="bg-coin1 dark:bg-slate-300 text-white p-2 rounded-full tab_list"
-                                id="height-tab" data-tabs-target="#height" type="button" role="tab"
-                                aria-controls="width" aria-selected="false">
 
-                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="w-6 h-6">
-                                    <path class="stroke-white dark:stroke-zinc-900" stroke-linecap="round"
-                                        stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
-                                </svg>
-                            </button>
-                        </li>
-
-                        <li role="presentation">
-                            <button class="bg-coin1 dark:bg-slate-300 text-white  p-2 rounded-full tab_list"
-                                id="width-tab" data-tabs-target="#width" type="button" role="tab"
-                                aria-controls="height" aria-selected="false">
-                                <svg class="xl2:w-6 xl2:h-6 sm:w-4 md:w-4" viewBox="0 0 512 512">
-                                    <path class="fill-white dark:fill-zinc-900"
-                                        d="M204 240H68a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 240H308a36 36 0 01-36-36V68a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM204 480H68a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36zM444 480H308a36 36 0 01-36-36V308a36 36 0 0136-36h136a36 36 0 0136 36v136a36 36 0 01-36 36z" />
-                                </svg>
-                            </button>
-
-                        </li>
 
                     </ul>
 
@@ -644,128 +621,6 @@
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
                                 {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
                                 <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
-                            <!-- post 1  -->
-                            @foreach ($articles as $article)
-                                <div
-                                    class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
-                                            alt="">
-                                    </a>
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-sm font-bold text-center line-clamp-1">
-                                            {{ Str::limit($article->title, 40) }}
-                                        </p>
-                                    </a>
-                                    <p
-                                        class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
-                                        {{ Str::limit($article->description, 80) }}
-                                    </p>
-
-                                    <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
-                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                stroke="currentColor" class="w-4 h-4">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                            </svg>
-                                            مشاهده مقاله
-                                        </a>
-
-                                        <div class="flex items-center gap-4 -mt-2">
-
-                                            <p class="flex gap-1 items-center text-base">
-                                                {{ $article->viewCount }}
-                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                    stroke="currentColor" class="w-5 h-5">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="flex">
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه قبل</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
-                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
-                            <!-- post 1  -->
-                            @foreach ($articles as $article)
-                                <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">
-
-                                    <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <img class="rounded-r-3xl w-8/12 lg:w-8/12"
-                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
-                                            alt="">
-                                    </a>
-                                    <a class="w-full px-4 "
-                                        href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
-                                        <p class="text-xs lg:text-sm font-bold text-center line-clamp-1">
-                                            {{ Str::limit($article->title, 40) }}
-                                        </p>
-                                    </a>
-
-                                    <p class="flex w-full gap-1 items-center text-base">
-                                        {{ $article->viewCount }}
-                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                            stroke="currentColor" class="w-5 h-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-
-                                    </p>
-
-                                    <div class="hidden lg:block w-44 p-1 bg-green rounded-full mx-4">
-                                        <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class=" flex p-2  text-xs items-center gap-2">
-                                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                stroke="currentColor" class="w-4 h-4">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                            </svg>
-                                            مشاهده
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            @endforeach
-
-
-
-
-                        </div>
-                        <div class="flex">
-                            <div class="flex w-full justify-between mt-14 mb-3">
-                                <a
-                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
-                                    بعد</a>
-                                {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-                                <a
-                                    class="hidden lg:block bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white">صفحه
-                                    قبل</a>
                             </div>
                         </div>
                     </div>
