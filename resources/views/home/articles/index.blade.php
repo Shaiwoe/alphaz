@@ -330,7 +330,7 @@
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
                         <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر زمان بندی</p>
 
-                        <div class="mt-6 flex flex-col space-y-6 justify-center items-center">
+                        <div class="mt-6 flex flex-col space-y-6 justify-center items-center text-center">
                             <a href="" class="bg-box w-full p-2 rounded-lg">پنج دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">ده دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">پانزدع دقیقه</a>
