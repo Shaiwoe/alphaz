@@ -333,7 +333,7 @@
                         <div class="mt-6 grid lg:grid-cols-2 gap-4 text-center">
                             <a href="" class="bg-box w-full p-2 rounded-lg">پنج دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">ده دقیقه</a>
-                            <a href="" class="bg-box w-full p-2 rounded-lg">پانزدع دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">پانزده دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">بیست دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">بیست پنج دقیقه</a>
                             <a href="" class="bg-box w-full p-2 rounded-lg">سی دقیقه</a>
