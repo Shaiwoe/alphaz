@@ -96,9 +96,9 @@ class ArticleController extends Controller
     }
 
 
-    public function time($time) {
-        $articles = Article::where('time', $time)->get();
+    // public function time($time) {
+    //     $articles = Article::where('time', $time)->get();
 
-        return view('home.articles.time' , compact('articles'));
-    }
+    //     return view('home.articles.time' , compact('articles'));
+    // }
 }

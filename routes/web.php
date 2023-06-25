@@ -76,7 +76,7 @@ Route::get('/categories/{category:slug}', [HomeCategoryController::class, 'show'
 Route::get('/tags/{tag:slug}', [HomeTagController::class, 'show'])->name('home.tags.show');
 Route::get('/articles/{article:slug}', [HomeArticleController::class, 'show'])->name('home.articles.show');
 
-Route::get('/articles/{article:slug}', [HomeArticleController::class, 'time'])->name('home.articles.time');
+// Route::get('/articles/{article:slug}', [HomeArticleController::class, 'time'])->name('home.articles.time');
 
 
 Route::get('/whislist/{article}', [WishlistController::class, 'add'])->name('home.whishlist.add');
