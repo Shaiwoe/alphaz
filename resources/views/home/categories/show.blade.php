@@ -54,7 +54,7 @@
 
                         @foreach ($parentCategorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-40">
-                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                         <path id="chevron-right" d="M9,18l6-6L9,6"
                                             transform="translate(19.414 -7.586) rotate(90)" fill="none"
@@ -65,7 +65,26 @@
                                     {{ $parentCategory->title }}
 
                                 </button>
+
+
+                                <?php
+
+                                $show = false;
+
+                                foreach($parentCategory->children as $one) {
+
+                                    if ($one->slug == $category->slug) {
+                                        $show = true;
+                                    }
+                                }
+
+                                ?>
+
+                                @if($show)
+                                <div class="dropdown-container z-40 mr-5" style="display:block">
+                                @else
                                 <div class="dropdown-container z-40 mr-5">
+                                @endif
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"

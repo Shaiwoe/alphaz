@@ -100,6 +100,7 @@
 
 
 
+                    @if($b)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -126,9 +127,11 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
 
 
+                    @if($c)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -155,8 +158,10 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
 
+                    @if($d)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -182,9 +187,11 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
 
 
+                    @if($e)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -210,9 +217,11 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
 
 
+                    @if($f)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -239,6 +248,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
             </div>
 
@@ -308,7 +318,7 @@
                         <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر اساس تگ ها</p>
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             @foreach ($tags as $tag)
-                                <a href="{{ route('home.tags.show', ['tag' => $tag->slug]) }}"
+                                <a href="{{ route('home.tags.show', ['tag' => $tag->slug ? $tag->slug : 'none']) }}"
                                     class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
                                 {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                             @endforeach
