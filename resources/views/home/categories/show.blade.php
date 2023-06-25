@@ -57,6 +57,12 @@
 
                                 <?php
 
+                                $hasChildren = false;
+
+                                if ($parentCategory->children) {
+                                    $hasChildren = true;
+                                }
+
                                 $show = false;
 
                                 foreach($parentCategory->children as $one) {
@@ -67,6 +73,8 @@
                                 }
 
                                 ?>
+
+                                @if($hasChildren)
 
                                 @if($show)
                                 <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
@@ -113,6 +121,10 @@
                                     @endforeach
 
                                 </div>
+                                @else
+
+                                    {{ $parentCategory->title }}
+                                @endif
                             </div>
                         @endforeach
 
