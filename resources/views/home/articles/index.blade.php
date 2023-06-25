@@ -69,38 +69,38 @@
             <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
 
 
-                    <div class="row-span-2 col-span-2">
-                        <div class="hover-img">
-                            <a href="" class="flex justify-end w-full  z-40">
-                                <img class="image"
-                                    src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a['primary_image']) }}"
-                                    alt="">
-                            </a>
-                            <div class="middle space-y-2 lg:space-y-8">
-                                <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($a['title'], 40) }}</div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($a['description'], 80) }}
-                                </div>
-                                <div class="text10">
-                                    <a href="{{ route('home.articles.show', ['article' => $a['slug']]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
-                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                            class="w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                        </svg>
-                                        مشاهده مقاله
-                                    </a>
-                                </div>
+                <div class="row-span-2 col-span-2">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full  z-40">
+                            <img class="image"
+                                src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a['primary_image']) }}"
+                                alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">
+                                {{ Str::limit($a['title'], 40) }}</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                {{ Str::limit($a['description'], 80) }}
+                            </div>
+                            <div class="text10">
+                                <a href="{{ route('home.articles.show', ['article' => $a['slug']]) }}"
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
 
 
-                    @if($b)
+                @if ($b)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -127,11 +127,11 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                @endif
 
 
 
-                    @if($c)
+                @if ($c)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -158,10 +158,10 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                @endif
 
 
-                    @if($d)
+                @if ($d)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -187,11 +187,11 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                @endif
 
 
 
-                    @if($e)
+                @if ($e)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -217,11 +217,11 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                @endif
 
 
 
-                    @if($f)
+                @if ($f)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-40">
@@ -248,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                @endif
 
             </div>
 
@@ -330,12 +330,14 @@
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
                         <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر زمان بندی</p>
 
-                        <a href="" class="bg-box w-full p-2 rounded-lg">پنج دقیقه</a>
-                        <a href="" class="bg-box w-full p-2 rounded-lg">ده دقیقه</a>
-                        <a href="" class="bg-box w-full p-2 rounded-lg">پانزدع دقیقه</a>
-                        <a href="" class="bg-box w-full p-2 rounded-lg">بیست دقیقه</a>
-                        <a href="" class="bg-box w-full p-2 rounded-lg">بیست پنج دقیقه</a>
-                        <a href="" class="bg-box w-full p-2 rounded-lg">سی دقیقه</a>
+                        <div class="mt-12 gap-4">
+                            <a href="" class="bg-box w-full p-2 rounded-lg">پنج دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">ده دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">پانزدع دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">بیست دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">بیست پنج دقیقه</a>
+                            <a href="" class="bg-box w-full p-2 rounded-lg">سی دقیقه</a>
+                        </div>
 
                     </div>
                 </div>
