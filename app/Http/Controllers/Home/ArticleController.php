@@ -94,4 +94,11 @@ class ArticleController extends Controller
         $tags = Tag::all();
         return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys', 'prev', 'next'));
     }
+
+
+    public function time($time) {
+        $articles = Article::where('time', $time)->get();
+
+        return view('home.articles.time' , compact('articles'));
+    }
 }
