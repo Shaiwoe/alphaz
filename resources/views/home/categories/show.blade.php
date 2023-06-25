@@ -54,18 +54,6 @@
 
                         @foreach ($parentCategorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-40">
-                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
-                                    <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
-                                        <path id="chevron-right" d="M9,18l6-6L9,6"
-                                            transform="translate(19.414 -7.586) rotate(90)" fill="none"
-                                            stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" />
-                                    </svg>
-
-                                    {{ $parentCategory->title }}
-
-                                </button>
-
 
                                 <?php
 
@@ -79,6 +67,25 @@
                                 }
 
                                 ?>
+
+                                @if($show)
+                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
+                                @else
+                                <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                @endif
+                                    <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
+                                        <path id="chevron-right" d="M9,18l6-6L9,6"
+                                            transform="translate(19.414 -7.586) rotate(90)" fill="none"
+                                            stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" />
+                                    </svg>
+
+                                    {{ $parentCategory->title }}
+
+                                </button>
+
+
+
 
                                 @if($show)
                                 <div class="dropdown-container z-40 mr-5" style="display:block">
