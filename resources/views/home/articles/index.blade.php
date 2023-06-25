@@ -330,12 +330,12 @@
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900 z-30 gap-10 p-4 rounded-full mt-8">
                         <p class="text-white font-bold text-xl text-center dark:text-zinc-900">فیلتر بر زمان بندی</p>
 
-                        <a href="{{ route('home.articles.time', ['time' => 6]) }}">6 Minutes</a>
-                        <a href="{{ route('home.articles.time', ['time' => 10]) }}">10 Minutes</a>
-                        <a href="{{ route('home.articles.time', ['time' => 15]) }}">15 Minutes</a>
-                        <a href="{{ route('home.articles.time', ['time' => 20]) }}">20 Minutes</a>
-                        <a href="{{ route('home.articles.time', ['time' => 25]) }}">25 Minutes</a>
-                        <a href="{{ route('home.articles.time', ['time' => 30]) }}">30 Minutes</a>
+                        <a href="">6 Minutes</a>
+                        <a href="">10 Minutes</a>
+                        <a href="">15 Minutes</a>
+                        <a href="">20 Minutes</a>
+                        <a href="">25 Minutes</a>
+                        <a href="">30 Minutes</a>
                     </div>
                 </div>
 
