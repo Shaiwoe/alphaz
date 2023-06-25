@@ -94,7 +94,12 @@
                                 @endif
 
                                     @foreach ($parentCategory->children as $childCategory)
+
+                                        @if($category->slug == $childCategory->slug)
+                                        <a class="flex mb-3 active"
+                                        @else
                                         <a class="flex mb-3"
+                                        @endif
                                             href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
