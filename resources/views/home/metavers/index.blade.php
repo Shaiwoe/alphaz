@@ -49,13 +49,13 @@
     </div>
 
 
-    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-40">
-        <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-32 z-40 relative text-white items-center justify-between  space-y-10">
+    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-20">
+        <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-32 z-20 relative text-white items-center justify-between  space-y-10">
 
             <div class="w-full lg:w-6/12  space-y-10 relative text-white dark:text-gray-700">
 
-                <p class="lg:text-4xl text-2xl z-40 flex justify-center">نمای بازار متاورس</p>
-                <p class="hidden lg:block z-40">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و
+                <p class="lg:text-4xl text-2xl z-20 flex justify-center">نمای بازار متاورس</p>
+                <p class="hidden lg:block z-20">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و
                     با
                     مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید. در این صفحه
                     می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و با مقایسه قیمت ارزهای
@@ -83,9 +83,9 @@
 
 
 
-        <div class="flex flex-col mt-20 lg:mt-32 space-y-10 z-40">
+        <div class="flex flex-col mt-20 lg:mt-32 space-y-10 z-20">
 
-            <div id="coinBox" class="w-full bg-coin1 flex p-2 lg:p-8 z-40 relative h-full">
+            <div id="coinBox" class="w-full bg-coin1 flex p-2 lg:p-8 z-20 relative h-full">
                 <div class="relative overflow-x-auto w-full sm:rounded-lg">
 
                     <table class="w-full  text-right text-gray-500">

@@ -41,7 +41,7 @@
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
             <div
-                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-20 gap-8 bg-box dark:bg-white rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
                         class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
@@ -53,7 +53,7 @@
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
-                            <div class="sidenav p-1 m-2 z-40">
+                            <div class="sidenav p-1 m-2 z-20">
                                 <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                         <path id="chevron-right" d="M9,18l6-6L9,6"
@@ -65,7 +65,7 @@
                                     {{ $parentCategory->title }}
 
                                 </button>
-                                <div class="dropdown-container z-40 mr-5">
+                                <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
@@ -106,10 +106,10 @@
 
 
             <div
-                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                class="w-full md:basis-2/3 text-white dark:text-gray-700 z-20 gap-8 bg-box dark:bg-white rounded-3xl p-5">
 
                 <div
-                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center">
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-20 text-center">
                     <ul class="flex flex-wrap -mb-px gap-4 text-center" id="myTab"
                         data-tabs-toggle="#myTabContent" role="tablist">
                         <li class="mr-2" role="presentation">
@@ -165,7 +165,7 @@
 
                 <div id="myTabContent">
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-20">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
@@ -217,7 +217,7 @@
                         </div>
                     </div>
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-20">
                             <!-- post 1  -->
                             @foreach ($articless as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
@@ -270,7 +270,7 @@
                         </div>
                     </div>
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-20">
                             <!-- post 1  -->
                             @foreach ($articlesss as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
@@ -324,7 +324,7 @@
                     </div>
 
                     <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
-                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-40">
+                        <div class="grid lg:grid-cols-3 mt-8 lg:mt-14 gap-4 lg:gap-8 z-20">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6">
@@ -378,7 +378,7 @@
                     </div>
 
                     <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
-                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4  z-40">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-4  z-20">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">

@@ -28,7 +28,7 @@
     <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
 
 
-        <form class="mt-44 z-40">
+        <form class="mt-44 z-20">
             <label for="default-search"
                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
@@ -61,17 +61,17 @@
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
-            <p class="text-white dark:text-zinc-900 text-3xl z-40 mt-8 underline underline-offset-8">برترین مقاله های یک
+            <p class="text-white dark:text-zinc-900 text-3xl z-20 mt-8 underline underline-offset-8">برترین مقاله های یک
                 ماه گذشته</p>
 
 
 
-            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-20 relative overflow-hidden rounded-3xl">
 
 
                 <div class="row-span-2 col-span-2">
                     <div class="hover-img">
-                        <a href="" class="flex justify-end w-full  z-40">
+                        <a href="" class="flex justify-end w-full  z-20">
                             <img class="image"
                                 src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $a['primary_image']) }}"
                                 alt="">
@@ -103,7 +103,7 @@
                 @if ($b)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $b['primary_image']) }}"
                                     alt="">
@@ -134,7 +134,7 @@
                 @if ($c)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $c['primary_image']) }}"
                                     alt="">
@@ -164,7 +164,7 @@
                 @if ($d)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $d['primary_image']) }}"
                                     alt="">
@@ -194,7 +194,7 @@
                 @if ($e)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $e['primary_image']) }}"
                                     alt="">
@@ -224,7 +224,7 @@
                 @if ($f)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $f['primary_image']) }}"
                                     alt="">
@@ -266,7 +266,7 @@
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
             <div
-                class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900  z-30 gap-10 p-4 rounded-full">
@@ -278,7 +278,7 @@
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
-                            <div class="sidenav p-1 m-2 z-40">
+                            <div class="sidenav p-1 m-2 z-20">
                                 <button
                                     class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 dark:bg-slate-300">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
@@ -291,7 +291,7 @@
                                     {{ $parentCategory->title }}
 
                                 </button>
-                                <div class="dropdown-container z-40 mr-5">
+                                <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
@@ -347,10 +347,10 @@
 
 
             <div
-                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
-                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-20 text-center dark:bg-slate-200 dark:shadow-sm">
                     <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0"
                         id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
 
@@ -389,7 +389,7 @@
                 <div id="myTabContent">
 
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($articles as $article)
                                 <div
@@ -458,7 +458,7 @@
                     </div>
 
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($articless as $article)
                                 <div
@@ -521,7 +521,7 @@
                     </div>
 
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($articleView as $viewDesc)
                                 <div
@@ -584,7 +584,7 @@
                     </div>
 
                     <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($articleViews as $viewASC)
                                 <div

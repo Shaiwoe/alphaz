@@ -35,13 +35,13 @@
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
             <div class="flex-col mt-24 lg:mt-44">
-                <div class="flex justify-center z-40">
-                    <h1 class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $article->title }}</h1>
+                <div class="flex justify-center z-20">
+                    <h1 class="text-xl md:text-2xl z-20 text-white dark:text-gray-700">{{ $article->title }}</h1>
                 </div>
 
             </div>
 
-            <div class="flex justify-center lg:px-36 z-40">
+            <div class="flex justify-center lg:px-36 z-20">
                 <img class="w-full  rounded-2xl"
                     src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $article->primary_image) }}"
                     alt="{{ $article->title }}">
@@ -157,7 +157,7 @@
 
             <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5">
                 <div
-                    class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                    class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
                     <div class="flex flex-col w-full ">
                         <div id="coinBox"
                             class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900  z-30 gap-10 p-4 rounded-full">
@@ -169,7 +169,7 @@
                             @endphp
 
                             @foreach ($parentCategorys as $parentCategory)
-                                <div class="sidenav p-1 m-2 z-40">
+                                <div class="sidenav p-1 m-2 z-20">
                                     <button
                                         class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 dark:bg-slate-300">
                                         <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
@@ -182,7 +182,7 @@
                                         {{ $parentCategory->title }}
 
                                     </button>
-                                    <div class="dropdown-container z-40 mr-5">
+                                    <div class="dropdown-container z-20 mr-5">
 
                                         @foreach ($parentCategory->children as $childCategory)
                                             <a class="flex mb-3"
@@ -223,13 +223,13 @@
 
                 </div>
                 <div
-                    class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl md:p-5 sm:p-1">
+                    class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl md:p-5 sm:p-1">
                     <div class="flex flex-col w-full">
 
-                        <div class="flex w-full rounded-3xl sm:p-0 lg:p-4 z-40 text-right">
+                        <div class="flex w-full rounded-3xl sm:p-0 lg:p-4 z-20 text-right">
                             <div
-                                class="flex flex-col md:p-4 sm:p-2 z-40 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
-                                <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
+                                class="flex flex-col md:p-4 sm:p-2 z-20 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
+                                <h1 class="text-xl md:text-2xl z-20 text-center text-white dark:text-gray-700">
                                     {{ $article->title }}</h1>
                                 <p class="text-sm" id="image-article">{!! $article->body !!}</p>
                                 <div id="coinBox"
@@ -332,7 +332,7 @@
             </div>
 
 
-            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col space-y-12 bg-coin1 p-4 z-40">
+            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col space-y-12 bg-coin1 p-4 z-20">
                 <p class="text-center dark:text-zinc-900 text-xl">
                     مقالات مرتبط
                 </p>

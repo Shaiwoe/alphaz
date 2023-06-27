@@ -28,7 +28,7 @@
     <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
 
 
-        <form class="mt-44 z-40">
+        <form class="mt-44 z-20">
             <label for="default-search"
                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
@@ -68,7 +68,7 @@
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
             <div
-                class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                class="w-full md:basis-3/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
                         class="bg-indigo-1 dark:bg-slate-200 dark:shadow-sm w-full flex-initial justify-between items-center text-white dark:text-zinc-900  z-30 gap-10 p-4 rounded-full">
@@ -80,7 +80,7 @@
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
-                            <div class="sidenav p-1 m-2 z-40">
+                            <div class="sidenav p-1 m-2 z-20">
                                 <button
                                     class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 dark:bg-slate-300">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
@@ -93,7 +93,7 @@
                                     {{ $parentCategory->title }}
 
                                 </button>
-                                <div class="dropdown-container z-40 mr-5">
+                                <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
@@ -145,7 +145,7 @@
 
 
             <div
-                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 @foreach ($articles as $article)
                     <div

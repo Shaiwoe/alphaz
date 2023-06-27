@@ -51,12 +51,12 @@
 
     <div class="sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-50">
         <div
-            class="flex flex-col md:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10 mb-12 lg:mb-32">
+            class="flex flex-col md:flex-row w-full mt-32 lg:mt-44 z-20 relative text-white justify-between items-center space-y-10 mb-12 lg:mb-32">
 
             <div class="w-full lg:w-4/12 space-y-10 relative text-white dark:text-zinc-900">
 
-                <p class="lg:text-4xl text-2xl z-40 flex justify-center">نمای بازار کریپتو</p>
-                <p class="z-40 text-justify">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز
+                <p class="lg:text-4xl text-2xl z-20 flex justify-center">نمای بازار کریپتو</p>
+                <p class="z-20 text-justify">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز
                     دیجیتال محبوبتان آگاه شوید و
                     با
                     مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید. در این صفحه
@@ -231,7 +231,7 @@
 
 
 
-        <div class="flex flex-row  mt-20 z-40 relative">
+        <div class="flex flex-row  mt-20 z-20 relative">
             <div class="md:basis-1/2 sm:basis-auto self-center text-2xl font-bold text-white dark:text-zinc-900">قیمت لحظه ای ارز های دیجیتال</div>
 
             {{-- <div class="basis-1/2" style="text-align: -webkit-left;">
@@ -248,8 +248,8 @@
 
 
 
-        <div class="w-full mt-10 tab_wrap tab_area z-40 relative">
-            <div class="btn_area clearfix z-40">
+        <div class="w-full mt-10 tab_wrap tab_area z-20 relative">
+            <div class="btn_area clearfix z-20">
                 <button
                     class="btn_tab_s btn_tab float-right p-3 backdrop-filter rounded-t-2xl ml-4 text-white act flex"
                     data-depth="0" data-idx="0">لیست تمام ارزها
@@ -288,9 +288,9 @@
                 </button> --}}
             </div>
 
-            <div class="content_area dark:bg-white dark:shadow-xl px-6 z-40 relative act dark-backdrop-filter-none rounded-tl-3xl rounded-b-3xl overflow-hidden" data-depth="0" data-idx="0">
+            <div class="content_area dark:bg-white dark:shadow-xl px-6 z-20 relative act dark-backdrop-filter-none rounded-tl-3xl rounded-b-3xl overflow-hidden" data-depth="0" data-idx="0">
 
-                <div class="flex flex-col space-y-10 z-40">
+                <div class="flex flex-col space-y-10 z-20">
 
                     <div class="w-full flex h-full mt-4">
                         <div class="overflow-x-auto w-full">
@@ -512,8 +512,8 @@
 
 
 
-            {{-- <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">Second tab content</div> --}}
-            {{-- <div class="content_area rounded-b-2xl pt-4 z-40 text-center" data-depth="0" data-idx="3">
+            {{-- <div class="content_area rounded-b-2xl z-20" data-depth="0" data-idx="1">Second tab content</div> --}}
+            {{-- <div class="content_area rounded-b-2xl pt-4 z-20 text-center" data-depth="0" data-idx="3">
                 <label for="default-search"
                     class="text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative mx-auto w-6/12">

@@ -40,13 +40,13 @@
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
             <div class="flex-col mt-24 lg:mt-44">
-                <div class="flex justify-center z-40">
-                    <p class="text-xl md:text-2xl z-40 text-white dark:text-gray-700">{{ $padcast->title }}</p>
+                <div class="flex justify-center z-20">
+                    <p class="text-xl md:text-2xl z-20 text-white dark:text-gray-700">{{ $padcast->title }}</p>
                 </div>
 
             </div>
 
-            <div class="flex justify-center lg:px-36 z-40">
+            <div class="flex justify-center lg:px-36 z-20">
                 <img class="w-full  rounded-2xl" src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $padcast->image) }}"
                     alt="{{ $padcast->title }}">
             </div>
@@ -157,7 +157,7 @@
 
             <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5">
                 <div
-                    class="w-full  md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                    class="w-full  md:basis-1/3 text-white dark:text-gray-700 z-20 gap-8 bg-box dark:bg-white rounded-3xl p-5">
                     <div class="flex flex-col w-full ">
                         <div id="coinBox"
                             class=" bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
@@ -169,7 +169,7 @@
                             @endphp
 
                             @foreach ($parentCategorys as $parentCategory)
-                                <div class="sidenav p-1 m-2 z-40">
+                                <div class="sidenav p-1 m-2 z-20">
                                     <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
                                         <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                             <path id="chevron-right" d="M9,18l6-6L9,6"
@@ -181,7 +181,7 @@
                                         {{ $parentCategory->title }}
 
                                     </button>
-                                    <div class="dropdown-container z-40 mr-5">
+                                    <div class="dropdown-container z-20 mr-5">
 
                                         @foreach ($parentCategory->children as $childCategory)
                                             <a class="flex mb-3"
@@ -211,15 +211,15 @@
 
                 </div>
                 <div
-                    class="w-full md:basis-2/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl">
+                    class="w-full md:basis-2/3 text-white dark:text-gray-700 z-20 gap-8 bg-box dark:bg-white rounded-3xl">
                     <div class="flex flex-col w-full">
 
-                        <div class="flex w-full rounded-3xl p-2 lg:p-4 z-40 text-right">
+                        <div class="flex w-full rounded-3xl p-2 lg:p-4 z-20 text-right">
                             <div
-                                class="flex  flex-col p-4 z-40 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
+                                class="flex  flex-col p-4 z-20 gap-4 text-white dark:text-gray-700 leading-10 text_articles">
 
 
-                                <h1 class="text-xl md:text-2xl z-40 text-center text-white dark:text-gray-700">
+                                <h1 class="text-xl md:text-2xl z-20 text-center text-white dark:text-gray-700">
                                     {{ $padcast->catepory->title }}</h1>
 
 
@@ -331,7 +331,7 @@
             </div>
 
 
-            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col space-y-12 bg-coin1 p-4 z-40">
+            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col space-y-12 bg-coin1 p-4 z-20">
                 <p class="text-center dark:text-zinc-900 text-xl">
                     پادکسن مرتبط
                 </p>

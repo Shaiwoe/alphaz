@@ -25,7 +25,7 @@
 
     <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white z-50">
 
-        <div class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full p-4 md:p-12 mt-16 md:mt-72 z-40"
+        <div class="flex flex-col bg-coin1 dark:bg-white  dark:shadow-2xl w-full p-4 md:p-12 mt-16 md:mt-72 z-20"
             id="coinBox" action="">
 
             <div id="accordion-open" class="border-none" data-accordion="open">

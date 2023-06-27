@@ -26,7 +26,7 @@
 
     <!-- main -->
     <div class="mx-auto text-white p-4 sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12">
-        <form class="mt-44 z-40">
+        <form class="mt-44 z-20">
             <label for="default-search"
                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
@@ -57,18 +57,18 @@
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
-            <p class="text-white dark:text-zinc-900 text-3xl z-40 mt-8 underline underline-offset-8">برترین پادکست های
+            <p class="text-white dark:text-zinc-900 text-3xl z-20 mt-8 underline underline-offset-8">برترین پادکست های
                 یک
                 ماه گذشته</p>
 
 
 
-            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-40 relative overflow-hidden rounded-3xl">
+            <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-20 relative overflow-hidden rounded-3xl">
 
                 @foreach ($sevenArticle as $sevenArticles)
                     <div class="row-span-2 col-span-2">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full  z-40">
+                            <a href="" class="flex justify-end w-full  z-20">
                                 <img class="image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $sevenArticles->image) }}"
                                     alt="">
@@ -99,7 +99,7 @@
                 @foreach ($sexArticle as $sexArticles)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $sexArticles->image) }}"
                                     alt="">
@@ -128,7 +128,7 @@
                 @foreach ($fiveArticle as $fiveArticles)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $fiveArticles->image) }}"
                                     alt="">
@@ -157,7 +157,7 @@
                 @foreach ($forArticle as $forArticles)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $forArticles->image) }}"
                                     alt="">
@@ -185,7 +185,7 @@
                 @foreach ($threeArticle as $threeArticles)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $threeArticles->image) }}"
                                     alt="">
@@ -213,7 +213,7 @@
                 @foreach ($twoArticle as $twoArticles)
                     <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-40">
+                            <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
                                     src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $twoArticles->image) }}"
                                     alt="">
@@ -255,7 +255,7 @@
         <div class="flex flex-wrap-reverse md:flex-row md:flex-nowrap gap-5 mt-20">
 
             <div
-                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-40 gap-8 bg-box dark:bg-white rounded-3xl p-5">
+                class="w-full md:basis-1/3 text-white dark:text-gray-700 z-20 gap-8 bg-box dark:bg-white rounded-3xl p-5">
                 <div class="flex flex-col w-full">
                     <div id="coinBox"
                         class="bg-indigo-1 w-full flex-initial justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
@@ -267,7 +267,7 @@
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
-                            <div class="sidenav p-1 m-2 z-40">
+                            <div class="sidenav p-1 m-2 z-20">
                                 <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                         <path id="chevron-right" d="M9,18l6-6L9,6"
@@ -279,7 +279,7 @@
                                     {{ $parentCategory->title }}
 
                                 </button>
-                                <div class="dropdown-container z-40 mr-5">
+                                <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
@@ -319,10 +319,10 @@
 
 
             <div
-                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-40 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
+                class="w-full md:basis-9/12 text-white dark:text-zinc-900 z-20 gap-8 bg-box dark:bg-white dark:shadow-2xl rounded-3xl p-5">
 
                 <div
-                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-40 text-center dark:bg-slate-200 dark:shadow-sm">
+                    class="mb-4 flex justify-between items-center w-full rounded-3xl bg-indigo-1 p-2 lg:p-4 z-20 text-center dark:bg-slate-200 dark:shadow-sm">
                     <ul class="sm:grid sm:grid-cols-2 md:contents text-center mx-auto sm:space-y-2 md:space-y-0"
                         id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
 
@@ -384,7 +384,7 @@
                 <div id="myTabContent">
 
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($padcasts as $article)
                                 <div
@@ -453,7 +453,7 @@
                     </div>
 
                     <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($padcastss as $article)
                                 <div
@@ -516,7 +516,7 @@
                     </div>
 
                     <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($padcastView as $viewDesc)
                                 <div
@@ -579,7 +579,7 @@
                     </div>
 
                     <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($padcastViews as $viewASC)
                                 <div
@@ -642,7 +642,7 @@
                     </div>
 
                     <div class="hidden " id="width" role="tabpanel" aria-labelledby="width-tab">
-                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-40">
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
                             @foreach ($padcasts as $article)
                                 <div
@@ -701,7 +701,7 @@
                     </div>
 
                     <div class="hidden " id="height" role="tabpanel" aria-labelledby="height-tab">
-                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-40">
+                        <div class="grid grid-cols-1 mt-8 lg:mt-14 gap-8  z-20">
                             <!-- post 1  -->
                             @foreach ($padcasts as $article)
                                 <div class="bg-indigo-1 rounded-3xl flex items-center w-full ">

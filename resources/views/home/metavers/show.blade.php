@@ -33,9 +33,9 @@
 
 
 
-    <div class="sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12mx-auto p-4 sm:p-8 z-40">
+    <div class="sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12mx-auto p-4 sm:p-8 z-20">
         <div
-            class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-40 relative text-white justify-between items-center space-y-10">
+            class="flex flex-col lg:flex-row w-full mt-32 lg:mt-44 z-20 relative text-white justify-between items-center space-y-10">
 
             <div id="coinBox" class="bg-coin1 w-full h-full flex justify-between p-4 overflow-hidden">
 

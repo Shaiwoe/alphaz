@@ -48,7 +48,7 @@
             </p>
         </div>
 
-        <div class="relative w-full flex justify-end z-40 mt-16 lg:mt-64">
+        <div class="relative w-full flex justify-end z-20 mt-16 lg:mt-64">
             <img class="w-full lg:w-7/12" src="image/svg/about-svg.svg" alt="">
             <img id=""
                 class="logo_dark_el hidden absolute w-6/12 top-[10%] left-[30%] animate-bounce duration-500"
@@ -76,7 +76,7 @@
         <div class="w-full gap-16 grid lg:grid-cols-2">
 
             <a href="{{ route('home.books.index') }}" id="coinBox"
-                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-20">
                 <img class="w-20" src="image/book.svg" alt="">
                 <p>کتاب ها</p>
                 <p class="text-justify">
@@ -87,7 +87,7 @@
             </a>
 
             <a href="{{ route('home.articles.index') }}" id="coinBox"
-                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-20">
                 <img class="w-20" src="image/svg/article-icon.svg" alt="">
                 <p>مقاله ها</p>
                 <p class="text-justify">
@@ -101,7 +101,7 @@
             </a>
 
             <a href="{{ route('home.padcasts.index') }}" id="coinBox"
-                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-20">
                 <img class="w-20" src="image/svg/padcast-icon.svg" alt="">
                 <p>پادکست ها</p>
                 <p class="text-justify">
@@ -113,7 +113,7 @@
             </a>
 
             <a href="{{ route('home.videos.index') }}" id="coinBox"
-                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-40">
+                class="bg-coin1 dark:bg-purple1 w-full flex flex-col justify-center items-center p-8 space-y-4 z-20">
                 <img class="w-20" src="image/svg/video-icon.svg" alt="">
                 <p>ویدئو ها</p>
                 <p class="text-justify">

@@ -54,7 +54,7 @@
 
 
 
-        <div class="flex flex-col w-full mt-32 lg:mt-44 z-40 relative text-white  space-y-10 mb-12 lg:mb-32">
+        <div class="flex flex-col w-full mt-32 lg:mt-44 z-20 relative text-white  space-y-10 mb-12 lg:mb-32">
 
 
 
@@ -452,7 +452,7 @@
 
             </div>
 
-            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col  space-y-12 bg-coin1 p-4 z-40">
+            <div class="coinBox dark:bg-white dark:shadow-2xl w-full flex flex-col  space-y-12 bg-coin1 p-4 z-20">
                 <p class="text-center dark:text-zinc-900 text-xl">
                     مقالات مرتبط
                 </p>
