@@ -35,6 +35,7 @@ module.exports = {
                 'red': '#BD082D',
                 'red-o': '#BD082Daa',
                 'purple3': '#685a8f',
+                'purple4': '#6113B4',
                 'white2': '#46494c',
                 'white3': '#f4f3ee',
                 'white4': '#FFFFFF2B',

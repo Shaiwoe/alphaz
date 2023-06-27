@@ -11,7 +11,7 @@
     <title>ویرایش {{ $article->title }}</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 h-[100vh] overflow-hidden">
 
     {{-- header  --}}
     @include('components/header')
@@ -30,15 +30,15 @@
     </div>
 
 
-    <div class="flex justify-between overflow-x-auto relative space-x-4">
+    <div class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
             <!-- main  -->
-            <div class="flex flex-col space-y-12 w-full px-4 mt-8">
+            <div class="flex flex-col space-y-8 w-full">
                 <div class="flex justify-between items-center">
-                    <p class="text-xl text-white dark:text-gray-600">ویرایش {{ $article->title }}</p>
+                    <p class="text-xl text-white dark:text-zinc-900">ویرایش {{ $article->title }}</p>
                 </div>
                 {{-- form create article  --}}
 
@@ -51,29 +51,29 @@
 
                         <div class="flex flex-col w-full">
                             <label for="title"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">عنوان
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900 ">عنوان
                                 مقاله</label>
                             <input type="text" name="title" id="title" value="{{ $article->title }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
                             <label for="time"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">زمان
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900 ">زمان
                                 مقاله</label>
                             <input type="text" name="time" id="time" value="{{ $article->time }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('time')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
-                            <label for="slug" class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">
+                            <label for="slug" class="block mb-2 text-sm font-medium text-white dark:text-zinc-900 ">
 
                                 لینک خبر ( از عنوان کپی کنید و با - جدا کنید)
                             </label>
                             <input type="text" name="slug" id="slug" value="{{ $article->slug }}"
-                                class="block p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
+                                class="block p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 border-gray-600 placeholder-gray-400 focus:ring-yellow-400 focus:border-yellow-400">
                             <x-input-error :messages="$errors->get('slug')" class="mt-2" />
                         </div>
 
@@ -85,10 +85,10 @@
 
                         <div class="flex flex-col w-full">
                             <label for="category_id"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600 ">نوع دسته
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900 ">نوع دسته
                                 بندی</label>
                             <select id="category_id" name="category_id"
-                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
+                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 @foreach ($Categorys as $Category)
                                     <option value="{{ $Category->id }}"
                                         {{ $Category->id == $article->Category->id ? 'selected' : '' }}>
@@ -100,19 +100,19 @@
 
                         <div class="flex flex-col w-full">
                             <label for="primary_image"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">انتخاب
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">انتخاب
                                 عکس</label>
                             <input name="primary_image" id="primary_image"
-                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 focus:ring-yellow-400 focus:border-yellow-400"
+                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 focus:ring-yellow-400 focus:border-yellow-400"
                                 type="file">
                             <x-input-error :messages="$errors->get('primary_image')" class="mt-2" />
                         </div>
 
                         <div class="flex flex-col w-full">
                             <label for="is_active"
-                                class="block mb-2 text-sm font-medium text-white dark:text-gray-600">وضعیت</label>
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">وضعیت</label>
                             <select id="is_active" id="is_active" name="is_active"
-                                class="flex  p-2.5 w-full rounded-lg bg-coin1 dark:bg-gray-100 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
+                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-gray-400 items-center justify-center text-center focus:ring-yellow-400 focus:border-yellow-400">
                                 <option value="1"
                                     {{ $article->getRawOriginal('is_active') == 1 ? 'selected' : '' }}>انتشار</option>
                                 <option value="0"
@@ -129,7 +129,7 @@
                         <div id="accordion-collapse" data-accordion="collapse">
                             <h2 id="accordion-collapse-heading-1">
                                 <button type="button"
-                                    class="flex p-4 items-center justify-between w-full rounded-lg bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400"
+                                    class="flex p-4 items-center justify-between w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 border-gray-600 placeholder-gray-400  focus:ring-yellow-400 focus:border-yellow-400"
                                     data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
                                     aria-controls="accordion-collapse-body-1">
                                     <span>انتخاب تگ ها</span>
@@ -153,7 +153,7 @@
                                     @endphp
                                     @foreach ($tags as $tag)
                                         <div
-                                            class="flex items-center gap-2 px-2 bg-coin1 dark:bg-gray-100 text-gray-400 border-gray-600 rounded-lg">
+                                            class="flex items-center gap-2 px-2 bg-coin1 dark:bg-slate-200 text-gray-400 border-gray-600 rounded-3xl">
                                             <input {{ in_array($tag->id, $articleTagIds) ? 'checked' : '' }} id="tag_ids" type="checkbox" value="{{ $tag->id }}"
                                                 name="tag_ids[]"
                                                 class="w-4 h-4 text-blue-600  rounded  ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
@@ -172,25 +172,25 @@
 
                     <div class="flex flex-col w-full my-6 text-white">
                         <label for="description"
-                            class="block mb-2 text-sm font-medium text-white dark:text-gray-600">توضیحات کوتاه</label>
+                            class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">توضیحات کوتاه</label>
                         <textarea id="description" name="description" rows="4"
-                            class="block p-2.5 w-full text-white bg-coin1 dark:bg-gray-100  dark:text-gray-600 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500">{{ $article->description }}</textarea>
+                            class="block p-2.5 w-full text-white bg-coin1 dark:bg-slate-200  dark:text-zinc-900 rounded-3xl border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500">{{ $article->description }}</textarea>
                         <x-input-error :messages="$errors->get('description')" class="mt-2" />
                     </div>
 
                     <div class="flex flex-col w-full mb-6 ">
-                        <label for="body" class="block mb-2 text-sm text-white dark:text-gray-600">متن
+                        <label for="body" class="block mb-2 text-sm text-white dark:text-zinc-900">متن
                             اخبار</label>
                         <textarea id="body" name="body" rows="8"
-                            class="block p-2.5 w-full text-white bg-coin1 dark:bg-gray-100 dark:text-gray-600 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500">{{ $article->body }}</textarea>
+                            class="block p-2.5 w-full text-white bg-coin1 dark:bg-slate-200 dark:text-zinc-900 rounded-3xl border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500">{{ $article->body }}</textarea>
                         <x-input-error :messages="$errors->get('body')" class="mt-2" />
                     </div>
 
                     <div class="flex gap-4 mt-14">
                         <button type="submit"
-                            class="bg-green hover:bg-green-o w-full lg:w-1/12 text-white p-2 rounded-lg">ثبت</button>
+                            class="bg-green hover:bg-green-o w-full lg:w-1/12 text-white p-2 rounded-3xl">ثبت</button>
                         <a href="{{ route('articles.index') }}"
-                            class="bg-red text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-lg">بازگشت</a>
+                            class="bg-red text-center hover:bg-red-600 w-full lg:w-1/12 text-white p-2 rounded-3xl">بازگشت</a>
                     </div>
 
 

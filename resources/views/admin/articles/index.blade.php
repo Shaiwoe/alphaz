@@ -12,7 +12,7 @@
     <title>مقالات</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 h-[100vh] overflow-hidden">
 
     {{-- header  --}}
     @include('components/header')
@@ -30,18 +30,19 @@
         </div>
     </div>
 
-    <div class="flex justify-between overflow-x-auto relative space-x-4">
+    <div
+        class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 min-h-screen">
+        <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
 
             <!-- main  -->
-            <div class="flex flex-col space-y-12 w-full px-4 mt-8">
+            <div class="flex flex-col space-y-8 w-full">
                 <div class="flex justify-between items-center">
-                    <p class="text-xl"> اخبار ها - {{ $Articles->total() }}</p>
+                    <p class="text-xl dark:text-zinc-900"> تعداد کل مقاله ها {{ $Articles->total() }} عدد</p>
                     <a href="{{ route('articles.create') }}"
-                        class="bg-green px-8 py-2 rounded-md flex gap-2 items-center text-white">
+                        class="bg-green px-8 py-2 flex gap-2 items-center text-white rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-5 h-5 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -50,9 +51,9 @@
                     </a>
                 </div>
 
-                <form class="mt-44 z-40">
+                <form class="z-30">
                     <label for="default-search"
-                        class="mb-2 text-sm font-medium text-white dark:text-gray-600 sr-only ">Search</label>
+                        class="mb-2 text-sm font-medium text-white dark:text-zinc-900 sr-only ">Search</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg aria-hidden="true" class="w-7 h-7 text-gray-100 dark:text-gray-800" fill="none"
@@ -64,33 +65,34 @@
 
                         <input type="search" name="search" id="search-input"
                             value="{{ request()->has('search') ? request()->search : '' }}"
-                            class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
+                            class="block w-full p-2 text-center pl-10 text-xs lg:text-lg text-gray-100 dark:text-zinc-900 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700"
                             placeholder="برای جستجو در مقاله ها کلمه مورد نظر را تایپ کنید" required>
                     </div>
                 </form>
 
-                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <div class="relative overflow-x-auto shadow-md rounded-3xl">
 
-                    <table class="w-full text-right bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600">
-                        <thead class=" uppercase ">
+                    <table
+                        class="w-full table-auto text-right bg-coin1 dark:bg-slate-200 dark:shadow-2xl text-white dark:text-zinc-900">
+                        <thead class="text-sm text-gray-200 dark:text-gray-800 uppercase bg-coin1 rounded-full">
                             <tr>
 
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     #
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     عنوان
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     لینک مقاله
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     نام دسته بندی
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     وضعیت
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="p-4">
                                     عملیات
                                 </th>
 
@@ -98,36 +100,43 @@
                         </thead>
                         <tbody>
                             @foreach ($Articles as $key => $article)
-                                <tr class="bg-coin1 dark:bg-gray-100 text-white dark:text-gray-600 border-b border-gray-700 ">
-                                    <td class="px-6 py-4">
+                                <tr
+                                    class="bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 border-b border-gray-700">
+                                    <td class="sm:p-0 md:px-6 md:py-2">
                                         {{ $Articles->firstItem() + $key }}
                                     </td>
-                                    <td class="px-6 py-4 ">
-                                        <a href="{{ $article->path() }}">
+                                    <td class="sm:p-0 md:px-6 md:py-2">
+                                        <a class=" line-clamp-1 w-max" href="{{ $article->path() }}">
                                             {{ $article->title }}
                                         </a>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        {{ $article->slug }}
-                                    </td>
-                                    
-                                    <td class="px-6 py-4">
-                                        {{ $article->category->title }}
+                                    <td class="sm:p-0 md:px-6 md:py-2">
+                                        <div class=" line-clamp-1 sm:w-max md:w-auto">
+
+                                            {{ $article->slug }}
+                                        </div>
                                     </td>
 
-                                    <td class="px-6 py-4">
+                                    <td class="sm:p-0 md:px-6 md:py-2">
+                                        <div class=" line-clamp-1 w-max">
+
+                                            {{ $article->category->title }}
+                                        </div>
+                                    </td>
+
+                                    <td class="sm:p-0 md:px-6 md:py-2">
                                         <div
                                             class="{{ $article->getRawOriginal('is_active') ? 'text-green' : 'text-red-500' }}">
                                             {{ $article->is_active }}
                                         </div>
                                     </td>
-                                    <td class="px-6 py-4 flex gap-4">
-                                        <a class="flex bg-sky-500 text-white px-4 py-2 rounded-md"
+                                    <td class="sm:p-0 md:px-6 md:py-2 flex gap-4">
+                                        <a class="flex bg-purple4 text-white px-4 py-2 rounded-full"
                                             href="{{ $article->path() }}">
                                             لینک
                                         </a>
 
-                                        <a class="flex bg-yellow-400 text-white px-4 py-2 rounded-md"
+                                        <a class="flex bg-yellow-400 text-white px-4 py-2 rounded-full"
                                             href="{{ route('articles.edit', ['article' => $article->id]) }}">
                                             ویرایش
                                         </a>
@@ -137,7 +146,7 @@
                                             @method('DELETE')
 
                                             <button type="submit"
-                                                class="flex bg-red text-white px-4 py-2 rounded-md">
+                                                class="flex bg-red text-white px-4 py-2 rounded-full">
                                                 حذف
                                             </button>
                                         </form>

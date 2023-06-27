@@ -26,12 +26,12 @@
             @endif
         </div>
 
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between w-full">
             <div>
 
             </div>
 
-            <div>
+            <div class="w-full text-center">
                 <span class="relative sm:gap-1 md:gap-2 z-0 inline-flex shadow-sm rounded-md">
 
 

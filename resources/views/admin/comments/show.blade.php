@@ -12,20 +12,20 @@
     <title>کامنت</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 h-[100vh] overflow-hidden">
 
     {{-- header  --}}
     @include('components/header')
 
     @include('components/light')
 
-    <div class="flex justify-between overflow-x-auto relative space-x-4">
+    <div class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav  -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
             <!-- main  -->
-            <div class="flex flex-col space-y-12 w-full px-4 mt-8">
+            <div class="flex flex-col space-y-8 w-full">
 
                 <div class="grid lg:grid-cols-2 w-full gap-6  mb-6">
 

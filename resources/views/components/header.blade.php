@@ -1,6 +1,6 @@
-<div>
-    <div class=" absolute flex">
-        <div id="" class=" bg-menu dark:bg-white fixed w-full p-3 z-50">
+<div class="flex">
+    <div class=" flex">
+        <div id="" class=" bg-menu dark:bg-white fixed w-full p-3 z-40">
 
             <div class="mx-auto flex items-center sm:w-full md:w-10/12 xl:w-10/12 xl2:w-10/12">
 

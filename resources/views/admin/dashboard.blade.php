@@ -11,7 +11,7 @@
     <title>پنل کاربری</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 h-[100vh] overflow-hidden">
 
 
     {{-- header  --}}
@@ -30,31 +30,31 @@
         </div>
     </div>
 
-    <div class="flex justify-between w-full relative space-x-4 ">
+    <div class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 ">
+        <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
 
             <div class="w-full mt-10 tab_wrap tab_area z-40 relative">
                 <div class="btn_area clearfix z-40 flex gap-16 justify-center items-center">
                     <button
-                        class="btn_tab_s btn_tab float-right p-3 backdrop-filter rounded-t-2xl  text-white act flex w-56  justify-center"
+                        class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 backdrop-filter rounded-t-3xl text-white dark:text-zinc-900 act flex w-56  justify-center"
                         data-depth="0" data-idx="0">آخرین محتوا مطالعه شده
                     </button>
 
-                    <button class="btn_tab_s btn_tab float-right p-3 rounded-t-2xl  text-white flex w-56 justify-center"
+                    <button class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 rounded-t-3xl text-white dark:text-zinc-900 flex w-56 justify-center"
                         data-depth="0" data-idx="1">آخرین محتوا مورد علاقه من
                     </button>
 
-                    <button class="btn_tab_s btn_tab float-right p-3 rounded-t-2xl  text-white flex w-56 justify-center"
+                    <button class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 rounded-t-3xl text-white dark:text-zinc-900 flex w-56 justify-center"
                         data-depth="0" data-idx="2">آخرین محتواهایی که پسندیدم
                     </button>
 
 
                 </div>
 
-                <div class="content_area rounded-b-2xl z-40 relative act" data-depth="0" data-idx="0">
+                <div class="content_area rounded-3xl z-40 relative act bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="0">
 
                     @if ($studys->isEmpty())
 
@@ -80,7 +80,7 @@
 
                                         <div class="flex flex-col space-y-4 p-4">
                                             <a href="{{ route('home.articles.show', ['article' => $study->article->slug]) }}"
-                                                class="w-full text-sm text-white dark:text-gray-700">
+                                                class="w-full text-sm text-white dark:text-zinc-900">
                                                 {{ $study->article->title }}
                                             </a>
 
@@ -97,7 +97,7 @@
 
                 </div>
 
-                <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="1">
+                <div class="content_area rounded-3xl z-40" data-depth="0" data-idx="1">
 
                     @if ($wishlists->isEmpty())
 
@@ -123,7 +123,7 @@
 
                                         <div class="flex flex-col space-y-4 p-4">
                                             <a href="{{ route('home.articles.show', ['article' => $wishlist->article->slug]) }}"
-                                                class="w-full text-sm text-white dark:text-gray-700">
+                                                class="w-full text-sm text-white dark:text-zinc-900">
                                                 {{ $wishlist->article->title }}
                                             </a>
 
@@ -139,7 +139,7 @@
 
                 </div>
 
-                <div class="content_area rounded-b-2xl z-40" data-depth="0" data-idx="2">
+                <div class="content_area rounded-3xl z-40" data-depth="0" data-idx="2">
 
                     @if ($likes->isEmpty())
 
@@ -165,7 +165,7 @@
 
                                         <div class="flex flex-col space-y-4 p-4">
                                             <a href="{{ route('home.articles.show', ['article' => $like->article->slug]) }}"
-                                                class="w-full text-sm text-white dark:text-gray-700">
+                                                class="w-full text-sm text-white dark:text-zinc-900">
                                                 {{ $like->article->title }}
                                             </a>
 
@@ -185,13 +185,13 @@
 
 
             <div class="flex w-full justify-center items-center  mt-12">
-                <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">آخرین مقالات سایت
+                <p class="w-6/12 lg:w-3/12 text-center bg-green text-white p-3 rounded-t-3xl">آخرین مقالات سایت
                 </p>
             </div>
 
-            <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 p-4" id="coinBox">
+            <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="flex w-full bg-box rounded-b-2xl">
+                    <div class="flex w-full bg-box dark:bg-slate-300 rounded-3xl">
                         <div class="flex justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                 <img class=" w-full h-44"
@@ -201,11 +201,11 @@
 
                             <div class="flex flex-col p-4 w-full space-y-4">
                                 <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                    class="w-full text-sm text-white dark:text-gray-700">
+                                    class="w-full text-sm text-white dark:text-zinc-900">
                                     {{ $article->title }}
                                 </a>
 
-                                <p class="text-sm">
+                                <p class="text-sm text-white dark:text-zinc-700">
                                     {{ Str::limit($article->description, 80) }}
                                 </p>
                             </div>

@@ -11,7 +11,7 @@
     <title>پنل کاربری</title>
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1 h-full">
+<body class="bg-indigo-1 dark:bg-white1 h-[100vh] overflow-hidden">
 
 
     {{-- header  --}}
@@ -31,58 +31,63 @@
     </div>
 
 
-    <div class="w-full flex justify-between relative">
+    <div
+        class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
-        <div class="flex flex-col w-full  mt-8 h-full p-4 ">
+        <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
 
-            @if ($wishlist->isEmpty())
+            <!-- main  -->
+            <div class="flex flex-col space-y-8 w-full">
+                @if ($wishlist->isEmpty())
 
-                <div class="mt-8 flex flex-col gap-4 w-full justify-center items-center space-y-6">
+                    <div class="mt-8 flex flex-col gap-4 w-full justify-center items-center space-y-6">
 
-                    <div class="flex lg:flex-col lg:text-5xl text-white dark:text-gray-600 lg:space-y-8 text-sm gap-2 mt-24">
-                        <p>شما هیچ لیست علاقه مندی ندارید</p>
+                        <div
+                            class="flex lg:flex-col lg:text-5xl text-white dark:text-gray-600 lg:space-y-8 text-sm gap-2 mt-24">
+                            <p>شما هیچ لیست علاقه مندی ندارید</p>
+                        </div>
+
+                        <div class="w-full flex justify-center items-center ">
+                            <img class="w-6/12 mt-12" src="image/server.svg" alt="">
+                        </div>
                     </div>
-
-                    <div class="w-full flex justify-center items-center ">
-                        <img class="w-6/12 mt-12" src="image/server.svg" alt="">
+                @else
+                    <div class="flex w-full justify-center items-center mt-16">
+                        <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">
+                            لیست علاقه مندی های شما
+                        </p>
                     </div>
-                </div>
-            @else
-                <div class="flex w-full justify-center items-center mt-16">
-                    <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">
-                        لیست علاقه مندی های شما
-                    </p>
-                </div>
-                <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
-                    @foreach ($wishlist as $wishlists)
-                        <div class="flex w-full bg-coin1" id="coinBox">
-                            <div class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
-                                <a href="{{ route('home.articles.show', ['article' => $wishlists->article->slug]) }}">
-                                    <img class="rounded-t-xl w-full h-44"
-                                        src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $wishlists->article->primary_image) }}"
-                                        alt="">
-                                </a>
-
-                                <div class="flex flex-col space-y-4 p-4">
-                                    <a href="{{ route('home.articles.show', ['article' => $wishlists->article->slug]) }}"
-                                        class="w-full text-sm text-white dark:text-gray-700">
-                                        {{ $wishlists->article->title }}
+                    <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" id="coinBox">
+                        @foreach ($wishlist as $wishlists)
+                            <div class="flex w-full bg-coin1" id="coinBox">
+                                <div class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
+                                    <a
+                                        href="{{ route('home.articles.show', ['article' => $wishlists->article->slug]) }}">
+                                        <img class="rounded-t-xl w-full h-44"
+                                            src="{{ asset(env('ARTICLES_IMAGES_UPLOAD_PATH') . $wishlists->article->primary_image) }}"
+                                            alt="">
                                     </a>
 
-                                    <p>
-                                        {{ Str::limit($wishlists->article->description, 80) }}
-                                    </p>
+                                    <div class="flex flex-col space-y-4 p-4">
+                                        <a href="{{ route('home.articles.show', ['article' => $wishlists->article->slug]) }}"
+                                            class="w-full text-sm text-white dark:text-gray-700">
+                                            {{ $wishlists->article->title }}
+                                        </a>
+
+                                        <p>
+                                            {{ Str::limit($wishlists->article->description, 80) }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
+                        @endforeach
+                    </div>
+                @endif
 
 
-
+            </div>
 
 
         </div>
