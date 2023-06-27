@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white flex">
+    <div class="p-4 sm:p-8 sm:w-full md:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto text-white sm:flex-wrap-reverse  flex md:flex-nowrap">
         <div class="w-full flex flex-col z-30 space-y-6 mt-16 lg:mt-72 bg-coin1 dark:bg-white p-8 self-center  dark:shadow-2xl"
             id="coinBox">
             <p class="text-center lg:text-3xl mt-8 dark:text-zinc-900">کریپتو کارنسی رو با آلفارنسی اصولی یاد بگیر</p>

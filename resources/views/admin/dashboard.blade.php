@@ -72,7 +72,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($studys as $study)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -116,7 +116,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($wishlists as $wishlist)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -159,7 +159,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($likes as $like)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -210,7 +210,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($studys as $study)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -257,7 +257,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($wishlists as $wishlist)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -304,7 +304,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($likes as $like)
-                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox  rounded-3xl overflow-hidden" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
