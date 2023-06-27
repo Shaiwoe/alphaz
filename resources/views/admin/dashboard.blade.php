@@ -54,7 +54,7 @@
 
                 </div>
 
-                <div class="content_area rounded-3xl z-40 relative act bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="0">
+                <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act" data-depth="0" data-idx="0">
 
                     @if ($studys->isEmpty())
 
@@ -66,9 +66,9 @@
                             </div>
                         </div>
                     @else
-                        <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
+                        <div class="w-full grid lg:grid-cols-4 gap-8 p-4" >
                             @foreach ($studys as $study)
-                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -97,7 +97,7 @@
 
                 </div>
 
-                <div class="content_area rounded-3xl z-40" data-depth="0" data-idx="1">
+                <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="1">
 
                     @if ($wishlists->isEmpty())
 
@@ -111,7 +111,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
                             @foreach ($wishlists as $wishlist)
-                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -139,7 +139,7 @@
 
                 </div>
 
-                <div class="content_area rounded-3xl z-40" data-depth="0" data-idx="2">
+                <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="2">
 
                     @if ($likes->isEmpty())
 
@@ -153,7 +153,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4">
                             @foreach ($likes as $like)
-                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -189,7 +189,7 @@
                 </p>
             </div>
 
-            <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4" id="coinBox">
+            <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4 coinBox rounded-3xl" id="">
                 @foreach ($articles as $article)
                     <div class="flex w-full bg-box dark:bg-slate-300 rounded-3xl overflow-hidden">
                         <div class="flex justify-center items-center text-center flex-col space-y-4 w-full">
