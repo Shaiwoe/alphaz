@@ -55,7 +55,7 @@
                     </div>
                 @else
                     <div class="flex w-full justify-center items-center mt-16">
-                        <p class="w-6/12 lg:w-3/12 text-center bg-button1 text-white p-3 rounded-t-full">
+                        <p class="w-6/12 lg:w-3/12 text-center bg-green text-white p-3 rounded-t-full">
                             لیست علاقه مندی های شما
                         </p>
                     </div>

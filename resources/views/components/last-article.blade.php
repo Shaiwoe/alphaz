@@ -37,7 +37,7 @@
 
                                     <div class="flex items-center justify-between py-1 px-3">
                                         <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}"
-                                            class="bg-button1 flex mt-3 rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                            class="bg-green flex mt-3 rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                                 <path stroke-linecap="round" stroke-linejoin="round"

@@ -66,7 +66,7 @@
                                         {{ $webinar->time }}</a>
                                     <a class="w-44 bg-coin1 text-center rounded-lg p-1" href="">تاریخ :
                                         {{ $webinar->date }}</a>
-                                    <a class="w-44 bg-button1 text-center rounded-lg p-1" href="">ثبت نام در
+                                    <a class="w-44 bg-green text-center rounded-lg p-1" href="">ثبت نام در
                                         وبینار</a>
 
                                 </div>

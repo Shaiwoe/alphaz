@@ -43,7 +43,7 @@
                     src="{{ asset(env('METAVERS_IMAGES_UPLOAD_PATH') . $metavers->icon) }}" alt="">
 
                 <div class="flex flex-col w-full justify-center items-center space-y-8">
-                    <a href="{{ route('home.prices.index') }}" class="bg-button1 p-4 rounded-full">بازگشت به لیست بازار کریپتو</a>
+                    <a href="{{ route('home.prices.index') }}" class="bg-green p-4 rounded-full">بازگشت به لیست بازار کریپتو</a>
 
                     <p class="text-2xl text-white dark:text-gray-600">قیمت لحظه ای {{ $metavers->name }}</p>
 
@@ -59,19 +59,19 @@
                 <div class="flex flex-col w-full justify-center items-center space-y-10">
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p class="text-white dark:text-gray-600">تغییرات ساعتی</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                        <p class="bg-green p-1 w-24 text-center rounded-lg">
                             {{ number_format($price->quote->USD->percent_change_1h, 2) }}</p>
                     </div>
 
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p class="text-white dark:text-gray-600">تغییرات روزانه</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                        <p class="bg-green p-1 w-24 text-center rounded-lg">
                             {{ number_format($price->quote->USD->percent_change_24h, 2) }}</p>
                     </div>
 
                     <div id="coinBox" class="bg-coin1 p-4 flex flex-col w-44 justify-center items-center space-y-4">
                         <p class="text-white dark:text-gray-600">تغییرات هفتگی</p>
-                        <p class="bg-button1 p-1 w-24 text-center rounded-lg">
+                        <p class="bg-green p-1 w-24 text-center rounded-lg">
                             {{ number_format($price->quote->USD->percent_change_7d, 2) }}</p>
                     </div>
                 </div>
@@ -88,11 +88,11 @@
                         </div>
 
 
-                        <div class="w-full text-center text-xl bg-button1 p-2 rounded-full">
+                        <div class="w-full text-center text-xl bg-green p-2 rounded-full">
                             <p>{{ number_format($price->quote->USD->price, 2) }}</p>
                         </div>
 
-                        <div class="flex gap-2 bg-button1 w-full justify-center items-center p-2 rounded-full">
+                        <div class="flex gap-2 bg-green w-full justify-center items-center p-2 rounded-full">
 
 
                             <p class="mt-2">{{ $metavers->site }}</p>
