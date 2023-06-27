@@ -31,7 +31,7 @@
     </div>
 
     <div
-        class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
+        class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl">
         <!-- nav left -->
         @include('components/nav')
         <!-- main -->
