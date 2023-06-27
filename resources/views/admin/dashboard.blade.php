@@ -68,7 +68,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
                             @foreach ($studys as $study)
-                                <div class="flex w-full bg-coin1" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -111,7 +111,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
                             @foreach ($wishlists as $wishlist)
-                                <div class="flex w-full bg-coin1" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -153,7 +153,7 @@
                     @else
                         <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4">
                             @foreach ($likes as $like)
-                                <div class="flex w-full bg-coin1" id="coinBox">
+                                <div class="flex w-full bg-box dark:bg-slate-300" id="coinBox">
                                     <div
                                         class="flex  justify-center items-center text-center flex-col space-y-4 w-full ">
                                         <a
@@ -191,7 +191,7 @@
 
             <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4" id="coinBox">
                 @foreach ($articles as $article)
-                    <div class="flex w-full bg-box dark:bg-slate-300 rounded-3xl">
+                    <div class="flex w-full bg-box dark:bg-slate-300 rounded-3xl overflow-hidden">
                         <div class="flex justify-center items-center text-center flex-col space-y-4 w-full">
                             <a href="{{ route('home.articles.show', ['article' => $article->slug]) }}">
                                 <img class=" w-full h-44"
