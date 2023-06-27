@@ -109,7 +109,7 @@
                             </div>
                         </div>
                     @else
-                        <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4" >
+                        <div class="w-full grid lg:grid-cols-4 gap-8 p-4" >
                             @foreach ($wishlists as $wishlist)
                                 <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
                                     <div
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                     @else
-                        <div class="w-full grid lg:grid-cols-4 gap-8 bg-coin1 p-4">
+                        <div class="w-full grid lg:grid-cols-4 gap-8 p-4">
                             @foreach ($likes as $like)
                                 <div class="flex w-full bg-box dark:bg-slate-300 coinBox rounded-3xl" id="">
                                     <div
