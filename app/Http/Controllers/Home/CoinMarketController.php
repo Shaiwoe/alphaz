@@ -86,7 +86,7 @@ class CoinMarketController extends Controller
 
             $coin = (object) ['name' => $coin->name, 'symbol' => $coin->symbol, 'price' => $coin->quote->USD->price, 'price_ir' => ($coin->quote->USD->price * $lastPrice), 'volume_24h' => $coin->quote->USD->volume_24h, 'percent_change_1h' => $coin->quote->USD->percent_change_1h, 'percent_change_24h' => $coin->quote->USD->percent_change_24h, 'percent_change_7d' => $coin->quote->USD->percent_change_7d, 'market_cap' => $coin->quote->USD->market_cap];
         }
-        
+
         // Coin info
         $info = $this->getMarketCoinInfo($symbol);
 
@@ -116,7 +116,8 @@ class CoinMarketController extends Controller
         ];
 
         $headers = [
-            'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
         $response = \PG\Request\Request::instance()
@@ -135,7 +136,8 @@ class CoinMarketController extends Controller
         ];
 
         $headers = [
-            'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
         $response = \PG\Request\Request::instance()
@@ -146,7 +148,7 @@ class CoinMarketController extends Controller
 
         return $response;
     }
-    
+
     protected function getMarketCoinInfo($symbol)
     {
         $address = [
@@ -154,7 +156,8 @@ class CoinMarketController extends Controller
         ];
 
         $headers = [
-            'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
         $response = \PG\Request\Request::instance()
