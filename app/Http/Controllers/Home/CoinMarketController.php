@@ -117,6 +117,7 @@ class CoinMarketController extends Controller
 
         $headers = [
             // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '134e7a1d-8a71-4140-94d3-dc142efec103'
             'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
@@ -137,6 +138,7 @@ class CoinMarketController extends Controller
 
         $headers = [
             // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '134e7a1d-8a71-4140-94d3-dc142efec103'
             'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
@@ -157,6 +159,7 @@ class CoinMarketController extends Controller
 
         $headers = [
             // 'X-CMC_PRO_API_KEY' => '0af4288d-7634-49c9-9338-8a7798e06d5c'
+            // 'X-CMC_PRO_API_KEY' => '134e7a1d-8a71-4140-94d3-dc142efec103'
             'X-CMC_PRO_API_KEY' => 'bde58904-5d32-4386-ab66-cbf98b060394'
         ];
 
