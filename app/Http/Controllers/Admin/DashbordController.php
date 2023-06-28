@@ -19,7 +19,7 @@ class DashbordController extends Controller
     public function index(Request $request)
     {
         $users = $request->user();
-        $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
+        $articles = Article::orderBy('created_at', 'desc')->where('is_active', 1)->take(4)->get();
         $studys = Study::where('user_id' , auth()->id())->take(4)->get();
         $likes = Like::where('user_id' , auth()->id())->take(4)->get();
         $wishlists = Wishlist::where('user_id' , auth()->id())->take(4)->get();
