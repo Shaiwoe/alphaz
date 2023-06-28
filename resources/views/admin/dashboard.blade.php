@@ -366,7 +366,7 @@
 
                         <div class="flex justify-between items-center px-2 lg:px-4">
                             <a href="{{ route('home.articles.show', ['article' => $articleShow->slug]) }}"
-                                class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
+                                class="bg-green text-white flex rounded-2xl p-2 text-xs mb-4 items-center gap-2">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                     class="w-4 h-4">
                                     <path stroke-linecap="round" stroke-linejoin="round"
