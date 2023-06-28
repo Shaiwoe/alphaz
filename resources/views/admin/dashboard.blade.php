@@ -345,7 +345,7 @@
                 </p>
             </div>
 
-            <div class="w-full grid lg:grid-cols-4 gap-12 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4 coinBox rounded-3xl"
+            <div class="w-full grid lg:grid-cols-4 gap-4 bg-coin1 dark:bg-slate-200 dark:shadow-2xl p-4 coinBox rounded-3xl"
                 id="">
                 @foreach ($articles as $articleShow)
                     <div
