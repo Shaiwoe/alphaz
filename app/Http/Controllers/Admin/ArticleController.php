@@ -29,7 +29,7 @@ class ArticleController extends Controller
             ->paginate(15);
 
 
-        return view('admin.articles.index', compact('Articles','users'));
+        return view('manager.articles.index', compact('Articles','users'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ArticleController extends Controller
         $users = $request->user();
         $tags = Tag::all();
         $Categorys = Category::where('parent_id', '!=' , 0)->get();
-        return view('admin.articles.create' , compact('tags' , 'Categorys','users'));
+        return view('manager.articles.create' , compact('tags' , 'Categorys','users'));
     }
 
     /**
@@ -112,7 +112,7 @@ class ArticleController extends Controller
     {
         $users = $request->user();
         $images = $article->images;
-        return view('admin.articles.show', compact('article', 'images', 'users'));
+        return view('manager.articles.show', compact('article', 'images', 'users'));
     }
 
     /**
@@ -126,7 +126,7 @@ class ArticleController extends Controller
         $users = $request->user();
         $tags = Tag::all();
         $Categorys = Category::where('parent_id', '!=' , 0)->get();
-        return view('admin.articles.edit' , compact('article' , 'tags' , 'Categorys', 'users'));
+        return view('manager.articles.edit' , compact('article' , 'tags' , 'Categorys', 'users'));
     }
 
     /**

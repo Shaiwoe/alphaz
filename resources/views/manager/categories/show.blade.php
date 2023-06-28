@@ -11,7 +11,7 @@
 <body class="bg-dark3 text-gray-200">
         <div class="flex justify-between overflow-x-auto relative space-x-4">
             <!-- nav  -->
-            @include('components/nav')
+            @include('components/nav-manager')
             <!-- main -->
             <div class="flex flex-col w-full h-screen overflow-y-auto p-4">
                 <!-- nav header -->

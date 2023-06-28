@@ -21,7 +21,7 @@
 
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
-        @include('components/nav')
+        @include('components/nav-manager')
         <!-- main -->
         <div class="flex flex-col w-10/12 mt-28 h-full  p-4 ">
             <!-- main  -->

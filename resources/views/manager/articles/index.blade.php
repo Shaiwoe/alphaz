@@ -33,7 +33,7 @@
     <div
         class="flex justify-between dashboard_back dark:bg-white dark:shadow-2xl w-11/12 mx-auto mt-28 h-[85vh] rounded-3xl overflow-hidden">
         <!-- nav  -->
-        @include('components/nav')
+        @include('components/nav-manager')
         <!-- main -->
         <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
 
@@ -140,7 +140,7 @@
                                             href="{{ route('articles.edit', ['article' => $article->id]) }}">
                                             ویرایش
                                         </a>
-                                        <form action="{{ route('articles.destroy', ['article' => $article->id]) }}"
+                                        {{-- <form action="{{ route('articles.destroy', ['article' => $article->id]) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -149,7 +149,7 @@
                                                 class="flex bg-red text-white px-4 py-2 rounded-full">
                                                 حذف
                                             </button>
-                                        </form>
+                                        </form> --}}
                                     </td>
 
                                 </tr>

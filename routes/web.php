@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CommentController;
+use App\Http\Controllers\Admin\ManagerController;
 use App\Http\Controllers\Admin\PadcastController;
 use App\Http\Controllers\Admin\WebinarController;
 use App\Http\Controllers\Home\LikeBookController;
@@ -155,19 +156,17 @@ Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
 
 
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
+    Route::get('/managers', [ManagerController::class, 'index'])->middleware(['permission:Manager'])->name('manager');
     Route::resource('categories', CategoryController::class)->middleware(['permission:New']);
     Route::resource('cateporys', CateporyController::class)->middleware(['permission:Padcast']);
     Route::resource('catevorys', CatevoryController::class)->middleware(['permission:Video']);
     Route::resource('cateborys', CateboryController::class)->middleware(['permission:Book']);
-    Route::resource('charts', ChartController::class)->middleware(['permission:Chart']);
     Route::resource('tags', TagController::class)->middleware(['permission:New']);
     Route::resource('tavs', TavController::class)->middleware(['permission:New']);
     Route::resource('taps', TapController::class)->middleware(['permission:New']);
     Route::resource('tabs', TabController::class)->middleware(['permission:New']);
     Route::resource('articles', ArticleController::class)->middleware(['permission:New']);
     Route::resource('banners', BannerController::class)->middleware(['permission:Banner']);
-    Route::resource('markets', AdminMarketController::class)->middleware(['permission:Prices']);
-    Route::resource('metavers', AdminMetaversController::class)->middleware(['permission:Metavers']);
     Route::resource('padcasts', PadcastController::class)->middleware(['permission:Padcast']);
     Route::resource('videos', VideoController::class)->middleware(['permission:Video']);
     Route::resource('books', BookController::class)->middleware(['permission:Book']);
@@ -177,7 +176,6 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('comments', CommentController::class);
     Route::get('/comments/{comment}/change-approve', [CommentController::class, 'ChangeApprove'])->name('comments.change');
-
     Route::post('ckeditor/upload', [ArticleController::class, 'upload'])->name('ckeditor.upload');
 });
 

@@ -79,7 +79,7 @@
                                 @auth
                                     <a href="{{ url('/dashboard') }}"
                                         class="w-12">
-                                        <img  src="/image/profile2.png" alt="profile image">
+                                        <img class="rounded-full" src="/image/profile/18.jpg" alt="profile image">
                                     </a>
                                 @else
                                     <a href="{{ route('login') }}"

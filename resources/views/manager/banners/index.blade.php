@@ -32,7 +32,7 @@
 
     <div class="flex justify-between overflow-x-auto relative space-x-4">
         <!-- nav  -->
-        @include('components/nav')
+        @include('components/nav-manager')
         <!-- main -->
         <div class="flex flex-col w-full lg:w-10/12 mt-28 h-full  p-4 min-h-screen">
             <!-- main  -->
@@ -114,10 +114,10 @@
                                     <td>
                                         {{ $banner->type }}
                                     </td>
-                                    
+
                                     <td class="px-6 py-4 flex gap-4">
 
-                                        <form action="{{ route('banners.destroy', ['banner' => $banner->id]) }}"
+                                        {{-- <form action="{{ route('banners.destroy', ['banner' => $banner->id]) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -126,7 +126,7 @@
                                                 class="flex bg-red-500 text-white px-4 py-2 rounded-md">
                                                 حذف
                                             </button>
-                                        </form>
+                                        </form> --}}
                                         <a class="flex bg-green-500 text-white px-4 py-2 rounded-md"
                                             href="{{ route('banners.edit', ['banner' => $banner->id]) }}">
                                             ویرایش بنر

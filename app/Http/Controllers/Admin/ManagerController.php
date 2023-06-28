@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\User;
+use App\Models\Like;
+use App\Models\Study;
 use App\Models\Article;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Like;
-use App\Models\Market;
-use App\Models\Padcast;
-use App\Models\Study;
-use App\Models\Video;
-use App\Models\Wishlist;
-use WisdomDiala\Cryptocap\Facades\Cryptocap;
 
-class DashbordController extends Controller
+class ManagerController extends Controller
 {
     public function index(Request $request)
     {
@@ -23,7 +18,7 @@ class DashbordController extends Controller
         $studys = Study::where('user_id' , auth()->id())->take(4)->get();
         $likes = Like::where('user_id' , auth()->id())->take(4)->get();
         $wishlists = Wishlist::where('user_id' , auth()->id())->take(4)->get();
-        return view('panel.dashboard', compact('users', 'articles', 'likes','studys','wishlists'));
+        return view('manager.index', compact('users', 'articles', 'likes','studys','wishlists'));
     }
 
     public function add(Article $article)
@@ -63,7 +58,4 @@ class DashbordController extends Controller
             return redirect()->back();
         }
     }
-
-
-
 }

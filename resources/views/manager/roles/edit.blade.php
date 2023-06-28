@@ -32,7 +32,7 @@
 
     <div class="flex justify-between overflow-x-auto relative space-x-4 ">
         <!-- nav  -->
-        @include('components/nav')
+        @include('components/nav-manager')
         <!-- main  -->
         <div class="flex flex-col w-full lg:w-10/12 space-y-12 min-h-screen px-4 mt-24">
 
