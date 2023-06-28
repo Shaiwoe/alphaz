@@ -1,5 +1,5 @@
 <div class="md:w-3/12 lg:w-2/12 relative z-30 hidden md:flex p-4" style="direction: ltr">
-    <div class=" overflow-y-auto rounded-3xl w-full self-center">
+    <div class="overflow-y-auto h-full rounded-3xl w-full self-center">
         <div class="bg-coin1 shadow-xl z-40 w-full rounded-3xl coinBox dark:bg-slate-200" style="direction: rtl">
             <div class="flex flex-col w-full items-center pt-4">
 
