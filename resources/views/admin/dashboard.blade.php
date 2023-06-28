@@ -37,7 +37,7 @@
         <!-- main -->
         <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
 
-            <div class="hidden md:block w-full mt-10 tab_wrap tab_area z-40 relative">
+            <div class="hidden md:block w-full mt-4 tab_wrap tab_area z-40 relative">
                 <div class="btn_area clearfix z-40 flex gap-16 justify-center items-center">
                     <button
                         class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 backdrop-filter rounded-t-3xl text-white dark:text-zinc-900 act flex w-56  justify-center"
@@ -66,7 +66,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -110,7 +110,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -153,7 +153,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
