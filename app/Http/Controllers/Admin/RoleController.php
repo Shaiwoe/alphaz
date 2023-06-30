@@ -22,7 +22,7 @@ class RoleController extends Controller
         $users = $request->user();
 
         $roles = Role::latest()->paginate(50);
-        return view('admin.roles.index', compact('roles','users'));
+        return view('manager.roles.index', compact('roles','users'));
     }
 
     /**
@@ -34,7 +34,7 @@ class RoleController extends Controller
     {
         $users = $request->user();
         $permissions = Permission::all();
-        return view('admin.roles.create' , compact('permissions','users'));
+        return view('manager.roles.create' , compact('permissions','users'));
     }
 
     /**
@@ -83,7 +83,7 @@ class RoleController extends Controller
     public function show(Role $role, Request $request)
     {
         $users = $request->user();
-        return view('admin.roles.show', compact('role','users'));
+        return view('manager.roles.show', compact('role','users'));
     }
 
     /**
@@ -96,7 +96,7 @@ class RoleController extends Controller
     {
         $users = $request->user();
         $permissions = Permission::all();
-        return view('admin.roles.edit' , compact('role' ,'permissions','users'));
+        return view('manager.roles.edit' , compact('role' ,'permissions','users'));
     }
 
     /**

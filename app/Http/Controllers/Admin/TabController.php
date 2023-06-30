@@ -21,7 +21,7 @@ class TabController extends Controller
     {
         $users = $request->user();
         $tabs = Tab::latest()->paginate(50);
-        return view('admin.tabs.index', compact('tabs','users'));
+        return view('manager.tabs.index', compact('tabs','users'));
     }
 
     /**
@@ -32,7 +32,7 @@ class TabController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.tabs.create' , compact('users'));
+        return view('manager.tabs.create' , compact('users'));
     }
 
     /**
@@ -87,7 +87,7 @@ class TabController extends Controller
     public function edit(Tab $tab, Request $request)
     {
         $users = $request->user();
-        return view('admin.tabs.edit' , compact('tab','users'));
+        return view('manager.tabs.edit' , compact('tab','users'));
     }
 
     /**

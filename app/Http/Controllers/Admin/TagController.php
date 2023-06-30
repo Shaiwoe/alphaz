@@ -19,7 +19,7 @@ class TagController extends Controller
     {
         $users = $request->user();
         $tags = Tag::latest()->paginate(50);
-        return view('admin.tags.index', compact('tags','users'));
+        return view('manager.tags.index', compact('tags','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class TagController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.tags.create' , compact('users'));
+        return view('manager.tags.create' , compact('users'));
     }
 
     /**
@@ -74,7 +74,7 @@ class TagController extends Controller
     public function show(Tag $tag, Request $request)
     {
         $users = $request->user();
-        return view('admin.tags.show' , compact('tag', 'users'));
+        return view('manager.tags.show' , compact('tag', 'users'));
     }
 
     /**
@@ -86,7 +86,7 @@ class TagController extends Controller
     public function edit(Tag $tag, Request $request)
     {
         $users = $request->user();
-        return view('admin.tags.edit' , compact('tag','users'));
+        return view('manager.tags.edit' , compact('tag','users'));
     }
 
     /**

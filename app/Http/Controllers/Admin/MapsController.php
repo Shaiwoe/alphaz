@@ -11,6 +11,6 @@ class MapsController extends Controller
     {
         $users = $request->user();
 
-        return view('admin.maps', compact('users'));
+        return view('manager.maps', compact('users'));
     }
 }

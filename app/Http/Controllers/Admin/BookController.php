@@ -21,7 +21,7 @@ class BookController extends Controller
         $users = $request->user();
 
         $books = Book::latest()->paginate(20);
-        return view('admin.books.index', compact('books','users'));
+        return view('manager.books.index', compact('books','users'));
     }
 
     /**
@@ -33,7 +33,7 @@ class BookController extends Controller
     {
         $users = $request->user();
         $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
-        return view('admin.books.create' , compact('cateborys','users'));
+        return view('manager.books.create' , compact('cateborys','users'));
     }
 
     /**
@@ -112,7 +112,7 @@ class BookController extends Controller
     {
         $users = $request->user();
         $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
-        return view('admin.books.edit' , compact('book' , 'cateborys','users'));
+        return view('manager.books.edit' , compact('book' , 'cateborys','users'));
     }
 
     /**

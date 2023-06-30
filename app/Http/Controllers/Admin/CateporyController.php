@@ -18,7 +18,7 @@ class CateporyController extends Controller
     {
         $users = $request->user();
         $cateporys = Catepory::latest()->paginate(100);
-        return view('admin.cateporys.index', compact('cateporys','users'));
+        return view('manager.cateporys.index', compact('cateporys','users'));
     }
 
     /**
@@ -31,7 +31,7 @@ class CateporyController extends Controller
         $users = $request->user();
         $cateporys = Catepory::all();
 
-        return view('admin.cateporys.create', compact('cateporys','users'));
+        return view('manager.cateporys.create', compact('cateporys','users'));
     }
 
     /**
@@ -78,7 +78,7 @@ class CateporyController extends Controller
     public function show(Catepory $catepory, Request $request)
     {
         $users = $request->user();
-        return view('admin.cateporys.show', compact('catepory', 'users'));
+        return view('manager.cateporys.show', compact('catepory', 'users'));
     }
 
     /**
@@ -91,7 +91,7 @@ class CateporyController extends Controller
     {
         $users = $request->user();
         $cateporys = Catepory::where('parent_id', 0)->get();
-        return view('admin.cateporys.edit', compact('catepory', 'cateporys', 'users'));
+        return view('manager.cateporys.edit', compact('catepory', 'cateporys', 'users'));
     }
 
     /**

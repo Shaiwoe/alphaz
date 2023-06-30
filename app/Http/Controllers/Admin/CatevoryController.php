@@ -18,7 +18,7 @@ class CatevoryController extends Controller
     {
         $users = $request->user();
         $catevorys = Catevory::latest()->paginate(100);
-        return view('admin.catevorys.index', compact('catevorys','users'));
+        return view('manager.catevorys.index', compact('catevorys','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class CatevoryController extends Controller
     {
         $users = $request->user();
         $catevorys = Catevory::where('parent_id', 0)->get();
-        return view('admin.catevorys.create', compact('catevorys', 'users'));
+        return view('manager.catevorys.create', compact('catevorys', 'users'));
     }
 
     /**
@@ -77,7 +77,7 @@ class CatevoryController extends Controller
     public function show(Catevory $catevory , Request $request)
     {
         $users = $request->user();
-        return view('admin.catevorys.show', compact('catevory','users'));
+        return view('manager.catevorys.show', compact('catevory','users'));
     }
 
     /**
@@ -90,7 +90,7 @@ class CatevoryController extends Controller
     {
         $users = $request->user();
         $catevorys = Catevory::where('parent_id', 0)->get();
-        return view('admin.catevorys.edit', compact('catevory', 'catevorys', 'users'));
+        return view('manager.catevorys.edit', compact('catevory', 'catevorys', 'users'));
     }
 
     /**

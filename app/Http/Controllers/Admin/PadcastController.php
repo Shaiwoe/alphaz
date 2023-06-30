@@ -20,7 +20,7 @@ class PadcastController extends Controller
 
         $users = $request->user();
         $padcasts = Padcast::latest()->paginate(20);
-        return view('admin.padcasts.index', compact('padcasts', 'users'));
+        return view('manager.padcasts.index', compact('padcasts', 'users'));
     }
 
     /**
@@ -33,7 +33,7 @@ class PadcastController extends Controller
         $users = $request->user();
         $cateporys = Catepory::all();
 
-        return view('admin.padcasts.create' , compact('cateporys','users'));
+        return view('manager.padcasts.create' , compact('cateporys','users'));
     }
 
     /**
@@ -113,7 +113,7 @@ class PadcastController extends Controller
     {
         $users = $request->user();
         $cateporys = Catepory::where('parent_id', '!=' , 0)->get();
-        return view('admin.padcasts.edit' , compact('padcast' , 'cateporys', 'users'));
+        return view('manager.padcasts.edit' , compact('padcast' , 'cateporys', 'users'));
     }
 
     /**

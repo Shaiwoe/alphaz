@@ -21,7 +21,7 @@ class PermissionController extends Controller
 
         $users = $request->user();
         $permissions = Permission::latest()->paginate(50);
-        return view('admin.permissions.index', compact('permissions', 'users'));
+        return view('manager.permissions.index', compact('permissions', 'users'));
     }
 
     /**
@@ -32,7 +32,7 @@ class PermissionController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.permissions.create', compact('users'));
+        return view('manager.permissions.create', compact('users'));
     }
 
     /**
@@ -77,7 +77,7 @@ class PermissionController extends Controller
     public function show(Permission $permission , Request $request)
     {
         $users = $request->user();
-        return view('admin.permissions.create', compact('users'));
+        return view('manager.permissions.create', compact('users'));
     }
 
     /**
@@ -89,7 +89,7 @@ class PermissionController extends Controller
     public function edit(Permission $permission, Request $request)
     {
         $users = $request->user();
-        return view('admin.permissions.edit' , compact('permission','users'));
+        return view('manager.permissions.edit' , compact('permission','users'));
     }
 
     /**

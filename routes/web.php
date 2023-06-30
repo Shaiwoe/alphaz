@@ -156,7 +156,7 @@ Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
 
 
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
-    Route::get('/managers', [ManagerController::class, 'index'])->middleware(['permission:Manager'])->name('manager');
+    Route::get('/managers', [ManagerController::class, 'index'])->middleware(['permission:Manager'])->name('managers');
     Route::resource('categories', CategoryController::class)->middleware(['permission:New']);
     Route::resource('cateporys', CateporyController::class)->middleware(['permission:Padcast']);
     Route::resource('catevorys', CatevoryController::class)->middleware(['permission:Video']);

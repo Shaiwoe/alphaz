@@ -18,7 +18,7 @@ class CateboryController extends Controller
     {
         $users = $request->user();
         $cateborys = Catebory::latest()->paginate(100);
-        return view('admin.cateborys.index', compact('cateborys','users'));
+        return view('manager.cateborys.index', compact('cateborys','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class CateboryController extends Controller
     {
         $users = $request->user();
         $cateborys = Catebory::where('parent_id', 0)->get();
-        return view('admin.cateborys.create', compact('cateborys', 'users'));
+        return view('manager.cateborys.create', compact('cateborys', 'users'));
     }
 
     /**
@@ -77,7 +77,7 @@ class CateboryController extends Controller
     public function show(Catebory $catebory, Request $request)
     {
         $users = $request->user();
-        return view('admin.cateborys.show', compact('catebory','users'));
+        return view('manager.cateborys.show', compact('catebory','users'));
     }
 
     /**
@@ -90,7 +90,7 @@ class CateboryController extends Controller
     {
         $users = $request->user();
         $cateborys = Catebory::where('parent_id', 0)->get();
-        return view('admin.cateborys.edit', compact('catebory', 'cateborys', 'users'));
+        return view('manager.cateborys.edit', compact('catebory', 'cateborys', 'users'));
     }
 
     /**

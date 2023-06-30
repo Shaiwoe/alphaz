@@ -20,7 +20,7 @@ class VideoController extends Controller
         $users = $request->user();
 
         $videos = Video::latest()->paginate(20);
-        return view('admin.videos.index', compact('videos','users'));
+        return view('manager.videos.index', compact('videos','users'));
     }
 
     /**
@@ -32,7 +32,7 @@ class VideoController extends Controller
     {
         $users = $request->user();
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
-        return view('admin.videos.create', compact('catevorys','users'));
+        return view('manager.videos.create', compact('catevorys','users'));
     }
 
     /**
@@ -106,7 +106,7 @@ class VideoController extends Controller
     public function show(Video $video, Request $request)
     {
         $users = $request->user();
-        return view('admin.videos.index', compact('users'));
+        return view('manager.videos.index', compact('users'));
     }
 
     /**
@@ -120,7 +120,7 @@ class VideoController extends Controller
         $users = $request->user();
 
         $catevorys = Catevory::where('parent_id', '!=', 0)->get();
-        return view('admin.videos.edit', compact('video', 'catevorys','users'));
+        return view('manager.videos.edit', compact('video', 'catevorys','users'));
     }
 
     /**

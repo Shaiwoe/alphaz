@@ -18,7 +18,7 @@ class WebinarController extends Controller
     {
         $users = $request->user();
         $webinars = Webinar::latest()->search()->paginate(20);
-        return view('admin.webinars.index', compact('webinars','users'));
+        return view('manager.webinars.index', compact('webinars','users'));
     }
 
     /**
@@ -29,7 +29,7 @@ class WebinarController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.webinars.create' , compact('users'));
+        return view('manager.webinars.create' , compact('users'));
     }
 
     /**
@@ -92,7 +92,7 @@ class WebinarController extends Controller
     {
         $users = $request->user();
         $webinars = Webinar::orderBy('updated_at', 'desc')->where('is_active', 1)->take(8)->get();
-        return view('admin.webinar', compact('users' , 'webinars'));
+        return view('manager.webinar', compact('users' , 'webinars'));
     }
 
     /**
@@ -105,7 +105,7 @@ class WebinarController extends Controller
     {
         $users = $request->user();
 
-        return view('admin.webinars.edit' , compact('webinar' , 'users'));
+        return view('manager.webinars.edit' , compact('webinar' , 'users'));
     }
 
     /**

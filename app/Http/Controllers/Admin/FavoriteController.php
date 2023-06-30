@@ -17,6 +17,6 @@ class FavoriteController extends Controller
         $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
         $videos = Video::orderBy('updated_at', 'desc')->where('is_active', 1)->take(4)->get();
 
-        return view('admin.favorite', compact('users', 'articles', 'videos', 'padcasts'));
+        return view('manager.favorite', compact('users', 'articles', 'videos', 'padcasts'));
     }
 }

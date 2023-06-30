@@ -20,7 +20,7 @@ class BannerController extends Controller
         $users = $request->user();
 
         $banners = Banner::latest()->paginate(20);
-        return view('admin.banners.index', compact('banners','users'));
+        return view('manager.banners.index', compact('banners','users'));
     }
 
     /**
@@ -31,7 +31,7 @@ class BannerController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.banners.create', compact('users'));
+        return view('manager.banners.create', compact('users'));
     }
 
     /**
@@ -88,7 +88,7 @@ class BannerController extends Controller
     public function show(Banner $banner, Request $request)
     {
         $users = $request->user();
-        return view('admin.banners.show', compact('users'));
+        return view('manager.banners.show', compact('users'));
 
     }
 
@@ -101,7 +101,7 @@ class BannerController extends Controller
     public function edit(Banner $banner, Request $request)
     {
         $users = $request->user();
-        return view('admin.banners.edit' , compact('banner','users'));
+        return view('manager.banners.edit' , compact('banner','users'));
     }
 
     /**

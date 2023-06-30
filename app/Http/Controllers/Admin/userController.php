@@ -18,7 +18,7 @@ class userController extends Controller
 
         $userr = User::latest()->search()->paginate(20);
 
-        return view('admin.users.index' , compact('userr','users'));
+        return view('manager.users.index' , compact('userr','users'));
     }
 
     public function edit(User $user, Request $request)
@@ -26,7 +26,7 @@ class userController extends Controller
         $users = $request->user();
         $roles = Role::all();
         $permissions = Permission::all();
-        return view('admin.users.edit' , compact('user' , 'roles' , 'permissions', 'users'));
+        return view('manager.users.edit' , compact('user' , 'roles' , 'permissions', 'users'));
 
     }
 

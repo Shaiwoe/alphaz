@@ -19,6 +19,7 @@
                 </div>
 
                 <ul class="flex flex-col text-white dark:text-zinc-900 mt-8 space-y-4 text-sm w-full px-3">
+
                     <li
                         class="flex items-center gap-4 dark:text-zinc-900 hover:bg-purple2 dark:hover:bg-slate-300 border border-white dark:border-zinc-900 rounded-full p-2">
                         <svg class="sm:h-5 sm:w-5 mr-3" viewBox="0 0 18 18">
@@ -152,23 +153,26 @@
                         </x-dropdown-link>
                     </form>
 
-
-
-
-
-
                 </ul>
 
                 <a href="{{ route('maps') }}" class="text-sm text-white my-3 dark:text-zinc-900">1.2.2 ver</a>
-            </div>
-            {{-- <div class="flex flex-col gap-3 absolute bottom-1 p-2">
 
-            <a href="/dashboard/profile"
-                class="flex text-white  items-center gap-4 py-4 px-4 border-t border-gray-600 w-full">
-                <image class="w-8" src="/image/profile2.png" alt="">
-                پروفایل
-            </a>
-        </div> --}}
+
+                @can('Admins')
+                    <a href="{{ route('managers') }}" class="text-sm text-white my-3 dark:text-zinc-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+                        </svg>
+
+                    </a>
+                @endcan
+
+
+
+            </div>
+
 
         </div>
     </div>

@@ -11,6 +11,6 @@ class QuestionController extends Controller
     {
         $users = $request->user();
 
-        return view('admin.question', compact('users'));
+        return view('manager.question', compact('users'));
     }
 }

@@ -18,7 +18,7 @@ class CommentController extends Controller
         $users = $request->user();
 
         $comments = Comment::latest()->paginate(20);
-        return view('admin.comments.index', compact('comments', 'users'));
+        return view('manager.comments.index', compact('comments', 'users'));
     }
 
     /**
@@ -51,7 +51,7 @@ class CommentController extends Controller
     public function show(Comment $comment, Request $request)
     {
         $users = $request->user();
-        return view('admin.comments.show', compact('comment', 'users'));
+        return view('manager.comments.show', compact('comment', 'users'));
     }
 
     /**

@@ -19,7 +19,7 @@ class TavController extends Controller
     {
         $users = $request->user();
         $tavs = Tav::latest()->paginate(50);
-        return view('admin.tavs.index', compact('tavs','users'));
+        return view('manager.tavs.index', compact('tavs','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class TavController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.tavs.create' , compact('users'));
+        return view('manager.tavs.create' , compact('users'));
     }
 
     /**
@@ -85,7 +85,7 @@ class TavController extends Controller
     public function edit(Tav $tav, Request $request)
     {
         $users = $request->user();
-        return view('admin.tavs.edit' , compact('tav','users'));
+        return view('manager.tavs.edit' , compact('tav','users'));
     }
 
     /**

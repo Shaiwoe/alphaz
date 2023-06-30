@@ -19,6 +19,7 @@
                 </div>
 
                 <ul class="flex flex-col text-white dark:text-zinc-900 mt-8 space-y-4 text-sm w-full px-3">
+                    
                     <li
                         class="flex items-center gap-4 dark:text-zinc-900 hover:bg-purple2 dark:hover:bg-slate-300 border border-white dark:border-zinc-900 rounded-full p-2">
                         <svg class="sm:h-5 sm:w-5 mr-3" viewBox="0 0 18 18">
@@ -27,7 +28,7 @@
                                 transform="translate(-32 -32)" fill="#fff" />
                         </svg>
 
-                        <a href="{{ route('manager') }}">داشبورد</a>
+                        <a href="{{ route('managers') }}">داشبورد</a>
                     </li>
 
 

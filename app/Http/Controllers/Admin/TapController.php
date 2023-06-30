@@ -19,7 +19,7 @@ class TapController extends Controller
     {
         $users = $request->user();
         $taps = Tap::latest()->paginate(50);
-        return view('admin.taps.index', compact('taps','users'));
+        return view('manager.taps.index', compact('taps','users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class TapController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        return view('admin.taps.create' , compact('users'));
+        return view('manager.taps.create' , compact('users'));
     }
 
     /**
@@ -85,7 +85,7 @@ class TapController extends Controller
     public function edit(Tap $tap , Request $request)
     {
         $users = $request->user();
-        return view('admin.taps.edit' , compact('tap','users'));
+        return view('manager.taps.edit' , compact('tap','users'));
     }
 
     /**
