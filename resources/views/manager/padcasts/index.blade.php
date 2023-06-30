@@ -108,7 +108,7 @@
                                             ویرایش
                                         </a>
 
-                                        {{-- <form action="{{ route('padcasts.destroy', ['padcast' => $padcast->id]) }}" method="POST">
+                                        <form action="{{ route('padcasts.destroy', ['padcast' => $padcast->id]) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
 
@@ -116,7 +116,7 @@
                                                 class="flex bg-red text-white px-4 py-2 rounded-3xl">
                                                 حذف
                                             </button>
-                                        </form> --}}
+                                        </form>
 
                                     </td>
 
