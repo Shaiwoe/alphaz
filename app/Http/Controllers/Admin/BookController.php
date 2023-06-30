@@ -46,7 +46,7 @@ class BookController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:book,slug',
+            'slug' => 'required',
             'catebory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
