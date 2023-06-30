@@ -77,8 +77,7 @@
                         @if (Route::has('login'))
                             <div class="flex  rounded-md md:gap-4 items-center">
                                 @auth
-                                    <a href="{{ url('/dashboard') }}"
-                                        class="w-12">
+                                    <a href="{{ url('/dashboard') }}" class="w-12">
                                         <img class="rounded-full" src="/image/profile/18.jpg" alt="profile image">
                                     </a>
                                 @else
@@ -98,8 +97,6 @@
                                             </g>
                                         </svg>
                                     </a>
-
-
 
                                 @endauth
                             </div>
@@ -169,8 +166,7 @@
                                     <li class="">خانه</li>
                                 </a>
                                 <a class="flex gap-6 w-full border-b border-white dark:border-gray-700 text-lg"
-                                    hrefroute('home.coins.index')
-                                    <i class="fa-solid fa-chart-simple"></i>
+                                    hrefroute('home.coins.index') <i class="fa-solid fa-chart-simple"></i>
                                     <li class="">مارکت</li>
                                 </a>
                                 <a class="flex gap-6 w-full border-b border-white dark:border-gray-700 text-lg"

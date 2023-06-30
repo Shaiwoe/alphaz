@@ -50,7 +50,7 @@
         <?php if (request()->has('search')) {?>
         <div class="flex justify-center items-center w-full mt-12">
             <p class="bg-green flex rounded-2xl p-4 text-base mb-4 items-center gap-2 text-white">
-                تعداد {{ $booksCount }} پادکست برای این جستجو پیدا شد
+                تعداد {{ $booksCount }} کتاب برای این جستجو پیدا شد
             </p>
         </div>
         <?php }?>
