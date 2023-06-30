@@ -53,6 +53,6 @@ class WishlistController extends Controller
         $users = $request->user();
 
         $wishlist = Wishlist::where('user_id' , auth()->id())->get();
-        return view('admin.wishlist' , compact('wishlist', 'users'));
+        return view('panel.wishlist' , compact('wishlist', 'users'));
     }
 }
