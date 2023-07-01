@@ -360,7 +360,7 @@
                         </div>
                      </form>
 <script>
-$(document).ready(function() {
+//$(document).ready(function() {
 
 
     $(".avatar_cl").click(function(e) {
@@ -369,7 +369,7 @@ $(document).ready(function() {
 
         $(".avatar_input").attr('value', address);
     });
-});
+//});
 </script>
                     </div>
 
