@@ -368,6 +368,8 @@ $(document).ready(function() {
         address = $(this).attr('src');
 
         $(".avatar_input").val(address);
+
+        $(this).css('border', '1px solid #00b16a');
     });
 });
 </script>
