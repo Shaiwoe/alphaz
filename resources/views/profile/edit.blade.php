@@ -70,7 +70,11 @@
 
                     </div>
 
+                    @if(!$errors->updatePassword && !session('status'))
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act"
+                    @else
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
+                    @endif
                         data-depth="0" data-idx="0">
 
                         <div class="flex justify-center items-center gap-12 w-full">
