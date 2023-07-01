@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Auth\Google;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -19,8 +20,8 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\StudyController;
 use App\Http\Controllers\Admin\ChartController;
 use App\Http\Controllers\Admin\ScoreController;
-use App\Http\Controllers\Admin\VideoController;
 
+use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Admin\ArticleController;
@@ -190,6 +191,7 @@ Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 
 Route::get('/profile', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['auth', 'verified'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified'])->name('profile.destroy');
+
 
 
 require __DIR__ . '/auth.php';

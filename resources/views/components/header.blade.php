@@ -1,8 +1,16 @@
 <div class="flex">
     <div class=" flex">
+
+
+
+
         <div id="" class=" bg-menu dark:bg-white fixed w-full p-3 z-40">
 
+
+
+
             <div class="mx-auto flex items-center sm:w-full md:w-10/12 xl:w-10/12 xl2:w-10/12">
+
 
                 <div class="flex w-full justify-start gap-3 md:gap-10 items-center z-50 text-white">
                     <div class="hidden md:flex gap-10 text-xs md:text-base text-white dark:text-gray-700">
@@ -81,22 +89,30 @@
                                         <img class="rounded-full" src="/image/profile/18.jpg" alt="profile image">
                                     </a>
                                 @else
-                                    <a href="{{ route('login') }}"
-                                        class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full">
-                                        <svg class="xl:w-7 md:w-5 xl:h-7 md:h-5" xmlns="http://www.w3.org/2000/svg"
-                                            width="18" height="20" viewBox="0 0 18 20">
-                                            <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
-                                                <path class="stroke-white dark:stroke-dark8" id="Path_5803"
-                                                    data-name="Path 5803" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
-                                                    transform="translate(-4 -3)" fill="none" stroke="#fff"
-                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
-                                                    data-name="Ellipse 210" cx="4" cy="4" r="4"
-                                                    transform="translate(4)" fill="none" stroke="#fff"
-                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                            </g>
-                                        </svg>
-                                    </a>
+                                    <!-- Modal toggle -->
+                                    <button data-modal-target="authentication-modal"
+                                        class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full"
+                                        data-modal-toggle="authentication-modal" type="button">
+                                        <a href="{{ route('login') }}">
+                                            <svg class="xl:w-7 md:w-5 xl:h-7 md:h-5" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="20" viewBox="0 0 18 20">
+                                                <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
+                                                    <path class="stroke-white dark:stroke-dark8" id="Path_5803"
+                                                        data-name="Path 5803"
+                                                        d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
+                                                        transform="translate(-4 -3)" fill="none" stroke="#fff"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <circle class="stroke-white dark:stroke-dark8" id="Ellipse_210"
+                                                        data-name="Ellipse 210" cx="4" cy="4"
+                                                        r="4" transform="translate(4)" fill="none"
+                                                        stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </button>
+
 
                                 @endauth
                             </div>
@@ -224,6 +240,8 @@
                     </a>
                 </div>
             </div>
+
+
 
         </div>
     </div>
