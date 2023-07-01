@@ -158,6 +158,7 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
+                                    {{ Auth::user()->avatar }} HI
                                     @if(!empty(Auth::user()->avatar))
                                     <img class="w-6/12 rounded-full" src="{{ Auth::user()->avatar }}" alt="">
                                     @else
