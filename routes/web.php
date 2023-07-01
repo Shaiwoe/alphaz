@@ -53,8 +53,10 @@ use App\Http\Controllers\Home\WishlistBookController;
 use App\Http\Controllers\Home\WishlistVideoController;
 use App\Http\Controllers\Home\CommentPadcastController;
 use App\Http\Controllers\Home\WishlistPadcastController;
+use App\Http\Controllers\Home\TabController as HomeTabController;
 use App\Http\Controllers\Home\TagController as HomeTagController;
 use App\Http\Controllers\Home\TapController as HomeTapController;
+use App\Http\Controllers\Home\TavController as HomeTavController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
 use App\Http\Controllers\Admin\MarketController as AdminMarketController;
@@ -120,11 +122,12 @@ Route::get('/study-book/{book}', [StudyBookController::class, 'add'])->name('hom
 Route::get('/study-romve-book/{book}', [StudyBookController::class, 'remove'])->name('home.studybook.remove');
 
 Route::get('/videos', [HomeVideoController::class, 'index'])->name('home.videos.index');
-Route::get('/tavs/{tav:slug}', [HomeTapController::class, 'show'])->name('home.tavs.show');
+Route::get('/tavs/{tav:slug}', [HomeTavController::class, 'show'])->name('home.tavs.show');
 Route::get('/catevories/{catevory:slug}', [HomeCatevoryController::class, 'show'])->name('home.catevories.show');
 Route::get('/videos/{video:slug}', [HomeVideoController::class, 'show'])->name('home.videos.show');
 
 Route::get('/books', [HomeBookController::class, 'index'])->name('home.books.index');
+Route::get('/tabs/{tab:slug}', [HomeTabController::class, 'show'])->name('home.tabs.show');
 Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('home.books.show');
 Route::get('/catebories/{catebory:slug}', [HomeCateboryController::class, 'show'])->name('home.catebories.show');
 

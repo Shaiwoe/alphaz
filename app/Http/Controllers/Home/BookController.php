@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Home;
 
+use Carbon\Carbon;
 use App\Models\Tab;
 use App\Models\Book;
 use App\Models\Catebory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class BookController extends Controller
@@ -56,17 +58,20 @@ class BookController extends Controller
 
 
 
-        $sevenArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
-        $sexArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
-        $fiveArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
-        $forArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(4)->latest()->get();
-        $threeArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(5)->latest()->get();
-        $twoArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
-        $oneArticle = Book::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
+        $$slider = Book::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get()->toArray();
+        $a = array_shift($slider);
+        $b = array_shift($slider);
+        $c = array_shift($slider);
+        $d = array_shift($slider);
+        $e = array_shift($slider);
+        $f = array_shift($slider);
 
-        $tabs = Tab::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
-        return view('home.books.index', compact('tabs', 'books', 'booksCount', 'bookss', 'booksss', 'bookView', 'bookViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+
+
+        $tabs = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
+
+        return view('home.books.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'tabs', 'books', 'booksCount', 'bookss', 'booksss', 'bookView', 'bookViews'));
     }
 
     public function show(Book $book)
@@ -79,7 +84,7 @@ class BookController extends Controller
         $books = Book::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $book->increment('viewCount');
         $cateborys = Catebory::all();
-        $tabs = Tab::all();
+        $tabs = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
         return view('home.books.show', compact('book', 'books', 'tabs', 'cateborys', 'prev', 'next'));
     }
 }
