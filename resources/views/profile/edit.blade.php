@@ -378,7 +378,7 @@
                             });
                         </script>
                     </div>
-
+{{ print_r($errors->updatePassword) }}
                     @if($errors->updatePassword)
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act" data-depth="0" data-idx="3">
                     @else
