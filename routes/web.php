@@ -128,7 +128,7 @@ Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('hom
 Route::get('/catebories/{catebory:slug}', [HomeCateboryController::class, 'show'])->name('home.catebories.show');
 
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
-Route::get('/taps/{tap:slug}', [HomeTapController::class, 'show'])->name('home.tags.show');
+Route::get('/taps/{tap:slug}', [HomeTapController::class, 'show'])->name('home.taps.show');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');
 Route::get('/catepories/{catepory:slug}', [HomeCateporyController::class, 'show'])->name('home.catepories.show');
 
