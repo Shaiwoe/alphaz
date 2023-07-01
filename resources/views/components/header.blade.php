@@ -87,10 +87,10 @@
                                 @auth
                                     <a href="{{ url('/dashboard') }}" >
                                         @if (Auth::user()->avatar)
-                                            <img class="w-13 rounded-full" src="{{ Auth::user()->avatar }}"
+                                            <img class="w-12 rounded-full" src="{{ Auth::user()->avatar }}"
                                                 alt="">
                                         @else
-                                            <img class="w-13 rounded-full" src="/image/profile/18.jpg" alt="">
+                                            <img class="w-12 rounded-full" src="/image/profile/18.jpg" alt="">
                                         @endif
                                     </a>
                                 @else
