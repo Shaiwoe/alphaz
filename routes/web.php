@@ -197,6 +197,7 @@ Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 
 Route::get('/profile', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified'])->name('profile.destroy');
+Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth'])->name('profile.avatar');
 
 
 
