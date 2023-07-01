@@ -69,7 +69,7 @@
                     <div class="hover-img">
                         <a href="" class="flex justify-end w-full  z-20">
                             <img class="image"
-                                src="{{ asset(env('PADCASAT_IMAGES_UPLOAD_PATH') . $a['image']) }}"
+                                src="{{ asset(env('PADCAST_IMAGES_UPLOAD_PATH') . $a['image']) }}"
                                 alt="">
                         </a>
                         <div class="middle space-y-2 lg:space-y-8">
