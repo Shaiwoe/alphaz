@@ -254,19 +254,7 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="flex">
-                    <div class="flex w-full justify-between mt-14 mb-3">
-
-                        <a href="{{ $articles->nextPageUrl() }}"
-                            class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه بعد</a>
-
-                        {{ $articles->onEachSide(0)->links('vendor.pagination.tailwind') }}
-
-                        <a href="{{ $articles->previousPageUrl() }}"
-                            class="bg-green p-3 rounded-full mx-3 sm:hidden md:block text-white"> صفحه قبل</a>
-
-                    </div>
-                </div>
+                
 
             </div>
 
