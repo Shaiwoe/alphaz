@@ -580,7 +580,7 @@
                     <div class="hidden " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
-                            @foreach ($articleViews as $viewASC)
+                            @foreach ($padcastViews as $viewASC)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.padcasts.show', ['padcast' => $viewASC->slug]) }}">
