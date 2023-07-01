@@ -58,7 +58,7 @@ class BookController extends Controller
 
 
 
-        $$slider = Book::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get()->toArray();
+        $slider = Book::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get()->toArray();
         $a = array_shift($slider);
         $b = array_shift($slider);
         $c = array_shift($slider);
