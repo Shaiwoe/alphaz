@@ -237,7 +237,7 @@
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
                         data-depth="0" data-idx="2">
                         
-                     <form method="post" action="{{ route('profile.update') }}" class="p-12 flex flex-col w-full gap-8">
+                     <form method="post" action="{{ route('profile.avatar') }}" class="p-12 flex flex-col w-full gap-8">
                         @csrf
                         @method('patch')
 
