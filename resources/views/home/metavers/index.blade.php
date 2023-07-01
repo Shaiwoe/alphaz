@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="bg-indigo-1 dark:bg-white1">
+<body class="bg-indigo-1 dark:bg-white1 min-h-screen overflow-hidden">
 
 
     {{-- header  --}}
@@ -49,137 +49,18 @@
     </div>
 
 
-    <div class="sm:p-8 sm:w-full lg:w-10/12 xl:w-10/12 xl2:w-9/12 mx-auto p-4 z-20">
-        <div class="flex flex-col lg:flex-row w-full mt-32 lg:mt-32 z-20 relative text-white items-center justify-between  space-y-10">
-
-            <div class="w-full lg:w-6/12  space-y-10 relative text-white dark:text-gray-700">
-
-                <p class="lg:text-4xl text-2xl z-20 flex justify-center">نمای بازار متاورس</p>
-                <p class="hidden lg:block z-20">در این صفحه می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و
-                    با
-                    مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید. در این صفحه
-                    می‌توانید به صورت لحظه‌ای از آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و با مقایسه قیمت ارزهای
-                    دیجیتال
-                    مختلف اقدام به خرید و فروش ارز دیجیتال مورد نظر خود نمایید.در این صفحه می‌توانید به صورت لحظه‌ای از
-                    آخرین قیمت ارز دیجیتال محبوبتان آگاه شوید و با مقایسه قیمت ارزهای دیجیتال مختلف اقدام به خرید و فروش
-                    ارز
-                    دیجیتال مورد نظر خود نمایید.
-                </p>
-            </div>
-
-            <div id="ex1" class="w-full  flex relative">
-                <div class="flex w-full justify-end">
-                    <img class="w-full" src="/image/meta1.png" alt="">
-                </div>
-
-                <div>
-                    <img  class="w-4/12 lg:w-3/12 absolute top-[13%]  right-[20%]" src="/image/meta2.png" alt="">
-                </div>
-            </div>
 
 
+    <div class="flex  w-full justify-center items-center gap-12 h-screen">
+
+        <div class="  text-white dark:text-gray-600 mt-12 flex flex-col justify-center items-center z-40 space-y-8">
+            <h1 class="text-5xl">سایت در حال بروزرسانی</h1>
+            <p class="text-2xl text-gray-400">منتظر خبرهای خوب باشید</p>
         </div>
 
+        <img class="w-7/12" src="/image/meta1.png" alt="">
 
-
-
-        <div class="flex flex-col mt-20 lg:mt-32 space-y-10 z-20">
-
-            <div id="coinBox" class="w-full bg-coin1 flex p-2 lg:p-8 z-20 relative h-full">
-                <div class="relative overflow-x-auto w-full sm:rounded-lg">
-
-                    <table class="w-full  text-right text-gray-500">
-                        <thead class=" text-sm text-gray-200 dark:text-gray-800 uppercase ">
-                            <tr>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
-                                    نام ارز
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
-                                    قیمت تتر
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
-                                    1h %
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
-                                    24h %
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
-                                    7d %
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3  ">
-                                    ارزش بازار
-                                </th>
-
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3 font-sans ">
-                                    Volume(24h)
-                                </th>
-
-                                <th scope="col" class="text-xs lg:text-base px-4 py-3">
-                                    نمودار
-                                </th>
-                                <th scope="col" class="text-xs lg:text-base flex justify-end px-4 py-3 ">
-                                    توضیحات بیشتر
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($coins as $coin)
-                                <tr class=" border-b border-gray-600 dark:border-gray-400 items-center">
-
-                                    <td class="flex gap-1 lg:gap-2 items-center lg:px-4 py-4 mt-2 text-gray-200 text-base">
-                                        <a href="">
-                                            <img class="rounded-full w-7 lg:w-9 "
-                                                src="{{ asset(env('METAVERS_IMAGES_UPLOAD_PATH') . $coin->icon) }}"
-                                                alt="">
-                                        </a>
-                                        <p class="text-xs lg:text-base text-gray-200 dark:text-gray-700">{{ $coin->name }}</p>
-                                    </td>
-
-                                    <td class="px-4 py-4 text-green-400">
-                                        {{ number_format($coin->quote->USD->price, 2) }}
-                                    </td>
-                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700 ">
-                                        {{ number_format($coin->quote->USD->percent_change_1h, 2) }}
-                                    </td>
-                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
-                                        {{ number_format($coin->quote->USD->percent_change_24h, 2) }}
-                                    </td>
-                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
-                                        {{ number_format($coin->quote->USD->percent_change_7d, 2) }}
-                                    </td>
-                                    <th class="px-4 py-4 text-gray-300 dark:text-gray-700">
-                                        {{ number_format($coin->quote->USD->market_cap, 3) }}
-                                    </th>
-
-                                    <td class="px-4 py-4 text-gray-300 dark:text-gray-700">
-                                        {{ number_format($coin->quote->USD->volume_24h, 3) }}
-                                    </td>
-                                    <td class="px-4 py-4">
-                                        <img src="/image/chart.png" alt="">
-                                    </td>
-                                    <td class="flex justify-end px-4 py-4 text-center">
-                                        <a href="{{ route('home.metavers.show', ['metavers' => $coin->id, 'slug' => $coin->slug]) }}"
-                                            class="flex gap-2 text-white bg-green py-2 px-4 rounded-full  text-xs items-center">
-                                            مشاهده بیشتر
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </div>
     </div>
-
-
 
 
 

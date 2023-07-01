@@ -56,7 +56,7 @@
                 ارز دیجیتال
             </div>
 
-            <a href="" data-tooltip-target="tooltip-no-arrow12"
+            <a href="{{ route('home.metavers.index') }}" data-tooltip-target="tooltip-no-arrow12"
                 data-tooltip-placement="left" type="button">
                 <svg class="xl:w-8 md:w-6 xl:h-8 md:h-6" x="0"
                     y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
@@ -232,7 +232,7 @@
                 پادکست ها
             </div>
 
-            
+
 
         </div>
     </div>
