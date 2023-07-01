@@ -30,9 +30,6 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request)
     {
-        print_r($request->validated());
-        echo 'OK';
-        print_r($_POST);exit;
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
