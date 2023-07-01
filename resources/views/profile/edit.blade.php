@@ -365,7 +365,7 @@ $(document).ready(function() {
 
 
     $(".avatar_cl").click(function(e) {
-
+        alert($(this).attr('src'));
         address = $(this).attr('src');
 
         $(".avatar_input").attr('value', address);
