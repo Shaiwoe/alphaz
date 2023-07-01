@@ -280,10 +280,10 @@
 
 
                         @php
-                            $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
+                            $parentCatevorys = App\Models\Catevory::where('parent_id', 0)->get();
                         @endphp
 
-                        @foreach ($parentCategorys as $parentCategory)
+                        @foreach ($parentCatevorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-20">
 
                                 <?php
