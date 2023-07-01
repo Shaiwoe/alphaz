@@ -117,11 +117,11 @@
                                     </div>
 
                                     <div>
-                                        <x-input-label for="chellphone" :value="__('شماره همراه ')" />
-                                        <x-text-input id="chellphone" name="chellphone" type="text"
-                                            class="mt-1 block w-full" :value="old('chellphone', $user->chellphone)" required autofocus
-                                            autocomplete="chellphone" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('chellphone')" />
+                                        <x-input-label for="cellphone" :value="__('شماره همراه ')" />
+                                        <x-text-input id="cellphone" name="cellphone" type="text"
+                                            class="mt-1 block w-full" :value="old('cellphone', $user->cellphone)" required autofocus
+                                            autocomplete="cellphone" />
+                                        <x-input-error class="mt-2" :messages="$errors->get('cellphone')" />
                                     </div>
 
                                     <div>
