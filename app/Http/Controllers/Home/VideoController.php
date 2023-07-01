@@ -8,6 +8,7 @@ use App\Models\Catevory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Stevebauman\Location\Facades\Location;
 
 class VideoController extends Controller
 {
@@ -75,12 +76,14 @@ class VideoController extends Controller
 
     public function show(Video $video)
     {
-
+        $ip = request()->ip();
+        $location = Location::get($ip);
+        
         $prev = Video::find($video->id - 1);
         $next = Video::find($video->id + 1);
         $videos = Video::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $video->increment('viewCount');
         $catevorys = Catevory::all();
-        return view('home.videos.show', compact('video', 'videos', 'catevorys', 'prev', 'next'));
+        return view('home.videos.show', compact('video', 'videos', 'catevorys', 'prev', 'next', 'location'));
     }
 }
