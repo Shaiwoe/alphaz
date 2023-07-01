@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Home;
 
+use Carbon\Carbon;
 use App\Models\Tap;
 use App\Models\Padcast;
 use App\Models\Catepory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class PadcastController extends Controller
@@ -55,17 +57,18 @@ class PadcastController extends Controller
 
 
 
-        $sevenArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
-        $sexArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
-        $fiveArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
-        $forArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(4)->latest()->get();
-        $threeArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(5)->latest()->get();
-        $twoArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
-        $oneArticle = Padcast::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
+        $slider = Padcast::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount', 'desc')->take(6)->get()->toArray();
+        $a = array_shift($slider);
+        $b = array_shift($slider);
+        $c = array_shift($slider);
+        $d = array_shift($slider);
+        $e = array_shift($slider);
+        $f = array_shift($slider);
 
-        $taps = Tap::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
 
-        return view('home.padcasts.index', compact('taps', 'padcasts', 'padcastCount', 'padcastss', 'padcastsss', 'padcastView', 'padcastViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        $taps = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
+
+        return view('home.padcasts.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'taps', 'padcasts', 'padcastCount', 'padcastss', 'padcastsss', 'padcastView', 'padcastViews'));
     }
 
     public function show(Padcast $padcast)
@@ -78,7 +81,7 @@ class PadcastController extends Controller
         $padcasts = Padcast::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $padcast->increment('viewCount');
         $cateporys = Catepory::all();
-        $taps = Tap::all();
-        return view('home.padcasts.show', compact('padcast' , 'padcasts' , 'cateporys' , 'taps' , 'prev', 'next'));
+        $taps = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
+        return view('home.padcasts.show', compact('padcast', 'padcasts', 'cateporys', 'taps', 'prev', 'next'));
     }
 }
