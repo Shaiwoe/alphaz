@@ -219,7 +219,7 @@
 
 
 
-                                    <a href="{{ url( $book->pdf ) }}"
+                                    <a href="{{ url(env('BOOK_PDF_UPLOAD_PATH') . $book->pdf) }}"
 
                                         class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
                                         دانلود مستقیم کتاب
