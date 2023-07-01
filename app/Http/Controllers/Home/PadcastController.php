@@ -66,7 +66,7 @@ class PadcastController extends Controller
         $f = array_shift($slider);
 
 
-        $taps = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
+        $taps = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join padcast_taps b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
 
         return view('home.padcasts.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'taps', 'padcasts', 'padcastCount', 'padcastss', 'padcastsss', 'padcastView', 'padcastViews'));
     }
