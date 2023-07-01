@@ -373,9 +373,11 @@ $(document).ready(function() {
 </script>
                     </div>
 
-                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
-                        data-depth="0" data-idx="3">
-
+                    @if($errors->updatePassword || session('status'))
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act" data-depth="0" data-idx="3">
+                    @else
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="3">
+                    @endif
                         <div class="flex justify-center items-center gap-12 w-full">
 
                             <div class="flex w-full justify-start">
