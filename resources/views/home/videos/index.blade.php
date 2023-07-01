@@ -283,7 +283,7 @@
                             $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
                         @endphp
 
-                        @foreach ($parentCategorys as $parentCategory)
+                        @foreach ($parentCategorys as $parentCatevory)
                             <div class="sidenav p-1 m-2 z-20">
 
                                 <?php
