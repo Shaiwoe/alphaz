@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use Carbon\Carbon;
 use App\Models\Video;
 use App\Models\Catevory;
 use Illuminate\Http\Request;
@@ -50,16 +51,16 @@ class VideoController extends Controller
 
 
 
-        $sevenArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(1)->latest()->get();
-        $sexArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(2)->latest()->get();
-        $fiveArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(3)->latest()->get();
-        $forArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(4)->latest()->get();
-        $threeArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(5)->latest()->get();
-        $twoArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(6)->latest()->get();
-        $oneArticle = Video::orderBy('created_at', 'desc')->where('is_active', 1)->take(1)->skip(7)->latest()->get();
+            $slider = Video::where('created_at', '>=', Carbon::now()->subDays(360)->toDateTimeString())->orderBy('viewCount' , 'desc')->take(6)->get()->toArray();
+            $a = array_shift($slider);
+            $b = array_shift($slider);
+            $c = array_shift($slider);
+            $d = array_shift($slider);
+            $e = array_shift($slider);
+            $f = array_shift($slider);
 
 
-        return view('home.videos.index', compact('videos', 'videoss', 'videosss', 'videoView', 'videoViews', 'sevenArticle', 'sexArticle', 'forArticle', 'fiveArticle', 'threeArticle', 'twoArticle', 'oneArticle'));
+        return view('home.videos.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' ,'videos', 'videoss', 'videosss', 'videoView', 'videoViews'));
     }
 
     public function show(Video $video)

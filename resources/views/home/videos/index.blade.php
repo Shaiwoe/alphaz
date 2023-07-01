@@ -61,7 +61,7 @@
 
 
 
-        {{-- slide top  --}}
+        <?php if (!request()->has('search')) {?>
         {{-- slide top  --}}
         <div class="flex flex-col w-full items-center gap-4 lg:gap-8 mt-8 lg:mt-20">
 
@@ -72,22 +72,53 @@
 
             <div class="w-10/12 grid grid-rows-3 grid-flow-col gap-0 z-20 relative overflow-hidden rounded-3xl">
 
-                @foreach ($sevenArticle as $sevenArticles)
-                    <div class="row-span-2 col-span-2">
+
+                <div class="row-span-2 col-span-2">
+                    <div class="hover-img">
+                        <a href="" class="flex justify-end w-full  z-20">
+                            <img class="image"
+                                src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $a['image']) }}"
+                                alt="">
+                        </a>
+                        <div class="middle space-y-2 lg:space-y-8">
+                            <div class="text10 text-xs lg:text-xl font-bold">
+                                {{ Str::limit($a['title'], 40) }}</div>
+                            <div class="text10 text-xs lg:text-sm">
+                                {{ Str::limit($a['description'], 80) }}
+                            </div>
+                            <div class="text10">
+                                <a href="{{ route('home.videos.show', ['video' => $a['slug']]) }}"
+                                    class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                    مشاهده مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                @if ($b)
+                    <div class="col-span-1">
                         <div class="hover-img">
-                            <a href="" class="flex justify-end w-full  z-20">
-                                <img class="image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $sevenArticles->image) }}"
+                            <a href="" class="flex justify-end w-full z-20">
+                                <img class=" image"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $b['image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($sevenArticles->title, 40) }}</div>
-                                <div class="text10 text-xs lg:text-sm">
-                                    {{ Str::limit($sevenArticles->description, 80) }}
+                                    {{ Str::limit($b['title'], 40) }}
                                 </div>
+
                                 <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $sevenArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $b['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                             class="w-4 h-4">
@@ -100,53 +131,25 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
 
 
-                @foreach ($sexArticle as $sexArticles)
+
+                @if ($c)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $sexArticles->image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $c['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($sexArticles->title, 40) }}
+                                    {{ Str::limit($c['title'], 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $sexArticles->slug]) }}"
-                                        class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
-                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                            class="w-4 h-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                        </svg>
-                                        مشاهده مقاله
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-                @foreach ($fiveArticle as $fiveArticles)
-                    <div class="col-span-1">
-                        <div class="hover-img">
-                            <a href="" class="flex justify-end w-full z-20">
-                                <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $fiveArticles->image) }}"
-                                    alt="">
-                            </a>
-                            <div class="middle space-y-2 lg:space-y-8">
-                                <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($fiveArticles->title, 40) }}
-                                </div>
-
-                                <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $fiveArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $c['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -159,22 +162,23 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
 
-                @foreach ($forArticle as $forArticles)
+
+                @if ($d)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $forArticles->image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $d['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($forArticles->title, 40) }}</div>
+                                    {{ Str::limit($d['title'], 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $forArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $d['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -187,22 +191,24 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
 
-                @foreach ($threeArticle as $threeArticles)
+
+
+                @if ($e)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $threeArticles->image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $e['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($threeArticles->title, 40) }}</div>
+                                    {{ Str::limit($e['title'], 40) }}</div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $threeArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $e['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -215,23 +221,25 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
 
-                @foreach ($twoArticle as $twoArticles)
+
+
+                @if ($f)
                     <div class="col-span-1">
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $twoArticles->image) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $f['primary_image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
                                 <div class="text10 text-xs lg:text-xl font-bold">
-                                    {{ Str::limit($twoArticles->title, 40) }}
+                                    {{ Str::limit($f['title'], 40) }}
                                 </div>
 
                                 <div class="text10">
-                                    <a href="{{ route('home.videos.show', ['video' => $twoArticles->slug]) }}"
+                                    <a href="{{ route('home.videos.show', ['video' => $f['slug']]) }}"
                                         class="flex justify-center gap-2 text-xs lg:text-sm rounded-3xl bg-green text-white text-center p-2">
                                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" class="w-4 h-4">
@@ -244,10 +252,12 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
+
             </div>
 
         </div>
+        <?php }?>
 
         <div class="light dark:opacity-40 w-full">
             <div class="absolute w-5/12 left-0" style="top:1500px">
