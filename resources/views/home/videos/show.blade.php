@@ -157,26 +157,59 @@
 
 
                             @php
-                                $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
-                            @endphp
+                            $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
+                        @endphp
 
-                            @foreach ($parentCategorys as $parentCategory)
-                                <div class="sidenav p-1 m-2 z-20">
-                                    <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
-                                        <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
-                                            <path id="chevron-right" d="M9,18l6-6L9,6"
-                                                transform="translate(19.414 -7.586) rotate(90)" fill="none"
-                                                stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" />
-                                        </svg>
+                        @foreach ($parentCategorys as $parentCategory)
+                            <div class="sidenav p-1 m-2 z-20">
 
-                                        {{ $parentCategory->title }}
+                                <?php
+
+                                $hasChildren = false;
+
+                                if ($parentCategory->children) {
+                                    $hasChildren = true;
+                                }
+
+                                $show = false;
+
+                                foreach ($parentCategory->children as $one) {
+                                    if ($one->slug == $category->slug) {
+                                        $show = true;
+                                    }
+                                }
+
+                                ?>
+
+                                @if ($hasChildren)
+                                    @if ($show)
+                                        <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
+                                        @else
+                                            <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
+                                    @endif
+                                    <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
+                                        <path id="chevron-right" d="M9,18l6-6L9,6"
+                                            transform="translate(19.414 -7.586) rotate(90)" fill="none"
+                                            stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" />
+                                    </svg>
+
+                                    {{ $parentCategory->title }}
 
                                     </button>
-                                    <div class="dropdown-container z-20 mr-5">
 
-                                        @foreach ($parentCategory->children as $childCategory)
-                                            <a class="flex mb-3"
+
+
+
+                                    @if ($show)
+                                        <div class="dropdown-container z-20 mr-5" style="display:block">
+                                        @else
+                                            <div class="dropdown-container z-20 mr-5">
+                                    @endif
+
+                                    @foreach ($parentCategory->children as $childCategory)
+                                        @if ($category->slug == $childCategory->slug)
+                                        <a class="flex mb-3 active" @else <a class="flex mb-3" @endif
                                                 href="{{ route('home.catevories.show', ['catevory' => $childCategory->slug]) }}">
                                                 <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                     <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
@@ -189,9 +222,23 @@
                                             </ul>
                                         @endforeach
 
-                                    </div>
-                                </div>
-                            @endforeach
+                            </div>
+                        @else
+                        <a class="flex mb-3 active" @else <a class="flex mb-3" @endif
+                                href="{{ route('home.catevories.show', ['catevory' => $parentCategory->slug]) }}">
+                                <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
+                                    <circle id="Ellipse_241" data-name="Ellipse 241" cx="4" cy="4"
+                                        r="4" fill="#fff" />
+                                </svg>
+
+                                {{ $parentCategory->title }}
+
+                            </a>
+
+
+                        @endif
+                    </div>
+                    @endforeach
 
                         </div>
                         <div id="coinBox"
