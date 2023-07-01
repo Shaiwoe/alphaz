@@ -207,11 +207,6 @@
                                     {{ $book->title }}</h1>
 
 
-
-
-
-
-
                                 <div class="">
                                     <img class="w-full  rounded-3xl"
                                         src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $book->image) }}"
@@ -224,7 +219,7 @@
 
 
 
-                                    <a href=""
+                                    <a href="{{ asset(env('BOOK_PDF_UPLOAD_PATH') . $book->pdf) }}"
                                         class="hidden lg:flex cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center">
                                         دانلود مستقیم کتاب
 
