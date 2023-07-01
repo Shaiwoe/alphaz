@@ -158,7 +158,11 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
+                                    @if(Auth::user()->avatar)
                                     <img class="w-6/12 rounded-full" src="{{ Auth::user()->avatar }}" alt="">
+                                    @else
+                                    <img class="w-6/12 rounded-full" src="/images/profile/18.jpg" alt="">
+                                    @endif
                                     <p class="bg-indigo-1 p-2 rounded-lg">{{ Auth::user()->name }} خوش آمدید</p>
                                 </div>
                             </div>
