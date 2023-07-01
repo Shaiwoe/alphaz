@@ -30,7 +30,6 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request)
     {
-        print_r($_POST);exit;
         $data = ['name' => $request->name, 'email' => $request->email, 'cellphone' => $request->cellphone, 'gender' => $request->gender, 'brith' => $request->brith];
         $request->user()->fill($data);
 
