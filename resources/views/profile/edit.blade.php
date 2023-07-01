@@ -125,19 +125,19 @@
                                     </div>
 
                                     <div>
-                                        <x-input-label for="chellphone" :value="__('جنسیت')" />
-                                        <x-text-input id="chellphone" name="chellphone" type="text"
-                                            class="mt-1 block w-full" :value="old('chellphone', $user->chellphone)" required autofocus
-                                            autocomplete="chellphone" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('chellphone')" />
+                                        <x-input-label for="gender" :value="__('جنسیت')" />
+                                        <x-text-input id="gender" name="gender" type="text"
+                                            class="mt-1 block w-full" :value="old('gender', $user->gender)" required autofocus
+                                            autocomplete="gender" />
+                                        <x-input-error class="mt-2" :messages="$errors->get('gender')" />
                                     </div>
 
                                     <div>
-                                        <x-input-label for="chellphone" :value="__('تاریخ تولد')" />
-                                        <x-text-input id="chellphone" name="chellphone" type="text"
-                                            class="mt-1 block w-full" :value="old('chellphone', $user->chellphone)" required autofocus
-                                            autocomplete="chellphone" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('chellphone')" />
+                                        <x-input-label for="brith" :value="__('تاریخ تولد')" />
+                                        <x-text-input id="brith" name="brith" type="text"
+                                            class="mt-1 block w-full" :value="old('brith', $user->brith)" required autofocus
+                                            autocomplete="brith" />
+                                        <x-input-error class="mt-2" :messages="$errors->get('brith')" />
                                     </div>
 
 
