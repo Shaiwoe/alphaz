@@ -369,7 +369,9 @@ $(document).ready(function() {
 
         $(".avatar_input").val(address);
 
-        $(this).css('border', '1px solid #00b16a');
+        $(".avatar_cl").css("border", "none");
+
+        $(this).css('border', '5px solid #00b16a');
     });
 });
 </script>
