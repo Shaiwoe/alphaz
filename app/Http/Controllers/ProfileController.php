@@ -41,7 +41,7 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request)
     {
-        $data = ['name' => $request->name, 'email' => $request->email, 'cellphone' => $request->cellphone, 'gender' => $request->gender, 'brith' => $request->brith];
+        $data = ['name' => $request->name, 'email' => $request->email, 'cellphone' => $request->cellphone, 'gender' => $request->gender, 'brith' => $request->brith , 'wallet_bit' => $request->wallet_bit , 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
         $request->user()->fill($data);
 
         if ($request->user()->isDirty('email')) {

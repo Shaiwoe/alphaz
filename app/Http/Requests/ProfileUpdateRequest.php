@@ -20,6 +20,9 @@ class ProfileUpdateRequest extends FormRequest
             'cellphone' => ['string', 'max:11'],
             'brith' => ['string'],
             'gender' => ['string'],
+            'wallet_bit' => ['string'],
+            'wallet_eth' => ['string'],
+            'wallet_usdt' => ['string'],
             'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
         ];
     }

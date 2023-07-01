@@ -182,7 +182,7 @@
                                     @method('patch')
 
                                     <div>
-                                        <x-input-label for="wallet_bit" :value="__('آدرس ولت بیت کوین (BTC)')" />
+                                        <x-input-label for="wallet_bit" :value="__('آدرس ولت بایننس کوین BNB')" />
                                         <x-text-input id="wallet_bit" name="wallet_bit" type="text"
                                             class="mt-1 block w-full" :value="old('wallet_bit', $user->wallet_bit)" required autofocus
                                             autocomplete="wallet_bit" />
@@ -191,27 +191,19 @@
 
 
                                     <div>
-                                        <x-input-label for="wallet_bit" :value="__('آدرس ولت اتریوم (ETH)')" />
-                                        <x-text-input id="wallet_bit" name="wallet_bit" type="text"
-                                            class="mt-1 block w-full" :value="old('wallet_bit', $user->wallet_bit)" required autofocus
-                                            autocomplete="wallet_bit" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('wallet_bit')" />
+                                        <x-input-label for="wallet_eth" :value="__('آدرس ولت اتریوم ETH')" />
+                                        <x-text-input id="wallet_eth" name="wallet_eth" type="text"
+                                            class="mt-1 block w-full" :value="old('wallet_eth', $user->wallet_eth)" required autofocus
+                                            autocomplete="wallet_eth" />
+                                        <x-input-error class="mt-2" :messages="$errors->get('wallet_eth')" />
                                     </div>
 
                                     <div>
-                                        <x-input-label for="wallet_bit" :value="__('آدرس ولت تتر  (USDT)')" />
-                                        <x-text-input id="wallet_bit" name="wallet_bit" type="text"
-                                            class="mt-1 block w-full" :value="old('wallet_bit', $user->wallet_bit)" required autofocus
-                                            autocomplete="wallet_bit" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('wallet_bit')" />
-                                    </div>
-
-                                    <div>
-                                        <x-input-label for="wallet_bit" :value="__('آدرس ولت تتر (USDC)')" />
-                                        <x-text-input id="wallet_bit" name="wallet_bit" type="text"
-                                            class="mt-1 block w-full" :value="old('wallet_bit', $user->wallet_bit)" required autofocus
-                                            autocomplete="wallet_bit" />
-                                        <x-input-error class="mt-2" :messages="$errors->get('wallet_bit')" />
+                                        <x-input-label for="wallet_usdt" :value="__('آدرس ولت ترون TRX')" />
+                                        <x-text-input id="wallet_usdt" name="wallet_usdt" type="text"
+                                            class="mt-1 block w-full" :value="old('wallet_usdt', $user->wallet_usdt)" required autofocus
+                                            autocomplete="wallet_usdt" />
+                                        <x-input-error class="mt-2" :messages="$errors->get('wallet_usdt')" />
                                     </div>
 
 
@@ -241,13 +233,13 @@
 
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
                         data-depth="0" data-idx="2">
-                        
+
                      <form method="post" action="{{ route('profile.avatar') }}" class="p-12 flex flex-col w-full gap-8">
                         @csrf
                         @method('patch')
 
                         <input type="hidden" name="avatar" class="avatar_input" value="">
-     
+
                         <div class="grid grid-cols-9 gap-12 w-full p-12">
 
                             <div>
