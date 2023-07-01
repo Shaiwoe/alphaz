@@ -298,7 +298,7 @@
 
                                 foreach($parentCategory->children as $one) {
 
-                                    if ($one->slug == $category->slug) {
+                                    if ($one->slug == $catevory->slug) {
                                         $show = true;
                                     }
                                 }
