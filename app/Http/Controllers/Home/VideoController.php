@@ -78,12 +78,11 @@ class VideoController extends Controller
     {
         $ip = request()->ip();
         $location = Location::get($ip);
-        
+
         $prev = Video::find($video->id - 1);
         $next = Video::find($video->id + 1);
         $videos = Video::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $video->increment('viewCount');
-        $catevorys = Catevory::all();
-        return view('home.videos.show', compact('video', 'videos', 'catevorys', 'prev', 'next', 'location'));
+        return view('home.videos.show', compact('video', 'videos', 'prev', 'next', 'location'));
     }
 }

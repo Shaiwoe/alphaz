@@ -83,8 +83,7 @@ class BookController extends Controller
 
         $books = Book::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $book->increment('viewCount');
-        $cateborys = Catebory::all();
         $tabs = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
-        return view('home.books.show', compact('book', 'books', 'tabs', 'cateborys', 'prev', 'next'));
+        return view('home.books.show', compact('book', 'books', 'tabs', 'prev', 'next'));
     }
 }
