@@ -93,7 +93,7 @@
                                     <button data-modal-target="authentication-modal"
                                         class="menu-dark dark:bg-icon-light dark:text-gray-700  p-3 rounded-full"
                                         data-modal-toggle="authentication-modal" type="button">
-                                        <a href="{{ route('login') }}">
+                                        <p>
                                             <svg class="xl:w-7 md:w-5 xl:h-7 md:h-5" xmlns="http://www.w3.org/2000/svg"
                                                 width="18" height="20" viewBox="0 0 18 20">
                                                 <g id="user_1_" data-name="user (1)" transform="translate(1 1)">
@@ -110,9 +110,8 @@
                                                         stroke-width="2" />
                                                 </g>
                                             </svg>
-                                        </a>
+                                        </p>
                                     </button>
-
 
                                 @endauth
                             </div>
