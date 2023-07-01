@@ -85,8 +85,13 @@
                         @if (Route::has('login'))
                             <div class="flex  rounded-md md:gap-4 items-center">
                                 @auth
-                                    <a href="{{ url('/dashboard') }}" class="w-12">
-                                        <img class="rounded-full" src="/image/profile/18.jpg" alt="profile image">
+                                    <a href="{{ url('/dashboard') }}" >
+                                        @if (Auth::user()->avatar)
+                                            <img class="w-14 rounded-full" src="{{ Auth::user()->avatar }}"
+                                                alt="">
+                                        @else
+                                            <img class="w-14 rounded-full" src="/image/profile/18.jpg" alt="">
+                                        @endif
                                     </a>
                                 @else
                                     <!-- Modal toggle -->

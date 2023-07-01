@@ -5,7 +5,11 @@
 
                 <div class="flex items-center">
                     <a href="{{ route('profile.edit') }}" class="flex justify-center items-center">
-                        <img class="rounded-full" src="/image/profile2.png" alt="">
+                        @if (Auth::user()->avatar)
+                            <img class="w-14 rounded-full" src="{{ Auth::user()->avatar }}" alt="">
+                        @else
+                            <img class="w-14 rounded-full" src="/image/profile/18.jpg" alt="">
+                        @endif
                     </a>
 
                     <div class="flex flex-col space-y-3 mr-3">
