@@ -23,6 +23,17 @@ class ProfileController extends Controller
         ]);
     }
 
+
+    public function wallet(ProfileUpdateRequest $request)
+    {
+        $data = ['wallet_bit' => $request->wallet_bit , 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
+
+        $request->user()->fill($data);
+        $request->user()->save();
+
+        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+    }
+
     public function avatar(AvatarRequest $request)
     {
         $data = ['avatar' => $request->avatar];

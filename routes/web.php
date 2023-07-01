@@ -194,11 +194,12 @@ Route::get('/score', [ScoreController::class, 'index'])->middleware(['auth', 've
 Route::get('/question', [QuestionController::class, 'index'])->middleware(['auth', 'verified'])->name('question');
 Route::get('/wishlist', [WishlistController::class, 'userProfile'])->middleware(['auth', 'verified'])->name('wishlist');
 Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 'verified'])->name('webinar');
+
 Route::get('/profile', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified'])->name('profile.destroy');
 Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth'])->name('profile.avatar');
-
+Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth'])->name('profile.wallet');
 
 
 require __DIR__ . '/auth.php';

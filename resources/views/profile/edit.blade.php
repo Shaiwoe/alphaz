@@ -158,10 +158,11 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
-                                    @if(Auth::user()->avatar)
-                                    <img class="w-6/12 rounded-full" src="{{ Auth::user()->avatar }}" alt="">
+                                    @if (Auth::user()->avatar)
+                                        <img class="w-6/12 rounded-full" src="{{ Auth::user()->avatar }}"
+                                            alt="">
                                     @else
-                                    <img class="w-6/12 rounded-full" src="/image/profile/18.jpg" alt="">
+                                        <img class="w-6/12 rounded-full" src="/image/profile/18.jpg" alt="">
                                     @endif
                                     <p class="bg-indigo-1 p-2 rounded-lg">{{ Auth::user()->name }} خوش آمدید</p>
                                 </div>
@@ -176,7 +177,7 @@
                         <div class="flex justify-center items-center gap-12 w-full">
 
                             <div class="flex w-full justify-start">
-                                <form method="post" action="{{ route('profile.update') }}"
+                                <form method="post" action="{{ route('profile.wallet') }}"
                                     class="p-12 flex flex-col w-full gap-8">
                                     @csrf
                                     @method('patch')
@@ -211,7 +212,7 @@
                                     <div class="flex items-center gap-4">
                                         <x-primary-button>{{ __('ذخیره اطلاعات') }}</x-primary-button>
 
-                                        @if (session('status') === 'profile-updated')
+                                        @if (session('status') === 'profile-wallet')
                                             <p x-data="{ show: true }" x-show="show" x-transition
                                                 x-init="setTimeout(() => show = false, 2000)"
                                                 class="text-sm text-gray-600 dark:text-gray-400">
@@ -224,7 +225,7 @@
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
                                     <img class="w-6/12 rounded-full" src="/image/wallet.jpg" alt="">
-                                    {{-- <p class="bg-indigo-1 p-2 rounded-lg">لورم اسپم متن انتخابی شما</p> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -234,143 +235,144 @@
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
                         data-depth="0" data-idx="2">
 
-                     <form method="post" action="{{ route('profile.avatar') }}" class="p-12 flex flex-col w-full gap-8">
-                        @csrf
-                        @method('patch')
+                        <form method="post" action="{{ route('profile.avatar') }}"
+                            class="p-12 flex flex-col w-full gap-8">
+                            @csrf
+                            @method('patch')
 
-                        <input type="hidden" name="avatar" class="avatar_input" value="">
+                            <input type="hidden" name="avatar" class="avatar_input" value="">
 
-                        <div class="grid grid-cols-9 gap-12 w-full p-12">
+                            <div class="grid grid-cols-9 gap-12 w-full p-12">
 
-                            <div>
-                                <img src="/image/profile/1.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/2.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/3.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/4.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/5.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/6.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/7.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/8.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/9.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/10.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/11.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/12.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/13.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/14.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/15.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/16.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/17.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/18.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/19.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/20.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/21.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/22.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/23.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/24.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/25.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/26.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/27.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/28.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/29.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/30.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/31.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/32.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/33.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/34.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/35.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <img src="/image/profile/36.jpg" alt="" class="avatar_cl">
-                            </div>
-                            <div>
-                                <button type="submit">Save</button>
-                            </div>
+                                <div>
+                                    <img src="/image/profile/1.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/2.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/3.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/4.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/5.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/6.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/7.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/8.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/9.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/10.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/11.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/12.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/13.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/14.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/15.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/16.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/17.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/18.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/19.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/20.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/21.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/22.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/23.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/24.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/25.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/26.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/27.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/28.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/29.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/30.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/31.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/32.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/33.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/34.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/35.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <img src="/image/profile/36.jpg" alt="" class="avatar_cl">
+                                </div>
+                                <div>
+                                    <button type="submit">Save</button>
+                                </div>
 
-                        </div>
-                     </form>
-<script>
-$(document).ready(function() {
+                            </div>
+                        </form>
+                        <script>
+                            $(document).ready(function() {
 
 
-    $(".avatar_cl").click(function(e) {
-        address = $(this).attr('src');
+                                $(".avatar_cl").click(function(e) {
+                                    address = $(this).attr('src');
 
-        $(".avatar_input").val(address);
+                                    $(".avatar_input").val(address);
 
-        $(".avatar_cl").css("border", "none");
+                                    $(".avatar_cl").css("border", "none");
 
-        $(this).css('border', '5px solid #00b16a');
-    });
-});
-</script>
+                                    $(this).css('border', '5px solid #00b16a');
+                                });
+                            });
+                        </script>
                     </div>
 
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
@@ -379,7 +381,8 @@ $(document).ready(function() {
                         <div class="flex justify-center items-center gap-12 w-full">
 
                             <div class="flex w-full justify-start">
-                                <form method="post" action="{{ route('password.update') }}" class="p-12 flex flex-col w-full gap-8">
+                                <form method="post" action="{{ route('password.update') }}"
+                                    class="p-12 flex flex-col w-full gap-8">
                                     @csrf
                                     @method('put')
 
