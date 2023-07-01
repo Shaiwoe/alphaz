@@ -525,7 +525,7 @@
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
                                     <a href="{{ route('home.videos.show', ['video' => $viewDesc->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $viewDesc->primary_image) }}"
+                                            src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $viewDesc->image) }}"
                                             alt="">
                                     </a>
                                     <a href="{{ route('home.videos.show', ['video' => $viewDesc->slug]) }}">
