@@ -140,7 +140,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $c['primary_image']) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $c['image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -170,7 +170,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $d['primary_image']) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $d['image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -200,7 +200,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $e['primary_image']) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $e['image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
@@ -230,7 +230,7 @@
                         <div class="hover-img">
                             <a href="" class="flex justify-end w-full z-20">
                                 <img class=" image"
-                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $f['primary_image']) }}"
+                                    src="{{ asset(env('VIDEO_IMAGES_UPLOAD_PATH') . $f['image']) }}"
                                     alt="">
                             </a>
                             <div class="middle space-y-2 lg:space-y-8">
