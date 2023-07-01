@@ -54,6 +54,7 @@ use App\Http\Controllers\Home\WishlistVideoController;
 use App\Http\Controllers\Home\CommentPadcastController;
 use App\Http\Controllers\Home\WishlistPadcastController;
 use App\Http\Controllers\Home\TagController as HomeTagController;
+use App\Http\Controllers\Home\TapController as HomeTapController;
 use App\Http\Controllers\Home\BookController as HomeBookController;
 use App\Http\Controllers\Home\VideoController as HomeVideoController;
 use App\Http\Controllers\Admin\MarketController as AdminMarketController;
@@ -127,6 +128,7 @@ Route::get('/books/{book:slug}', [HomeBookController::class, 'show'])->name('hom
 Route::get('/catebories/{catebory:slug}', [HomeCateboryController::class, 'show'])->name('home.catebories.show');
 
 Route::get('/padcasts', [HomePadcastController::class, 'index'])->name('home.padcasts.index');
+Route::get('/taps/{tap:slug}', [HomeTapController::class, 'show'])->name('home.tags.show');
 Route::get('/padcasts/{padcast:slug}', [HomePadcastController::class, 'show'])->name('home.padcasts.show');
 Route::get('/catepories/{catepory:slug}', [HomeCateporyController::class, 'show'])->name('home.catepories.show');
 
