@@ -151,7 +151,11 @@
                                 <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
-                                        <a class="flex mb-3"
+                                        @if($childCategory->slug == $category->slug)
+                                        <a class="flex mb-3 active"
+                                        @else
+                                        <a class="flex mb-3 active"
+                                        @endif
                                             href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle class="dark:fill-zinc-900" id="Ellipse_241"
