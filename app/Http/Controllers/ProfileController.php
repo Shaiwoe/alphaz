@@ -25,6 +25,7 @@ class ProfileController extends Controller
 
     public function avatar(AvatarRequest $request)
     {
+        print_r($request->avatar);exit;
         $data = ['avatar' => $request->avatar];
 
         $request->user()->fill($data);
