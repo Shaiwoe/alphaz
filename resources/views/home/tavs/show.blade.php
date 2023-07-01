@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Alpharency | پادکست ها</title>
+    <title>Alpharency | ویدیو ها</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -43,7 +43,7 @@
                 <input type="search" name="search" id="search-input"
                     value="{{ request()->has('search') ? request()->search : '' }}"
                     class="block w-full p-4 text-center pl-10 text-xs lg:text-lg text-gray-100 rounded-full bg-form1 placeholder-gray-100 dark:placeholder-gray-700 border-none"
-                    placeholder="برای جستجو در پادکست ها کلمه مورد نظر را تایپ کنید" required>
+                    placeholder="برای جستجو در ویدیو ها کلمه مورد نظر را تایپ کنید" required>
             </div>
         </form>
 
@@ -68,7 +68,7 @@
 
 
                         @php
-                            $parentCategorys = App\Models\Catepory::where('parent_id', 0)->get();
+                            $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
                         @endphp
 
                         @foreach ($parentCategorys as $parentCategory)
@@ -88,7 +88,7 @@
 
                                     @foreach ($parentCategory->children as $childCategory)
                                         <a class="flex mb-3"
-                                            href="{{ route('home.categories.show', ['category' => $childCategory->slug]) }}">
+                                            href="{{ route('home.catevories.show', ['catevory' => $childCategory->slug]) }}">
                                             <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                 <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
                                                     cy="4" r="4" fill="#fff" />
