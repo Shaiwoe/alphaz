@@ -226,8 +226,8 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
-                                    <img class="w-6/12 rounded-full" src="/image/profile/30.jpg" alt="">
-                                    <p class="bg-indigo-1 p-2 rounded-lg">لورم اسپم متن انتخابی شما</p>
+                                    <img class="w-6/12 rounded-full" src="/image/wallet.jpg" alt="">
+                                    {{-- <p class="bg-indigo-1 p-2 rounded-lg">لورم اسپم متن انتخابی شما</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -399,8 +399,8 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
-                                    <img class="w-6/12 rounded-full" src="/image/profile/32.jpg" alt="">
-                                    <p class="bg-indigo-1 p-2 rounded-lg">لورم اسپم متن انتخابی شما</p>
+                                    <img class="w-6/12 rounded-full" src="/image/sec.jpg" alt="">
+                                    {{-- <p class="bg-indigo-1 p-2 rounded-lg">لورم اسپم متن انتخابی شما</p> --}}
                                 </div>
                             </div>
                         </div>
