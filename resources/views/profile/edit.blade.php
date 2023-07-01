@@ -44,7 +44,7 @@
                 <div class=" w-full mt-4 tab_wrap tab_area z-40 relative">
                     <div class="btn_area clearfix z-40 flex gap-16 justify-center items-center">
                         <button
-                            class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 backdrop-filter rounded-t-3xl text-white dark:text-zinc-900 act flex w-56  justify-center"
+                            class="btn_tab_s @if(!$errors->updatePassword) act @endif btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 backdrop-filter rounded-t-3xl text-white dark:text-zinc-900 flex w-56  justify-center"
                             data-depth="0" data-idx="0">
                             اطلاعات حساب کاربری
                         </button>
@@ -62,7 +62,7 @@
                         </button>
 
                         <button
-                            class="btn_tab_s btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 rounded-t-3xl text-white dark:text-zinc-900 flex w-56 justify-center"
+                            class="btn_tab_s @if($errors->updatePassword) act @endif btn_tab bg-coin1 dark:bg-slate-200 float-right p-3 rounded-t-3xl text-white dark:text-zinc-900 flex w-56 justify-center"
                             data-depth="0" data-idx="3">
                             تنظیمات امنیتی
                         </button>
@@ -70,7 +70,11 @@
 
                     </div>
 
+                    @if(!$errors->updatePassword)
                     <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act"
+                    @else
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
+                    @endif
                         data-depth="0" data-idx="0">
 
                         <div class="flex justify-center items-center gap-12 w-full">
@@ -375,9 +379,11 @@
                         </script>
                     </div>
 
-                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl"
-                        data-depth="0" data-idx="3">
-
+                    @if($errors->updatePassword)
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl act" data-depth="0" data-idx="3">
+                    @else
+                    <div class="content_area rounded-3xl z-40 relative bg-coin1 dark:bg-slate-200 dark:shadow-2xl" data-depth="0" data-idx="3">
+                    @endif
                         <div class="flex justify-center items-center gap-12 w-full">
 
                             <div class="flex w-full justify-start">
