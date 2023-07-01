@@ -382,26 +382,26 @@
                     <div class="hidden " id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:mt-8 md:mt-14 gap-4 z-20">
                             <!-- post 1  -->
-                            @foreach ($books as $booka)
+                            @foreach ($books as $book)
                                 <div
                                     class="bg-indigo-1 rounded-3xl flex flex-col w-full space-y-6 dark:bg-slate-200 dark:shadow-md shadow-slate-600">
-                                    <a href="{{ route('home.books.show', ['booka' => $booka->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $book->slug]) }}">
                                         <img class="rounded-t-3xl h-full"
-                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $booka->image) }}"
+                                            src="{{ asset(env('BOOK_IMAGES_UPLOAD_PATH') . $book->image) }}"
                                             alt="">
                                     </a>
-                                    <a href="{{ route('home.books.show', ['booka' => $booka->slug]) }}">
+                                    <a href="{{ route('home.books.show', ['book' => $book->slug]) }}">
                                         <p class="text-sm font-bold text-center line-clamp-1">
-                                            {{ Str::limit($booka->title, 40) }}
+                                            {{ Str::limit($book->title, 40) }}
                                         </p>
                                     </a>
                                     <p
                                         class="text-center text-white text-xs font-extralight px-3 dark:text-zinc-900 line-clamp-2">
-                                        {{ Str::limit($booka->description, 80) }}
+                                        {{ Str::limit($book->description, 80) }}
                                     </p>
 
                                     <div class="flex justify-between items-center px-2 lg:px-4">
-                                        <a href="{{ route('home.books.show', ['booka' => $booka->slug]) }}"
+                                        <a href="{{ route('home.books.show', ['book' => $book->slug]) }}"
                                             class="bg-green flex rounded-2xl p-2 text-xs mb-4 items-center gap-2 text-white">
                                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" class="w-4 h-4">
@@ -414,7 +414,7 @@
                                         <div class="flex items-center gap-4 -mt-2">
 
                                             <p class="flex gap-1 items-center text-base">
-                                                {{ $booka->viewCount }}
+                                                {{ $book->viewCount }}
                                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                                     stroke="currentColor" class="w-5 h-5">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
