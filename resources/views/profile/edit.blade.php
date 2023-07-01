@@ -157,7 +157,7 @@
 
                             <div class="w-full flex justify-end p-12">
                                 <div class="flex flex-col space-y-8 items-center">
-                                    <img class="w-6/12 rounded-full" src="/image/profile/18.jpg" alt="">
+                                    <img class="w-6/12 rounded-full" src="{{ Auth::user()->avatar }}" alt="">
                                     <p class="bg-indigo-1 p-2 rounded-lg">{{ Auth::user()->name }} خوش آمدید</p>
                                 </div>
                             </div>
