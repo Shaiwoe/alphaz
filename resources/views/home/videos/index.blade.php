@@ -283,7 +283,7 @@
                             $parentCategorys = App\Models\Catevory::where('parent_id', 0)->get();
                         @endphp
 
-                        @foreach ($parentCategorys as $parentCatevory)
+                        @foreach ($parentCategorys as $parentCategory)
                             <div class="sidenav p-1 m-2 z-20">
 
                                 <?php
@@ -334,7 +334,7 @@
 
                                     @foreach ($parentCategory->children as $childCategory)
 
-                                        @if($category->slug == $childCategory->slug)
+                                        @if($catevory->slug == $childCategory->slug)
                                         <a class="flex mb-3 active"
                                         @else
                                         <a class="flex mb-3"
