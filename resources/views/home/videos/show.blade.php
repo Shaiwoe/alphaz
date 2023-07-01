@@ -171,22 +171,12 @@
                                     $hasChildren = true;
                                 }
 
-                                $show = false;
-
-                                foreach ($parentCategory->children as $one) {
-                                    if ($one->slug == $category->slug) {
-                                        $show = true;
-                                    }
-                                }
 
                                 ?>
 
                                 @if ($hasChildren)
-                                    @if ($show)
-                                        <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3 active">
-                                        @else
-                                            <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
-                                    @endif
+      
+                                    <button class="dropdown-btn hover:bg-green rounded-full flex py-2 px-3">
                                     <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 14.828 8.414">
                                         <path id="chevron-right" d="M9,18l6-6L9,6"
                                             transform="translate(19.414 -7.586) rotate(90)" fill="none"
@@ -201,15 +191,12 @@
 
 
 
-                                    @if ($show)
-                                        <div class="dropdown-container z-20 mr-5" style="display:block">
-                                        @else
-                                            <div class="dropdown-container z-20 mr-5">
-                                    @endif
+                                    
+                                    <div class="dropdown-container z-20 mr-5">
 
                                     @foreach ($parentCategory->children as $childCategory)
-                                        @if ($category->slug == $childCategory->slug)
-                                        <a class="flex mb-3 active" @else <a class="flex mb-3" @endif
+                                       
+                                        <a class="flex mb-3 active"
                                                 href="{{ route('home.catevories.show', ['catevory' => $childCategory->slug]) }}">
                                                 <svg class="w-3 h-3 self-center ml-2" viewBox="0 0 8 8">
                                                     <circle id="Ellipse_241" data-name="Ellipse 241" cx="4"
