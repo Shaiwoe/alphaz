@@ -270,9 +270,15 @@
                                             </video>
                                         </div>
                                     @else
+                                        @if($location->countryCode == "IR")
+                                        <div class="w-full">
+                                            <iframe class="w-full h-96" src="{{ $video->aparat }}"></iframe>
+                                        </div>
+                                        @else
                                         <div class="w-full">
                                             <iframe class="w-full h-96" src="{{ $video->youtube }}"></iframe>
                                         </div>
+                                        @endif
                                     @endif
 
                                 </div>
