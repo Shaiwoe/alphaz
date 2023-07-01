@@ -80,9 +80,6 @@
 
 
 
-
-
-
                         <div class="flex flex-col w-full">
                             <label for="category_id"
                                 class="block mb-2 text-sm font-medium text-white dark:text-zinc-900 ">نوع دسته

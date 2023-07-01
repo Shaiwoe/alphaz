@@ -213,9 +213,8 @@
                             </p>
                             <div class="grid grid-cols-3 gap-4 mt-8">
                                 @foreach ($tags as $tag)
-                                    <a href="{{ route('home.tags.show', ['tag' => $tag->id]) }}"
+                                    <a href="{{ route('home.tags.show', ['tag' => $tag->slug ? $tag->slug : 'none']) }}"
                                         class="bg-box dark:bg-slate-300 rounded-xl text-center p-2 text-sm h-fit">{{ $tag->title }}</a>
-                                    {{-- <a href="" class="bg-box rounded-xl w-24 text-center p-2">{{ $tag->title }}</a> --}}
                                 @endforeach
                             </div>
                         </div>
@@ -495,8 +494,6 @@
                 }
             });
         }
-
-
     </script>
 
     <script>

@@ -69,7 +69,7 @@ class ArticleController extends Controller
 
 
 
-        // $tags = Tag::orderBy('created_at', 'desc')->inRandomOrder()->limit(15)->get();
+
         $tags = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
 
         return view('home.articles.index', compact('slider' ,'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'tags', 'articles', 'articlesCount', 'articless', 'articlesss', 'articleView', 'articleViews'));
@@ -84,7 +84,7 @@ class ArticleController extends Controller
         $articles = Article::orderBy('updated_at', 'desc')->where('is_active', 1)->inRandomOrder()->limit(4)->get();
         $article->increment('viewCount');
         $categorys = Category::all();
-        $tags = Tag::all();
+        $tags = DB::select('select ANY_VALUE(a.title) as title, ANY_VALUE(a.slug) as slug, COUNT(b.tag_id) as total FROM tags a inner join article_tags b ON b.tag_id = a.id group by b.tag_id order by total desc limit 15');
         return view('home.articles.show', compact('article', 'articles', 'tags', 'categorys', 'prev', 'next'));
     }
 
