@@ -29,7 +29,7 @@ class CatevoryController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        $catevorys = Catevory::where('parent_id', 0)->get();
+        $catevorys = Catevory::all();
         return view('manager.catevorys.create', compact('catevorys', 'users'));
     }
 

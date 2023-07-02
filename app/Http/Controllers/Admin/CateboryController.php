@@ -29,7 +29,7 @@ class CateboryController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        $cateborys = Catebory::where('parent_id', 0)->get();
+        $cateborys = Catebory::all();
         return view('manager.cateborys.create', compact('cateborys', 'users'));
     }
 
