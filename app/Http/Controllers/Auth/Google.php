@@ -20,7 +20,7 @@ class Google extends Controller
        try {
             $googleUsers = Socialite::driver('google')->user();
             $user = User::where('email' , $googleUsers->getEmail())->first();
-            
+
             if ($user) {
                 auth()->loginUsingId($user->id);
             }else {
@@ -39,7 +39,7 @@ class Google extends Controller
        }catch (\Exception $e) {
             // TODO Auto-generated catch block
             Alert::error('خطایی رخ داده است', 'لطفا مجدد تلاش کنید');
-            return redirect('/login');
+            return redirect('/');
        }
     }
 }

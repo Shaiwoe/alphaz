@@ -41,7 +41,7 @@ class AuthController extends Controller
        }catch (\Exception $e) {
             // TODO Auto-generated catch block
             Alert::error('خطایی رخ داده است', 'لطفا مجدد تلاش کنید');
-            return redirect('/login');
+            return redirect('/');
        }
     }
 }
