@@ -29,6 +29,9 @@
     @include('components/light')
 
 
+    @include('components/login')
+
+
     <!-- top -->
     @include('components/index-top')
 
