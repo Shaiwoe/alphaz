@@ -249,112 +249,112 @@
                                 <div class="grid grid-cols-9 gap-12 w-full p-12">
 
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/1.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/1.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/2.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/2.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/3.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/3.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/4.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/4.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/5.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/5.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/6.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/6.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/7.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/7.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/8.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/8.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/9.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/9.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/10.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/10.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/11.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/11.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/12.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/12.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/13.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/13.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/14.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/14.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/15.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/15.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/16.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/16.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/17.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/17.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/18.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/18.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/19.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/19.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/20.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/20.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/21.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/21.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/22.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/22.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/23.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/23.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/24.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/24.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/25.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/25.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/26.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/26.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/27.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/27.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/28.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/28.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/29.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/29.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/30.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/30.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/31.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/31.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/32.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/32.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/33.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/33.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/34.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/34.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/35.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/35.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
-                                        <img class="rounded-full" src="/image/profile/36.jpg" alt="" class="avatar_cl">
+                                        <img src="/image/profile/36.jpg" alt="" class="avatar_cl rounded-full">
                                     </div>
                                     <div>
                                         <button class="bg-button2 w-44 text-center hover:bg-button1 rounded-full p-2 text-white" type="submit">دخیره پروفایل</button>
