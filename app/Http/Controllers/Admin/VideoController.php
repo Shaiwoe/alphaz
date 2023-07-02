@@ -119,7 +119,7 @@ class VideoController extends Controller
     {
         $users = $request->user();
 
-        $catevorys = Catevory::where('parent_id', '!=', 0)->get();
+        $catevorys = Catevory::all();
         return view('manager.videos.edit', compact('video', 'catevorys','users'));
     }
 

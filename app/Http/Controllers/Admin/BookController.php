@@ -32,7 +32,7 @@ class BookController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
-        $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
+        $cateborys = Catebory::all();
         return view('manager.books.create' , compact('cateborys','users'));
     }
 
@@ -111,7 +111,7 @@ class BookController extends Controller
     public function edit(Book $book, Request $request)
     {
         $users = $request->user();
-        $cateborys = Catebory::where('parent_id', '!=' , 0)->get();
+        $cateborys = Catebory::all();
         return view('manager.books.edit' , compact('book' , 'cateborys','users'));
     }
 
