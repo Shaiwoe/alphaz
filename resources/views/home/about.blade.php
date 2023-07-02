@@ -15,7 +15,7 @@
 
 <body class="bg-indigo-1 dark:bg-white">
 
-
+    @include('components/login')
 
     {{-- header  --}}
     @include('components/header')

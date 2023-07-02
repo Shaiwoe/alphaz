@@ -15,7 +15,7 @@
 
 <body class="bg-indigo-1 dark:bg-white1">
 
-
+    @include('components/login')
 
     <div class="light dark:opacity-40 relative w-full">
         <div class="absolute top-0 left-0">
