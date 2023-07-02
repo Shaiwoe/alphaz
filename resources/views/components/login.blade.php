@@ -45,7 +45,7 @@
                                 <!-- Email Address -->
                                 <div>
                                     <x-input-label for="email" :value="__('ایمیل خود را وارد کنید')" />
-                                    <x-text-input id="email"
+                                    <input id="email"
                                         class="block bg-dark4 rounded-full mt-2 w-full text-right" type="email"
                                         name="email" :value="old('email')" required autofocus autocomplete="username" />
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -55,7 +55,7 @@
                                 <div class="mt-4">
                                     <x-input-label for="password" :value="__('کلمه عبور را وارد کنید')" />
 
-                                    <x-text-input id="password"
+                                    <input id="password"
                                         class="block bg-dark4 rounded-full mt-2 w-full text-right" type="password"
                                         name="password" required autocomplete="current-password" />
 
