@@ -36,7 +36,7 @@ class AuthController extends Controller
                 auth()->loginUsingId($user->id);
             }
 
-            return redirect('/');
+            return redirect('/profile');
 
        }catch (\Exception $e) {
             // TODO Auto-generated catch block
