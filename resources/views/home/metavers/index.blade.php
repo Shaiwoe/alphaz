@@ -20,6 +20,8 @@
 
 <body class="bg-indigo-1 dark:bg-white1 min-h-screen overflow-hidden">
 
+    @include('components/login')
+
 
     {{-- header  --}}
     @include('components/header')
