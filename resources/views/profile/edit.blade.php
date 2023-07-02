@@ -219,7 +219,7 @@
                                             @if (session('status') === 'profile-wallet')
                                                 <p x-data="{ show: true }" x-show="show" x-transition
                                                     x-init="setTimeout(() => show = false, 2000)"
-                                                    class="text-sm text-gray-600 dark:text-gray-400">
+                                                    class="text-sm text-gray-200 dark:text-gray-400">
                                                     {{ __('بروزرسانی شد.') }}</p>
                                             @endif
                                         </div>
