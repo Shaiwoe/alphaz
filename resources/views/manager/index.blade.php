@@ -66,7 +66,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -111,7 +111,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -155,7 +155,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-2/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-2/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -207,7 +207,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-3/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -255,7 +255,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-3/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
@@ -303,7 +303,7 @@
 
 
                             <div class="w-full flex justify-center items-center p-4">
-                                <img class="w-3/12 mt-12" src="image/soon.svg" alt="">
+                                <img class="w-3/12 mt-12" src="/image/soon.svg" alt="">
                             </div>
                         </div>
                     @else
