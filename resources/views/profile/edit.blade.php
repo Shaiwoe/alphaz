@@ -357,7 +357,7 @@
                                         <img src="/image/profile/36.jpg" alt="" class="avatar_cl">
                                     </div>
                                     <div>
-                                        <button class="bg-button2 hover:bg-button1 rounded-full p-2 text-white" type="submit">دخیره پروفایل</button>
+                                        <button class="bg-button2 w-44 text-center hover:bg-button1 rounded-full p-2 text-white" type="submit">دخیره پروفایل</button>
                                     </div>
 
                                 </div>
