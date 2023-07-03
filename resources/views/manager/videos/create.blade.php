@@ -135,7 +135,7 @@
                             <div id="accordion-collapse-body-1" class="hidden"
                                 aria-labelledby="accordion-collapse-heading-1">
                                 <div class="grid grid-cols-5 gap-4 py-4">
-                                    @foreach ($tags as $tag)
+                                    @foreach ($tavs as $tag)
                                         <div
                                             class="flex items-center gap-2 px-2 bg-coin1 dark:bg-slate-200 text-gray-400 border-gray-600 rounded-3xl">
                                             <input id="tag_ids" type="checkbox" value="{{ $tag->id }}"
