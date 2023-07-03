@@ -34,7 +34,7 @@ class VideoController extends Controller
         $users = $request->user();
         $tavs = Tav::all();
         $catevorys = Catevory::all();
-        return view('manager.videos.create', compact('catevorys','users'));
+        return view('manager.videos.create', compact('catevorys','users', 'tavs'));
     }
 
     /**
