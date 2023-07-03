@@ -55,7 +55,7 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:article,slug',
+            'slug' => 'required|unique:articles,slug',
             'time' => 'required',
             'tag_ids' => 'required',
             'is_active' => 'required',
