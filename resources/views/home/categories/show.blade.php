@@ -128,7 +128,7 @@
                                     {{ $parentCategory->title }}
                                 @endif
                             </div>
-                        @endforeach}}
+                        @endforeach
 
                         
 
