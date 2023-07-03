@@ -45,7 +45,7 @@ class VideoController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:video,slug',
+            'slug' => 'required|unique:videos,slug',
             'catevory_id' => 'required',
             'type' => 'required',
             'description' => 'required',
