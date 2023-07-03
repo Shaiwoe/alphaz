@@ -39,7 +39,7 @@
         <!-- main -->
         <div class="flex flex-col sm:w-full md:w-9/12 lg:w-10/12 h-full m-0 overflow-hidden overflow-y-auto p-4">
             <!-- main  -->
-            <div class="flex flex-col space-y-8 w-full items-center items-center">
+            <div class="flex flex-col space-y-8 w-full items-center">
 
                 <div class=" w-full mt-4 tab_wrap tab_area z-40 relative">
                     <div class="btn_area clearfix z-40 flex gap-16 justify-center items-center">

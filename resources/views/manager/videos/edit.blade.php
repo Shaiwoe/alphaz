@@ -74,7 +74,7 @@
                                 @foreach ($catevorys as $catevory)
                                     <option value="{{ $catevory->id }}"
                                         {{ $catevory->id == $video->catevory->id ? 'selected' : '' }}>
-                                        {{ $catevory->title }} از {{ $catevory->parent->title }}</option>
+                                        {{ $catevory->title }} </option>
                                 @endforeach
                             </select>
                             <x-input-error :messages="$errors->get('catevory_id')" class="mt-2" />
