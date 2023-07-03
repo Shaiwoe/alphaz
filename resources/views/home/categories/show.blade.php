@@ -130,7 +130,7 @@
                             </div>
                         @endforeach}}
 
-                        @php
+                        <!--@php
                             $parentCategorys = App\Models\Category::where('parent_id', 0)->get();
                         @endphp
 
@@ -166,7 +166,7 @@
 
                                 </div>
                             </div>
-                        @endforeach
+                        @endforeach-->
 
                     </div>
 
