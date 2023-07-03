@@ -133,27 +133,11 @@
 
                     </div>
 
+
+
+
+
                     <div class="flex flex-col gap-4 w-full">
-                        <div class="flex flex-col w-full">
-                            <label for="youtube"
-                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">لینک یوتیوب
-                            </label>
-                            <textarea rows="1" type="text" name="youtube" id="youtube"
-                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 focus:ring-yellow-400 focus:border-yellow-400"
-                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('youtube') }}"></textarea>
-                            <x-input-error :messages="$errors->get('youtube')" class="mt-2" />
-                        </div>
-
-                        <div class="flex flex-col w-full">
-                            <label for="aparat"
-                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">لینک آپارات
-                            </label>
-                            <textarea rows="1" type="text" name="aparat" id="aparat"
-                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 focus:ring-yellow-400 focus:border-yellow-400"
-                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('aparat') }}"></textarea>
-                            <x-input-error :messages="$errors->get('aparat')" class="mt-2" />
-                        </div>
-
 
                         <div id="accordion-collapse" data-accordion="collapse">
                             <h2 id="accordion-collapse-heading-1">
@@ -188,6 +172,30 @@
 
                             <x-input-error :messages="$errors->get('tag_ids')" class="mt-2" />
                         </div>
+
+
+                        <div class="flex flex-col w-full">
+                            <label for="youtube"
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">لینک یوتیوب
+                            </label>
+                            <textarea rows="1" type="text" name="youtube" id="youtube"
+                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 focus:ring-yellow-400 focus:border-yellow-400"
+                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('youtube') }}"></textarea>
+                            <x-input-error :messages="$errors->get('youtube')" class="mt-2" />
+                        </div>
+
+                        <div class="flex flex-col w-full">
+                            <label for="aparat"
+                                class="block mb-2 text-sm font-medium text-white dark:text-zinc-900">لینک آپارات
+                            </label>
+                            <textarea rows="1" type="text" name="aparat" id="aparat"
+                                class="flex  p-2.5 w-full rounded-3xl bg-coin1 dark:bg-slate-200 text-white dark:text-zinc-900 focus:ring-yellow-400 focus:border-yellow-400"
+                                placeholder="لینک یوتیوب ویدیو را وارد کنید" value="{{ old('aparat') }}"></textarea>
+                            <x-input-error :messages="$errors->get('aparat')" class="mt-2" />
+                        </div>
+
+
+
 
                         <div class="flex flex-col w-full">
                             <label for="description"
