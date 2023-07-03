@@ -1,5 +1,5 @@
 <!-- Main modal -->
-@if(old('email'))
+@if($errors->get('email'))
 <div id="authentication-modal" tabindex="-1" aria-hidden="false"
 @else
 <div id="authentication-modal" tabindex="-1" aria-hidden="true"
