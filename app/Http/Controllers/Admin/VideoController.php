@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Tav;
 use App\Models\Video;
 use App\Models\Catevory;
 use Illuminate\Http\Request;
@@ -31,6 +32,7 @@ class VideoController extends Controller
     public function create(Request $request)
     {
         $users = $request->user();
+        $tags = Tav::all();
         $catevorys = Catevory::all();
         return view('manager.videos.create', compact('catevorys','users'));
     }
@@ -52,7 +54,7 @@ class VideoController extends Controller
             'body' => 'required',
             'image' => 'required|mimes:jpg,jpeg,png,svg',
             'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
-            'tags' => 'required',
+            'tag_ids' => 'required',
             'youtube' => 'nullable',
             'aparat' => 'nullable',
 
@@ -80,11 +82,13 @@ class VideoController extends Controller
                 'image' => $fileNameImage,
                 'video' => $request->video !== null ? $fileNameVideo : $video->video,
                 'time' => $request->time,
-                'tags' => $request->tags,
                 'youtube' => $request->youtube,
                 'aparat' => $request->aparat,
                 'is_active' => $request->is_active,
             ]);
+
+
+            $video->tavs()->attach($request->tag_ids);
 
             DB::commit();
         } catch (\Exception $ex) {
