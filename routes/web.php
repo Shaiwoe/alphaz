@@ -74,6 +74,9 @@ Route::get('/test', function() {
     return ['OK'];
 })->middleware('google');
 
+Auth::routes();
+
+
 Route::post('/2fa', function () {
     return redirect('/test');
 })->name('2fa');
