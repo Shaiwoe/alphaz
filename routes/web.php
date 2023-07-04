@@ -70,6 +70,10 @@ use App\Http\Controllers\Home\CateporyController as HomeCateporyController;
 use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
+Route::get('/test', function() {
+    return ['OK'];
+})->middleware('google');
+
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
 
