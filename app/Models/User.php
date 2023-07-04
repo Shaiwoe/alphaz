@@ -14,7 +14,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable , HasRoles;
-
+    
+    public function getGoogle2faSecretAttribute()
+    {
+        return $this->google;
+    }
+    
     /**
      * The attributes that are mass assignable.
      *
