@@ -278,7 +278,7 @@
                                     @auth
                                         @if ($book->checkUserStudy(auth()->id()))
                                             <a href="{{ route('home.studybook.remove', ['book' => $book->id]) }}"
-                                                class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center">
+                                                class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center text-xs lg:text-base">
                                                 کتاب را مطالعه کردم
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -295,7 +295,7 @@
                                             </a>
                                         @else
                                             <a href="{{ route('home.studybook.add', ['book' => $book->id]) }}"
-                                                class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center">
+                                                class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center text-xs lg:text-base">
                                                 افزودن به لیست مطالعه شده ها
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -313,7 +313,7 @@
                                         @endif
                                     @else
                                         <a href="{{ route('home.studybook.add', ['book' => $book->id]) }}"
-                                            class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center">
+                                            class="flex cursor-pointer bg-coin1 dark:bg-slate-200 px-4 py-2 rounded-full gap-2 items-center text-xs lg:text-base">
                                             افزودن به لیست مطالعه شده ها
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
                                                 fill="none" stroke="currentColor" stroke-width="2"
