@@ -11,6 +11,6 @@ class ScoreController extends Controller
     {
         $users = $request->user();
 
-        return view('manager.score', compact('users'));
+        return view('panel.score', compact('users'));
     }
 }

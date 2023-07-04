@@ -11,6 +11,6 @@ class VipController extends Controller
     {
         $users = $request->user();
 
-        return view('manager.vip', compact('users'));
+        return view('panel.vip', compact('users'));
     }
 }
