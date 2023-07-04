@@ -72,10 +72,10 @@ use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 Route::get('/test', function() {
     return ['OK'];
-})->middleware('google');
+})->middleware(['auth', 'google']);
 
 Route::post('/2fa', function () {
-    return redirect('/dashboard');
+    return redirect('/test');
 })->name('2fa');
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
