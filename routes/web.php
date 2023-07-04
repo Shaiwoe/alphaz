@@ -71,7 +71,7 @@ use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 Route::get('/test', function() {
-    return ['test'];
+    return ['two factor is ok'];
 })->middleware(['google']);
 
 Route::post('/2fa', function () {
