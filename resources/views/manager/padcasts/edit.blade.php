@@ -72,7 +72,7 @@
                                 @foreach ($cateporys as $catepory)
                                     <option value="{{ $catepory->id }}"
                                         {{ $catepory->id == $padcast->catepory->id ? 'selected' : '' }}>
-                                        {{ $catepory->title }} از {{ $catepory->parent->title }}</option>
+                                        {{ $catepory->title }}</option>
                                 @endforeach
                             </select>
                             <x-input-error :messages="$errors->get('catepory_id')" class="mt-2" />
