@@ -72,7 +72,7 @@ use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 Route::get('/test', function() {
     return ['OK'];
-})->middleware(['auth', 'google']);
+})->middleware(['google']);
 
 Route::post('/2fa', function () {
     return redirect('/test');
