@@ -74,6 +74,10 @@ Route::get('/test', function() {
     return ['OK'];
 })->middleware('google');
 
+Route::post('/2fa', function () {
+    return redirect(route('home'));
+})->name('2fa');
+
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
 
