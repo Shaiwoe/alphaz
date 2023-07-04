@@ -52,7 +52,7 @@
             </div>
 
             <div id="coinBox"
-                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                class="bg-box dark:bg-white w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700 z-30 md:gap-10 sm:gap-3 p-4 rounded-full">
 
                 <p>زمان مطالعه برای این پادکست {{ $padcast->time }} دقیقه است</p>
 

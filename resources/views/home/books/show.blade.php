@@ -38,7 +38,7 @@
         <div class="flex flex-col space-y-4 sm:space-y-8">
 
             <div id="coinBox"
-                class="bg-box dark:bg-white w-full flex justify-between items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full mt-24">
+                class="bg-box dark:bg-white w-full sm:grid sm:place-content-center md:flex justify-between items-center text-white dark:text-gray-700 z-30 md:gap-10 sm:gap-3 p-4 rounded-full">
 
                 <p>زمان مطالعه برای این کتاب {{ $book->time }} دقیقه است</p>
 
