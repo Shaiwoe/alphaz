@@ -10,6 +10,19 @@ use Illuminate\Support\Facades\Redirect;
 
 class ProfileController extends Controller
 {
+    public function google()
+    {
+        $user = request()->user();
+        
+        $google = app('pragmarx.google2fa');
+
+        $googleSecretKey = $google->generateSecretKey();
+
+        $googleQR = $google2fa->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
+
+        return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
+    }
+    
     /**
      * Display the user's profile form.
      *
