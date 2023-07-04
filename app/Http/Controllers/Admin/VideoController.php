@@ -88,7 +88,7 @@ class VideoController extends Controller
             ]);
 
 
-            $video->tavs()->attach($request->tag_ids);
+            $video->tavs()->attach($request->tav_ids);
 
             DB::commit();
         } catch (\Exception $ex) {
@@ -122,7 +122,7 @@ class VideoController extends Controller
     public function edit(Video $video, Request $request)
     {
         $users = $request->user();
-
+        $tavs = Tav::all();
         $catevorys = Catevory::all();
         return view('manager.videos.edit', compact('video', 'catevorys','users'));
     }
@@ -145,7 +145,7 @@ class VideoController extends Controller
             'body' => 'required',
             'image' => 'nullable|mimes:jpg,jpeg,png,svg',
             'video' => 'nullable|mimes:mp4,mkv,mov,avi,wmv,avc',
-            'tags' => 'required',
+            'tag_ids' => 'required',
             'aparat' => 'nullable',
             'youtube' => 'nullable',
         ]);
@@ -175,11 +175,13 @@ class VideoController extends Controller
                 'image' => $request->has('image') ? $fileNameImage : $video->image,
                 'video' => $request->has('video') ? $fileNameVideo : $video->video,
                 'time' => $request->time,
-                'tags' => $request->tags,
+                'tag_id.*' => 'exists:tavs,id',
                 'youtube' => $request->youtube,
                 'aparat' => $request->aparat,
                 'is_active' => $request->is_active,
             ]);
+
+            $video->tavs()->sync($request->tav_ids);
 
 
             DB::commit();
