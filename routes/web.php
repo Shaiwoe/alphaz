@@ -74,11 +74,8 @@ Route::get('/test', function() {
     return ['OK'];
 })->middleware('google');
 
-Auth::routes();
-
-
 Route::post('/2fa', function () {
-    return redirect('/test');
+    return redirect('/dashboard');
 })->name('2fa');
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
