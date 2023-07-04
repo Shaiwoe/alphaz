@@ -18,7 +18,7 @@ class ProfileController extends Controller
 
         $googleSecretKey = $google->generateSecretKey();
 
-        $googleQR = $google2fa->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
+        $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
 
         return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
     }
