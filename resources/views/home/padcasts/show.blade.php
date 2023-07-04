@@ -224,7 +224,7 @@
 
 
 
-                                <audio class="flex w-9/12 lg:w-full " controls>
+                                <audio class="flex w-10/12 lg:w-full " controls>
                                     <source src="{{ asset(env('PADCAST_VOICE_UPLOAD_PATH') . $padcast->voice) }}"
                                         type="audio/mpeg">
                                 </audio>

@@ -8,6 +8,7 @@ use App\Models\Catevory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\VideoTag;
 
 class VideoController extends Controller
 {
@@ -72,7 +73,7 @@ class VideoController extends Controller
             }
 
 
-            Video::create([
+            $video = Video::create([
                 'title' => $request->title,
                 'slug' => $request->slug,
                 'catevory_id' => $request->catevory_id,
@@ -87,8 +88,11 @@ class VideoController extends Controller
                 'is_active' => $request->is_active,
             ]);
 
+            foreach ((array)$request->tag_ids as $id) {
 
-            $video->tavs()->attach($request->tav_ids);
+                $data = ['tag_id' => $id, 'video_id' => $video->id];
+                VideoTag::create($data);
+            }
 
             DB::commit();
         } catch (\Exception $ex) {
@@ -124,7 +128,7 @@ class VideoController extends Controller
         $users = $request->user();
         $tavs = Tav::all();
         $catevorys = Catevory::all();
-        return view('manager.videos.edit', compact('video', 'catevorys','users'));
+        return view('manager.videos.edit', compact('video', 'catevorys','users' , 'tavs'));
     }
 
     /**

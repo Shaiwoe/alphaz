@@ -155,9 +155,8 @@
                                     @php
                                         $videoTagIds = $video
                                             ->tavs()
-                                            ->pluck('id')
+                                            ->pluck('tag_id')
                                             ->toArray();
-
                                     @endphp
 
                                     @foreach ($tavs as $tag)

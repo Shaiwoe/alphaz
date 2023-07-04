@@ -23,7 +23,7 @@ class Video extends Model
 
     public function tavs()
     {
-        return $this->belongsToMany(Tav::class, 'video_tags');
+        return $this->hasMany(VideoTag::class);
     }
 
     public function catevory()
