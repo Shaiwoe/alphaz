@@ -200,6 +200,8 @@ Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['aut
 Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified'])->name('profile.destroy');
 Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth'])->name('profile.avatar');
 Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth'])->name('profile.wallet');
+Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth'])->name('profile.google');
+
 
 
 require __DIR__ . '/auth.php';
