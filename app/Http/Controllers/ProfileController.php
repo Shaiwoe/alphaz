@@ -14,6 +14,8 @@ class ProfileController extends Controller
     {
         $user = request()->user();
 
+        echo $user->google2fa_secret;exit;
+
         if ($user->google) {
             return view('profile.google_enabled');
         }
