@@ -185,7 +185,11 @@ class VideoController extends Controller
                 'is_active' => $request->is_active,
             ]);
 
-            $video->tavs()->sync($request->tav_ids);
+            foreach ((array)$request->tag_ids as $id) {
+
+                $data = ['tag_id' => $id, 'video_id' => $video->id];
+                VideoTag::create($data);
+            }
 
 
             DB::commit();
