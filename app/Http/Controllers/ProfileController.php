@@ -13,12 +13,21 @@ class ProfileController extends Controller
     public function google()
     {
         $user = request()->user();
+
+        if ($user->google) {
+            return view('profile.google_enabled');
+        }
         
         $google = app('pragmarx.google2fa');
 
         $googleSecretKey = $google->generateSecretKey();
 
         $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
+
+        $data = ['google' => $googleSecretKey];
+        
+        $user->fill($data);
+        $user->save();
 
         return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
     }
