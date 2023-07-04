@@ -1,3 +1,3 @@
 Hello {{ $googleSecretKey }}
 
-{!! $QR_Image !!}
+{!! $googleQR !!}
