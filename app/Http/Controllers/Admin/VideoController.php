@@ -185,6 +185,8 @@ class VideoController extends Controller
                 'is_active' => $request->is_active,
             ]);
 
+            VideoTag::where('video_id', $video->id)->delete();
+
             foreach ((array)$request->tag_ids as $id) {
 
                 $data = ['tag_id' => $id, 'video_id' => $video->id];
