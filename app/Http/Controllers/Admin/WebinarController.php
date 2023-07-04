@@ -92,7 +92,7 @@ class WebinarController extends Controller
     {
         $users = $request->user();
         $webinars = Webinar::orderBy('updated_at', 'desc')->where('is_active', 1)->take(8)->get();
-        return view('manager.webinar', compact('users' , 'webinars'));
+        return view('panel.webinar', compact('users' , 'webinars'));
     }
 
     /**
