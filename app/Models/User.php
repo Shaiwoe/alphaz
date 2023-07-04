@@ -29,7 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'avatar',
         'password',
         'email_verified_at',
-        'wallet_bit', 'wallet_eth', 'wallet_usdt'
+        'wallet_bit', 'wallet_eth', 'wallet_usdt', 'google'
     ];
 
     /**
