@@ -71,12 +71,12 @@ use App\Http\Controllers\Home\CatevoryController as HomeCatevoryController;
 use App\Http\Controllers\Admin\MetaversController as AdminMetaversController;
 
 Route::get('/test', function() {
-    return ['OK'];
+    return ['test'];
 })->middleware(['google']);
 
 Route::post('/2fa', function () {
-    return redirect('/test');
-})->name('2fa');
+    return ['2fa'];
+})->name('2fa')->middleware('2fa');
 
 Route::get('/coins/{page?}', [CoinMarketController::class, 'list'])->name('home.coins.index');
 Route::get('/coin/{symbol}', [CoinMarketController::class, 'show'])->name('home.coins.show');
