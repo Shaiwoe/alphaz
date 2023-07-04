@@ -221,7 +221,7 @@
 
                                     <a href="{{ url(env('BOOK_PDF_UPLOAD_PATH') . $book->book) }}"
 
-                                        class="flex w-full cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center text-center">
+                                        class="flex w-full justify-center cursor-pointer bg-green px-4 py-2 rounded-full gap-2 items-center text-center">
                                         دانلود مستقیم کتاب
 
                                         <svg class="w-6 h-6" viewBox="0 0 512 512">
@@ -238,7 +238,7 @@
 
 
                                     <a href=""
-                                        class="flex w-full cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center text-center">
+                                        class="flex w-full justify-center cursor-pointer bg-green rounded-full px-4 py-2 gap-2 items-center text-center">
                                         مطالعه آنلاین به زودی
 
                                         <svg class="w-6 h-6" viewBox="0 0 512 512">
