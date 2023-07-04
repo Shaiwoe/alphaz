@@ -12,5 +12,6 @@ class QuestionController extends Controller
         $users = $request->user();
 
         return view('panel.question', compact('users'));
+        
     }
 }
