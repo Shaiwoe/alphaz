@@ -14,7 +14,7 @@
                 @endif
   
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="/google2fa/authenticate">
+                    <form class="form-horizontal" method="POST" action="/2fa">
                         {{ csrf_field() }}
   
                         <div class="form-group">
