@@ -214,7 +214,7 @@
                                 </div>
 
                                 <div id="coinBox"
-                                    class="bg-box dark:bg-white w-full flex justify-center items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
+                                    class="bg-box dark:bg-white w-full flex flex-col lg:flex-row justify-center items-center text-white dark:text-gray-700  z-30 gap-10 py-4 px-8 rounded-full">
 
 
 
