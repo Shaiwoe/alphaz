@@ -22,7 +22,7 @@
 
             <div class="flex gap-12 p-8 w-full items-center">
 
-                <div class="w-full">
+                <div class="w-7/12">
                     <div class="mb-4">
                         <ul class="flex flex-wrap gap-8  justify-center items-center text-center" id="myTab"
                             data-tabs-toggle="#myTabContent" role="tablist">
@@ -94,12 +94,14 @@
 
 
                             <div class="flex gap-4 mt-4 justify-center">
-                                <a href="{{ route('auth.google') }}" id="coinBox">
-                                    <img class="w-10" src="/image/google.png" alt="">
+                                <a href="{{ route('auth.google') }}" class="flex justify-center gap-2 text-white text-sm dark:text-gray-700 w-full p-1 items-center border border-button2" id="coinBox">
+                                     ورود با گوگل
+                                    <img class="w-8" src="/image/google.png" alt="">
                                 </a>
 
-                                <a href="{{ route('auth.provider', ['provider' => 'github']) }}" id="coinBox">
-                                    <img class="w-10" src="/image/git.png" alt="">
+                                <a href="{{ route('auth.provider', ['provider' => 'github']) }}" class="flex justify-center text-sm gap-2 w-full p-1 text-white dark:text-gray-700 items-center border border-button2" id="coinBox">
+                                 ورود با گیت هاب
+                                    <img class="w-8" src="/image/git.png" alt="">
                                 </a>
                             </div>
 
@@ -168,12 +170,14 @@
 
 
                             <div class="flex gap-4 mt-4 justify-center">
-                                <a href="{{ route('auth.google') }}" id="coinBox">
-                                    <img class="w-10" src="/image/google.png" alt="">
+                                <a href="{{ route('auth.google') }}" class="flex justify-center gap-2 text-white text-sm dark:text-gray-700 w-full p-1 items-center border border-button2" id="coinBox">
+                                    ثبت نام با گوگل
+                                    <img class="w-8" src="/image/google.png" alt="">
                                 </a>
 
-                                <a href="{{ route('auth.provider', ['provider' => 'github']) }}" id="coinBox">
-                                    <img class="w-10" src="/image/git.png" alt="">
+                                <a href="{{ route('auth.provider', ['provider' => 'github']) }}" class="flex justify-center text-sm gap-2 w-full p-1 text-white dark:text-gray-700 items-center border border-button2" id="coinBox">
+                                    ثبت نام با گیت هاب
+                                    <img class="w-8" src="/image/git.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -182,8 +186,8 @@
 
                 </div>
 
-                <div class="w-full">
-                    <img src="/image/vector-reg.svg" alt="">
+                <div class="w-7/12">
+                    <img class="w-full" src="/image/login.svg" alt="">
                 </div>
 
             </div>
