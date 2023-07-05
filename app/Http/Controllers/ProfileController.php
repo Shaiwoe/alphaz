@@ -15,9 +15,10 @@ class ProfileController extends Controller
         $user = request()->user();
 
         if ($user->google) {
-            return view('profile.google_enabled');
+            alert()->success(' کاربر گرامی Google Authenticator قبلا فعال شده است ', 'با تشکر');
+            return redirect()->route('profile.edit');
         }
-        
+
         $google = app('pragmarx.google2fa');
 
         $googleSecretKey = $google->generateSecretKey();
@@ -25,13 +26,13 @@ class ProfileController extends Controller
         $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
 
         $data = ['google' => $googleSecretKey];
-        
+
         $user->fill($data);
         $user->save();
 
         return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
     }
-    
+
     /**
      * Display the user's profile form.
      *
@@ -48,7 +49,7 @@ class ProfileController extends Controller
 
     public function wallet(ProfileUpdateRequest $request)
     {
-        $data = ['wallet_bit' => $request->wallet_bit , 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
+        $data = ['wallet_bit' => $request->wallet_bit, 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
 
         $request->user()->fill($data);
         $request->user()->save();
@@ -74,7 +75,7 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request)
     {
-        $data = ['name' => $request->name, 'email' => $request->email, 'cellphone' => $request->cellphone, 'gender' => $request->gender, 'brith' => $request->brith , 'wallet_bit' => $request->wallet_bit , 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
+        $data = ['name' => $request->name, 'email' => $request->email, 'cellphone' => $request->cellphone, 'gender' => $request->gender, 'brith' => $request->brith, 'wallet_bit' => $request->wallet_bit, 'wallet_eth' => $request->wallet_eth, 'wallet_usdt' => $request->wallet_usdt];
         $request->user()->fill($data);
 
         if ($request->user()->isDirty('email')) {
