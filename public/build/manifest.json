@@ -7,16 +7,16 @@
     "file": "assets/light-bf19f76e.woff2",
     "src": "public/fonts/light.woff2"
   },
-  "public/fonts/NovaSquare-Regular.ttf": {
-    "file": "assets/NovaSquare-Regular-8359deb4.ttf",
-    "src": "public/fonts/NovaSquare-Regular.ttf"
-  },
   "public/fonts/Yekan-Bakh-FaNum-05-Medium.woff": {
     "file": "assets/Yekan-Bakh-FaNum-05-Medium-d807027d.woff",
     "src": "public/fonts/Yekan-Bakh-FaNum-05-Medium.woff"
   },
+  "public/fonts/NovaSquare-Regular.ttf": {
+    "file": "assets/NovaSquare-Regular-8359deb4.ttf",
+    "src": "public/fonts/NovaSquare-Regular.ttf"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-3bf1b449.css",
+    "file": "assets/app-9984be33.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
