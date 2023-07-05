@@ -22,7 +22,7 @@
 
             <div class="flex gap-12 p-8 w-full items-center">
 
-                <div class="w-7/12">
+                <div class="w-full lg:w-7/12">
                     <div class="mb-4">
                         <ul class="flex flex-wrap gap-8  justify-center items-center text-center" id="myTab"
                             data-tabs-toggle="#myTabContent" role="tablist">
@@ -50,7 +50,7 @@
                                 <div>
                                     <x-input-label for="email" :value="__('ایمیل خود را وارد کنید')" />
                                     <input id="email"
-                                        class="block bg-dark4 dark:bg-gray-700 text-gray-200 dark:text-gray-700 rounded-full mt-2 w-full text-right" type="email"
+                                        class="block bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100 rounded-full mt-2 w-full text-right" type="email"
                                         name="email" :value="old('email')" required autofocus autocomplete="username" />
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
@@ -60,7 +60,7 @@
                                     <x-input-label for="password" :value="__('کلمه عبور را وارد کنید')" />
 
                                     <input id="password"
-                                        class="block  bg-dark4 dark:bg-gray-700 text-gray-200 dark:text-gray-700  rounded-full mt-2 w-full text-right" type="password"
+                                        class="block  bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100  rounded-full mt-2 w-full text-right" type="password"
                                         name="password" required autocomplete="current-password" />
 
                                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -93,7 +93,7 @@
                             <div class="border-b-2 border-dark4 mt-8"></div>
 
 
-                            <div class="flex gap-4 mt-4 justify-center">
+                            <div class="flex flex-col lg:flex-row gap-4 mt-4 justify-center">
                                 <a href="{{ route('auth.google') }}" class="flex justify-center gap-2 text-white text-sm dark:text-gray-700 w-full p-1 items-center border border-button2" id="coinBox">
                                      ورود با گوگل
                                     <img class="w-8" src="/image/google.png" alt="">
@@ -117,7 +117,7 @@
                                 <div>
                                     <x-input-label for="name" :value="__('نام')" />
                                     <x-text-input id="name"
-                                        class="lock dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="text"
+                                        class="block bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100 rounded-full mt-2 w-full text-right" type="text"
                                         name="name" :value="old('name')" required autofocus autocomplete="name" />
                                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                 </div>
@@ -127,7 +127,7 @@
                                 <div class="mt-4">
                                     <x-input-label for="email" :value="__('ایمیل')" />
                                     <x-text-input id="email"
-                                        class="lock dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="email"
+                                        class="block bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100 rounded-full mt-2 w-full text-right" type="email"
                                         name="email" :value="old('email')" required autocomplete="username" />
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
@@ -137,7 +137,7 @@
                                     <x-input-label for="password" :value="__('پسورد')" />
 
                                     <x-text-input id="password"
-                                        class="lock dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="password"
+                                        class="block bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100 rounded-full mt-2 w-full text-right" type="password"
                                         name="password" required autocomplete="new-password" />
 
                                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -148,7 +148,7 @@
                                     <x-input-label for="password_confirmation" :value="__('تکرار پسورد')" />
 
                                     <x-text-input id="password_confirmation"
-                                        class="lock dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="password"
+                                        class="block bg-dark4 dark:bg-gray-700 placeholder:text-gray-200 dark:placeholder:text-gray-100 rounded-full mt-2 w-full text-right" type="password"
                                         name="password_confirmation" required autocomplete="new-password" />
 
                                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
@@ -169,7 +169,7 @@
                             <div class="border-b-2 border-dark4 mt-8"></div>
 
 
-                            <div class="flex gap-4 mt-4 justify-center">
+                            <div class="flex flex-col lg:flex-row gap-4 mt-4 justify-center">
                                 <a href="{{ route('auth.google') }}" class="flex justify-center gap-2 text-white text-sm dark:text-gray-700 w-full p-1 items-center border border-button2" id="coinBox">
                                     ثبت نام با گوگل
                                     <img class="w-8" src="/image/google.png" alt="">
@@ -186,8 +186,10 @@
 
                 </div>
 
-                <div class="w-7/12">
+                <div class="hidden lg:flex w-7/12 relative">
                     <img class="w-full" src="/image/login.svg" alt="">
+                    <img class="w-6/12 absolute right-0 bottom-[20%]" src="/image/logo.png" alt="">
+
                 </div>
 
             </div>
