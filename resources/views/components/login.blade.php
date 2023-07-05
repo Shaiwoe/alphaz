@@ -50,7 +50,7 @@
                                 <div>
                                     <x-input-label for="email" :value="__('ایمیل خود را وارد کنید')" />
                                     <input id="email"
-                                        class="block  dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="email"
+                                        class="block bg-dark4 dark:bg-gray-700 text-gray-200 dark:text-gray-700 rounded-full mt-2 w-full text-right" type="email"
                                         name="email" :value="old('email')" required autofocus autocomplete="username" />
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
@@ -60,7 +60,7 @@
                                     <x-input-label for="password" :value="__('کلمه عبور را وارد کنید')" />
 
                                     <input id="password"
-                                        class="block  dark:bg-coin1 text-gray-700 rounded-full mt-2 w-full text-right" type="password"
+                                        class="block  bg-dark4 dark:bg-gray-700 text-gray-200 dark:text-gray-700  rounded-full mt-2 w-full text-right" type="password"
                                         name="password" required autocomplete="current-password" />
 
                                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
