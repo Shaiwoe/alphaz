@@ -163,11 +163,11 @@ Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/faq', [FaqController::class, 'index'])->name('home.faq');
 Route::get('/contact', [ContactController::class, 'index'])->name('home.contact');
 
-Route::get('/auth/google', [Google::class, 'redirect'])->name('auth.google')->middleware('google');
+Route::get('/auth/google', [Google::class, 'redirect'])->name('auth.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\Google::class, 'callback']);
 
-Route::get('/auth/{provider}', [AuthController::class, 'redirect'])->name('auth.provider')->middleware('google');
-Route::get('/auth/{provider}/callback', [AuthController::class, 'callback'])->middleware('google');
+Route::get('/auth/{provider}', [AuthController::class, 'redirect'])->name('auth.provider');
+Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
 
 
 
@@ -197,7 +197,7 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
 });
 
 
-Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashbordController::class, 'index'])->middleware(['auth', 'verified' , 'google'])->name('dashboard');
 Route::get('/maps', [MapsController::class, 'index'])->middleware(['auth', 'verified'])->name('maps');
 Route::get('/vip', [VipController::class, 'index'])->middleware(['auth', 'verified'])->name('vip');
 Route::get('/score', [ScoreController::class, 'index'])->middleware(['auth', 'verified'])->name('score');
