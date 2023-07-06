@@ -211,6 +211,8 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['a
 Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth'])->name('profile.avatar');
 Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth'])->name('profile.wallet');
 Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth'])->name('profile.google');
+Route::post('/profile/accept', [ProfileController::class, 'accept'])->middleware(['auth', 'google'])->name('profile.accept');
+
 
 
 
