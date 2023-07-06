@@ -15,8 +15,8 @@ class ProfileController extends Controller
         $user = request()->user();
 
         if ($user->google) {
-            alert()->success(' کاربر گرامی Google Authenticator قبلا فعال شده است ', 'با تشکر');
-            return redirect()->route('profile.edit');
+            #alert()->success(' کاربر گرامی Google Authenticator قبلا فعال شده است ', 'با تشکر');
+            #return redirect()->route('profile.edit');
         }
 
         $google = app('pragmarx.google2fa');
