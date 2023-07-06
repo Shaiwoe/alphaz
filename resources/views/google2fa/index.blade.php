@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="w-full">
-                        <img src="image/2fm.png" alt="">
+                        <img src="/image/2fm.png" alt="">
                     </div>
 
 

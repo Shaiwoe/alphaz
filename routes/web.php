@@ -206,12 +206,12 @@ Route::get('/wishlist', [WishlistController::class, 'userProfile'])->middleware(
 Route::get('/webinar', [WebinarController::class, 'show'])->middleware(['auth', 'verified' , 'google'])->name('webinar');
 
 Route::get('/profile', [ProfileController::class, 'edit'])->middleware(['auth'])->name('profile.edit');
-Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['auth' , 'google'])->name('profile.update');
-Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified' , 'google'])->name('profile.destroy');
-Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth' , 'google'])->name('profile.avatar');
-Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth' , 'google'])->name('profile.wallet');
-Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth' , 'google'])->name('profile.google');
-Route::post('/profile/accept', [ProfileController::class, 'accept'])->middleware(['auth', 'google'])->name('profile.accept');
+Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['auth'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->middleware(['auth', 'verified'])->name('profile.destroy');
+Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middleware(['auth'])->name('profile.avatar');
+Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth'])->name('profile.wallet');
+Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth'])->name('profile.google');
+Route::post('/profile/accept', [ProfileController::class, 'accept'])->middleware(['auth'])->name('profile.accept');
 
 
 
