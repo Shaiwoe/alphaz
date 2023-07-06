@@ -23,14 +23,40 @@ class ProfileController extends Controller
 
         $googleSecretKey = $google->generateSecretKey();
 
+        // Keep google in session
+        request()->session()->push('google', $googleSecretKey);
+
         $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
 
-        $data = ['google' => $googleSecretKey];
+        #$data = ['google' => $googleSecretKey];
+
+        #$user->fill($data);
+        #$user->save();
+
+        return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
+    }
+
+    public function accept()
+    {
+        $user = request()->user();
+
+        if ($user->google) {
+            return redirect()->route('profile.edit');
+        }
+
+        // Get google from session
+        $google = session()->get('google');
+
+        if (empty($google)) {
+            return redirect()->route('profile.edit');
+        }
+
+        $data = ['google' => $google];
 
         $user->fill($data);
         $user->save();
 
-        return view('profile.google', compact('user', 'googleSecretKey', 'googleQR'));
+        return redirect()->route('profile.edit');
     }
 
     /**
