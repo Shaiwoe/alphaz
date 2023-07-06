@@ -46,7 +46,7 @@ class ProfileController extends Controller
 
         // Get google from session
         $google = request()->session()->pull('google', null);
-
+echo $google;exit;
         if (empty($google)) {
             return redirect()->route('profile.edit');
 
