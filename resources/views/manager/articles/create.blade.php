@@ -202,7 +202,8 @@
 
 
 
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    {{-- <script src="{{ asset('ckeditor/ckeditor.js') }}"></script> --}}
+    <script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('body', {
             filebrowserUploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
