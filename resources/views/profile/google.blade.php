@@ -50,7 +50,16 @@
                             <div
                                 class="flex lg:flex-col lg:text-xl justify-center items-center text-white dark:text-gray-600 space-y-4 text-sm">
                                 {!! $googleQR !!}
-                                <p class="bg-slate-900 text-white p-2 rounded-lg font-medium">{{ $googleSecretKey }}</p>
+                                <p class="flex gap-4 bg-slate-900 text-white px-8 py-2 rounded-lg font-medium">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                    </svg>
+
+                                    {{ $googleSecretKey }}
+
+                                </p>
                             </div>
 
                             <div class="flex flex-col space-y-10">
@@ -74,18 +83,20 @@
                                 </div>
 
 
-                                <form method="POST" action="{{ route('profile.accept') }} class="flex gap-4">
-                                    @csrf
+                                <div class="flex flex-col gap-4">
+                                    <form method="POST" action="{{ route('profile.accept') }}">
+                                        @csrf
 
-                                    <button type="submit"
-                                        class="bg-button2 hover:bg-button1 p-2 rounded-lg text-white w-1/2 text-center">
-                                        تکمیل راه اندازی
-                                    </button>
-                                </form>
+                                        <button type="submit"
+                                            class="bg-button2 hover:bg-button1 p-2 rounded-lg text-white w-1/2 text-center">
+                                            تکمیل راه اندازی
+                                        </button>
+                                    </form>
 
-                                <a href="{{ route('profile.edit') }}"
-                                    class="bg-red hover:bg-red-o p-2 rounded-lg text-white w-1/2 text-center">انصراف
-                                    راه اندازی</a>
+                                    <a href="{{ route('profile.edit') }}"
+                                        class="bg-red hover:bg-red-o p-2 rounded-lg text-white w-1/2 text-center">انصراف
+                                        راه اندازی</a>
+                                </div>
 
                             </div>
                         </div>
