@@ -24,7 +24,7 @@ class ProfileController extends Controller
         $googleSecretKey = $google->generateSecretKey();
 
         // Keep google in session
-        request()->session()->push('google', $googleSecretKey);
+        request()->session()->put('google', $googleSecretKey);
 
         $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
 
