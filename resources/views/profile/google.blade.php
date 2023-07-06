@@ -74,15 +74,18 @@
                                 </div>
 
 
-                                <div class="flex gap-4">
-                                    <a href="{{ route('profile.edit') }}"
-                                        class="bg-button2 hover:bg-button1 p-2 rounded-lg text-white w-1/2 text-center">تکمیل
-                                        راه اندازی</a>
-                                    <a href="{{ route('profile.edit') }}"
-                                        class="bg-red hover:bg-red-o p-2 rounded-lg text-white w-1/2 text-center">انصراف
-                                        راه اندازی</a>
-                                </div>
+                                <form method="POST" action="{{ route('profile.accept') }} class="flex gap-4">
+                                    @csrf
 
+                                    <button type="submit"
+                                        class="bg-button2 hover:bg-button1 p-2 rounded-lg text-white w-1/2 text-center">
+                                        تکمیل راه اندازی
+                                    </button>
+                                </form>
+
+                                <a href="{{ route('profile.edit') }}"
+                                    class="bg-red hover:bg-red-o p-2 rounded-lg text-white w-1/2 text-center">انصراف
+                                    راه اندازی</a>
 
                             </div>
                         </div>
