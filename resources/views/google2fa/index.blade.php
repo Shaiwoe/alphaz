@@ -54,14 +54,13 @@
                             @csrf
 
                             <div class="form-group">
-                                <p>Please enter the <strong>OTP</strong> generated on your Authenticator App.
-                                    <br> Ensure you submit the current one because it refreshes every 30
-                                    seconds.
+                                <p>
+                                    لطفا کد google authenticator خود را وارد کنید
                                 </p>
-                                <label for="one_time_password" class="col-md-4 control-label">One Time
-                                    Password</label>
+                                <label for="one_time_password" class="col-md-4 control-label">
+                                    </label>
 
-                                <div class="w-full">
+                                <div class="w-full mt-4">
                                     <input  type="number" class="w-full rounded-lg"
                                         name="one_time_password" required autofocus>
                                 </div>
