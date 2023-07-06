@@ -62,6 +62,9 @@
                                     {{ $googleSecretKey }}
                                 </button>
 
+                                <p class="bg-yellow-400 p-2 rounded-lg  text-gray-800 text-sm text-center">
+                                    لطفا بعد از فعال سازی در اپلیکیشن تکمیل راه اندازی انجام دهید
+                                </p>
                             </div>
 
                             <div class="flex flex-col space-y-10">
@@ -85,9 +88,7 @@
                                 </div>
 
 
-                                <p class="bg-yellow-400 text-gray-400 dark:text-gray-500">
-                                    لطفا بعد از فعال سازی در اپلیکیشن تکمیل راه اندازی انجام دهید
-                                </p>
+
 
 
 
