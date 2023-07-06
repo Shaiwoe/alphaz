@@ -49,6 +49,7 @@ class ProfileController extends Controller
 
         if (empty($google)) {
             return redirect()->route('profile.edit');
+
         }
 
         $data = ['google' => $google];
@@ -56,6 +57,7 @@ class ProfileController extends Controller
         $user->fill($data);
         $user->save();
 
+        alert()->success('با موفقیت فعال شد', 'با تشکر');
         return redirect()->route('profile.edit');
     }
 

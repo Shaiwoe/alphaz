@@ -163,11 +163,11 @@ Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/faq', [FaqController::class, 'index'])->name('home.faq');
 Route::get('/contact', [ContactController::class, 'index'])->name('home.contact');
 
-Route::get('/auth/google', [Google::class, 'redirect'])->name('auth.google');
+Route::get('/auth/google', [Google::class, 'redirect'])->name('auth.google')->middleware('google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\Google::class, 'callback']);
 
-Route::get('/auth/{provider}', [AuthController::class, 'redirect'])->name('auth.provider');
-Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
+Route::get('/auth/{provider}', [AuthController::class, 'redirect'])->name('auth.provider')->middleware('google');
+Route::get('/auth/{provider}/callback', [AuthController::class, 'callback'])->middleware('google');
 
 
 
@@ -212,7 +212,6 @@ Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middlewar
 Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth'])->name('profile.wallet');
 Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth'])->name('profile.google');
 Route::post('/profile/accept', [ProfileController::class, 'accept'])->middleware(['auth', 'google'])->name('profile.accept');
-
 
 
 
