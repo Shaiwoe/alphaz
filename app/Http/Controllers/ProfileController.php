@@ -15,8 +15,8 @@ class ProfileController extends Controller
         $user = request()->user();
 
         if ($user->google) {
-            #alert()->success(' کاربر گرامی Google Authenticator قبلا فعال شده است ', 'با تشکر');
-            #return redirect()->route('profile.edit');
+            alert()->success(' کاربر گرامی Google Authenticator قبلا فعال شده است ', 'با تشکر');
+            return redirect()->route('profile.edit');
         }
 
         $google = app('pragmarx.google2fa');
@@ -24,7 +24,7 @@ class ProfileController extends Controller
         $googleSecretKey = $google->generateSecretKey();
 
         // Keep google in session
-        request()->session()->push('google', $googleSecretKey);
+        request()->session()->put('google', $googleSecretKey);
 
         $googleQR = $google->getQRCodeInline('alpharency', $user->email, $googleSecretKey);
 
@@ -41,12 +41,12 @@ class ProfileController extends Controller
         $user = request()->user();
 
         if ($user->google) {
-            #return redirect()->route('profile.edit');
+            return redirect()->route('profile.edit');
         }
 
         // Get google from session
-        $google = request()->session()->pull('google', null);
-echo $google;exit;
+        $google = request()->session()->get('google');
+
         if (empty($google)) {
             return redirect()->route('profile.edit');
 
