@@ -47,10 +47,12 @@
                             alt="" />
 
                         <div class="flex gap-20">
-                            <div
+                            <div id="myInput"
                                 class="flex lg:flex-col lg:text-xl justify-center items-center text-white dark:text-gray-600 space-y-4 text-sm">
                                 {!! $googleQR !!}
-                                <p class="flex gap-4 bg-slate-900 text-white px-8 py-2 rounded-lg font-medium">
+
+                                <button onclick="myFunction()"
+                                    class="flex gap-4 bg-slate-900 text-white px-8 py-2 rounded-lg font-medium">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -58,8 +60,8 @@
                                     </svg>
 
                                     {{ $googleSecretKey }}
+                                </button>
 
-                                </p>
                             </div>
 
                             <div class="flex flex-col space-y-10">
@@ -108,6 +110,24 @@
 
         </div>
     </div>
+
+
+    <script>
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
 
 </body>
 
