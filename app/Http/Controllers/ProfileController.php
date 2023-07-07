@@ -61,6 +61,18 @@ class ProfileController extends Controller
         return redirect()->route('profile.edit');
     }
 
+    public function cancel()
+    {
+        $user = request()->user();
+
+        $data = ['google' => null];
+        
+        $user->fill($data);
+        $user->save();
+
+        return redirect()->route('profile.edit');
+    }
+
     /**
      * Display the user's profile form.
      *
