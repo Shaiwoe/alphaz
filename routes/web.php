@@ -212,6 +212,7 @@ Route::patch('/profile/avatar', [ProfileController::class, 'avatar'])->middlewar
 Route::patch('/profile/wallet', [ProfileController::class, 'wallet'])->middleware(['auth' , 'google'])->name('profile.wallet');
 Route::get('/profile/google', [ProfileController::class, 'google'])->middleware(['auth' , 'google'])->name('profile.google');
 Route::post('/profile/accept', [ProfileController::class, 'accept'])->middleware(['auth' , 'google'])->name('profile.accept');
+Route::get('/profile/cancel', [ProfileController::class, 'cancel'])->middleware(['auth' , 'google'])->name('profile.cancel');
 
 
 
