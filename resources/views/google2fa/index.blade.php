@@ -43,7 +43,7 @@
 
                     @if ($errors->any())
                         <div class="w-8/12">
-                            <div class="bg-red text-white text-center">
+                            <div class="bg-red text-white text-center rounded-lg">
                                 <strong>{{ $errors->first() }}</strong>
                             </div>
                         </div>
