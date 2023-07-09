@@ -70,8 +70,8 @@ class ProfileController extends Controller
         $user->fill($data);
         $user->save();
 
+        alert()->info('با موفقیت غیرفعال شد', 'با تشکر');
         return redirect()->route('profile.edit');
-        alert()->success('با موفقیت غیرفعال شد', 'با تشکر');
 
     }
 
