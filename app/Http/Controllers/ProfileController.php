@@ -71,7 +71,7 @@ class ProfileController extends Controller
         $user->save();
 
         return redirect()->route('profile.edit');
-        alert()->info('با موفقیت غیرفعال شد', 'با تشکر');
+        alert()->success('با موفقیت غیرفعال شد', 'با تشکر');
 
     }
 
