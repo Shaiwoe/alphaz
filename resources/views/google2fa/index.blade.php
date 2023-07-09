@@ -42,8 +42,8 @@
                 <div class="flex flex-col items-center  gap-20 mt-28">
 
                     @if ($errors->any())
-                        <div class="w-4/12">
-                            <div class="bg-red text-white">
+                        <div class="w-8/12">
+                            <div class="bg-red text-white text-center">
                                 <strong>{{ $errors->first() }}</strong>
                             </div>
                         </div>
