@@ -473,11 +473,11 @@
                                 <div class="flex flex-col space-y-8 items-center">
                                     <img class="w-6/12 rounded-full" src="/image/sec.jpg" alt="">
                                     <a href="{{ route('profile.google') }}"
-                                        class="bg-button2 p-3 rounded-full text-white w-1/2">فعال سازی Google
+                                        class="bg-button2 p-3 rounded-full text-white w-1/2 text-center">فعال سازی Google
                                         Authenticator</a>
 
                                         <a href="{{ route('profile.cancel') }}"
-                                        class="bg-red p-3 rounded-full text-white w-1/2">
+                                        class="bg-red p-3 rounded-full text-white w-1/2 text-center">
                                             غیرفعال سازی Google Authenticator
                                         </a>
                                 </div>
