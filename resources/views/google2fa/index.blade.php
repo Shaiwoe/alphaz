@@ -36,9 +36,9 @@
         <!-- nav left -->
 
         <!-- main -->
-        <div class="flex flex-col sm:w-full h-full m-0 overflow-hidden overflow-y-auto p-4">
+        <div class="flex sm:w-full h-full m-0 overflow-hidden overflow-y-auto p-4">
             <!-- main  -->
-            <div class="flex  w-full  items-center">
+            <div class="flex flex-col  w-full  items-center">
                 <div class="flex items-center  gap-20 mt-64">
 
                     @if ($errors->any())
