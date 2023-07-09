@@ -85,7 +85,7 @@
                         @if (Route::has('login'))
                             <div class="flex  rounded-md md:gap-4 items-center">
                                 @auth
-                                    <a href="{{ url('/dashboard') }}" >
+                                    <a href="{{ route('profile.edit') }}" >
                                         @if (Auth::user()->avatar)
                                             <img class="w-14 rounded-full" src="{{ Auth::user()->avatar }}"
                                                 alt="">
