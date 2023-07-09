@@ -39,7 +39,7 @@
         <div class="flex sm:w-full h-full m-0 overflow-hidden overflow-y-auto p-4">
             <!-- main  -->
             <div class="flex flex-col  w-full  items-center">
-                <div class="flex flex-col items-center  gap-20 mt-64">
+                <div class="flex flex-col items-center  gap-20 mt-32">
 
                     @if ($errors->any())
                         <div class="col-md-12">
