@@ -475,6 +475,11 @@
                                     <a href="{{ route('profile.google') }}"
                                         class="bg-button2 p-3 rounded-full text-white">فعال سازی Google
                                         Authenticator</a>
+
+                                        <a href="{{ route('profile.cancel') }}"
+                                        class="bg-red p-3 rounded-full text-white">
+                                            غیرفعال سازی Google Authenticator
+                                        </a>
                                 </div>
                             </div>
                         </div>

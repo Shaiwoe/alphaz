@@ -66,11 +66,13 @@ class ProfileController extends Controller
         $user = request()->user();
 
         $data = ['google' => null];
-        
+
         $user->fill($data);
         $user->save();
 
         return redirect()->route('profile.edit');
+        alert()->info('با موفقیت غیرفعال شد', 'با تشکر');
+
     }
 
     /**
