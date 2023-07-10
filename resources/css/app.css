@@ -637,7 +637,7 @@ select:not([size]) {
     box-shadow: 0px 0px 128px -48px rgba(8, 181, 189, 1);
 }
 .text_articles p {
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .tradingview-widget-container iframe {
